@@ -1,2 +1,2 @@
-# dark-configs
-My personal configurations.
+# Configurations
+My personal configurations for differents programs.
