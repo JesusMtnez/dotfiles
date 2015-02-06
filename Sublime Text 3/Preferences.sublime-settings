@@ -4,33 +4,33 @@
  * by Jesús Martínez-Barquero Herrada
  */
 {
-	// Theme
-	"color_scheme": "Packages/Color Scheme - Default/Cobalt.tmTheme",
+    // Theme
+    "color_scheme": "Packages/Color Scheme - Default/Cobalt.tmTheme",
 
     // Font Settings
-	"font_size": 11,
+    "font_size": 11,
     "font_options": [],
 
-	// Language
-	"dictionary": "Packages/Language - English/en_GB.dic",
+    // Language
+    "dictionary": "Packages/Language - English/en_GB.dic",
 
-	// Development
-	"line_numbers": true,
+    // Development
+    "line_numbers": true,
 
     //Indentation Settings
-	"tab_size": 4,
-	"translate_tabs_to_spaces": true,
+    "tab_size": 4,
+    "translate_tabs_to_spaces": true,
     "detect_indentation": true,
     "use_tab_stops": true,
     "auto_indent": true,
     "smart_indent": true,
     "trim_automatic_white_space": true,
     "indent_to_bracket": true,
-	
-	// Ingenored Packages
-	"ignored_packages":
-	[
-		"Markdown",
-		"Vintage"
-	]
+
+    // Ingenored Packages
+    "ignored_packages":
+    [
+    	"Markdown",
+    	"Vintage"
+    ]
 }
