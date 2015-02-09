@@ -2,4 +2,7 @@
     // Comments
     { "keys": ["ctrl+7"], "command": "toggle_comment", "args": { "block": false } },
     { "keys": ["ctrl+shift+7"], "command": "toggle_comment", "args": { "block": true } },
-]
+
+    // Show/Hide Side panel
+    { "keys": ["ctrl+b"], "command": "toggle_side_bar"},
+]   
