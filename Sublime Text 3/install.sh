@@ -16,3 +16,8 @@
 ln -sf "$(pwd)/Settings-Keys/Preferences.sublime-settings" "${HOME}/.config/sublime-text-3/Packages/User/Preferences.sublime-settings"
 # Linux Keymap file
 ln -sf "$(pwd)/Settings-Keys/Default (Linux).sublime-keymap" "${HOME}/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap"
+###########################################################################
+# Plugins
+###########################################################################
+# Markdown GFM Settings
+ln -sf "$(pwd)/Settings-Keys/Markdown.sublime-settings" "${HOME}/.config/sublime-text-3/Packages/User/Markdown.sublime-settings"
