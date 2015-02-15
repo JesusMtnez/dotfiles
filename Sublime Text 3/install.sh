@@ -2,13 +2,13 @@
 # Author: Jesús Martínez-Barquero Herrada
 # Last edited: 15/02/2015
 ###########################################################################
-# Description: Replace Sublime Text 3 Settings and Keymaps
-#   with symbolic links to this project files.
+# Description: Replace Sublime Text 3 Settings and Keymaps with symbolic
+#       links to this project files.
 ###########################################################################
 # URL: https://github.com/JesusMtnez/configs/tree/master/Sublime%20Text%203
 ###########################################################################
-# NOTE: Only works if the script it is call from the same
-#       folder where the script is locate.
+# NOTE: Only works if the script it is called from the same folder where 
+#       the script is located.
 ###########################################################################
 #
 #!/bin/bash
