@@ -13,11 +13,17 @@
 #
 #!/bin/bash
 # Preferences file
-ln -sf "$(pwd)/Settings-Keys/Preferences.sublime-settings" "${HOME}/.config/sublime-text-3/Packages/User/Preferences.sublime-settings"
+ln -sf "$(pwd)/Settings-Keys/Preferences.sublime-settings" "${HOME}/.config/sublime-text-3/Packages/User/Preferences.sublime-settings";
 # Linux Keymap file
-ln -sf "$(pwd)/Settings-Keys/Default (Linux).sublime-keymap" "${HOME}/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap"
+ln -sf "$(pwd)/Settings-Keys/Default (Linux).sublime-keymap" "${HOME}/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap";
 ###########################################################################
 # Plugins
 ###########################################################################
 # Markdown GFM Settings
-ln -sf "$(pwd)/Settings-Keys/Markdown.sublime-settings" "${HOME}/.config/sublime-text-3/Packages/User/Markdown.sublime-settings"
+ln -sf "$(pwd)/Settings-Keys/Markdown.sublime-settings" "${HOME}/.config/sublime-text-3/Packages/User/Markdown.sublime-settings";
+###########################################################################
+# Snippets
+###########################################################################
+# XML
+ln -sf "$(pwd)/Snippets/XML_Header.sublime-snippet" "${HOME}/.config/sublime-text-3/Packages/User/XML_Header.sublime-snippet";
+ln -sf "$(pwd)/Snippets/XML_Tag.sublime-snippet" "${HOME}/.config/sublime-text-3/Packages/User/XML_Tag.sublime-snippet";
