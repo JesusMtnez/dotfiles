@@ -16,6 +16,8 @@
 ln -sf "$(pwd)/Settings-Keys/Preferences.sublime-settings" "${HOME}/.config/sublime-text-3/Packages/User/Preferences.sublime-settings";
 # Linux Keymap file
 ln -sf "$(pwd)/Settings-Keys/Default (Linux).sublime-keymap" "${HOME}/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap";
+# XML Preferences
+ln -sf "$(pwd)/Settings-Keys/XML.sublime-settings" "${HOME}/.config/sublime-text-3/Packages/User/XML.sublime-settings";
 ###########################################################################
 # Plugins
 ###########################################################################
@@ -27,3 +29,8 @@ ln -sf "$(pwd)/Settings-Keys/Markdown.sublime-settings" "${HOME}/.config/sublime
 # XML
 ln -sf "$(pwd)/Snippets/XML_Header.sublime-snippet" "${HOME}/.config/sublime-text-3/Packages/User/XML_Header.sublime-snippet";
 ln -sf "$(pwd)/Snippets/XML_Tag.sublime-snippet" "${HOME}/.config/sublime-text-3/Packages/User/XML_Tag.sublime-snippet";
+###########################################################################
+# Color Schemes
+###########################################################################
+# Batman (for XML files)
+ln -sf "$(pwd)/ColorSchemes/Batman.tmTheme" "${HOME}/.config/sublime-text-3/Packages/User/Batman.tmTheme";
