@@ -36,8 +36,10 @@ Or follow the instructions **[here](https://packagecontrol.io/installation)**.
     - **Description**: Shortcuts and menu entries for opening a terminal at the current file, or the current root project folder in Sublime Text.
     - [GitHub](https://github.com/wbond/sublime_terminal).
     - [Homepage](http://wbond.net/sublime_packages/terminal).
-
+- **View In Browser**:
+    + **Description**: Sublime Text plugin that will open whatever is in your current view/tab. If the file current open is new and has not been saved a temporary file is created (in your default temp directory for your OS) with the extension of .htm and your browser will open it. However if the current open file is saved and has a name this plugin will open it in whatever you have set to handle its type.
+    + [GitHub](https://github.com/adampresley/sublime-view-in-browser).
 ---
 **Author:** *Jesús Martínez-Barquero Herrada*
 
-**Last edit:** _15/02/2015_
+**Last edit:** _18/02/2015_
