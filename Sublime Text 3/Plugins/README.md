@@ -39,6 +39,7 @@ Or follow the instructions **[here](https://packagecontrol.io/installation)**.
 - **View In Browser**:
     + **Description**: Sublime Text plugin that will open whatever is in your current view/tab. If the file current open is new and has not been saved a temporary file is created (in your default temp directory for your OS) with the extension of .htm and your browser will open it. However if the current open file is saved and has a name this plugin will open it in whatever you have set to handle its type.
     + [GitHub](https://github.com/adampresley/sublime-view-in-browser).
+
 ---
 **Author:** *Jesús Martínez-Barquero Herrada*
 
