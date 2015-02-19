@@ -29,6 +29,9 @@ Or follow the instructions **[here](https://packagecontrol.io/installation)**.
 - **Package Resource Viewer**
     + **Description**: Plugin to assist viewing and editing package resources in Sublime Text 2 and Sublime Text 3.
     + [GitHub](https://github.com/skuroda/PackageResourceViewer).
+- **Plain Tasks**:
+    + **Description**: An opinionated todo-list plugin for Sublime Text 2/3 editor.
+    + [GitHub](https://github.com/aziz/PlainTasks).
 - **SideBar Enhancements**:
     + **Description**: Provides enhancements to the operations on sidebar of files and folders for Sublime Text.
     + [GitHub](https://github.com/titoBouzout/SideBarEnhancements).
@@ -49,4 +52,4 @@ Or follow the instructions **[here](https://packagecontrol.io/installation)**.
 ---
 **Author:** *Jesús Martínez-Barquero Herrada*
 
-**Last edit:** _18/02/2015_
+**Last edit:** _19/02/2015_
