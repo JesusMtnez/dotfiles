@@ -31,4 +31,4 @@ Copy these files in 'Packages/User'. All the files are avaliable in this reposit
 ---
 **Author:** *Jesús Martínez-Barquero Herrada*
 
-**Last edit:** _18/02/2015_
+**Last updated:** _18/02/2015_

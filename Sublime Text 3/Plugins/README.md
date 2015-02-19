@@ -52,4 +52,4 @@ Or follow the instructions **[here](https://packagecontrol.io/installation)**.
 ---
 **Author:** *Jesús Martínez-Barquero Herrada*
 
-**Last edit:** _19/02/2015_
+**Last updated:** _19/02/2015_
