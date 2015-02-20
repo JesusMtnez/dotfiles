@@ -14,6 +14,9 @@ import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7
 Or follow the instructions **[here](https://packagecontrol.io/installation)**.
 ## Installation.
 ### Avaliable in Package Control.
+- **Auto Semi-Colon**:
+    + **Description**: This plugin automatically moves a semi-colon to outside of the last bracket when pressed inside one of more pairs of brackets.
+    + [GitHub](https://github.com/vivait/SublimeAutoSemiColon).
 - **DocBlockr**:
     + **Description**: DocBlockr is a package for Sublime Text 2 & 3 which makes writing documentation a breeze. DocBlockr supports JavaScript (including ES6), PHP, ActionScript, Haxe, CoffeeScript, TypeScript, Java, Groovy, Objective C, C, C++ and Rust.
     + [GitHub](https://github.com/spadgos/sublime-jsdocs).
@@ -32,12 +35,16 @@ Or follow the instructions **[here](https://packagecontrol.io/installation)**.
 - **Plain Tasks**:
     + **Description**: An opinionated todo-list plugin for Sublime Text 2/3 editor.
     + [GitHub](https://github.com/aziz/PlainTasks).
+-   **Scope Hunter**:
+    +   **Description**: This is a simple plugin get the scope under the cursor(s) in Sublime Text. This is useful for plugin development.
+    +   [GitHub](https://github.com/facelessuser/ScopeHunter).
 - **SideBar Enhancements**:
     + **Description**: Provides enhancements to the operations on sidebar of files and folders for Sublime Text.
     + [GitHub](https://github.com/titoBouzout/SideBarEnhancements).
-- **Sublime AutoSemiColon**:
-    + **Description**: This plugin automatically moves a semi-colon to outside of the last bracket when pressed inside one of more pairs of brackets.
-    + [GitHub](https://github.com/vivait/SublimeAutoSemiColon).
+- **Sublime CodeIntel**:
+    + **Description**: A full-featured code intelligence and smart autocomplete engine for Sublime Text. Supports: JavaScript, Mason, XBL, XUL, RHTML, SCSS, Python, HTML, Ruby, Python3, XML, XSLT, Django, HTML5, Perl, CSS, Twig, Less, Smarty, Node.js, Tcl, TemplateToolkit, PHP.
+    + [GitHub](https://github.com/SublimeCodeIntel/SublimeCodeIntel).
+    + [Homepage](http://sublimecodeintel.github.io/SublimeCodeIntel/).
 - **Terminal**:
     + **Description**: Shortcuts and menu entries for opening a terminal at the current file, or the current root project folder in Sublime Text.
     + [GitHub](https://github.com/wbond/sublime_terminal).
@@ -52,4 +59,4 @@ Or follow the instructions **[here](https://packagecontrol.io/installation)**.
 ---
 **Author:** *Jesús Martínez-Barquero Herrada*
 
-**Last updated:** _19/02/2015_
+**Last updated:** _20/02/2015_
