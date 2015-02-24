@@ -1,13 +1,13 @@
 ###########################################################################
 # Author: Jesús Martínez-Barquero Herrada
-# Last edited: 19/02/2015
+# Last edited: 24/02/2015
 ###########################################################################
 # Description: Replace Sublime Text 3 Settings and Keymaps with symbolic
 #       links to this project files.
 ###########################################################################
 # URL: https://github.com/JesusMtnez/configs/tree/master/Sublime%20Text%203
 ###########################################################################
-# NOTE: Only works if the script it is called from the same folder where 
+# NOTE: Only works if the script it is called from the same folder where
 #       the script is located.
 ###########################################################################
 #
@@ -23,6 +23,8 @@ ln -sf "$(pwd)/Settings-Keys/XML.sublime-settings" "${HOME}/.config/sublime-text
 ###########################################################################
 # Markdown GFM Settings
 ln -sf "$(pwd)/Settings-Keys/Markdown.sublime-settings" "${HOME}/.config/sublime-text-3/Packages/User/Markdown.sublime-settings";
+# Plain Tasks Settings
+ln -sf "$(pwd)/Settings-Keys/PlainTasks (Linux).sublime-settings" "${HOME}/.config/sublime-text-3/Packages/PlainTasks/PlainTasks (Linux).sublime-settings";
 ###########################################################################
 # Snippets
 ###########################################################################
