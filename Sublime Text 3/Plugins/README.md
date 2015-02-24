@@ -20,6 +20,9 @@ Or follow the instructions **[here](https://packagecontrol.io/installation)**.
 - **DocBlockr**:
     + **Description**: DocBlockr is a package for Sublime Text 2 & 3 which makes writing documentation a breeze. DocBlockr supports JavaScript (including ES6), PHP, ActionScript, Haxe, CoffeeScript, TypeScript, Java, Groovy, Objective C, C, C++ and Rust.
     + [GitHub](https://github.com/spadgos/sublime-jsdocs).
+- **Dotfiles Syntex Highlighting**:
+    + **Description**: Want ShellScript (Bash) syntax highlighting for your dotfiles? You're damn right you do!
+    + [GitHub](https://github.com/mattbanks/dotfiles-syntax-highlighting-st2).
 - **MacTerminal**:
     + **Description**:MacTerminal is a SublimeText plugin. It opens new Terminal tab (on current or new window if necessary). It's working with Terminal and iTerm.
     +  [GitHub](https://github.com/afterdesign/MacTerminal).
