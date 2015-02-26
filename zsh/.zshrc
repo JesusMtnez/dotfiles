@@ -9,6 +9,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="ys"
+export TERM='xterm-256color'
 #
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -73,6 +74,7 @@ alias ga='git add'
 alias gaa='git add --all'
 alias gp='git push'
 alias gl='git log'
+alias gll='git log --graph --decorate --oneline --all'
 alias gs='git status'
 alias gd='git diff'
 alias gm='git commit -m'
