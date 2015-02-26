@@ -14,7 +14,7 @@
 #!/usr/bin/env bash
 # Preferences file
 ln -sf "$(pwd)/Settings-Keys/Preferences.sublime-settings" "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings";
-# Linux Keymap file
+# MacOSX Keymap file
 ln -sf "$(pwd)/Settings-Keys/Default (OSX).sublime-keymap" "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap";
 # XML Preferences
 ln -sf "$(pwd)/Settings-Keys/XML.sublime-settings" "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/XML.sublime-settings";
