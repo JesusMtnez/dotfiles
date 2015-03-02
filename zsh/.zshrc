@@ -1,5 +1,5 @@
 # Author: Jesús Martínez-Barquero Herrada
-# Last updated: 24/02/2015
+# Last updated: 02/03/2015
 # -------------------------------------------------------------------
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -53,7 +53,7 @@ plugins=(git zsh-syntax-highlighting)
 #
 # User configuration
 #
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/sbin:/bin:/usr/games:/usr/local/games":$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 #
 source $ZSH/oh-my-zsh.sh
