@@ -7,8 +7,8 @@ My personal configurations for different programs:
     + [Snippets](https://github.com/JesusMtnez/configs/tree/master/Sublime%20Text%203/Snippets).
 - [**ZSH with OH-MY-ZSH:**](https://github.com/JesusMtnez/configs/tree/master/zsh)
     + ZSH Configuration File (.zshrc).
-    + Plugins.
-    + Themes
+    + [Plugins](https://github.com/JesusMtnez/configs/tree/master/zsh#plugins).
+    + Themes.
 - [**iTerm2**](https://github.com/JesusMtnez/configs/tree/master/iTerm2).
 
 ---
