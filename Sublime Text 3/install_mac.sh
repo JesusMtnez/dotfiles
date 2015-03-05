@@ -12,32 +12,34 @@
 ###########################################################################
 #
 #!/usr/bin/env bash
-# Preferences file
-ln -sf "$(pwd)/Settings-Keys/Preferences.sublime-settings" "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings";
-# MacOSX Keymap file
-ln -sf "$(pwd)/Settings-Keys/Default (OSX).sublime-keymap" "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap";
-# XML Preferences
-ln -sf "$(pwd)/Settings-Keys/XML.sublime-settings" "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/XML.sublime-settings";
-# C Preferences
+## C Preferences
 ln -sf "$(pwd)/Settings-Keys/C.sublime-settings" "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/C.sublime-settings";
 # C++ Preferences
 ln -sf "$(pwd)/Settings-Keys/C++.sublime-settings" "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/C++.sublime-settings";
+# MacOSX Keymap file
+ln -sf "$(pwd)/Settings-Keys/Default (OSX).sublime-keymap" "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap";
+# Preferences file
+ln -sf "$(pwd)/Settings-Keys/Preferences.sublime-settings" "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings";
+# XML Preferences
+ln -sf "$(pwd)/Settings-Keys/XML.sublime-settings" "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/XML.sublime-settings";
 ###########################################################################
 # Plugins
 ###########################################################################
-# Markdown GFM Settings
-ln -sf "$(pwd)/Settings-Keys/Markdown.sublime-settings" "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Markdown.sublime-settings";
-# Plain Tasks Settings
-ln -sf "$(pwd)/Settings-Keys/PlainTasks.sublime-settings" "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/PlainTasks.sublime-settings";
 # MacTerminal Settings
 ln -sf "$(pwd)/Settings-Keys/MacTerminal.sublime-settings" "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/MacTerminal.sublime-settings";
+# Markdown GFM Settings
+ln -sf "$(pwd)/Settings-Keys/Markdown.sublime-settings" "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Markdown.sublime-settings";
+# Markdown Preview Settings
+cp -n "$(pwd)/Settings-Keys/MarkdownPreview.sublime-settings" "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/MarkdownPreview.sublime-settings";
+# Plain Tasks Settings
+ln -sf "$(pwd)/Settings-Keys/PlainTasks.sublime-settings" "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/PlainTasks.sublime-settings";
 ###########################################################################
 # Snippets
 ###########################################################################
 # XML
-ln -sf "$(pwd)/Snippets/XML_Snippets" "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/XML_Snippets";
+ln -sfh "$(pwd)/Snippets/XML_Snippets/" "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/XML_Snippets";
 # C
-ln -sf "$(pwd)/Snippets/C_Snippets" "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/C_Snippets";
+ln -sfh "$(pwd)/Snippets/C_Snippets" "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/C_Snippets";
 ###########################################################################
 # Color Schemes
 ###########################################################################
