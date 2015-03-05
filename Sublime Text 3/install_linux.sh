@@ -1,6 +1,6 @@
 ###########################################################################
 # Author: Jesús Martínez-Barquero Herrada
-# Last edited: 26/02/2015
+# Last edited: 05/03/2015
 ###########################################################################
 # Description: Replace Sublime Text 3 Settings and Keymaps with symbolic
 #       links to this project files.
@@ -18,6 +18,10 @@ ln -sf "$(pwd)/Settings-Keys/Preferences.sublime-settings" "${HOME}/.config/subl
 ln -sf "$(pwd)/Settings-Keys/Default (Linux).sublime-keymap" "${HOME}/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap";
 # XML Preferences
 ln -sf "$(pwd)/Settings-Keys/XML.sublime-settings" "${HOME}/.config/sublime-text-3/Packages/User/XML.sublime-settings";
+# C Preferences
+ln -sf "$(pwd)/Settings-Keys/C.sublime-settings" "${HOME}/.config/sublime-text-3/Packages/User/C.sublime-settings";
+# C++ Preferences
+ln -sf "$(pwd)/Settings-Keys/C++.sublime-settings" "${HOME}/.config/sublime-text-3/Packages/User/C++.sublime-settings";
 ###########################################################################
 # Plugins
 ###########################################################################
