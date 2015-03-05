@@ -1,0 +1,10 @@
+<snippet>
+    <description>C for</description>
+    <content><![CDATA[int ${1:i};
+for($1 = ${2:0}; $1 ${3:<} $4; $1${5:++})
+{
+    ${0:/* code */}
+}]]></content>
+    <tabTrigger>for</tabTrigger>
+    <scope>source.c</scope>
+</snippet>

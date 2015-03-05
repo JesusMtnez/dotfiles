@@ -35,8 +35,9 @@ ln -sf "$(pwd)/Settings-Keys/MacTerminal.sublime-settings" "${HOME}/Library/Appl
 # Snippets
 ###########################################################################
 # XML
-ln -sf "$(pwd)/Snippets/XML_Header.sublime-snippet" "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/XML_Header.sublime-snippet";
-ln -sf "$(pwd)/Snippets/XML_Tag.sublime-snippet" "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/XML_Tag.sublime-snippet";
+ln -sf "$(pwd)/Snippets/XML_Snippets" "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/XML_Snippets";
+# C
+ln -sf "$(pwd)/Snippets/C_Snippets" "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/C_Snippets";
 ###########################################################################
 # Color Schemes
 ###########################################################################
