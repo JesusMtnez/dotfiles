@@ -32,6 +32,9 @@ Or follow the instructions **[here](https://packagecontrol.io/installation)**.
 - **Markdown Preview**:
     + **Description**: Preview and build your markdown files quickly in your web browser from Sublime Text 2/3.
     + [GitHub](https://github.com/revolunet/sublimetext-markdown-preview).
+- **OmniMarkupPreviewer**:
+    + __Description__: OmniMarkupPreviewer is a plugin for both Sublime Text 2 and Sublime Text 3 that preview markups in web browsers. OmniMarkupPreviewer renders markups into htmls and send it to web browser in the backgound, which enables a live preview. Besides, OmniMarkupPreviewer provide support for exporting result to html file as well.
+    + [GitHub](https://github.com/timonwong/OmniMarkupPreviewer).
 - **Package Resource Viewer**
     + **Description**: Plugin to assist viewing and editing package resources in Sublime Text 2 and Sublime Text 3.
     + [GitHub](https://github.com/skuroda/PackageResourceViewer).
@@ -48,6 +51,9 @@ Or follow the instructions **[here](https://packagecontrol.io/installation)**.
     + **Description**: A full-featured code intelligence and smart autocomplete engine for Sublime Text. Supports: JavaScript, Mason, XBL, XUL, RHTML, SCSS, Python, HTML, Ruby, Python3, XML, XSLT, Django, HTML5, Perl, CSS, Twig, Less, Smarty, Node.js, Tcl, TemplateToolkit, PHP.
     + [GitHub](https://github.com/SublimeCodeIntel/SublimeCodeIntel).
     + [Homepage](http://sublimecodeintel.github.io/SublimeCodeIntel/).
+- **Table Editor**:
+    + **Description**: Table Editor is a package for the Sublime Text 2 and Sublime Text 3 editor for edit text tables. Table Editor is has almost the same keys as Emacs-org mode table editor.
+    + [GitHub](https://github.com/vkocubinsky/SublimeTableEditor).
 - **Terminal**:
     + **Description**: Shortcuts and menu entries for opening a terminal at the current file, or the current root project folder in Sublime Text.
     + [GitHub](https://github.com/wbond/sublime_terminal).
