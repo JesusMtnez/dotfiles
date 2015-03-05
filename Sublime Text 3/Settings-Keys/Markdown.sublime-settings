@@ -3,7 +3,9 @@
     [
         "md",
         "mdown",
-        "txt"
+        "txt",
+        "markdown",
+        "mdown"
     ],
     "color_scheme": "Packages/User/MarkdownEditor-Cobaltish.tmTheme",
     "tab_size": 4,
@@ -15,7 +17,7 @@
     "draw_centered": false,
     "word_wrap": true,
     "wrap_width": 80,
-    "rulers": [],
+    "rulers": [80],
 
     // Line
     "line_numbers": true,
