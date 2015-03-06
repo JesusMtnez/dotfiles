@@ -1,5 +1,6 @@
 /*
-    Markdown Preview default settings
+    Markdown Preview User Settings
+    Author: Jesús Martínez-Barquero Herrada
 */
 {
     /*
@@ -22,7 +23,7 @@
         markdown - Use the built-in python-markdown parser
         github - Use the github API to convert markdown, so you can use GitHub flavored Markdown, see http://github.github.com/github-flavored-markdown/
     */
-    "parser": "github",
+    "parser": "markdown",
 
     /*
         By default, Markdown Preview builds the HTML in the source directory.
@@ -80,7 +81,7 @@
          github     | extension's values are not used.
 
     */
-    "enabled_extensions": "default",
+    "enabled_extensions": "github",
 
     /*
         Enabled parsers for the parser "select parser" command
@@ -90,13 +91,13 @@
         via the quick panel for which one to use.  If there is only one, it
         will automatically run that parser.
     */
-    "enabled_parsers": ["markdown", "github"],
+    "enabled_parsers": "github",
 
     /*
         Default mode for the github Markdown parser : markdown (documents) or gfm (comments)
         see http://developer.github.com/v3/markdown/#render-an-arbitrary-markdown-document
     */
-    "github_mode": "markdown",
+    "github_mode": "gfm",
 
     /*
         Enables a post process to inject header ids to ensure hrefs to headers work
@@ -152,7 +153,7 @@
     /*
         Enable or not whether parsed files will be auto-reloaded on save
     */
-    "enable_autoreload": false,
+    "enable_autoreload": true,
 
     /*
         Sets the supported filetypes for auto-reload on save
