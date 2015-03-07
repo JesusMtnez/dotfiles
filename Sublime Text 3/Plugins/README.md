@@ -23,11 +23,17 @@ Or follow the instructions __[here](https://packagecontrol.io/installation)__.
 - __Dotfiles Syntex Highlighting__:
     + __Description__: Want ShellScript (Bash) syntax highlighting for your dotfiles? You're damn right you do!
     + [GitHub](https://github.com/mattbanks/dotfiles-syntax-highlighting-st2).
+- __Git__:
+    + __Description__: Git integration: it's pretty handy. Who knew, right?
+    + [GitHub](https://github.com/kemayo/sublime-text-git).
+- __GitGutter__:
+    + __Description__: A sublime text 2/3 plugin to show an icon in the gutter area indicating whether a line has been inserted, modified or deleted.
+    + [GitHub](https://github.com/jisaacks/GitGutter).
 - __LiveReload__:
     + __Description__: A web browser page reloading plugin for the Sublime Text 3 editor.
     + [GitHub](https://github.com/dz0ny/LiveReload-sublimetext2).
 - __MacTerminal__:
-    + __Description__:MacTerminal is a SublimeText plugin. It opens new Terminal tab (on current or new window if necessary). It's working with Terminal and iTerm.
+    + __Description__: MacTerminal is a SublimeText plugin. It opens new Terminal tab (on current or new window if necessary). It's working with Terminal and iTerm.
     +  [GitHub](https://github.com/afterdesign/MacTerminal).
 - __MarkdownEditing__:
     + __Description__: Markdown plugin for Sublime Text. Provides a decent Markdown color scheme (light and dark) with more robust syntax highlighting and useful Markdown editing features for Sublime Text. 3 flavors are supported: Standard Markdown, GitHub Flavored Markdown (GFM), MultiMarkdown.
