@@ -50,6 +50,9 @@ Or follow the instructions __[here](https://packagecontrol.io/installation)__.
 - __Plain Tasks__:
     + __Description__: An opinionated todo-list plugin for Sublime Text 2/3 editor.
     + [GitHub](https://github.com/aziz/PlainTasks).
+- __Prolog__:
+    + __Description__: This package provides syntax highlighting and automated build for the logic programming language Prolog.
+    + [GitHub](https://github.com/alnkpa/sublimeprolog).
 -   __Scope Hunter__:
     +   __Description__: This is a simple plugin get the scope under the cursor(s) in Sublime Text. This is useful for plugin development.
     +   [GitHub](https://github.com/facelessuser/ScopeHunter).
