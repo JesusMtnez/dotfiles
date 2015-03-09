@@ -1,3 +1,4 @@
 configs.sublime-project
 configs.sublime-workspace
 .directory
+.DS_store
