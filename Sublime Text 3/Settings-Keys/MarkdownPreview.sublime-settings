@@ -1,7 +1,3 @@
-/*
-    Markdown Preview User Settings
-    Author: Jesús Martínez-Barquero Herrada
-*/
 {
     /*
         Sets the default opener for HTML files
@@ -23,7 +19,7 @@
         markdown - Use the built-in python-markdown parser
         github - Use the github API to convert markdown, so you can use GitHub flavored Markdown, see http://github.github.com/github-flavored-markdown/
     */
-    "parser": "markdown",
+    "parser": "github",
 
     /*
         By default, Markdown Preview builds the HTML in the source directory.
@@ -91,7 +87,7 @@
         via the quick panel for which one to use.  If there is only one, it
         will automatically run that parser.
     */
-    "enabled_parsers": "github",
+    "enabled_parsers": ["github"],
 
     /*
         Default mode for the github Markdown parser : markdown (documents) or gfm (comments)
@@ -153,7 +149,7 @@
     /*
         Enable or not whether parsed files will be auto-reloaded on save
     */
-    "enable_autoreload": true,
+    "enable_autoreload": false,
 
     /*
         Sets the supported filetypes for auto-reload on save
