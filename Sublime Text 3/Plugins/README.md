@@ -1,6 +1,6 @@
-# List of plugins
+# SublimeText Plugins
 ## Pre-installation.
-Before begining, install __Package Control__ for *Sublime Text 2/3*. To do so, just open the Sublime Text console (`` ctrl + ` `` or `Show > View console`) and paste the following code:
+Before begining, install __Package Control__ for *Sublime Text 2/3*. To do so, just open the Sublime Text console (<code>ctrl + `</code>  or <code>Show > View console</code>) and paste the following code:
 
 __Sublime Text 2__
 ```python
@@ -12,7 +12,8 @@ __Sublime Text 3__
 import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)
 ```
 Or follow the instructions __[here](https://packagecontrol.io/installation)__.
-## Installation.
+
+## List of Plugins:
 ### Avaliable in Package Control.
 - __Auto Semi-Colon__:
     + __Description__: This plugin automatically moves a semi-colon to outside of the last bracket when pressed inside one of more pairs of brackets.
@@ -77,7 +78,63 @@ Or follow the instructions __[here](https://packagecontrol.io/installation)__.
     + __Description__: Sublime Text plugin that will open whatever is in your current view/tab. If the file current open is new and has not been saved a temporary file is created (in your default temp directory for your OS) with the extension of .htm and your browser will open it. However if the current open file is saved and has a name this plugin will open it in whatever you have set to handle its type.
     + [GitHub](https://github.com/adampresley/sublime-view-in-browser).
 
+## Installation.
+There are two posible ways to install this list of plugins:
+
+#### Manual installation (one-by-one):
+Open SublimeText _Command Palette_:
+ - `cmd + shift + p` in MacOSX.
+ - `ctrl + shift + p` in Linux and Windows.
+
+Choose:
+
+>Package Control: Install Package
+
+Then type and select the name of the plugin and press `ENTER` to install.
+
+#### Automatic installation:
+Copy my _Package Control.sublime-settings_ in:
+
+>"SublimeTextPath"/Package/User
+
+The next time you open Sublime Text it will install missing packages.
+
+__WARNING__: If you have already installed other plugins, don't overwrite the file. Just add my plugins list to you personal list.
+
+```json
+{
+    "in_process_packages":
+    [
+    ],
+    "installed_packages":
+    [
+        "Auto Semi-Colon",
+        "DocBlockr",
+        "Dotfiles Syntax Highlighting",
+        "Git",
+        "GitGutter",
+        "MacTerminal",
+        "Markdown Preview",
+        "MarkdownEditing",
+        "OmniMarkupPreviewer",
+        "Package Control",
+        "PackageResourceViewer",
+        "PlainTasks",
+        "Project Manager",
+        "Prolog",
+        "ScopeHunter",
+        "SideBarEnhancements",
+        "SublimeCodeIntel",
+        "Table Editor",
+        "Theme - Cobalt2",
+        "TrailingSpaces",
+        "View In Browser"
+    ]
+}
+```
+
+
 ---
 __Author:__ _Jesús Martínez-Barquero Herrada_
 
-__Last updated:__ _06/03/2015_
+__Last updated:__ _12/03/2015_
