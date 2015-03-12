@@ -1,0 +1,29 @@
+{
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Auto Semi-Colon",
+		"DocBlockr",
+		"Dotfiles Syntax Highlighting",
+		"Git",
+		"GitGutter",
+		"MacTerminal",
+		"Markdown Preview",
+		"MarkdownEditing",
+		"OmniMarkupPreviewer",
+		"Package Control",
+		"PackageResourceViewer",
+		"PlainTasks",
+		"Project Manager",
+		"Prolog",
+		"ScopeHunter",
+		"SideBarEnhancements",
+		"SublimeCodeIntel",
+		"Table Editor",
+		"Theme - Cobalt2",
+		"TrailingSpaces",
+		"View In Browser"
+	]
+}
