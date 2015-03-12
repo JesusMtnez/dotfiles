@@ -1,6 +1,6 @@
 ###########################################################################
 # Author: Jesús Martínez-Barquero Herrada
-# Last edited: 05/03/2015
+# Last edited: 12/03/2015
 ###########################################################################
 # Description: Replace Sublime Text 3 Settings and Keymaps with symbolic
 #       links to this project files. For MacOSX.
@@ -18,6 +18,8 @@ ln -sf "$(pwd)/Settings-Keys/C.sublime-settings" "${HOME}/Library/Application Su
 ln -sf "$(pwd)/Settings-Keys/C++.sublime-settings" "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/C++.sublime-settings";
 # MacOSX Keymap file
 ln -sf "$(pwd)/Settings-Keys/Default (OSX).sublime-keymap" "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap";
+# Package Control file
+ln -sf "$(pwd)//Settings-Keys/Package Control.sublime-settings.macosx" "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings"
 # Preferences file
 cp -fr "$(pwd)/Settings-Keys/Preferences.sublime-settings" "${HOME}/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings";
 # XML Preferences
