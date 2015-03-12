@@ -149,7 +149,7 @@
     /*
         Enable or not whether parsed files will be auto-reloaded on save
     */
-    "enable_autoreload": false,
+    "enable_autoreload": true,
 
     /*
         Sets the supported filetypes for auto-reload on save
