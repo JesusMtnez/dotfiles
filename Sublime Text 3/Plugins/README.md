@@ -18,6 +18,9 @@ Or follow the instructions __[here](https://packagecontrol.io/installation)__.
 - __Auto Semi-Colon__:
     + __Description__: This plugin automatically moves a semi-colon to outside of the last bracket when pressed inside one of more pairs of brackets.
     + [GitHub](https://github.com/vivait/SublimeAutoSemiColon).
+- __C Improved__:
+    + __Description__: This package provides better support of C/C++/Objective-C languages in Sublime Text. It is primarily focused on pure C overriding a standard syntax definition shipped with Sublime Text, though once installed it affects other C-family languages as well. Note that C Improved per se provides only the syntax definition among with some symbol indexing settings, nothing more. That is, it is not a self-sustained package, but only an addition (improvement) to the standard C++ package.
+    + [GitHub](https://github.com/abusalimov/SublimeCImproved).
 - __Djainero__:
     + __Description__: Django support for Sublime Text 2/3.
     + [GitHub](https://github.com/squ1b3r/Djaneiro).
@@ -115,6 +118,7 @@ __WARNING__: If you have already installed other plugins, don't overwrite the fi
     "installed_packages":
     [
         "Auto Semi-Colon",
+        "C Improved",
         "Djaneiro",
         "DocBlockr",
         "Dotfiles Syntax Highlighting",

@@ -1,6 +1,6 @@
 ###########################################################################
 # Author: Jesús Martínez-Barquero Herrada
-# Last edited: 05/03/2015
+# Last edited: 23/03/2015
 ###########################################################################
 # Description: Replace Sublime Text 3 Settings and Keymaps with symbolic
 #       links to this project files.
@@ -13,7 +13,7 @@
 #
 #!/bin/bash
 # C Preferences
-ln -sf "$(pwd)/Settings-Keys/C.sublime-settings" "${HOME}/.config/sublime-text-3/Packages/User/C.sublime-settings";
+ln -sf "$(pwd)/Settings-Keys/C Improved.sublime-settings" "${HOME}/.config/sublime-text-3/Packages/User/C Improved.sublime-settings";
 # C++ Preferences
 ln -sf "$(pwd)/Settings-Keys/C++.sublime-settings" "${HOME}/.config/sublime-text-3/Packages/User/C++.sublime-settings";
 # Linux Keymap file
@@ -36,8 +36,6 @@ ln -sf "$(pwd)/Settings-Keys/PlainTasks.sublime-settings" "${HOME}/.config/subli
 ###########################################################################
 # XML
 ln -sfh "$(pwd)/Snippets/XML_Snippets" "${HOME}/.config/sublime-text-3/Packages/User/XML_Snippets";
-# C
-ln -sfh "$(pwd)/Snippets/C_Snippets" "${HOME}/.config/sublime-text-3/Packages/User/C_Snippets";
 ###########################################################################
 # Color Schemes
 ###########################################################################
