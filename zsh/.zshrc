@@ -1,6 +1,6 @@
 ###########################################
 # Author: Jesús Martínez-Barquero Herrada #
-# Last updated: 09-03-2015                #
+# Last updated: 23-03-2015                #
 ###########################################
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -50,12 +50,12 @@ HIST_STAMPS="dd/mm/yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting)
+plugins=(zsh-syntax-highlighting django npm)
 #
 ######################
 # User configuration #
 ######################
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/sbin:/bin:/usr/games:/usr/local/games":$PATH
+export PATH="/usr/local:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/sbin:/bin:/usr/games:/usr/local/games":$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 #
 ########
