@@ -18,6 +18,9 @@ Or follow the instructions __[here](https://packagecontrol.io/installation)__.
 - __Auto Semi-Colon__:
     + __Description__: This plugin automatically moves a semi-colon to outside of the last bracket when pressed inside one of more pairs of brackets.
     + [GitHub](https://github.com/vivait/SublimeAutoSemiColon).
+- __Djainero__:
+    + __Description__: Django support for Sublime Text 2/3.
+    + [GitHub](https://github.com/squ1b3r/Djaneiro).
 - __DocBlockr__:
     + __Description__: DocBlockr is a package for Sublime Text 2 & 3 which makes writing documentation a breeze. DocBlockr supports JavaScript (including ES6), PHP, ActionScript, Haxe, CoffeeScript, TypeScript, Java, Groovy, Objective C, C, C++ and Rust.
     + [GitHub](https://github.com/spadgos/sublime-jsdocs).
@@ -51,6 +54,9 @@ Or follow the instructions __[here](https://packagecontrol.io/installation)__.
 - __Plain Tasks__:
     + __Description__: An opinionated todo-list plugin for Sublime Text 2/3 editor.
     + [GitHub](https://github.com/aziz/PlainTasks).
+- __Project Manager__:
+    + __Description__: Dont't have any idea what `*.sublime-project` and `*.sublime-workspace are doing? Forget where the project files are? Project Manager will help organizing the project files for you. It is inspired by Atom's Project Manager.
+    + [GitHub](https://github.com/randy3k/Project-Manager).
 - __Prolog__:
     + __Description__: This package provides syntax highlighting and automated build for the logic programming language Prolog.
     + [GitHub](https://github.com/alnkpa/sublimeprolog).
@@ -109,6 +115,7 @@ __WARNING__: If you have already installed other plugins, don't overwrite the fi
     "installed_packages":
     [
         "Auto Semi-Colon",
+        "Djaneiro",
         "DocBlockr",
         "Dotfiles Syntax Highlighting",
         "Git",
@@ -137,4 +144,4 @@ __WARNING__: If you have already installed other plugins, don't overwrite the fi
 ---
 __Author:__ _Jesús Martínez-Barquero Herrada_
 
-__Last updated:__ _12/03/2015_
+__Last updated:__ _23/03/2015_
