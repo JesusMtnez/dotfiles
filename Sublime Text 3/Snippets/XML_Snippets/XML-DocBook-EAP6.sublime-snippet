@@ -1,0 +1,7 @@
+<snippet>
+	<content>
+<![CDATA[JBoss Enterprise Application Platform 6]]>
+	</content>
+	<tabTrigger>eap6</tabTrigger>
+	<scope>text.xml</scope>
+</snippet>

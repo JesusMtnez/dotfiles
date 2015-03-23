@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+<warning>
+	<para>
+		${1:text}
+	</para>
+</warning> $0	
+]]></content>
+	<scope>text.xml</scope>
+</snippet>

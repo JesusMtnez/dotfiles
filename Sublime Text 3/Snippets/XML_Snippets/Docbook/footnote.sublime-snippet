@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+<footnote>
+	<para>${1:para}</para>
+</footnote>	$0
+]]></content>
+	<tabTrigger>footnote</tabTrigger>
+	<scope>text.xml</scope>
+</snippet>

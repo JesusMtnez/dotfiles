@@ -1,0 +1,56 @@
+<snippet>
+	<content>
+<![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<section>
+	<title/>
+	<!-- INJECT TITLE HERE -->
+	<!-- Uncomment prerequisites and result if required. -->
+	<!-- Replace all text marked with ** and leave other text -->
+	<!--
+     	<itemizedlist>
+        	<title>Prerequisites</title>
+        	** inject list items here **
+     	</itemizedlist>
+	-->
+	<procedure>
+		<title>Task</title>
+		<!-- "Task" title only required to visually separate task from prerequisites -->
+		<step>
+			<title>** step title **</title>
+			<para>
+				** step instructions **
+			</para>
+		</step>
+		<step>
+			<title>** step title **</title>
+			<para>
+				** explain sub steps **
+			</para>
+			<!-- or use <stepalternatives> for one step or the other -->
+			<substeps>
+				<step>
+					<para>
+						** step instructions **
+					</para>
+				</step>
+				<step>
+					<para>
+						** step instructions **
+					</para>
+				</step>
+			</substeps>
+		</step>
+	</procedure>
+	<!--
+	<formalpara>
+        	<title>Result</title>
+        	<para>** describe resulting state **</para>
+	</formalpara>
+	-->
+
+<!-- Generated Topic Details -->
+</section>]]>
+	</content>
+	<tabTrigger>skynettask</tabTrigger>
+	<scope>text.xml</scope>
+</snippet>

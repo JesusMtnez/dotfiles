@@ -1,0 +1,15 @@
+<!-- varlistentry -->
+<snippet>
+	<content><![CDATA[
+<varlistentry>
+	<term>${1:term}</term>
+	<listitem>
+		<para>
+			${2:text}
+		</para>
+	</listitem>
+</varlistentry> $0
+]]></content>
+	<tabTrigger>vle</tabTrigger>
+	<scope>text.xml</scope>
+</snippet>

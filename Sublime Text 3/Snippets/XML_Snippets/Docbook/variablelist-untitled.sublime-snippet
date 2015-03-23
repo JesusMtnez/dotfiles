@@ -1,0 +1,33 @@
+<!-- variablelist -->
+<snippet>
+	<content><![CDATA[
+<variablelist>
+	<varlistentry>
+		<term>${1:term}</term>
+		<listitem>
+			<para>
+				${2:text}
+			</para>
+		</listitem>
+	</varlistentry>
+		<varlistentry>
+		<term>${3:term}</term>
+		<listitem>
+			<para>
+				${4:text}
+			</para>
+		</listitem>
+	</varlistentry>
+		<varlistentry>
+		<term>${5:term}</term>
+		<listitem>
+			<para>
+				${6:text}
+			</para>
+		</listitem>
+	</varlistentry> $0
+</variablelist>
+]]></content>
+	<tabTrigger>vl</tabTrigger>
+	<scope>text.xml</scope>
+</snippet>

@@ -1,0 +1,9 @@
+<snippet>
+	<content>
+<![CDATA[
+<guibutton>${1:}</guibutton>
+	]]>
+	</content>
+	<tabTrigger>guibutton</tabTrigger>
+	<scope>text.xml</scope>
+</snippet>

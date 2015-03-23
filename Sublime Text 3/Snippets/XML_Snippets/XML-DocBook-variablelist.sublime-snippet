@@ -1,0 +1,21 @@
+<snippet>
+	<content>
+<![CDATA[<variablelist>
+	<title>${1:Title}</title>
+	<varlistentry>
+		<term>
+			<filename>
+				${2:Term}
+			</filename>
+		</term>
+		<listitem>
+			<para>
+				${3:ParaText}
+			</para>
+		</listitem>
+	</varlistentry>
+</variablelist>]]>
+	</content>
+	<tabTrigger>variablelist</tabTrigger>
+	<scope>text.xml</scope>
+</snippet>

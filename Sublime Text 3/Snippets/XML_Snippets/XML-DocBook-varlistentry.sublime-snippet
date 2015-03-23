@@ -1,0 +1,18 @@
+<snippet>
+	<content>
+<![CDATA[<varlistentry>
+	<term>
+		<filename>
+			${1:Term}
+		</filename>
+	</term>
+	<listitem>
+		<para>
+			${1:ParaText}
+		</para>
+	</listitem>
+</varlistentry>]]>
+	</content>
+	<tabTrigger>varlistentry</tabTrigger>
+	<scope>text.xml</scope>
+</snippet>

@@ -1,0 +1,11 @@
+<!-- orderedlist -->
+<snippet>
+	<content><![CDATA[
+<orderedlist>
+	<title>${1:optional-title}</title>
+	<listitem><para>${2:text}</para></listitem> $0 
+</orderedlist>
+]]></content>
+	<tabTrigger>ol</tabTrigger>
+	<scope>text.xml</scope>
+</snippet>

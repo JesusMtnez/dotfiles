@@ -1,0 +1,9 @@
+<!-- listitem -->
+<snippet>
+	<content><![CDATA[
+<listitem><para>${1:text}</para></listitem>
+$0
+]]></content>
+	<tabTrigger>li</tabTrigger>
+	<scope>text.xml</scope>
+</snippet>

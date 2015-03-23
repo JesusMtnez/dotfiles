@@ -1,0 +1,11 @@
+<snippet>
+	<content>
+<![CDATA[<row>
+	<entry>
+		${1:}
+	</entry>
+</row>]]>
+	</content>
+	<tabTrigger>row</tabTrigger>
+	<scope>text.xml</scope>
+</snippet>

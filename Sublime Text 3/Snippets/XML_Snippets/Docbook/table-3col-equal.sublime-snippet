@@ -1,0 +1,30 @@
+<snippet>
+	<content><![CDATA[
+<table>
+	<title>${1:title}</title>
+	<tgroup cols="3">
+	<colspec colnum="1" colwidth="*" />
+	<colspec colnum="2" colwidth="*" />
+	<colspec colnum="3" colwidth="*" />
+		<thead>
+			<row>
+				<entry><para>${3:header}</para></entry>
+				<entry><para>${4:header}</para></entry>
+				<entry><para>${5:header}</para></entry>
+			</row>
+		</thead>
+		<tbody>
+			<row>
+				<entry><para>${5:data}</para></entry>
+				<entry><para>${6:data}</para></entry>
+				<entry><para>${7:data}</para></entry>
+
+			</row>
+			${0:row}
+		</tbody>
+	</tgroup>
+</table>		
+]]></content>
+	<tabTrigger>table</tabTrigger>
+	<scope>text.xml</scope>
+</snippet>

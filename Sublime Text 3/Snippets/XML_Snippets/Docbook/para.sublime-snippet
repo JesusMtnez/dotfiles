@@ -1,0 +1,11 @@
+<!-- para -->
+<snippet>
+	<content><![CDATA[
+<para>
+	${1:text}
+</para>
+${0:para}
+]]></content>
+	<tabTrigger>para</tabTrigger>
+	<scope>text.xml</scope>
+</snippet>

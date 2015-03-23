@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+<screen>${1:screen_output}</screen> $0		
+]]></content>
+	<tabTrigger>screen</tabTrigger>
+	<scope>text.xml</scope>
+</snippet>

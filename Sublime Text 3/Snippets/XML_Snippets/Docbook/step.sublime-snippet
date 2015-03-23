@@ -1,0 +1,14 @@
+<!-- step -->
+<snippet>
+	<content><![CDATA[
+<step>
+	<title>${1:optional-title}</title>
+	<para>
+		${2:text}
+	</para>
+</step>
+${0:step}
+]]></content>
+	<tabTrigger>step</tabTrigger>
+	<scope>text.xml</scope>
+</snippet>

@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+<code>${1:inline_code}</code> $0		
+]]></content>
+	<tabTrigger>code</tabTrigger>
+	<scope>text.xml</scope>
+</snippet>

@@ -1,0 +1,16 @@
+<!-- procedure -->
+<snippet>
+	<content><![CDATA[
+<procedure>
+	<step>
+		<title>${1:optional-title}</title>
+		<para>
+			${2:text}
+		</para>
+	</step>
+	step$0
+</procedure>
+]]></content>
+	<tabTrigger>proc</tabTrigger>
+	<scope>text.xml</scope>
+</snippet>

@@ -1,0 +1,13 @@
+<snippet>
+	<content>
+<![CDATA[<itemizedlist>
+    <title>Prerequisites</title>
+        <!-- <listitem>
+            <para/>
+        </listitem> -->
+    <!-- InjectListItems:${1:}  -->
+</itemizedlist>]]>
+	</content>
+	<tabTrigger>prereq</tabTrigger>
+	<scope>text.xml</scope>
+</snippet>

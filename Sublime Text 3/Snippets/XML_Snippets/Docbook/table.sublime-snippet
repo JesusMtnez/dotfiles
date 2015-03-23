@@ -1,0 +1,26 @@
+<!-- table -->
+<snippet>
+	<content><![CDATA[
+<table>
+	<title>${1:title}</title>
+	<tgroup cols="${2:cols}">
+		<colspec colwidth=* />
+		<thead>
+			<row>
+				<cell>${3:heading}</cell>
+				<cell>${4:heading}</cell>
+			</row>
+		</thead>
+		<tbody>
+			<row>
+				<cell>${6:heading}</cell>
+				<cell>${7:heading}</cell>
+			</row>
+			${0:row}
+		</tbody>
+	</tgroup>
+</table>
+]]></content>
+	<tabTrigger>table</tabTrigger>
+	<scope>text.xml</scope>
+</snippet>

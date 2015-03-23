@@ -1,0 +1,20 @@
+<snippet>
+	<content><![CDATA[
+<figure>
+	<title>${1:title}</title>
+	<image>
+		<mediaobject>
+			<imageobject>
+				<imagedata fileref="${2:images/}" align="center" width="${3:666px}" />
+			</imageobject>
+			<textobject>
+				<phrase>${4:text-description}
+			</textobject>
+          	<caption><para>${5:caption}</para></caption>
+		</mediaobject>	  
+	</image>	
+</figure> $0
+]]></content>
+	<tabTrigger>figure</tabTrigger>
+	<scope>text.xml</scope>
+</snippet>

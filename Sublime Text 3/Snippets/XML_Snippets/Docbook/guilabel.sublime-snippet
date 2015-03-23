@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+<guilabel>${1:label}</guilabel>$0		
+]]></content>
+	<tabTrigger>guilabel</tabTrigger>
+	<scope>text.xml</scope>
+</snippet>

@@ -1,0 +1,13 @@
+<!-- section -->
+<snippet>
+	<content><![CDATA[
+<section>
+	<title>${1:title}</title>
+	<para>
+		${2:text}
+	</para> $0
+</section>
+]]></content>
+	<tabTrigger>section</tabTrigger>
+	<scope>text.xml</scope>
+</snippet>

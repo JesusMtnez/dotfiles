@@ -1,0 +1,12 @@
+<!-- itemizedlist -->
+<snippet>
+	<content><![CDATA[
+<itemizedlist>
+	<listitem><para>${1:item}</para></listitem>
+	<listitem><para>${2:item}</para></listitem>
+	<listitem><para>${3:item}</para></listitem> $0 
+</itemizedlist>
+]]></content>
+	<tabTrigger>il</tabTrigger>
+	<scope>text.xml</scope>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+<row>
+	<cell>${1:contents}</cell>
+	${0:cell}
+</row>
+]]></content>
+	<tabTrigger>row</tabTrigger>
+	<scope>text.xml</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="${1:path_to_file}"/> $0
+		
+]]></content>
+	<tabTrigger>xi</tabTrigger>
+	<scope>text.xml</scope>
+</snippet>

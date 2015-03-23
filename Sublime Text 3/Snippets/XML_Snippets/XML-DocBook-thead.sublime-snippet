@@ -1,0 +1,9 @@
+<snippet>
+	<content>
+<![CDATA[<thead>
+	${1:}
+</thead>]]>
+	</content>
+	<tabTrigger>thead</tabTrigger>
+	<scope>text.xml</scope>
+</snippet>

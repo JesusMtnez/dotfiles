@@ -1,0 +1,23 @@
+<snippet>
+	<content>
+<![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<section>
+	<title/>
+	<!-- Topic type: Concept -->
+	<!-- The 4 Characteristics of a Concept: -->
+	<!-- 1. It has single information role: "illuminate". -->
+	<!-- 2. It treats one, and only one subject. -->
+	<!-- 3. It builds a bridge from the known to the unknown. -->
+	<!-- 4. It reduces uncertainty. -->
+	<!-- INJECT TITLE HERE -->
+
+	<para>
+		The concept body goes here. 
+	</para>
+
+<!-- Generated Topic Details -->
+</section>]]>
+	</content>
+	<tabTrigger>skynetconcept</tabTrigger>
+	<scope>text.xml</scope>
+</snippet>

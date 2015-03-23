@@ -1,0 +1,14 @@
+<snippet>
+	<content>
+<![CDATA[<menuchoice>
+	<guimenu>
+		${1:GuiMenu}
+	</guimenu>
+	<guimenuitem>
+		${1:GuiMenuItem}
+	</guimenuitem>
+</menuchoice>]]>
+	</content>
+	<tabTrigger>menuchoice</tabTrigger>
+	<scope>text.xml</scope>
+</snippet>

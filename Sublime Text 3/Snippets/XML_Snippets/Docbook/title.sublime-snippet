@@ -1,0 +1,8 @@
+<!-- title -->
+<snippet>
+	<content><![CDATA[
+<title>${1:text}</title> $0
+]]></content>
+	<tabTrigger>title</tabTrigger>
+	<scope>text.xml</scope>
+</snippet>

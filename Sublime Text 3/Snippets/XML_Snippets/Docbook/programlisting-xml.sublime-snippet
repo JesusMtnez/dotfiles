@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+<programlisting language="${1:XML}" role="${2:XML}"><![CDATA[
+$4
+]]${5:>}
+</programlisting> $0		
+]]></content>
+	<tabTrigger>programlisting</tabTrigger>
+	<scope>text.xml</scope>
+</snippet>
