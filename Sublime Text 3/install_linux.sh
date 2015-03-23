@@ -35,7 +35,7 @@ ln -sf "$(pwd)/Settings-Keys/PlainTasks.sublime-settings" "${HOME}/.config/subli
 # Snippets
 ###########################################################################
 # XML
-ln -sfh "$(pwd)/Snippets/XML_Snippets" "${HOME}/.config/sublime-text-3/Packages/User/XML_Snippets";
+ln -sf "$(pwd)/Snippets/XML_Snippets" "${HOME}/.config/sublime-text-3/Packages/User/XML_Snippets";
 ###########################################################################
 # Color Schemes
 ###########################################################################
