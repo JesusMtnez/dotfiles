@@ -45,9 +45,13 @@ plugins=(git zsh-syntax-highlighting newPlugin)
 ```
 ##Plugins
 Here you got my personal list of plugins.
-- **Git**: Include git aliases and functions. Include in _oh-my-zsh_ by default.
-- **zsh-syntax-highlighting**: Add highlighting to shell commands.
+
+- __zsh-syntax-highlighting__: Add highlighting to shell commands.
     + [Github](https://github.com/zsh-users/zsh-syntax-highlighting).
+- __django__: Add django auto completion.
+    + [GitHub](https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/django).
+- __npm__: Add npm auto completion.
+    + [GitHub](https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/npm).
 
 ---
 **Author:** *Jesús Martínez-Barquero Herrada*
