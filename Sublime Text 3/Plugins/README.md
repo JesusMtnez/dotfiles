@@ -30,6 +30,10 @@ Or follow the instructions __[here](https://packagecontrol.io/installation)__.
 - __Dotfiles Syntex Highlighting__:
     + __Description__: Want ShellScript (Bash) syntax highlighting for your dotfiles? You're damn right you do!
     + [GitHub](https://github.com/mattbanks/dotfiles-syntax-highlighting-st2).
+- __Emmet__:
+    + __Description__: Official Emmet plugin (previously called Zen Coding) for Sublime Text.
+    + [GitHub](https://github.com/sergeche/emmet-sublime).
+    + [Homepage](http://emmet.io/).
 - __Git__:
     + __Description__: Git integration: it's pretty handy. Who knew, right?
     + [GitHub](https://github.com/kemayo/sublime-text-git).
