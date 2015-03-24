@@ -5,6 +5,7 @@
 	"installed_packages":
 	[
 		"Auto Semi-Colon",
+		"BracketHighlighter",
 		"C Improved",
 		"Djaneiro",
 		"DocBlockr",

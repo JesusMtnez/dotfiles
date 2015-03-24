@@ -18,6 +18,9 @@ Or follow the instructions __[here](https://packagecontrol.io/installation)__.
 - __Auto Semi-Colon__:
     + __Description__: This plugin automatically moves a semi-colon to outside of the last bracket when pressed inside one of more pairs of brackets.
     + [GitHub](https://github.com/vivait/SublimeAutoSemiColon).
+- __Bracket Highlighter__:
+    + __Description__: This is a fork of pyparadigm's SublimeBrackets and SublimeTagmatcher (both are no longer available). I forked this to fix some issues I had and to add some features I wanted. I also wanted to improve the efficiency of the matching. This cuts down on the parallel searching that is now streamlined in one search. Since then, I have rewritten the entire code base to bring more flexibility, speed, and features.
+    + [GitHub](https://github.com/facelessuser/BracketHighlighter).
 - __C Improved__:
     + __Description__: This package provides better support of C/C++/Objective-C languages in Sublime Text. It is primarily focused on pure C overriding a standard syntax definition shipped with Sublime Text, though once installed it affects other C-family languages as well. Note that C Improved per se provides only the syntax definition among with some symbol indexing settings, nothing more. That is, it is not a self-sustained package, but only an addition (improvement) to the standard C++ package.
     + [GitHub](https://github.com/abusalimov/SublimeCImproved).
