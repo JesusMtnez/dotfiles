@@ -1,3 +1,15 @@
-[submodule ".emacs.d/emacs-color-theme-solarized"]
+[submodule "Emacs Solarized Theme"]
 	path = .emacs.d/emacs-color-theme-solarized
 	url = git@github.com:sellout/emacs-color-theme-solarized.git
+[submodule "ac-js2 emacs package"]
+	path = .emacs.d/elpa/ac-js2
+	url = git@github.com:ScottyB/ac-js2.git
+[submodule "livedown emacs package"]
+	path = .emacs.d/elpa/emacs-livedown
+	url = git@github.com:shime/emacs-livedown.git
+[submodule "linum-off emacs package"]
+	path = .emacs.d/elpa/linum-off
+	url = git@github.com:emacsmirror/linum-off.git
+[submodule "move-lines emacs package"]
+	path = .emacs.d/elpa/move-lines
+	url = git@github.com:targzeta/move-lines.git
