@@ -1,10 +1,10 @@
 ###########################################
 # Author: Jesús Martínez-Barquero Herrada #
-# Last updated: 23-03-2015                #
+# Last updated: 12-05-2015                #
 ###########################################
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
-#
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -56,6 +56,7 @@ plugins=(zsh-syntax-highlighting django npm)
 # User configuration #
 ######################
 export PATH="/usr/local:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/sbin:/bin:/usr/games:/usr/local/games":$PATH
+fpath=(/usr/local/share/zsh-completions $fpath)
 # export MANPATH="/usr/local/man:$MANPATH"
 #
 ########
@@ -65,7 +66,7 @@ export PATH="/usr/local:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/sbin:
 [[ -z "$TMUX" ]] && exec tmux
 #
 source $ZSH/oh-my-zsh.sh
-#
+
 #########
 # ALIAS #
 #########
@@ -74,6 +75,7 @@ source $ZSH/oh-my-zsh.sh
 # Some alias settings #
 # ------------------- #
 alias zshconfig='emacs -nw ~/.zshrc'
+alias e='emacs -nw'
 # --- #
 # Git #
 # --- #
