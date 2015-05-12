@@ -82,7 +82,8 @@
  '(ciao-indent-width 2)
  '(livedown:autostart t)
  '(livedown:open t)
- '(livedown:port 1337))
+ '(livedown:port 1337)
+ '(sh-indentation 2))
     ; port for livedown server
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -159,3 +160,9 @@
 ;; (setq sml/theme 'dark)
 ;; (setq sml/no-confirm-load-theme t)
 ;; (sml/setup)
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
