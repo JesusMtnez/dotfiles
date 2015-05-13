@@ -1,7 +1,8 @@
 ;; MELPA and Mrmalade repos for packages.
 (require 'package)
 (add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/") t)
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
 
 ;; ido-vertical-mode package
@@ -11,12 +12,6 @@
 
 ;; common lisp package
 (require 'cl)
-
-;; multi-term package
-;; (add-to-list 'load-path "~/.emacs.d/elpa/multi-term")
-;; (require 'multi-term)
-;; (setq multi-term-program "/usr/local/bin/zsh")
-;; (setq multi-termi-dir "~/")
 
 ;; web-mode package
 (require 'web-mode)
@@ -70,6 +65,15 @@
 (require 'undo-tree)
 (global-undo-tree-mode t)
 
+;; js2-mode package
+(require 'js2-mode)
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+
+;; autocomplete for js2-mode package
+(require 'ac-js2)
+(setq ac-js2-evaluate-calls t)
+(add-hook 'js2-mode-hook 'ac-js2-mode)
+
 ;; livedown package
 (add-to-list 'load-path "~/.emacs.d/elpa/emacs-livedown")
 (require 'livedown)
@@ -84,7 +88,6 @@
  '(livedown:open t)
  '(livedown:port 1337)
  '(sh-indentation 2))
-    ; port for livedown server
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; My personal configurations ;;
@@ -111,7 +114,7 @@
 (global-visual-line-mode t)
 (setq make-backup-file nil)
 (setq-default indent-tabs-mode nil)
-(setq-default tab-width 2)
+(setq-default tab-width 4)
 (setq-default tab-always-indent nil)
 ;; Font configuration
 (set-face-attribute 'default nil :font "Monaco")
@@ -148,21 +151,8 @@
     (load-file "/usr/local/lib/ciao/ciao-1.14/ciao-mode-init.el"))
 
 ;; CHECK LATER
-;; (require 'js2-mode)
-;; (require 'skewer-mode)
-;; (add-to-list 'load-path "~/.emacs.d/elpa/ac-js2")
-;; (require 'ac-js2)
-;; (setq ac-js2-evaluate-calls t)
-;; (add-hook 'js-mode-hook 'js2-minor-mode)
-;; (add-hook 'js2-mode-hook 'ac-js2-mode)
 ;; (require 'smart-mode-line)
 ;; (setq sml/no-confirm-load-theme t)
 ;; (setq sml/theme 'dark)
 ;; (setq sml/no-confirm-load-theme t)
 ;; (sml/setup)
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
