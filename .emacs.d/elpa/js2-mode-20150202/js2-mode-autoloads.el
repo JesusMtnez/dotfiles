@@ -3,9 +3,9 @@
 ;;; Code:
 (add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil "js2-imenu-extras" "js2-imenu-extras.el" (21823
-;;;;;;  32676 0 0))
-;;; Generated autoloads from js2-imenu-extras.el
+;;;### (autoloads nil "js2-imenu-extras" "../../../../.emacs.d/elpa/js2-mode-20150202/js2-imenu-extras.el"
+;;;;;;  "a7580f86032a9ca1d6f6e543cf770ba7")
+;;; Generated autoloads from ../../../../.emacs.d/elpa/js2-mode-20150202/js2-imenu-extras.el
 
 (autoload 'js2-imenu-extras-setup "js2-imenu-extras" "\
 
@@ -19,8 +19,9 @@ Toggle Imenu support for frameworks and structural patterns.
 
 ;;;***
 
-;;;### (autoloads nil "js2-mode" "js2-mode.el" (21823 32676 0 0))
-;;; Generated autoloads from js2-mode.el
+;;;### (autoloads nil "js2-mode" "../../../../.emacs.d/elpa/js2-mode-20150202/js2-mode.el"
+;;;;;;  "83e133efb2cbba24d9a4a9dda4dbc549")
+;;; Generated autoloads from ../../../../.emacs.d/elpa/js2-mode-20150202/js2-mode.el
 
 (autoload 'js2-minor-mode "js2-mode" "\
 Minor mode for running js2 as a background linter.
@@ -37,8 +38,11 @@ Major mode for editing JavaScript code.
 
 ;;;***
 
-;;;### (autoloads nil nil ("js2-mode-pkg.el") (21823 32676 881734
-;;;;;;  0))
+;;;### (autoloads nil nil ("../../../../.emacs.d/elpa/js2-mode-20150202/js2-imenu-extras.el"
+;;;;;;  "../../../../.emacs.d/elpa/js2-mode-20150202/js2-mode-autoloads.el"
+;;;;;;  "../../../../.emacs.d/elpa/js2-mode-20150202/js2-mode-pkg.el"
+;;;;;;  "../../../../.emacs.d/elpa/js2-mode-20150202/js2-mode.el")
+;;;;;;  (21843 7115 225616 0))
 
 ;;;***
 
