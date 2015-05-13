@@ -99,10 +99,10 @@
 (set-terminal-parameter nil 'background-mode 'dark)
 (enable-theme 'solarized)
 
-(menu-bar-mode -1)
-(tool-bar-mode -1)
+(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+(if (fboundp 'menu-bar-mode)   (menu-bar-mode -1))
+(if (fboundp 'tool-bar-mode)   (tool-bar-mode -1))
 (fset 'yes-or-no-p 'y-or-n-p)
-(scroll-bar-mode -1)
 (show-paren-mode t)
 (setq show-paren-style 'expression)
 (column-number-mode t)
