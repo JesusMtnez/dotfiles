@@ -51,11 +51,10 @@
 
 ;; markdown package
 (require 'markdown-mode)
-(autoload 'gfm-mode "markdown-mode.el" "Major mode for editing Markdown files" t)
-(eval-after-load 'gfm-mode '(define-key gfm-mode (kbd "C-RET") 'markdown-insert-list-item))
-(add-to-list 'auto-mode-alist '("\\.md\\'" . gfm-mode))
-(add-to-list 'auto-mode-alist '("\\.mdown\\'" . gfm-mode))
-(add-to-list 'auto-mode-alist '("\\.markdown\\'" . gfm-mode))
+(autoload 'markdown-mode "markdown-mode.el" "Major mode for editing Markdown files" t)
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.mdown\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 
 ;; linum-off package
 (add-to-list 'load-path "~/.emacs.d/elpa/linum-off")
@@ -77,17 +76,6 @@
 ;; livedown package
 (add-to-list 'load-path "~/.emacs.d/elpa/emacs-livedown")
 (require 'livedown)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(ciao-first-indent-width 2)
- '(ciao-indent-width 2)
- '(livedown:autostart t)
- '(livedown:open t)
- '(livedown:port 1337)
- '(sh-indentation 2))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; My personal configurations ;;
@@ -161,3 +149,23 @@
 ;; (setq sml/theme 'dark)
 ;; (setq sml/no-confirm-load-theme t)
 ;; (sml/setup)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(ciao-first-indent-width 2)
+ '(ciao-indent-width 2)
+ '(livedown:autostart t)
+ '(livedown:open t)
+ '(livedown:port 1337)
+ '(sh-indentation 2))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(neo-dir-link-face ((t (:foreground "DeepSkyBlue"))))
+ '(neo-expand-btn-face ((t (:foreground "SkyBlue"))))
+ '(neo-file-link-face ((t (:foreground "White"))))
+ '(neo-header-face ((t (:foreground "lightBlue" :weight bold)))))
