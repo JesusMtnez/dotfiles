@@ -124,10 +124,12 @@
 (set-default-coding-systems 'utf-8)
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
-;; (setq mac-option-key-is-meta nil)
-;; (setq mac-command-key-is-meta t)
-;; (setq mac-command-modifier 'meta)
-;; (setq mac-option-modifier nil)
+;; Remap left-option-key to meta-key
+(if (eq system-type 'darwin)
+    ;; (setq ns-command-modifier 'meta)
+    (setq ns-option-modifier 'meta)
+)
+(setq ns-right-option-modifier 'none)
 ;; (setq inhibit-startup-screen t)
 
 ;; Comment line/region function. Bind to C-c C-c
@@ -136,9 +138,12 @@
   (interactive)
   (let (beg end)
     (if (region-active-p)
-        (setq beg (region-beginning) end (region-end))
-      (setq beg (line-beginning-position) end (line-end-position)))
-            (comment-or-uncomment-region beg end)))
+      (setq beg (region-beginning) end (region-end))
+      (setq beg (line-beginning-position) end (line-end-position))
+    )
+    (comment-or-uncomment-region beg end)
+  )
+)
 
 ;; Key bindings
 (global-set-key (kbd "C-c C-c") 'comment-or-uncomment-region-or-line)
