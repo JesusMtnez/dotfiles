@@ -69,7 +69,9 @@ export CPLUS_INCLUDE_PATH="/usr/local/include"
 [[ -z "$TMUX" ]] && exec tmux
 #
 source $ZSH/oh-my-zsh.sh
-
+if [ -f ~/.localrc ]; then
+  source ~/.localrc
+fi
 #########
 # ALIAS #
 #########

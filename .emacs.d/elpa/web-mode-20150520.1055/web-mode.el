@@ -4,7 +4,7 @@
 ;; Copyright 2011-2015 François-Xavier Bois
 
 ;; Version: 11.1.10
-;; Package-Version: 20150518.1308
+;; Package-Version: 20150520.1055
 ;; Author: François-Xavier Bois <fxbois AT Google Mail Service>
 ;; Maintainer: François-Xavier Bois
 ;; Created: July 2011
@@ -249,7 +249,7 @@ See web-mode-part-face."
   :type 'list
   :group 'web-mode)
 
-(defcustom web-mode-tests-directory "~/Repos/web-mode/tests"
+(defcustom web-mode-tests-directory (concat default-directory "tests/")
   "Directory containing all the unit tests."
   :type 'list
   :group 'web-mode)

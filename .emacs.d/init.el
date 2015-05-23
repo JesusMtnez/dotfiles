@@ -159,6 +159,7 @@
  '(livedown:autostart t)
  '(livedown:open t)
  '(livedown:port 1337)
+ '(markdown-indent-on-enter nil)
  '(sh-indentation 2))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
