@@ -3,8 +3,8 @@
 
 ;; Copyright 2011-2015 François-Xavier Bois
 
-;; Version: 11.1.10
-;; Package-Version: 20150520.1055
+;; Version: 11.1.12
+;; Package-Version: 20150526.741
 ;; Author: François-Xavier Bois <fxbois AT Google Mail Service>
 ;; Maintainer: François-Xavier Bois
 ;; Created: July 2011
@@ -14,9 +14,9 @@
 ;; License: GNU General Public License >= 2
 ;; Distribution: This file is not part of Emacs
 
-;; =============================================================================
-;; WEB-MODE is sponsored by Kernix: Great Digital Agency (Web & Mobile) in Paris
-;; =============================================================================
+;;==============================================================================
+;; WEB-MODE is sponsored by Kernix : Great Digital Agency (Web&Mobile) in Paris
+;;==============================================================================
 
 ;; Code goes here
 
@@ -27,7 +27,7 @@
 
 ;;---- CONSTS ------------------------------------------------------------------
 
-(defconst web-mode-version "11.1.10"
+(defconst web-mode-version "11.1.12"
   "Web Mode version.")
 
 ;;---- GROUPS ------------------------------------------------------------------
@@ -7664,68 +7664,85 @@ Pos should be in a tag."
       ) ;save-excursion
     (web-mode-go beg)))
 
-(defun web-mode-element-vanish ()
+(defun web-mode-element-vanish (&optional arg)
   "Vanish the current html element. The content of the element is kept."
-  (interactive)
+  (interactive "p")
   (let (type (pos (point)) start-b start-e end-b end-e)
-    (setq type (get-text-property pos 'tag-type))
-    (when type
-      (cond
-       ((member type '(void))
-        (web-mode-element-kill)
-        (set-mark (point))
-        (web-mode-tag-match)
-        (web-mode-tag-end)
-        (exchange-point-and-mark))
-       ((member type '(start))
-        (setq start-b (web-mode-tag-beginning-position)
-              start-e (web-mode-tag-end-position))
-        (when (web-mode-tag-match)
-          (setq end-b (web-mode-tag-beginning-position)
-                end-e (web-mode-tag-end-position)))
-        )
-       (t
-        (setq end-b (web-mode-tag-beginning-position)
-              end-e (web-mode-tag-end-position))
-        (when (web-mode-tag-match)
+    (while (>= arg 1)
+      (setq type (get-text-property pos 'tag-type))
+      (when type
+        (cond
+         ((member type '(void))
+          (web-mode-element-kill)
+          (set-mark (point))
+          (web-mode-tag-match)
+          (web-mode-tag-end)
+          (exchange-point-and-mark))
+         ((member type '(start))
           (setq start-b (web-mode-tag-beginning-position)
-                start-e (web-mode-tag-end-position)))
-        ) ;t
-       ) ;cond
-      (when (and start-b end-b)
-        (goto-char end-b)
-        (delete-region end-b (1+ end-e))
-        (delete-blank-lines)
-        (goto-char start-b)
-        (delete-region start-b (1+ start-e))
-        (delete-blank-lines)
-        (web-mode-buffer-indent)
-        )
-;;        (message "start %S %S - end %S %S" start-b start-e end-b end-e))
-      ) ;when
-    ))
+                start-e (web-mode-tag-end-position))
+          (when (web-mode-tag-match)
+            (setq end-b (web-mode-tag-beginning-position)
+                  end-e (web-mode-tag-end-position)))
+          )
+         (t
+          (setq end-b (web-mode-tag-beginning-position)
+                end-e (web-mode-tag-end-position))
+          (when (web-mode-tag-match)
+            (setq start-b (web-mode-tag-beginning-position)
+                  start-e (web-mode-tag-end-position)))
+          ) ;t
+         ) ;cond
+        (when (and start-b end-b)
+          (goto-char end-b)
+          (delete-region end-b (1+ end-e))
+          (delete-blank-lines)
+          (goto-char start-b)
+          (delete-region start-b (1+ start-e))
+          (delete-blank-lines)
+          (web-mode-buffer-indent)
+          )
+        ;;        (message "start %S %S - end %S %S" start-b start-e end-b end-e))
+        ) ;when
+      (skip-chars-forward "[:space:]")
+      (setq arg (1- arg))
+      ) ;while
+    ) ;let
+  )
 
-(defun web-mode-element-kill ()
+(defun web-mode-element-kill (&optional arg)
   "Kill the current html element."
-  (interactive)
-  (web-mode-element-select)
-  (when mark-active
-    (kill-region (region-beginning) (region-end))))
-
-(defun web-mode-element-clone ()
-  "Clone the current html element."
-  (interactive)
-  (let ((offset 0))
+  (interactive "p")
+  (while (>= arg 1)
+    (setq arg (1- arg))
     (web-mode-element-select)
     (when mark-active
-      (save-excursion
-        (goto-char (region-beginning))
-        (setq offset (current-column)))
-      (kill-region (region-beginning) (region-end))
-      (yank)
-      (newline)
-      (indent-line-to offset)
-      (yank))))
+      (kill-region (region-beginning) (region-end)))
+    ) ;while
+  )
+
+(defun web-mode-element-clone (&optional arg)
+  "Clone the current html element."
+  (interactive "p")
+  (let (col pos)
+    (while (>= arg 1)
+      (setq arg (1- arg)
+            col 0)
+      (web-mode-element-select)
+      (when mark-active
+        (save-excursion
+          (goto-char (region-beginning))
+          (setq col (current-column)))
+        (kill-region (region-beginning) (region-end))
+        (yank)
+        (newline)
+        (indent-line-to col)
+        (setq pos (point))
+        (yank)
+        (goto-char pos))
+      )
+    ) ;let
+  )
 
 (defun web-mode-element-insert ()
   "Insert an html element."
@@ -9458,6 +9475,25 @@ Pos should be in a tag."
     (if (null continue) pos nil)
     ))
 
+(defun web-mode-element-previous-position (&optional pos limit)
+  (unless pos (setq pos (point)))
+  (unless limit (setq limit (point-min)))
+  (save-excursion
+    (goto-char pos)
+    (let ((continue (not (bobp)))
+          (props '(start void comment)))
+      (while continue
+        (setq pos (web-mode-tag-previous))
+        (cond
+         ((or (null pos) (< (point) limit))
+          (setq continue nil
+                pos nil))
+         ((member (get-text-property (point) 'tag-type) props)
+          (setq continue nil))
+         )
+        ) ;while
+      pos)))
+
 (defun web-mode-element-next-position (&optional pos limit)
   (unless pos (setq pos (point)))
   (unless limit (setq limit (point-max)))
@@ -9676,7 +9712,6 @@ Pos should be in a tag."
   (let (char (continue (not (null pos))))
     (while continue
       (setq char (char-after pos))
-      ;;(message "%S : %c" pos char)
       (cond
        ((< pos block-beg)
         (message "block-args-beginning-position ** failure **")
@@ -9694,8 +9729,7 @@ Pos should be in a tag."
         (setq pos (+ pos (length (match-string-no-properties 0)))))
        ((and (string= web-mode-engine "php")
              (web-mode-looking-back "\\<\\(extends\\|implements\\)[ \n\t]*" pos))
-        (setq ;;pos (point)
-              continue nil))
+        (setq continue nil))
        (t
         (setq pos (1- pos)))
        ) ;cond
@@ -10196,26 +10230,50 @@ Pos should be in a tag."
   (interactive)
   (web-mode-go (web-mode-attribute-previous-position (point))))
 
-(defun web-mode-element-previous ()
+(defun web-mode-element-previous (&optional arg)
   "Fetch previous element."
-  (interactive)
-  (let ((continue (not (bobp)))
-        (ret)
-        (pos (point))
-        (props '(start void)))
-    (while continue
-      (setq ret (web-mode-tag-previous))
-      (when (or (null ret)
-                (member (get-text-property (point) 'tag-type) props))
-        (setq continue nil))
+  (interactive "p")
+  (unless arg (setq arg 1))
+  (cond
+   ((= arg 1) (web-mode-go (web-mode-element-previous-position (point))))
+   ((< arg 1) (web-mode-element-next (* arg -1)))
+   (t
+    (while (>= arg 1)
+      (setq arg (1- arg))
+      (web-mode-go (web-mode-element-previous-position (point)))
       ) ;while
-    (unless ret (goto-char pos))
-    ret))
+    ) ;t
+   ) ;cond
+  )
 
-(defun web-mode-element-next ()
+;; (let ((continue (not (bobp)))
+;;       (ret)
+;;       (pos (point))
+;;       (props '(start void)))
+;;   (while continue
+;;     (setq ret (web-mode-tag-previous))
+;;     (when (or (null ret)
+;;               (member (get-text-property (point) 'tag-type) props))
+;;       (setq continue nil))
+;;     ) ;while
+;;   (unless ret (goto-char pos))
+;;   ret))
+
+(defun web-mode-element-next (&optional arg)
   "Fetch next element."
-  (interactive)
-  (web-mode-go (web-mode-element-next-position (point))))
+  (interactive "p")
+  (unless arg (setq arg 1))
+  (cond
+   ((= arg 1) (web-mode-go (web-mode-element-next-position (point))))
+   ((< arg 1) (web-mode-element-previous (* arg -1)))
+   (t
+    (while (>= arg 1)
+      (setq arg (1- arg))
+      (web-mode-go (web-mode-element-next-position (point)))
+      ) ;while
+    ) ;t
+   ) ;cond
+  )
 
 (defun web-mode-element-sibling-next ()
   "Fetch next sibling element."
