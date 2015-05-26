@@ -10,27 +10,28 @@
 [default]
 	push = matching
 [color]
-  ui = auto
+    ui = auto
 [alias]
 	s = status
 	co = checkout
-  a = add
-  aa = add --all
-  c = commit
-  ca = commit -a
-  cm = commit -m
-  cma = commit -a -m
-  ps = push
-  pl = pull
-  cl = clone
-  t = tag -a -m
-  ra = remote add
-  rr = remote rm
-  b = branch
-  br = branch -r
-  ba = branch -a
-  l = log -2
-  t = log --graph --decorate --oneline --all
-  d = diff
-  f = fetch
-  m = merge
+    a = add
+    aa = add --all
+    c = commit
+    ca = commit -a
+    cm = commit -m
+    cma = commit -a -m
+    ps = push
+    pl = pull
+    cl = clone
+    t = tag
+    ra = remote add
+    rr = remote rm
+    b = branch
+    br = branch -r
+    ba = branch -a
+    l = log -2
+    t = log --graph --pretty=format:'%C(yellow)%h%Creset%C(auto)%d%Creset %s %Cblue(%an)%Creset %Cgreen(%cr)%Creset' --abbrev-commit --all
+    # t = log --graph --decorate --oneline --all
+    d = diff
+    f = fetch
+    m = merge
