@@ -28,7 +28,7 @@
 ;; Maintainer: Jason R. Blevins <jrblevin@sdf.org>
 ;; Created: May 24, 2007
 ;; Version: 2.0
-;; Package-Version: 20150523.2036
+;; Package-Version: 20150527.1919
 ;; Keywords: Markdown, GitHub Flavored Markdown, itex
 ;; URL: http://jblevins.org/projects/markdown-mode/
 
@@ -4722,9 +4722,12 @@ if ARG is omitted or nil."
   ;; do the initial link fontification
   (markdown-fontify-buffer-wiki-links))
 
-;;;###autoload(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
-;;;###autoload(add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
-;;;###autoload(add-to-list 'auto-mode-alist '("\\.md\\'" . gfm-mode))
+;;;###autoload
+(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
+;;;###autoload
+(add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
+;;;###autoload
+(add-to-list 'auto-mode-alist '("\\.md\\'" . gfm-mode))
 
 
 ;;; GitHub Flavored Markdown Mode  ============================================

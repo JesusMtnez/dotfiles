@@ -3,8 +3,8 @@
 
 ;; Copyright 2011-2015 François-Xavier Bois
 
-;; Version: 11.1.12
-;; Package-Version: 20150526.741
+;; Version: 11.2.2
+;; Package-Version: 20150528.55
 ;; Author: François-Xavier Bois <fxbois AT Google Mail Service>
 ;; Maintainer: François-Xavier Bois
 ;; Created: July 2011
@@ -27,7 +27,7 @@
 
 ;;---- CONSTS ------------------------------------------------------------------
 
-(defconst web-mode-version "11.1.12"
+(defconst web-mode-version "11.2.2"
   "Web Mode version.")
 
 ;;---- GROUPS ------------------------------------------------------------------
@@ -615,6 +615,7 @@ Must be used in conjunction with web-mode-enable-block-face."
 (defvar web-mode-engine-font-lock-keywords nil)
 (defvar web-mode-engine-token-regexp nil)
 (defvar web-mode-expand-initial-pos nil)
+(defvar web-mode-expand-initial-scroll nil)
 (defvar web-mode-expand-previous-state "")
 (defvar web-mode-font-lock-keywords '(web-mode-font-lock-highlight))
 (defvar web-mode-change-beg nil)
@@ -2194,6 +2195,7 @@ the environment as needed for ac-sources, right before they're used.")
   (make-local-variable 'web-mode-engine-open-delimiter-regexps)
   (make-local-variable 'web-mode-engine-token-regexp)
   (make-local-variable 'web-mode-expand-initial-pos)
+  (make-local-variable 'web-mode-expand-initial-scroll)
   (make-local-variable 'web-mode-expand-previous-state)
   (make-local-variable 'web-mode-indent-style)
   (make-local-variable 'web-mode-is-scratch)
@@ -7250,7 +7252,9 @@ the environment as needed for ac-sources, right before they're used.")
 
     (if mark-active
         (setq reg-beg (region-beginning))
-      (setq web-mode-expand-initial-pos (point)))
+      (setq web-mode-expand-initial-pos (point)
+            web-mode-expand-initial-scroll (window-start))
+      )
 
     ;; (message "regs=%S %S %S %S" (region-beginning) (region-end) (point-min) (point-max))
     ;; (message "before=%S" web-mode-expand-previous-state)
@@ -7264,10 +7268,8 @@ the environment as needed for ac-sources, right before they're used.")
       (deactivate-mark)
       (goto-char (or web-mode-expand-initial-pos (point-min)))
       (setq web-mode-expand-previous-state nil)
-      (when (and web-mode-expand-initial-pos
-                 (or (< web-mode-expand-initial-pos (window-start))
-                     (> web-mode-expand-initial-pos (window-end))))
-        (recenter))
+      (when web-mode-expand-initial-scroll
+        (set-window-start (selected-window) web-mode-expand-initial-scroll))
       )
 
      ((string= web-mode-expand-previous-state "elt-content")
@@ -8743,8 +8745,12 @@ Pos should be in a tag."
       (when (eq this-command 'keyboard-quit)
         (goto-char web-mode-expand-initial-pos))
       (deactivate-mark)
+      (when web-mode-expand-initial-scroll
+        (set-window-start (selected-window) web-mode-expand-initial-scroll)
+        )
       (setq web-mode-expand-previous-state nil
-            web-mode-expand-initial-pos nil))
+            web-mode-expand-initial-pos nil
+            web-mode-expand-initial-scroll nil))
 
     (when (member this-command '(yank))
       (setq web-mode-inhibit-fontification nil)
@@ -9109,12 +9115,25 @@ Pos should be in a tag."
     (point)
     ))
 
-(defun web-mode-attribute-kill ()
+(defun web-mode-attribute-kill (&optional arg)
   "Kill the current html attribute."
-  (interactive)
-  (web-mode-attribute-select)
-  (when mark-active
-    (kill-region (region-beginning) (region-end))))
+  (interactive "p")
+  (unless arg (setq arg 1))
+  (while (>= arg 1)
+    (setq arg (1- arg))
+    (web-mode-attribute-select)
+    (when mark-active
+      (let ((beg (region-beginning)) (end (region-end)))
+        (save-excursion
+          (goto-char end)
+          (when (looking-at "[ \n\t]*")
+            (setq end (+ end (length (match-string-no-properties 0)))))
+          ) ;save-excursion
+        (kill-region beg end)
+        ) ;let
+      ) ;when
+    ) ;while
+  )
 
 (defun web-mode-block-close (&optional pos)
   "Close the first unclosed control block."
@@ -10220,15 +10239,38 @@ Pos should be in a tag."
   (interactive)
   (web-mode-go (web-mode-attribute-end-position (point)) 1))
 
-(defun web-mode-attribute-next ()
+(defun web-mode-attribute-next (&optional arg)
   "Fetch next attribute."
-  (interactive)
-  (web-mode-go (web-mode-attribute-next-position (point))))
+  (interactive "p")
+  (unless arg (setq arg 1))
+  (cond
+   ((= arg 1) (web-mode-go (web-mode-attribute-next-position (point))))
+   ((< arg 1) (web-mode-element-previous (* arg -1)))
+   (t
+    (while (>= arg 1)
+      (setq arg (1- arg))
+      (web-mode-go (web-mode-attribute-next-position (point)))
+      )
+    )
+   )
+  )
 
-(defun web-mode-attribute-previous ()
+(defun web-mode-attribute-previous (&optional arg)
   "Fetch previous attribute."
-  (interactive)
-  (web-mode-go (web-mode-attribute-previous-position (point))))
+  (interactive "p")
+  (unless arg (setq arg 1))
+  (unless arg (setq arg 1))
+  (cond
+   ((= arg 1) (web-mode-go (web-mode-attribute-previous-position (point))))
+   ((< arg 1) (web-mode-element-next (* arg -1)))
+   (t
+    (while (>= arg 1)
+      (setq arg (1- arg))
+      (web-mode-go (web-mode-attribute-previous-position (point)))
+      )
+    )
+   )
+  )
 
 (defun web-mode-element-previous (&optional arg)
   "Fetch previous element."
@@ -11013,15 +11055,14 @@ Pos should be in a tag."
         )
       )
 
-    (unless web-mode-engine
-      (setq found nil)
-      (dolist (elt web-mode-engines)
-        ;;(message "%S %S" (car elt) buff-name)
-        (when (and (not found) (string-match-p (car elt) buff-name))
-          (setq web-mode-engine (car elt)
-                found t))
-        )
-      )
+    ;; (unless web-mode-engine
+    ;;   (setq found nil)
+    ;;   (dolist (elt web-mode-engines)
+    ;;     (when (and (not found) (string-match-p (car elt) buff-name))
+    ;;       (setq web-mode-engine (car elt)
+    ;;             found t))
+    ;;     )
+    ;;   )
 
     (when (and (or (null web-mode-engine) (string= web-mode-engine "none"))
                (string-match-p "php" (buffer-substring-no-properties
