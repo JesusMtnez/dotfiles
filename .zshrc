@@ -76,27 +76,5 @@ fi
 # ALIAS #
 #########
 #
-# ------------------- #
-# Some alias settings #
-# ------------------- #
 alias zshconfig='emacs -nw ~/.zshrc'
 alias e='emacs -nw'
-# --- #
-# Git #
-# --- #
-alias ga='git add'
-alias gaa='git add --all'
-alias gp='git push'
-alias gl='git log'
-alias gll='git log --graph --decorate --oneline --all'
-alias gs='git status'
-alias gd='git diff'
-alias gm='git commit -m'
-alias gma='git commit -am'
-alias gb='git branch'
-alias gc='git checkout'
-alias gra='git remote add'
-alias grr='git remote rm'
-alias gpu='git pull'
-alias gcl='git clone'
-alias gta='git tag -a -m'
