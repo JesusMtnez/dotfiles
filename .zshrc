@@ -1,6 +1,6 @@
 ###########################################
 # Author: Jesús Martínez-Barquero Herrada #
-# Last updated: 12-05-2015                #
+# Last updated: 27-05-2015                #
 ###########################################
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -63,12 +63,13 @@ export CPLUS_INCLUDE_PATH="/usr/local/include"
 # export MANPATH="/usr/local/man:$MANPATH"
 #
 ########
-# TMUX #
+# TMUX # (DISABLED)
 ########
-[[ $- != *i* ]] && return
-[[ -z "$TMUX" ]] && exec tmux
+# [[ $- != *i* ]] && return
+# [[ -z "$TMUX" ]] && exec tmux
 #
 source $ZSH/oh-my-zsh.sh
+#
 if [ -f ~/.localrc ]; then
   source ~/.localrc
 fi
