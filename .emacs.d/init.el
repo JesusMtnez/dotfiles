@@ -92,6 +92,11 @@
 (set-terminal-parameter nil 'background-mode 'dark)
 (enable-theme 'solarized)
 
+(setq-default c-basic-offset 4
+              tab-width 4
+              indent-tabs-mode nil
+              tab-always-indent nil)
+
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 (if (fboundp 'menu-bar-mode)   (menu-bar-mode -1))
 (if (fboundp 'tool-bar-mode)   (tool-bar-mode -1))
@@ -106,9 +111,6 @@
 (global-hl-line-mode t)
 (global-visual-line-mode t)
 (setq make-backup-file nil)
-(setq-default indent-tabs-mode nil)
-(setq-default tab-width 4)
-(setq-default tab-always-indent nil)
 ;; Font configuration
 (set-face-attribute 'default nil :font "Monaco")
 (set-frame-font "Monaco 12" nil t)
