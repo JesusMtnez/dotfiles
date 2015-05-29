@@ -57,7 +57,6 @@
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . gfm-mode))
 
 ;; linum-off package
-(add-to-list 'load-path "~/.emacs.d/elpa/linum-off")
 (require 'linum-off)
 
 ;; undo-tree package
@@ -150,12 +149,6 @@
 (if (file-exists-p "/usr/local/lib/ciao/ciao-1.14/ciao-mode-init.el")
     (load-file "/usr/local/lib/ciao/ciao-1.14/ciao-mode-init.el"))
 
-;; CHECK LATER
-;; (require 'smart-mode-line)
-;; (setq sml/no-confirm-load-theme t)
-;; (setq sml/theme 'dark)
-;; (setq sml/no-confirm-load-theme t)
-;; (sml/setup)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
