@@ -80,6 +80,14 @@
 (require 'highlight-chars)
 (add-hook 'font-lock-mode-hook 'hc-highlight-tabs)
 (add-hook 'font-lock-mode-hook 'hc-highlight-trailing-whitespace)
+(add-hook 'after-change-major-mode-hook
+          (lambda ()
+            (when (eq major-mode 'ibuffer-mode)
+              (remove-hook 'font-lock-mode-hook
+                           'hc-highlight-trailing-whitespace)
+              (hc-dont-highlight-trailing-whitespace))))
+
+(require 'ibuffer)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; My personal configurations ;;
@@ -144,6 +152,7 @@
 (global-set-key (kbd "C-x C-k") 'kill-this-buffer)
 (global-set-key (kbd "C-z")     'undo-tree-undo)
 (global-set-key (kbd "C-S-z")   'undo-tree-redo)
+(global-set-key (kbd "C-x C-b") 'ibuffer)
 
 ;; TEMPORARY - Ciao configuration - Prolog
 (if (file-exists-p "/usr/local/lib/ciao/ciao-1.14/ciao-mode-init.el")
