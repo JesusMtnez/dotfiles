@@ -77,6 +77,11 @@
 (add-to-list 'load-path "~/.emacs.d/elpa/emacs-livedown")
 (require 'livedown)
 
+;; highlight-chars package
+(require 'highlight-chars)
+(add-hook 'font-lock-mode-hook 'hc-highlight-tabs)
+(add-hook 'font-lock-mode-hook 'hc-highlight-trailing-whitespace)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; My personal configurations ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
