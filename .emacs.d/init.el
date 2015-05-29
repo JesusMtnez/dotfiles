@@ -33,7 +33,7 @@
 (global-auto-complete-mode t)
 
 ;; move-lines package
-(add-to-list 'load-path "~/.emacs.d/elpa/move-lines")
+(add-to-list 'load-path "~/.emacs.d/non-elpa/move-lines")
 (require 'move-lines)
 (move-lines-binding)
 
@@ -74,7 +74,7 @@
 (add-hook 'js2-mode-hook 'ac-js2-mode)
 
 ;; livedown package
-(add-to-list 'load-path "~/.emacs.d/elpa/emacs-livedown")
+(add-to-list 'load-path "~/.emacs.d/non-elpa/emacs-livedown")
 (require 'livedown)
 
 ;; highlight-chars package
