@@ -128,9 +128,10 @@
 (set-keyboard-coding-system 'utf-8)
 ;; Remap left-option-key to meta-key
 (if (eq system-type 'darwin)
-    ;; (setq ns-command-modifier 'meta)
-    (setq ns-option-modifier 'meta)
+  (setq ns-command-modifier 'meta)
+  (setq ns-option-modifier 'meta)
 )
+(setq ns-right-command-modifier 'none)
 (setq ns-right-option-modifier 'none)
 ;; (setq inhibit-startup-screen t)
 
