@@ -87,7 +87,11 @@
                            'hc-highlight-trailing-whitespace)
               (hc-dont-highlight-trailing-whitespace))))
 
+;; IBuffer package
 (require 'ibuffer)
+
+;; misc package for extra functionality
+(require 'misc)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; My personal configurations ;;
