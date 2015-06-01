@@ -118,6 +118,7 @@
 (electric-pair-mode t)
 (delete-selection-mode t)
 (global-linum-mode t)
+(global-auto-revert-mode t)
 (setq linum-format "%4d ")
 (global-hl-line-mode t)
 (global-visual-line-mode t)
