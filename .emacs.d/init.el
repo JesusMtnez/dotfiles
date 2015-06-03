@@ -93,6 +93,9 @@
 ;; misc package for extra functionality
 (require 'misc)
 
+;; nlinum package
+(require 'nlinum)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; My personal configurations ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -117,15 +120,15 @@
 (column-number-mode t)
 (electric-pair-mode t)
 (delete-selection-mode t)
-(global-linum-mode t)
+(global-nlinum-mode t)
 (global-auto-revert-mode t)
-(setq linum-format "%4d ")
+(setq nlinum-format "%4d")
 (global-hl-line-mode t)
 (global-visual-line-mode t)
 (setq make-backup-file nil)
 ;; Font configuration
-(set-face-attribute 'default nil :font "Monaco")
-(set-frame-font "Monaco 12" nil t)
+(set-face-attribute 'default nil :font "DejaVu Sans Mono")
+(set-frame-font "DejaVu Sans Mono 12" nil t)
 ;; Encoding configuration
 (prefer-coding-system 'utf-8)
 (set-default-coding-systems 'utf-8)
