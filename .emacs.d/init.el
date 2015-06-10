@@ -123,7 +123,7 @@
 (global-nlinum-mode t)
 (global-auto-revert-mode t)
 (setq nlinum-format "%4d")
-(global-hl-line-mode t)
+;; (global-hl-line-mode t)
 (global-visual-line-mode t)
 (setq make-backup-file nil)
 ;; Font configuration
