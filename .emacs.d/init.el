@@ -126,6 +126,9 @@
 ;; (global-hl-line-mode t)
 (global-visual-line-mode t)
 (setq make-backup-file nil)
+
+(setq doc-view-ghostscript-program "/usr/local/bin/gs")
+
 ;; Font configuration
 (set-face-attribute 'default nil :font "DejaVu Sans Mono")
 (set-frame-font "DejaVu Sans Mono 12" nil t)
