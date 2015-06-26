@@ -3,11 +3,11 @@
 ;; Copyright (C) 2013, 2014  Steven Degutis
 
 ;; Author: Steven Degutis
-;; Maintainer: Daniel Gempesaw <gempesaw@gmail.com>
+;; Maintainer: Christopher Reichert <creichert07@gmail.com>
 ;; Version: 1.0.0
-;; Package-Version: 20150619.847
+;; Package-Version: 20150623.1410
 ;; Keywords: convenience
-;; URL: https://github.com/gempesaw/ido-vertical-mode.el
+;; URL: https://github.com/creichert/ido-vertical-mode.el
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by

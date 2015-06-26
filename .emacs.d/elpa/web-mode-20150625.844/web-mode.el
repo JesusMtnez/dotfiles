@@ -3,8 +3,8 @@
 
 ;; Copyright 2011-2015 François-Xavier Bois
 
-;; Version: 11.2.9
-;; Package-Version: 20150618.1109
+;; Version: 11.2.10
+;; Package-Version: 20150625.844
 ;; Author: François-Xavier Bois <fxbois AT Google Mail Service>
 ;; Maintainer: François-Xavier Bois
 ;; Created: July 2011
@@ -27,7 +27,7 @@
 
 ;;---- CONSTS ------------------------------------------------------------------
 
-(defconst web-mode-version "11.2.9"
+(defconst web-mode-version "11.2.10"
   "Web Mode version.")
 
 ;;---- GROUPS ------------------------------------------------------------------
@@ -10944,7 +10944,11 @@ Pos should be in a tag."
   (web-mode-buffer-highlight))
 
 (defun web-mode-set-content-type (content-type)
+  "Set the content-type for the current buffer"
+  (interactive (list (completing-read "Content-type: " web-mode-part-content-types)))
   (setq web-mode-content-type content-type)
+  (when (called-interactively-p 'any)
+    )
   (web-mode-buffer-highlight))
 
 (defun web-mode-on-engine-setted ()
