@@ -35,3 +35,4 @@
     d = diff
     f = fetch
     m = merge
+    su = submodule foreach git pull origin master
