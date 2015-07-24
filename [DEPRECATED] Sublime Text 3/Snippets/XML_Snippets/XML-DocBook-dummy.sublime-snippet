@@ -1,9 +1,0 @@
-<snippet>
-	<content>
-<![CDATA[<listitem>
-        <para/>
-</listitem>]]>
-	</content>
-	<tabTrigger>dummy</tabTrigger>
-	<scope>text.xml</scope>
-</snippet>

@@ -1,7 +1,0 @@
-<snippet>
-	<content><![CDATA[
-<indexterm xml:id="${1:ID}"><primary>${2:primary}</primary></indexterm> $0		
-]]></content>
-	<tabTrigger>indexterm</tabTrigger>
-	<scope>text.xml</scope>
-</snippet>

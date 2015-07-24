@@ -1,7 +1,0 @@
-<snippet>
-	<content>
-<![CDATA[<textobject>${1:}</textobject>]]>
-	</content>
-	<tabTrigger>textobject</tabTrigger>
-	<scope>text.xml</scope>
-</snippet>

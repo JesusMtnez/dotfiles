@@ -1,7 +1,0 @@
-<snippet>
-	<content><![CDATA[
-<!-- InjectImage: ${1:IMAGE_ID} --> $0
-]]></content>
-	<tabTrigger>inject</tabTrigger>
-	<scope>text.xml</scope>
-</snippet>

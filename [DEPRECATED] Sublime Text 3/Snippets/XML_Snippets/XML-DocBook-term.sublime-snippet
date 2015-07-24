@@ -1,7 +1,0 @@
-<snippet>
-	<content>
-<![CDATA[<term>${1:}</term>]]>
-	</content>
-	<tabTrigger>term</tabTrigger>
-	<scope>text.xml</scope>
-</snippet>

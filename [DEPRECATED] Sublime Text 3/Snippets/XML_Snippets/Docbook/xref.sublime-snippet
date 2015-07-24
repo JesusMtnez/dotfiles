@@ -1,7 +1,0 @@
-<snippet>
-	<content><![CDATA[
-<xref linkend="${1:ID}" />		
-]]></content>
-	<tabTrigger>xref</tabTrigger>
-	<scope>text.xml</scope>
-</snippet>

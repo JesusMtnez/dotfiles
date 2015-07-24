@@ -1,8 +1,0 @@
-<snippet>
-	<content><![CDATA[
-<cell>${1:contents}</cell>
-${0:cell}
-]]></content>
-	<tabTrigger>cell</tabTrigger>
-	<scope>text.xml</scope>
-</snippet>
