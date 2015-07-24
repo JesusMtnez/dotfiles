@@ -125,7 +125,7 @@
 (setq nlinum-format "%4d")
 ;; (global-hl-line-mode t)
 (global-visual-line-mode t)
-(setq make-backup-file nil)
+(setq make-backup-files nil)
 
 (setq doc-view-ghostscript-program "/usr/local/bin/gs")
 
