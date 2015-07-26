@@ -5,8 +5,8 @@
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
 
-;; TODO: Install paradox automatically
-(unless package-archive-contents (or (file-exists-p package-user-dir) (package-refresh-contents))) 
+;; paradox-package-manager installation
+(unless package-archive-contents (or (file-exists-p package-user-dir) (package-refresh-contents)))
 (package-install 'paradox)
 
 ;; ido-vertical-mode package
