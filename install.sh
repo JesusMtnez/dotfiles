@@ -1,12 +1,15 @@
 ############################################
 # Author: Jesús Martínez-Barquero Herrrada #
-# Last update: 12/05/2015                  #
+# Last update: 26/07/2015                  #
 ############################################
+#!/usr/bin/env sh
 
-DOT="${HOME}/.dotfiles"
+DOT_DIR="$HOME/.dotfiles"
+DOT_FILES="gitconfig tmux.conf zshrc"
+# DOT_FOLDERS=".emacs.d"
 
-ln -sf $DOT/.emacs.d ${HOME}
-ln -sf $DOT/.gitconfig ${HOME}/.gitconfig
-ln -sf $DOT/.zshrc ${HOME}/.zshrc
-ln -sf $DOT/.tmux.conf ${HOME}/.tmux.conf
-ln -sf $DOT/ohmytheme.zsh-theme ${HOME}/.oh-my-zsh/themes/ohmytheme.zsh-theme
+for f in $DOT_FILES; do
+    ln -sf $DOT_DIR/$f $HOME/.$f
+done
+
+ln -sf $DOT_DIR/.emacs.d $HOME/.emacs.d
