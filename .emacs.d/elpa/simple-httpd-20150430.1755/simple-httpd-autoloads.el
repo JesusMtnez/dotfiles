@@ -3,9 +3,9 @@
 ;;; Code:
 (add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil "simple-httpd" "simple-httpd.el" (21845 64275
-;;;;;;  0 0))
-;;; Generated autoloads from simple-httpd.el
+;;;### (autoloads nil "simple-httpd" "../../../../.emacs.d/elpa/simple-httpd-20150430.1755/simple-httpd.el"
+;;;;;;  "a59848b08579c025b09772753715e374")
+;;; Generated autoloads from ../../../../.emacs.d/elpa/simple-httpd-20150430.1755/simple-httpd.el
 
 (autoload 'httpd-start "simple-httpd" "\
 Start the web server process. If the server is already
@@ -23,6 +23,12 @@ Stop the web server if it is currently running, otherwise do nothing.
 Start the web server with given `directory' as `httpd-root'.
 
 \(fn DIRECTORY)" t nil)
+
+;;;***
+
+;;;### (autoloads nil nil ("../../../../.emacs.d/elpa/simple-httpd-20150430.1755/simple-httpd-autoloads.el"
+;;;;;;  "../../../../.emacs.d/elpa/simple-httpd-20150430.1755/simple-httpd.el")
+;;;;;;  (21941 14694 441286 820000))
 
 ;;;***
 

@@ -3,9 +3,9 @@
 ;;; Code:
 (add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil "highlight-chars" "highlight-chars.el" (21938
-;;;;;;  42581 0 0))
-;;; Generated autoloads from highlight-chars.el
+;;;### (autoloads nil "highlight-chars" "../../../../.emacs.d/elpa/highlight-chars-20150630.2135/highlight-chars.el"
+;;;;;;  "8a2e61c5c82c3a872f357f7b8079be03")
+;;; Generated autoloads from ../../../../.emacs.d/elpa/highlight-chars-20150630.2135/highlight-chars.el
 
 (let ((loads (get 'Highlight-Characters 'custom-loads))) (if (member '"highlight-chars" loads) nil (put 'Highlight-Characters 'custom-loads (cons '"highlight-chars" loads))))
 
@@ -141,6 +141,12 @@ This includes tab, space, and hard (non-breaking) space characters.
 Uses face `hc-trailing-whitespace'.
 
 \(fn &optional MSGP)" t nil)
+
+;;;***
+
+;;;### (autoloads nil nil ("../../../../.emacs.d/elpa/highlight-chars-20150630.2135/highlight-chars-autoloads.el"
+;;;;;;  "../../../../.emacs.d/elpa/highlight-chars-20150630.2135/highlight-chars.el")
+;;;;;;  (21941 14699 758332 641000))
 
 ;;;***
 

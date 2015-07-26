@@ -3,8 +3,9 @@
 ;;; Code:
 (add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil "neotree" "neotree.el" (21941 734 125854 191000))
-;;; Generated autoloads from neotree.el
+;;;### (autoloads nil "neotree" "../../../../.emacs.d/elpa/neotree-20150726.636/neotree.el"
+;;;;;;  "ddc6b36a11bcfe29cec1fa40048b7985")
+;;; Generated autoloads from ../../../../.emacs.d/elpa/neotree-20150726.636/neotree.el
 
 (autoload 'neotree-find "neotree" "\
 Quick select node which specified PATH in NeoTree.
@@ -48,7 +49,10 @@ Show the NeoTree window.")
 
 ;;;***
 
-;;;### (autoloads nil nil ("neotree-pkg.el") (21941 735 207335 413000))
+;;;### (autoloads nil nil ("../../../../.emacs.d/elpa/neotree-20150726.636/neotree-autoloads.el"
+;;;;;;  "../../../../.emacs.d/elpa/neotree-20150726.636/neotree-pkg.el"
+;;;;;;  "../../../../.emacs.d/elpa/neotree-20150726.636/neotree.el")
+;;;;;;  (21941 14666 495937 479000))
 
 ;;;***
 

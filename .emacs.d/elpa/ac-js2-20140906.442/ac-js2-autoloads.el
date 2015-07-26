@@ -3,8 +3,9 @@
 ;;; Code:
 (add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil "ac-js2" "ac-js2.el" (21843 7615 0 0))
-;;; Generated autoloads from ac-js2.el
+;;;### (autoloads nil "ac-js2" "../../../../.emacs.d/elpa/ac-js2-20140906.442/ac-js2.el"
+;;;;;;  "8d9d241ebf504e483f38ac8b969e8c2d")
+;;; Generated autoloads from ../../../../.emacs.d/elpa/ac-js2-20140906.442/ac-js2.el
 
 (autoload 'ac-js2-expand-function "ac-js2" "\
 Expand the function definition left of point.
@@ -37,8 +38,11 @@ A minor mode that provides auto-completion and navigation for Js2-mode.
 
 ;;;***
 
-;;;### (autoloads nil nil ("ac-js2-pkg.el" "ac-js2-tests.el") (21843
-;;;;;;  7615 218543 0))
+;;;### (autoloads nil nil ("../../../../.emacs.d/elpa/ac-js2-20140906.442/ac-js2-autoloads.el"
+;;;;;;  "../../../../.emacs.d/elpa/ac-js2-20140906.442/ac-js2-pkg.el"
+;;;;;;  "../../../../.emacs.d/elpa/ac-js2-20140906.442/ac-js2-tests.el"
+;;;;;;  "../../../../.emacs.d/elpa/ac-js2-20140906.442/ac-js2.el")
+;;;;;;  (21941 14698 332192 555000))
 
 ;;;***
 

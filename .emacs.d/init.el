@@ -1,20 +1,24 @@
-;; MELPA and Mrmalade repos for packages.
+;; MELPA and Marmalade repos for packages.
 (require 'package)
 (add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/") t)
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
 
+;; TODO: Install paradox automatically
+(unless package-archive-contents (or (file-exists-p package-user-dir) (package-refresh-contents))) 
+(package-install 'paradox)
+
 ;; ido-vertical-mode package
-(require 'ido-vertical-mode)
+(paradox-require 'ido-vertical-mode)
 (ido-mode t)
 (ido-vertical-mode t)
 
 ;; common lisp package
-(require 'cl)
+(paradox-require 'cl)
 
 ;; web-mode package
-(require 'web-mode)
+(paradox-require 'web-mode)
 (setq web-mode-code-indent-offset 2)
 (setq web-mode-css-indent-offset 2)
 (setq web-mode-markup-indent-offset 2)
@@ -27,11 +31,11 @@
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 
 ;; emmet-mode package
-(require 'emmet-mode)
+(paradox-require 'emmet-mode)
 (add-hook 'web-mode-hook 'emmet-mode)
 
 ;; auto-complete package
-(require 'auto-complete)
+(paradox-require 'auto-complete)
 (global-auto-complete-mode t)
 
 ;; move-lines package
@@ -40,37 +44,37 @@
 (move-lines-binding)
 
 ;; projectile package
-;; (require 'projectile)
+;; (paradox-require 'projectile)
 ;; (projectile-global-mode t)
 
 ;; neotree package
-(require 'neotree)
+(paradox-require 'neotree)
 (global-set-key [f8] 'neotree-toggle)
 
 ;; magit package
-(require 'magit)
+(paradox-require 'magit)
 (setq magit-last-seen-setup-instructions "1.4.0")
 
 ;; markdown package
-(require 'markdown-mode)
+(paradox-require 'markdown-mode)
 (autoload 'markdown-mode "markdown-mode.el" "Major mode for editing Markdown files" t)
 (add-to-list 'auto-mode-alist '("\\.md\\'" . gfm-mode))
 (add-to-list 'auto-mode-alist '("\\.mdown\\'" . gfm-mode))
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . gfm-mode))
 
 ;; linum-off package
-(require 'linum-off)
+(paradox-require 'linum-off)
 
 ;; undo-tree package
-(require 'undo-tree)
+(paradox-require 'undo-tree)
 (global-undo-tree-mode t)
 
 ;; js2-mode package
-(require 'js2-mode)
+(paradox-require 'js2-mode)
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 
 ;; autocomplete for js2-mode package
-(require 'ac-js2)
+(paradox-require 'ac-js2)
 (setq ac-js2-evaluate-calls t)
 (add-hook 'js2-mode-hook 'ac-js2-mode)
 
@@ -79,7 +83,7 @@
 (require 'livedown)
 
 ;; highlight-chars package
-(require 'highlight-chars)
+(paradox-require 'highlight-chars)
 (add-hook 'font-lock-mode-hook 'hc-highlight-tabs)
 (add-hook 'font-lock-mode-hook 'hc-highlight-trailing-whitespace)
 (add-hook 'after-change-major-mode-hook
@@ -90,13 +94,13 @@
               (hc-dont-highlight-trailing-whitespace))))
 
 ;; IBuffer package
-(require 'ibuffer)
+(paradox-require 'ibuffer)
 
 ;; misc package for extra functionality
 (require 'misc)
 
 ;; nlinum package
-(require 'nlinum)
+(paradox-require 'nlinum)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; My personal configurations ;;
@@ -133,7 +137,7 @@
 
 ;; Font configuration
 (set-face-attribute 'default nil :font "DejaVu Sans Mono")
-(set-frame-font "DejaVu Sans Mono 12" nil t)
+(set-frame-font "DejaVu Sans Mono 9" nil t)
 ;; Encoding configuration
 (prefer-coding-system 'utf-8)
 (set-default-coding-systems 'utf-8)

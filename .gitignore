@@ -3,8 +3,7 @@
 
 .backup
 
-.emacs.d/elpa/*.txt
-.emacs.d/elpa/archives/
+.emacs.d/elpa
 .emacs.d/ac-comphist.dat
 .emacs.d/ido.last
 .emacs.d/projectile-bookmarks.eld
