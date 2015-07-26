@@ -22,6 +22,8 @@
 (setq web-mode-enable-auto-pairing t)
 (setq web-mode-enable-current-element-highlight t)
 (setq web-mode-enable-current-column-highlight t)
+(set-face-attribute 'web-mode-html-tag-bracket-face nil :foreground "Snow3")
+(set-face-attribute 'web-mode-current-element-highlight-face nil :background "#073642")
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 
 ;; emmet-mode package
