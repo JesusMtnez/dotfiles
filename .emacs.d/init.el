@@ -133,7 +133,7 @@
 
 ;; Font configuration
 (set-face-attribute 'default nil :font "DejaVu Sans Mono")
-(set-frame-font "DejaVu Sans Mono 12" nil t)
+(set-frame-font "DejaVu Sans Mono 9" nil t)
 ;; Encoding configuration
 (prefer-coding-system 'utf-8)
 (set-default-coding-systems 'utf-8)
@@ -183,6 +183,7 @@
  '(livedown:open t)
  '(livedown:port 1337)
  '(markdown-indent-on-enter nil)
+ '(paradox-github-token t)
  '(sh-indentation 2))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
