@@ -22,7 +22,7 @@
 
 (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action) ; rebind tab to run persistent action
 (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action) ; make TAB works in terminal
-(define-key helm-map (kbd "C-z")  'helm-select-action) ; list actions using C-z
+(define-key helm-map (kbd "C-z") 'helm-select-action) ; list actions using C-z
 
 (when (executable-find "curl")
   (setq helm-google-suggest-use-curl-p t))
@@ -36,8 +36,11 @@
       helm-autoresize-mode t;
       helm-autoresize-max-height 20
       ;; Enable fuzzy matching globally in helm
+      ;; Not working in helm-M-x
       helm-mode-fuzzy-match t
-      helm-completion-in-region-fuzzy-match t)
+      helm-completion-in-region-fuzzy-match t
+      ;; Fix fuzzy matching in helm-M-x
+      helm-M-x-fuzzy-match t)
 
 (helm-mode t)
 
