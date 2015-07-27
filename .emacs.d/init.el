@@ -6,13 +6,13 @@
 (package-initialize)
 
 ;; paradox-package-manager installation
-(unless package-archive-contents (or (file-exists-p package-user-dir) (package-refresh-contents)))
+(unless package-archive-contents (package-refresh-contents))
 (package-install 'paradox)
 
 ;; ido-vertical-mode package
-(paradox-require 'ido-vertical-mode)
-(ido-mode t)
-(ido-vertical-mode t)
+;; (paradox-require 'ido-vertical-mode)
+;; (ido-mode t)
+;; (ido-vertical-mode t)
 
 ;; common lisp package
 (paradox-require 'cl)
