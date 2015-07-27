@@ -129,7 +129,7 @@
               (hc-dont-highlight-trailing-whitespace))))
 
 ;; IBuffer package
-(paradox-require 'ibuffer)
+;; (paradox-require 'ibuffer)
 
 ;; misc package for extra functionality
 (require 'misc)
