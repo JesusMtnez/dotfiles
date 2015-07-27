@@ -32,11 +32,12 @@
       helm-ff-search-library-in-sexp t
       helm-scroll-amount 8
       helm-ff-file-name-history-use-recentf t
+      ;; Enable autoresize
       helm-autoresize-mode t;
       helm-autoresize-max-height 20
-      helm-M-x-fuzzy-match t
-      helm-buffers-fuzzy-matching t
-      helm-recentf-fuzzy-match t)
+      ;; Enable fuzzy matching globally in helm
+      helm-mode-fuzzy-match t
+      helm-completion-in-region-fuzzy-match t)
 
 (helm-mode t)
 
