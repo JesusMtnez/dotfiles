@@ -1,3 +1,7 @@
+;; Improve Emacs performance
+(setq max-specpdl-size (* max-specpdl-size 15)
+      max-lisp-eval-depth (* max-lisp-eval-depth 30))
+
 ;; MELPA and Marmalade repos for packages.
 (require 'package)
 (add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/") t)
