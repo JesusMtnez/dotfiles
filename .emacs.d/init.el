@@ -147,16 +147,6 @@
 ;; nlinum package
 (paradox-require 'nlinum)
 
-(paradox-require 'tabbar)
-(tabbar-mode t)
-;(setf tabbar-background-color    default-bg)
-(setf tabbar-buffer-home-button  (quote (("" (:type pbm :data "")) "" (:type pbm :data ""))))
-(setf tabbar-home-button         (quote (("" (:type pbm :data "")) "" (:type pbm :data ""))))
-(setf tabbar-scroll-left-button  (quote (("" (:type pbm :data "")) "")))
-(setf tabbar-scroll-right-button (quote (("" (:type pbm :data "")) "")))
-(setf tabbar-separator           (quote ("  ")))
-(setf tabbar-use-images          nil)
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; My personal configurations ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
