@@ -9,9 +9,10 @@
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
 
-;; paradox-package-manager installation
-(unless package-archive-contents (package-refresh-contents))
-(package-install 'paradox)
+;; Bootstrap 'paradox-package-manager
+(unless (package-installed-p 'paradox)
+  (package-refresh-contents)
+  (package-install 'paradox))
 
 (package-install 'helm)
 (require 'helm)
@@ -146,6 +147,16 @@
 ;; nlinum package
 (paradox-require 'nlinum)
 
+(paradox-require 'tabbar)
+(tabbar-mode t)
+;(setf tabbar-background-color    default-bg)
+(setf tabbar-buffer-home-button  (quote (("" (:type pbm :data "")) "" (:type pbm :data ""))))
+(setf tabbar-home-button         (quote (("" (:type pbm :data "")) "" (:type pbm :data ""))))
+(setf tabbar-scroll-left-button  (quote (("" (:type pbm :data "")) "")))
+(setf tabbar-scroll-right-button (quote (("" (:type pbm :data "")) "")))
+(setf tabbar-separator           (quote ("  ")))
+(setf tabbar-use-images          nil)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; My personal configurations ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -162,7 +173,7 @@
               tab-always-indent nil)
 
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
-(if (fboundp 'menu-bar-mode)   (menu-bar-mode -1))
+;; (if (fboundp 'menu-bar-mode)   (menu-bar-mode -1))
 (if (fboundp 'tool-bar-mode)   (tool-bar-mode -1))
 (fset 'yes-or-no-p 'y-or-n-p)
 (show-paren-mode t)
