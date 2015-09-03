@@ -56,6 +56,11 @@
 ;; common lisp package
 (paradox-require 'cl)
 
+;; powerline
+(paradox-require 'powerline)
+(powerline-center-theme)
+(setq powerline-default-separator 'contour)
+
 ;; web-mode package
 (paradox-require 'web-mode)
 (setq web-mode-code-indent-offset 2)
