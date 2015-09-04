@@ -1,11 +1,11 @@
 ############################################
 # Author: Jesús Martínez-Barquero Herrrada #
-# Last update: 26/07/2015                  #
+# Last update: 04/09/2015                  #
 ############################################
 #!/usr/bin/env sh
 
 DOT_DIR="$HOME/.dotfiles"
-DOT_FILES="gitconfig tmux.conf zshrc"
+DOT_FILES="gitconfig tmux.conf zshrc Xmodmap"
 # DOT_FOLDERS=".emacs.d"
 
 for f in $DOT_FILES; do
