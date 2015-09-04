@@ -12,14 +12,14 @@ DOT_DIRS="emacs.d"
 # Delete old config files #
 ###########################
 for f in $DOT_FILES; do
-    if [ -f $HOME/$f ]; then
-      rm $HOME/$f;
+    if [ -f $HOME/.$f ]; then
+      rm $HOME/.$f;
     fi
 done
 
 for d in $DOT_DIRS; do
-    if [ -d $HOME/$d ]; then
-      rm -rf $HOME/$d;
+    if [ -d $HOME/.$d ]; then
+      rm -rf $HOME/.$d;
     fi
 done
 
