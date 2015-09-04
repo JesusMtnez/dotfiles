@@ -1,11 +1,11 @@
 [submodule "Emacs Solarized Theme"]
-    path = .emacs.d/emacs-color-theme-solarized
+	path = emacs.d/emacs-color-theme-solarized
     url = git@github.com:sellout/emacs-color-theme-solarized.git
 [submodule "livedown emacs package"]
-    path = .emacs.d/non-elpa/emacs-livedown
+	path = emacs.d/non-elpa/emacs-livedown
     url = git@github.com:shime/emacs-livedown.git
 [submodule "move-lines emacs package"]
-    path = .emacs.d/non-elpa/move-lines
+	path = emacs.d/non-elpa/move-lines
     url = git@github.com:targzeta/move-lines.git
 [submodule "oh-my-zsh"]
 	path = .oh-my-zsh
