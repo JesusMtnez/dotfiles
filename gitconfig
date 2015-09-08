@@ -13,6 +13,7 @@
     ui = auto
 [alias]
     s = status
+    sa = status --ignored
     co = checkout
     a = add
     aa = add --all
