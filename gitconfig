@@ -1,19 +1,19 @@
 # Author: Jesús Martínez-Barquero Herrada
 
 [user]
-	name = JesusMtnez
-	email = jesusmartinez93@gmail.com
+    name = JesusMtnez
+    email = jesusmartinez93@gmail.com
 [core]
 	editor = emacs
 [push]
-	default = matching
+    default = matching
 [default]
-	push = matching
+    push = matching
 [color]
     ui = auto
 [alias]
-	s = status
-	co = checkout
+    s = status
+    co = checkout
     a = add
     aa = add --all
     c = commit
