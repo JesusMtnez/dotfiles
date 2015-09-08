@@ -4,7 +4,7 @@
     name = JesusMtnez
     email = jesusmartinez93@gmail.com
 [core]
-	editor = emacs
+    editor = emacs -nw
 [push]
     default = matching
 [default]
