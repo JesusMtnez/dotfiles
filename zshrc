@@ -52,6 +52,9 @@ alias e='emacs -nw'
 alias emacs='emacs -nw'
 alias vi='emacs -nw'
 alias vim='emacs -nw'
+
+# Edition
+alias dotedit='cd ~/.dotfiles; e'
 ########
 # TMUX # (DISABLED)
 ########
