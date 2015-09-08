@@ -46,9 +46,12 @@ function chpwd() {
 #########
 # ALIAS #
 #########
-#
-alias zshconfig='emacs -nw ~/.zshrc'
+
+# Emacs
 alias e='emacs -nw'
+alias emacs='emacs -nw'
+alias vi='emacs -nw'
+alias vim='emacs -nw'
 ########
 # TMUX # (DISABLED)
 ########
