@@ -21,6 +21,7 @@
     ca = commit -a
     cm = commit -m
     cma = commit -a -m
+    cam = commit --amend
     ps = push
     pl = pull
     cl = clone
