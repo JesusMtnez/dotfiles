@@ -55,6 +55,7 @@ alias vim='emacs -nw'
 
 # Edition
 alias dotedit='cd ~/.dotfiles; e'
+alias zshconfig='emacs -nw ~/.zshrc'
 ########
 # TMUX # (DISABLED)
 ########
