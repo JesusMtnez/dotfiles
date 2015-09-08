@@ -37,6 +37,12 @@ source $ZSH/oh-my-zsh.sh
 if [ -f ~/.localrc ]; then
   source ~/.localrc
 fi
+
+# Change PWD hook
+function chpwd() {
+    ls -lh
+}
+
 #########
 # ALIAS #
 #########
