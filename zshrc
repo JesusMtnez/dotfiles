@@ -1,7 +1,8 @@
 ###########################################
 # Author: Jesús Martínez-Barquero Herrada #
-# Last updated: 25-07-2015                #
+# Last updated: 08-09-2015                #
 ###########################################
+
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.dotfiles/.oh-my-zsh
 # Set name of the theme to load.
@@ -19,7 +20,7 @@ HIST_STAMPS="dd/mm/yyyy"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 plugins=(zsh-syntax-highlighting git-extras django npm)
-#
+
 ######################
 # User configuration #
 ######################
@@ -29,15 +30,10 @@ export LIBRARY_PATH="/usr/local/lib":$LD_LIBRARY_PATH
 export C_INCLUDE_PATH="/usr/local/include"
 export CPLUS_INCLUDE_PATH="/usr/local/include"
 # export MANPATH="/usr/local/man:$MANPATH"
-#
-########
-# TMUX # (DISABLED)
-########
-# [[ $- != *i* ]] && return
-# [[ -z "$TMUX" ]] && exec tmux
-#
+
 source $ZSH/oh-my-zsh.sh
-#
+
+# Source local configuration
 if [ -f ~/.localrc ]; then
   source ~/.localrc
 fi
@@ -47,3 +43,8 @@ fi
 #
 alias zshconfig='emacs -nw ~/.zshrc'
 alias e='emacs -nw'
+########
+# TMUX # (DISABLED)
+########
+# [[ $- != *i* ]] && return
+# [[ -z "$TMUX" ]] && exec tmux
