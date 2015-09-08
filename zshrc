@@ -57,6 +57,11 @@ alias vim='emacs -nw'
 alias dotedit='cd ~/.dotfiles; e'
 alias zshconfig='emacs -nw ~/.zshrc'
 alias econfig='emacs -nw ~/.emacs.d/init.el'
+
+# Rerun as sudo
+alias please='sudo $(fc -ln -1)'
+alias fuck='sudo $(fc -ln -1)'
+
 ########
 # TMUX # (DISABLED)
 ########
