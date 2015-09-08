@@ -11,3 +11,4 @@ emacs.d/auto-save-list/
 emacs.d/url
 emacs.d/recentf
 emacs.d/eshell
+emacs.d/localrc.el
