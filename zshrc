@@ -1,6 +1,6 @@
 ###########################################
 # Author: Jesús Martínez-Barquero Herrada #
-# Last updated: 08-09-2015                #
+# Last updated: 09-09-2015                #
 ###########################################
 
 # Path to your oh-my-zsh installation.
@@ -19,7 +19,7 @@ HIST_STAMPS="dd/mm/yyyy"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-plugins=(zsh-syntax-highlighting git-extras django npm)
+plugins=(git-extras npm mvn zsh-syntax-highlighting)
 
 ######################
 # User configuration #
