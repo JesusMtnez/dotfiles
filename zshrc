@@ -1,6 +1,6 @@
 ###########################################
 # Author: Jesús Martínez-Barquero Herrada #
-# Last updated: 09-09-2015                #
+# Last updated: 15-09-2015                #
 ###########################################
 
 # Path to your oh-my-zsh installation.
@@ -76,6 +76,11 @@ function git-wt() {
         sleep 0.5;                    # Wait
     done
 
+}
+
+# Create dir and move inside.
+function mcd() {
+    mkdir "$1" && cd "$1"
 }
 
 ########
