@@ -67,7 +67,7 @@ alias fuck='sudo $(fc -ln -1)'
 #############
 
 # Watch Git Tree
-function git-wt() {
+function gwt() {
     # Loop to imitate watch
     while :; do
         clear;                        # Clear screen
