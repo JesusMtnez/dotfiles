@@ -83,6 +83,15 @@ function mcd() {
     mkdir "$1" && cd "$1"
 }
 
+# Act as git status if no parameters.
+function g() {
+    if [[ $# > 0 ]]; then
+      git $@
+    else
+        git status
+    fi
+}
+
 ########
 # TMUX # (DISABLED)
 ########
