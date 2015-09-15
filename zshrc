@@ -62,6 +62,22 @@ alias econfig='emacs -nw ~/.emacs.d/init.el'
 alias please='sudo $(fc -ln -1)'
 alias fuck='sudo $(fc -ln -1)'
 
+#############
+# FUNCTIONS #
+#############
+
+# Watch Git Tree
+function git-wt() {
+    # Loop to imitate watch
+    while :; do
+        clear;                        # Clear screen
+        LINES=`tput lines`;           # Get screen size
+        git log --graph --pretty=format:'%C(yellow)%h%Creset%C(auto)%d%Creset %s %Cblue(%an)%Creset %Cgreen(%cr)%Creset' --abbrev-commit --all | head -n $(($LINES-1)) # Draw tree
+        sleep 0.5;                    # Wait
+    done
+
+}
+
 ########
 # TMUX # (DISABLED)
 ########
