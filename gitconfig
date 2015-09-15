@@ -33,7 +33,6 @@
     ba = branch -a
     l = log -2
     t = log --graph --pretty=format:'%C(yellow)%h%Creset%C(auto)%d%Creset %s %Cblue(%an)%Creset %Cgreen(%cr)%Creset' --abbrev-commit --all
-    wt = !watch --color -t -x git log --graph --pretty=format:'%C(yellow)%h%Creset%C(red)%d%Creset %C(white dim)%s%Creset %Cblue(%an)%Creset %Cgreen(%cr)%Creset' --abbrev-commit --all
     d = diff
     f = fetch
     m = merge
