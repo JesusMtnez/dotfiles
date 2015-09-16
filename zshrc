@@ -21,7 +21,7 @@ plugins=(git-extras npm mvn zsh-syntax-highlighting)
 ######################
 # User configuration #
 ######################
-export PATH="/usr/local:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/sbin:/bin:/usr/games:/usr/local/games":$PATH
+export PATH="$HOME/bin:/usr/local:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/sbin:/bin:/usr/games:/usr/local/games":$PATH
 fpath=(/usr/local/share/zsh-completions /usr/local/etc/bash_completion.d/ $fpath)
 export LIBRARY_PATH="/usr/local/lib":$LD_LIBRARY_PATH
 export C_INCLUDE_PATH="/usr/local/include"
