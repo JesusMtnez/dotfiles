@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+# Watch Git Tree
+while :; do                       # Loop to imitate watch
+    clear;                        # Clear screen
+    LINES=`tput lines`;           # Get screen size
+    COLUMNS=`tput cols`;
+    git --no-pager log --graph --pretty=format:'%C(yellow)%h%Creset%C(auto)%d%Creset %s %Cblue(%an)%Creset %Cgreen(%cr)%Creset' --abbrev-commit --all | gcut -nc -$(($COLUMNS-1)) | head -n $(($LINES-1)) # Draw tree
+    sleep 0.5;                    # Wait
+done
