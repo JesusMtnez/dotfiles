@@ -16,7 +16,7 @@ HIST_STAMPS="dd/mm/yyyy"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-plugins=(git-extras npm mvn zsh-syntax-highlighting)
+plugins=(docker docker-compose git-extras heroku npm mvn zsh-syntax-highlighting)
 
 ######################
 # User configuration #
