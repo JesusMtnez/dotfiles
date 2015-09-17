@@ -12,7 +12,7 @@ for f in $DOT_FILES; do
 done
 
 # Create $HOME/bin if necessary
-if [[ ! -d $HOME/bin ]]; then
+if [ ! -d $HOME/bin ]; then
   mkdir $HOME/bin
 fi
 
