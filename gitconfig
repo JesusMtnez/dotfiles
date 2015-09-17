@@ -1,10 +1,11 @@
-# Author: Jesús Martínez-Barquero Herrada
+# Author: JesusMtnez
 
 [user]
     name = JesusMtnez
     email = jesusmartinez93@gmail.com
 [core]
     editor = emacs -nw
+    autocrlf = input
 [push]
     default = matching
 [default]
