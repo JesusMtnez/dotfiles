@@ -4,159 +4,164 @@
 
 ;; MELPA and Marmalade repos for packages.
 (require 'package)
-(add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/") t)
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
 
-;; Bootstrap 'paradox-package-manager
-(unless (package-installed-p 'paradox)
+;; Bootstrap 'use-package
+(unless (package-installed-p 'use-package)
   (package-refresh-contents)
-  (package-install 'paradox))
+  (package-install 'use-package))
 
-(package-install 'helm)
-(require 'helm)
-(require 'helm-config)
+(eval-when-compile
+  (require 'use-package))
+(require 'bind-key)
+(require 'diminish)
 
-(global-set-key (kbd "C-c h") 'helm-command-prefix)
-(global-unset-key (kbd "C-x c"))
-(global-set-key (kbd "M-x") 'helm-M-x) ; replace M-x with helm-M-X
-(global-set-key (kbd "C-x C-f") 'helm-find-files) ; replace find-file
-(global-set-key (kbd "M-y") 'helm-show-kill-ring)
-(global-set-key (kbd "C-x b") 'helm-buffers-list)
+;; Color Theme: Solarized Dark [Light]
+(use-package color-theme-solarized
+  :ensure t
+  :init (require 'color-theme)
+  :config (progn (set-frame-parameter nil 'background-mode 'dark)
+                 (set-terminal-parameter nil 'background-mode 'dark)
+                 (add-to-list 'load-path (car (directory-files "~/.emacs.d/elpa" t "color-theme-solarized-*" nil)))
+                 (color-theme-solarized))
+  )
 
-(define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action) ; rebind tab to run persistent action
-(define-key helm-map (kbd "C-i") 'helm-execute-persistent-action) ; make TAB works in terminal
-(define-key helm-map (kbd "C-z") 'helm-select-action) ; list actions using C-z
+;; Common Lisp
+(use-package cl
+  :ensure t
+  :defer t)
 
-(when (executable-find "curl")
-  (setq helm-google-suggest-use-curl-p t))
+;; Company
+(use-package company
+  :ensure t
+  :config (progn (add-hook 'after-init-hook 'global-company-mode))
+  :diminish company-mode)
+;; TODO: Company integration with helm: https://github.com/yasuyk/helm-company
 
-(setq helm-split-window-in-side-p t
-      helm-move-to-line-cycle-in-source t
-      helm-ff-search-library-in-sexp t
-      helm-scroll-amount 8
-      helm-ff-file-name-history-use-recentf t
-      ;; Enable autoresize
-      helm-autoresize-mode t;
-      helm-autoresize-max-height 20
-      ;; Enable fuzzy matching globally in helm
-      ;; Not working in helm-M-x
-      helm-mode-fuzzy-match t
-      helm-completion-in-region-fuzzy-match t
-      ;; Fix fuzzy matching in helm-M-x
-      helm-M-x-fuzzy-match t)
+;; Helm
+(use-package helm
+  :ensure t
+  :defer t
+  :bind (("C-c h" . helm-command-prefix)
+         ("C-x C-f" . helm-find-files)
+         ("C-x b" . helm-buffers-list)
+         ("M-x" . helm-M-x)
+         ("M-y" . helm-show-kill-ring))
+  :config (progn (require 'helm-config)
+                 (setq helm-split-window-in-side-p t
+                       helm-move-to-line-cycle-in-source t
+                       helm-ff-search-library-in-sexp t
+                       helm-scroll-amount 8
+                       helm-ff-file-name-history-use-recentf t
+                       helm-autoresize-mode t;
+                       helm-autoresize-max-height 20
+                       helm-mode-fuzzy-match t
+                       helm-completion-in-region-fuzzy-match t
+                       helm-M-x-fuzzy-match t)
+                 (helm-mode t)
+                 (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action) ; rebind tab to run persistent action
+                 (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action) ; make TAB works in terminal
+                 (define-key helm-map (kbd "C-z") 'helm-select-action) ; list actions using C-z
+                 )
+  :diminish helm-mode
+  )
 
-(helm-mode t)
+;; Highlight-Characters
+(use-package highlight-chars
+  :ensure t
+  :config (progn (add-hook 'font-lock-mode-hook 'hc-highlight-tabs)
+                 (add-hook 'font-lock-mode-hook 'hc-highlight-trailing-whitespace)))
 
-;; ido-vertical-mode package
-;; (paradox-require 'ido-vertical-mode)
-;; (ido-mode t)
-;; (ido-vertical-mode t)
+;; JS2-mode
+(use-package js2-mode
+  :ensure t
+  :defer t
+  :mode (("\\.js" . js2-mode)))
 
-;; common lisp package
-(paradox-require 'cl)
+;; Magit
+(use-package magit
+  :ensure t
+  :defer t
+  :config (progn (setq magit-last-seen-setup-instructions "1.4.0")))
 
-;; powerline
-(paradox-require 'powerline)
-(powerline-center-theme)
-(setq powerline-default-separator 'contour)
+;; Markdown-mode
+(use-package markdown-mode
+  :ensure t
+  :defer t
+  :mode (("\\.md" . gfm-mode)
+         ("\\.mdown" . gfm-mode)
+         ("\\.markdown" . gfm-mode))
+  :config (progn (set-variable 'markdown-indent-on-enter nil)))
 
-;; web-mode package
-(paradox-require 'web-mode)
-(setq web-mode-code-indent-offset 2)
-(setq web-mode-css-indent-offset 2)
-(setq web-mode-markup-indent-offset 2)
-(setq web-mode-script-padding 2)
-(setq web-mode-enable-auto-pairing t)
-(setq web-mode-enable-current-element-highlight t)
-(setq web-mode-enable-current-column-highlight t)
-(set-face-attribute 'web-mode-html-tag-bracket-face nil :foreground "Snow3")
-(set-face-attribute 'web-mode-current-element-highlight-face nil :background "#073642")
-(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+;; Neo-tree
+(use-package neotree
+  :ensure t
+  :defer t
+  :bind ("<f8>" . neotree-toggle))
+  ;TODO: Add config section with set-face-attribute
 
-;; emmet-mode package
-(paradox-require 'emmet-mode)
-(add-hook 'web-mode-hook 'emmet-mode)
+;; nlinum
+(use-package nlinum
+  :ensure t
+  :config (progn (setq nlinum-format "%4d")
+                 (add-hook 'after-init-hook 'global-nlinum-mode)))
 
-;; auto-complete package
-(paradox-require 'auto-complete)
-(global-auto-complete-mode t)
+;; Powerline
+(use-package powerline
+  :ensure t
+  :config (progn (powerline-center-theme)
+                 (setq powerline-default-separator 'contour)))
+
+;; Undo-Tree
+(use-package undo-tree
+  :ensure t
+  :defer t
+  :bind (("C-z" . undo-tree-undo)
+         ("C-S-z" . undo-tree-redo))
+  :init (progn (global-undo-tree-mode t))
+  :diminish undo-tree-mode)
+
+;; Web-mode
+(use-package web-mode
+  :ensure t
+  :defer t
+  :mode ("\\.html?\\'" "\\.css?\\'")
+  :config (progn (setq web-mode-code-indent-offset 2)
+                 (setq web-mode-css-indent-offset 2)
+                 (setq web-mode-markup-indent-offset 2)
+                 (setq web-mode-script-padding 2)
+                 (setq web-mode-enable-auto-pairing t)
+                 (setq web-mode-enable-current-element-highlight t)
+                 (setq web-mode-enable-current-column-highlight t)
+                 (set-face-attribute 'web-mode-html-tag-bracket-face nil :foreground "Snow3")
+                 (set-face-attribute 'web-mode-current-element-highlight-face nil :background "#073642")))
+
+;; Web-mode -> Emmet
+(use-package emmet-mode
+  :ensure t
+  :defer t
+  :config (progn (add-hook 'web-mode-hook 'emmet-mode)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;
+;; OLD CONFIGURATIONS ;;
+;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; move-lines package
-(add-to-list 'load-path "~/.emacs.d/non-elpa/move-lines")
-(require 'move-lines)
-(move-lines-binding)
-
-;; projectile package
-;; (paradox-require 'projectile)
-;; (projectile-global-mode t)
-
-;; neotree package
-(paradox-require 'neotree)
-(global-set-key [f8] 'neotree-toggle)
-
-;; magit package
-(paradox-require 'magit)
-(setq magit-last-seen-setup-instructions "1.4.0")
-
-;; markdown package
-(paradox-require 'markdown-mode)
-(autoload 'markdown-mode "markdown-mode.el" "Major mode for editing Markdown files" t)
-(add-to-list 'auto-mode-alist '("\\.md\\'" . gfm-mode))
-(add-to-list 'auto-mode-alist '("\\.mdown\\'" . gfm-mode))
-(add-to-list 'auto-mode-alist '("\\.markdown\\'" . gfm-mode))
-
-;; linum-off package
-(paradox-require 'linum-off)
-
-;; undo-tree package
-(paradox-require 'undo-tree)
-(global-undo-tree-mode t)
-
-;; js2-mode package
-(paradox-require 'js2-mode)
-(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
-
-;; autocomplete for js2-mode package
-(paradox-require 'ac-js2)
-(setq ac-js2-evaluate-calls t)
-(add-hook 'js2-mode-hook 'ac-js2-mode)
+;;(add-to-list 'load-path "~/.emacs.d/non-elpa/move-lines")
+;;(require 'move-lines)
+;;(move-lines-binding)
 
 ;; livedown package
-(add-to-list 'load-path "~/.emacs.d/non-elpa/emacs-livedown")
-(require 'livedown)
-
-;; highlight-chars package
-(paradox-require 'highlight-chars)
-(add-hook 'font-lock-mode-hook 'hc-highlight-tabs)
-(add-hook 'font-lock-mode-hook 'hc-highlight-trailing-whitespace)
-(add-hook 'after-change-major-mode-hook
-          (lambda ()
-            (when (eq major-mode 'ibuffer-mode)
-              (remove-hook 'font-lock-mode-hook
-                           'hc-highlight-trailing-whitespace)
-              (hc-dont-highlight-trailing-whitespace))))
-
-;; IBuffer package
-;; (paradox-require 'ibuffer)
+;; (add-to-list 'load-path "~/.emacs.d/non-elpa/emacs-livedown")
+;; (require 'livedown)
 
 ;; misc package for extra functionality
 (require 'misc)
 
-;; nlinum package
-(paradox-require 'nlinum)
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; My personal configurations ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Solarized Dark Theme
-(add-to-list 'custom-theme-load-path "~/.emacs.d/emacs-color-theme-solarized")
-(load-theme 'solarized t)
-(set-frame-parameter nil 'background-mode 'dark)
-(set-terminal-parameter nil 'background-mode 'dark)
-(enable-theme 'solarized)
-
 (setq-default c-basic-offset 4
               tab-width 4
               indent-tabs-mode nil
@@ -171,15 +176,10 @@
 (column-number-mode t)
 (electric-pair-mode t)
 (delete-selection-mode t)
-(global-nlinum-mode t)
 (global-auto-revert-mode t)
-(setq nlinum-format "%4d")
-;; (global-hl-line-mode t)
 (global-visual-line-mode t)
 (setq make-backup-files nil)
 (setq-default cursor-type 'bar)
-
-(setq doc-view-ghostscript-program "/usr/local/bin/gs")
 
 ;; Font configuration
 (set-face-attribute 'default nil :font "DejaVu Sans Mono for Powerline")
@@ -198,38 +198,18 @@
 (setq ns-right-option-modifier 'none)
 ;; (setq inhibit-startup-screen t)
 
-;; Comment line/region function. Bind to C-c C-c
-(defun comment-or-uncomment-region-or-line ()
-  "Comments or uncomments the region or the current line if there's no active region."
-  (interactive)
-  (let (beg end)
-    (if (region-active-p)
-      (setq beg (region-beginning) end (region-end))
-      (setq beg (line-beginning-position) end (line-end-position))
-    )
-    (comment-or-uncomment-region beg end)
-  )
-)
-
 ;; Key bindings
 (global-set-key (kbd "C-c C-c") 'comment-or-uncomment-region-or-line)
 (global-set-key (kbd "C-x C-k") 'kill-this-buffer)
-(global-set-key (kbd "C-z")     'undo-tree-undo)
-(global-set-key (kbd "C-S-z")   'undo-tree-redo)
-(global-set-key (kbd "C-x C-b") 'ibuffer)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(ciao-first-indent-width 2)
- '(ciao-indent-width 2)
  '(livedown:autostart t)
  '(livedown:open t)
  '(livedown:port 1337)
- '(markdown-indent-on-enter nil)
- '(paradox-github-token t)
  '(sh-indentation 2))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
