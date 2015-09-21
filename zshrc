@@ -76,6 +76,8 @@ function g() {
         git status -sb
     fi
 }
+# Auto-complete g function as git
+compdef g=git
 
 ########
 # TMUX # (DISABLED)
