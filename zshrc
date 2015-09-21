@@ -44,20 +44,10 @@ function chpwd() {
 # ALIAS #
 #########
 
-# Emacs
-alias e='emacs -nw'
-alias emacs='emacs -nw'
-alias vi='emacs -nw'
-alias vim='emacs -nw'
-
-# Edition
-alias dotedit='cd ~/.dotfiles; e'
-alias zshconfig='emacs -nw ~/.zshrc'
-alias econfig='emacs -nw ~/.emacs.d/init.el'
-
-# Rerun as sudo
-alias please='sudo $(fc -ln -1)'
-alias fuck='sudo $(fc -ln -1)'
+# Source aliases
+if [ -f $HOME/.alias ]; then
+  source ~HOME/.alias
+fi
 
 #############
 # FUNCTIONS #

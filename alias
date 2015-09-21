@@ -1,0 +1,26 @@
+# Rerun as sudo
+alias please='sudo -E $(fc -ln -1)'
+alias fuck='sudo -E $(fc -ln -1)'
+
+# ls alias
+if [ `uname` = 'Darwin' ]; then
+  alias ls='ls -G'  # Colorized in MacOSX
+else
+  alias ls='ls --color=auto'
+fi
+alias l='ls -lFh'   # long list, show type, human readable
+alias ll='ls -lAFh' # long list, show almost all, show type, human readeable
+
+# Emacs/Vi/Vim
+alias e='emacs -nw'
+alias emacs='emacs -nw'
+alias vi='emacs -nw'
+alias vim='emacs -nw'
+
+# Edition
+alias zshconfig='emacs -nw ~/.zshrc'
+alias emacsinit='emacs -nw ~/.emacs.d/init.el'
+
+# Others
+alias RM='rm -rf'
+alias grep='grep --color=auto'
