@@ -74,3 +74,5 @@ compdef g=git
 ########
 # [[ $- != *i* ]] && return
 # [[ -z "$TMUX" ]] && exec tmux
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
