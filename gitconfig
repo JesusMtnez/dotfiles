@@ -35,6 +35,7 @@
     l = log -2
     t = log --graph --pretty=format:'%C(yellow)%h%Creset%C(auto)%d%Creset %s %Cblue(%an)%Creset %Cgreen(%cr)%Creset' --abbrev-commit --all
     d = diff
+    dc = diff --cached
     f = fetch
     m = merge
     su = submodule foreach git pull origin master
