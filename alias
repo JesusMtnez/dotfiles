@@ -8,6 +8,7 @@ if [ `uname` = 'Darwin' ]; then
 else
   alias ls='ls --color=auto'
 fi
+alias la='ls -A'    # show almost all
 alias l='ls -lFh'   # long list, show type, human readable
 alias ll='ls -lAFh' # long list, show almost all, show type, human readeable
 
