@@ -3,7 +3,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.dotfiles/.oh-my-zsh
 # Set name of the theme to load.
-ZSH_THEME="sorin"
+ZSH_THEME="ys"
 export TERM='xterm-256color'
 export UPDATE_ZSH_DAYS=3
 # CASE_SENSITIVE="true"
