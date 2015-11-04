@@ -2,6 +2,7 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.dotfiles/.oh-my-zsh
+export ZSH_CUSTOM=$HOME/.dotfiles/custom
 # Set name of the theme to load.
 ZSH_THEME="ys"
 export TERM='xterm-256color'
@@ -13,9 +14,8 @@ DISABLE_AUTO_TITLE="true"
 COMPLETION_WAITING_DOTS="true"
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 HIST_STAMPS="dd/mm/yyyy"
-# ZSH_CUSTOM=/path/to/new-custom-folder
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
 plugins=(brew docker docker-compose git-extras heroku npm mvn zsh-syntax-highlighting)
 
 ######################
