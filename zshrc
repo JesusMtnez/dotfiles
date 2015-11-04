@@ -4,7 +4,7 @@
 export ZSH=$HOME/.dotfiles/.oh-my-zsh
 export ZSH_CUSTOM=$HOME/.dotfiles/custom
 # Set name of the theme to load.
-ZSH_THEME="ys"
+ZSH_THEME="jesusmtnez"
 export TERM='xterm-256color'
 export UPDATE_ZSH_DAYS=3
 # CASE_SENSITIVE="true"
