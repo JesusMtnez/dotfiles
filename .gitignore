@@ -1,8 +1,8 @@
+# OS
 .directory
 .DS_store
 
-.backup
-
+# Emacs
 emacs.d/elpa
 emacs.d/ac-comphist.dat
 emacs.d/ido.last
@@ -13,3 +13,9 @@ emacs.d/recentf
 emacs.d/eshell
 emacs.d/localrc.el
 emacs.d/.last-package-update-day
+
+# ZSH
+custom/plugins/**
+
+# Custom
+.backup
