@@ -22,6 +22,12 @@ alias vim='emacs -nw'
 alias zshconfig='emacs -nw ~/.zshrc'
 alias emacsinit='emacs -nw ~/.emacs.d/init.el'
 
+# Copy/Paste as MacOSX in Linux
+if [ `uname` = 'Linux' ]; then
+  alias pbcopy='xsel --clipboard --input'
+  alias pbpaste='xsel --clipboard --output'
+fi
+
 # Others
 alias RM='rm -rf'
 alias grep='grep --color=auto'
