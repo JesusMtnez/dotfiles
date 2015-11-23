@@ -62,10 +62,5 @@ g() {
 # Auto-complete g function as git
 compdef g=git
 
-########
-# TMUX # (DISABLED)
-########
-# [[ $- != *i* ]] && return
-# [[ -z "$TMUX" ]] && exec tmux
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
