@@ -31,3 +31,4 @@ fi
 # Others
 alias RM='rm -rf'
 alias grep='grep --color=auto'
+alias t=tmux

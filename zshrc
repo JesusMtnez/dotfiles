@@ -62,6 +62,9 @@ g() {
 # Auto-complete g function as git
 compdef g=git
 
+# Auto-complete t alias as tmux
+compdef t=tmux
+
 #########
 # Hooks #
 #########
