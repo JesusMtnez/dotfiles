@@ -73,3 +73,6 @@ compdef t=tmux
 function chpwd() {
     ls -lh
 }
+
+# Avoid duplicated in PATH
+export -U PATH
