@@ -27,6 +27,8 @@ export LIBRARY_PATH="/usr/local/lib":$LD_LIBRARY_PATH
 export C_INCLUDE_PATH="/usr/local/include"
 export CPLUS_INCLUDE_PATH="/usr/local/include"
 # export MANPATH="/usr/local/man:$MANPATH"
+export EDITOR="emacs -nw"
+export VISUAL=emacs
 
 source $ZSH/oh-my-zsh.sh
 
