@@ -43,7 +43,7 @@ source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 #############
-# FUNCTIONS #
+# Functions #
 #############
 
 # Create dir and move inside.
@@ -62,5 +62,11 @@ g() {
 # Auto-complete g function as git
 compdef g=git
 
+#########
+# Hooks #
+#########
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# Change PWD hook
+function chpwd() {
+    ls -lh
+}
