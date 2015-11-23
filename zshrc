@@ -56,12 +56,12 @@ fi
 #############
 
 # Create dir and move inside.
-function mcd() {
+mcd() {
     mkdir "$1" && cd "$1"
 }
 
 # Act as git status if no parameters.
-function g() {
+g() {
     if [[ $# > 0 ]]; then
       git $@
     else
