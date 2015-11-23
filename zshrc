@@ -30,26 +30,17 @@ export CPLUS_INCLUDE_PATH="/usr/local/include"
 export EDITOR="emacs -nw"
 export VISUAL=emacs
 
+# Source OH-MY-ZSH
 source $ZSH/oh-my-zsh.sh
 
 # Source local configuration
-if [ -f ~/.localrc ]; then
-  source ~/.localrc
-fi
-
-# Change PWD hook
-function chpwd() {
-    ls -lh
-}
-
-#########
-# ALIAS #
-#########
+[ -f $HOME/.localrc ] && source $HOME/.localrc
 
 # Source aliases
-if [ -f $HOME/.alias ]; then
-  source ~HOME/.alias
-fi
+[ -f $HOME/.alias ] && source $HOME/.alias
+
+# Source fzf bindings
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 #############
 # FUNCTIONS #
