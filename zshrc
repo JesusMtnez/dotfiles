@@ -65,6 +65,10 @@ compdef g=git
 # Auto-complete t alias as tmux
 compdef t=tmux
 
+# History configuration
+setopt hist_ignore_all_dups
+setopt hist_ignore_space
+
 #########
 # Hooks #
 #########
