@@ -29,6 +29,7 @@ export CPLUS_INCLUDE_PATH="/usr/local/include"
 # export MANPATH="/usr/local/man:$MANPATH"
 export EDITOR="emacs -nw"
 export VISUAL=emacs
+export NVM_DIR="$HOME/.nvm"
 
 # Source OH-MY-ZSH
 source $ZSH/oh-my-zsh.sh
@@ -41,6 +42,9 @@ source $ZSH/oh-my-zsh.sh
 
 # Source fzf bindings
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Source nvm
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 #############
 # Functions #
