@@ -18,6 +18,7 @@
     co = checkout
     a = add
     aa = add --all
+    ap = add --patch
     c = commit --verbose
     ca = commit -a
     cm = commit -m
