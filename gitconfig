@@ -30,6 +30,8 @@
     t = tag
     ra = remote add
     rr = remote rm
+    rp = remote prune
+    rpo = remote prune origin
     b = branch
     br = branch -r
     ba = branch -a
