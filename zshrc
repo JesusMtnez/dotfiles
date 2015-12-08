@@ -21,11 +21,20 @@ plugins=(brew docker docker-compose git-extras heroku npm mvn zsh-syntax-highlig
 ######################
 # User configuration #
 ######################
-export PATH="$HOME/bin:/usr/local:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/sbin:/bin:/usr/games:/usr/local/games":$PATH
-fpath=(/usr/local/share/zsh-completions /usr/local/etc/bash_completion.d/ $fpath)
+# PATH
+export PATH="/usr/games:/usr/local/games":$PATH
+export PATH="/usr/bin:/usr/sbin:/sbin:/bin":$PATH
+export PATH="/usr/local:/usr/local/bin:/usr/local/sbin":$PATH
+export PATH="$HOME/bin":$PATH # My personal bin path
+
+# Functions Path
+export fpath=(/usr/local/share/zsh-completions /usr/local/etc/bash_completion.d/ $fpath)
+
+# Libraries Path
 export LIBRARY_PATH="/usr/local/lib":$LD_LIBRARY_PATH
 export C_INCLUDE_PATH="/usr/local/include"
 export CPLUS_INCLUDE_PATH="/usr/local/include"
+
 # export MANPATH="/usr/local/man:$MANPATH"
 export EDITOR="emacs -nw"
 export VISUAL=emacs
