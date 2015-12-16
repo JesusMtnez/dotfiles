@@ -33,3 +33,4 @@ alias RM='rm -rf'
 alias grep='grep --color=auto'
 alias t=tmux
 alias scala='scala -Dscala.color'
+alias mvn='mvn-color'
