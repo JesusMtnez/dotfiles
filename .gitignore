@@ -13,6 +13,7 @@ emacs.d/recentf
 emacs.d/eshell
 emacs.d/localrc.el
 emacs.d/.last-package-update-day
+emacs.d/ensime/
 
 # ZSH
 custom/plugins/**
