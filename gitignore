@@ -1,1 +1,6 @@
+# Mac OSX
 .DS_Store
+
+# ENSIME
+.ensime
+.ensime_cache/
