@@ -6,6 +6,7 @@
 [core]
     editor = emacs -nw
     autocrlf = input
+    excludesfile = ~/.gitignore
 [push]
     default = matching
 [default]
