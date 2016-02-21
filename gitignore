@@ -4,3 +4,6 @@
 # ENSIME
 .ensime
 .ensime_cache/
+
+# IntelliJ Idea
+.idea/
