@@ -29,6 +29,7 @@ values."
      version-control
      emacs-lisp
      scala
+     selectric
      ;; markdown
      ;; org
      ;; (shell :variables
