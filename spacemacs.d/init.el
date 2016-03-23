@@ -28,7 +28,9 @@ values."
      git
      version-control
      emacs-lisp
-     scala
+     (scala :variables
+            scala-enable-eldoc t
+            scala-auto-insert-asterisk-in-comments t)
      selectric
      ;; markdown
      ;; org
