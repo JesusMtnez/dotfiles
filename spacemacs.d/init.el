@@ -31,12 +31,12 @@ values."
      emacs-lisp
      git
      html
+     markdown
      (scala :variables
             scala-enable-eldoc t
             scala-auto-insert-asterisk-in-comments t)
      selectric
      version-control
-     ;; markdown
      ;; org
      ;; (shell :variables
      ;;        shell-default-height 30
