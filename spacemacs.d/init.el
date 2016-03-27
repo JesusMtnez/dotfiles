@@ -25,6 +25,8 @@ values."
      ;; ----------------------------------------------------------------
      auto-completion
      better-defaults
+     (colors :variables
+             colors-enable-rainbow-indentifiers t)
      dockerfile
      emacs-lisp
      git
