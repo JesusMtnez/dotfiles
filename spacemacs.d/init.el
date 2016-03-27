@@ -25,13 +25,13 @@ values."
      ;; ----------------------------------------------------------------
      auto-completion
      better-defaults
-     git
-     version-control
      emacs-lisp
+     git
      (scala :variables
             scala-enable-eldoc t
             scala-auto-insert-asterisk-in-comments t)
      selectric
+     version-control
      ;; markdown
      ;; org
      ;; (shell :variables
