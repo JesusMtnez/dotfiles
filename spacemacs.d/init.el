@@ -37,6 +37,7 @@ values."
             scala-auto-insert-asterisk-in-comments t)
      selectric
      version-control
+     yaml
      ;; org
      ;; (shell :variables
      ;;        shell-default-height 30
