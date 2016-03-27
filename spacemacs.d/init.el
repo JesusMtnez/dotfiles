@@ -25,6 +25,7 @@ values."
      ;; ----------------------------------------------------------------
      auto-completion
      better-defaults
+     dockerfile
      emacs-lisp
      git
      (scala :variables
