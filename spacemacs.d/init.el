@@ -30,6 +30,7 @@ values."
      dockerfile
      emacs-lisp
      git
+     html
      (scala :variables
             scala-enable-eldoc t
             scala-auto-insert-asterisk-in-comments t)
