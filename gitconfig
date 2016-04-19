@@ -41,6 +41,8 @@
     t = log --graph --pretty=format:'%C(yellow)%h%Creset%C(auto)%d%Creset %s %Cblue(%an)%Creset %Cgreen(%cr)%Creset' --abbrev-commit --all
     d = diff
     dc = diff --cached
+    df = "!f() { git --no-pager diff $@; }; f"
+    dfc = "!f() { git --no-pager diff --cached $@; }; f"
     f = fetch
     fa = fetch --all
     m = merge
