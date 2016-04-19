@@ -7,6 +7,7 @@
     editor = emacs -nw
     autocrlf = input
     excludesfile = ~/.gitignore
+    whitespace = trailing-space, blank-at-eol, tabs-in-indent
 [push]
     default = matching
 [default]
