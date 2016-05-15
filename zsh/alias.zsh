@@ -18,10 +18,6 @@ alias emacs='emacs -nw'
 alias vi='emacs -nw'
 alias vim='emacs -nw'
 
-# Edition
-alias zshconfig='emacs -nw ~/.zshrc'
-alias emacsinit='emacs -nw ~/.emacs.d/init.el'
-
 # Copy/Paste as MacOSX in Linux
 if [ `uname` = 'Linux' ]; then
   alias pbcopy='xsel --clipboard --input'
@@ -31,6 +27,5 @@ fi
 # Others
 alias RM='rm -rf'
 alias grep='grep --color=auto'
-alias t=tmux
 alias scala='scala -Dscala.color'
 alias mvn='mvn-color'
