@@ -1,21 +1,16 @@
 # Author: JesusMtnez
 
-# Path to your oh-my-zsh installation.
+###########################
+# oh-my-zsh configuration #
+###########################
 export ZSH=$HOME/.dotfiles/.oh-my-zsh
 export ZSH_CUSTOM=$HOME/.dotfiles/custom
-# Set name of the theme to load.
 ZSH_THEME="jesusmtnez"
 export TERM='xterm-256color'
 export UPDATE_ZSH_DAYS=3
-# CASE_SENSITIVE="true"
-# DISABLE_AUTO_UPDATE="true"
 DISABLE_AUTO_TITLE="true"
-# ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
 HIST_STAMPS="yyyy/mm/dd"
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
 plugins=(brew docker docker-compose git-extras heroku npm mvn zsh-syntax-highlighting)
 
 ######################
