@@ -16,7 +16,7 @@ emacs.d/.last-package-update-day
 emacs.d/ensime/
 
 # ZSH
-custom/plugins/**
+zsh/plugins/**
 
 # Custom
 .backup

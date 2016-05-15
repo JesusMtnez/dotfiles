@@ -4,7 +4,7 @@
 # oh-my-zsh configuration #
 ###########################
 export ZSH=$HOME/.dotfiles/.oh-my-zsh
-export ZSH_CUSTOM=$HOME/.dotfiles/custom
+export ZSH_CUSTOM=$HOME/.dotfiles/zsh
 ZSH_THEME="jesusmtnez"
 export TERM='xterm-256color'
 export UPDATE_ZSH_DAYS=3
