@@ -9,9 +9,7 @@
     excludesfile = ~/.gitignore
     whitespace = trailing-space, blank-at-eol, tabs-in-indent
 [push]
-    default = matching
-[default]
-    push = matching
+    default = upstream
 [color]
     ui = auto
 [alias]
