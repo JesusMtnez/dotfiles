@@ -38,6 +38,7 @@ values."
      (scala :variables
             scala-enable-eldoc t
             scala-auto-insert-asterisk-in-comments t)
+     python
      selectric
      version-control
      yaml
