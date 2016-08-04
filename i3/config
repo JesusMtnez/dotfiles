@@ -173,3 +173,6 @@ bar {
 
 # Launch dunst with custom config
 exec --no-startup-id dunst -config ~/.dunstrc
+
+# Set custom keymap (CapLocks -> Ctrl)
+exec --no-startup-id xmodmap ~/.Xmodmap
