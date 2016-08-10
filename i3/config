@@ -176,6 +176,9 @@ bar {
         position top
 }
 
+# Disable focus on mouse position
+focus_follows_mouse no
+
 # Launch dunst with custom config
 exec --no-startup-id dunst -config ~/.dunstrc
 
