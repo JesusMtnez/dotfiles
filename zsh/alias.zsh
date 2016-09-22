@@ -12,11 +12,9 @@ alias la='ls -A'    # show almost all
 alias l='ls -lFh'   # long list, show type, human readable
 alias ll='ls -lAFh' # long list, show almost all, show type, human readeable
 
-# Emacs/Vi/Vim
+# Emacs
 alias e='emacs -nw'
 alias emacs='emacs -nw'
-alias vi='emacs -nw'
-alias vim='emacs -nw'
 
 # Copy/Paste as MacOSX in Linux
 if [ `uname` = 'Linux' ]; then
