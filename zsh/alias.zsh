@@ -22,6 +22,17 @@ if [ `uname` = 'Linux' ]; then
   alias pbpaste='xsel --clipboard --output'
 fi
 
+# APT tool alias
+alias a='sudo apt'
+alias as='sudo apt search'
+alias ai='sudo apt install'
+alias aup='sudo apt update'
+alias aug='sudo apt upgrade'
+alias auu='sudo apt update && sudo apt upgrade'
+alias ar='sudo apt remove'
+alias ap='sudo apt purge'
+alias aar='sudo apt autoremove'
+
 # Others
 alias RM='rm -rf'
 alias grep='grep --color=auto'
