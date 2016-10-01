@@ -24,6 +24,7 @@
     cm = commit -m
     cma = commit -a -m
     cam = commit --amend
+    camn = commit --amend --no-edit
     ps = push
     pl = pull
     cl = clone
