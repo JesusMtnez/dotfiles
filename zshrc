@@ -11,7 +11,7 @@ HIST_STAMPS="yyyy/mm/dd"
 
 plugins=(brew docker docker-compose git-extras heroku npm mvn zsh-syntax-highlighting)
 
-# This source are unnecessary since oh-my-zsh framework will load all *.zsh in ZSH_CUSTOM
+# These sources are unnecessary since oh-my-zsh framework will load all *.zsh in ZSH_CUSTOM
 # source $ZSH_CUSTOM/alias.zsh
 # source $ZSH_CUSTOM/env.zsh
 # source $ZSH_CUSTOM/functions.zsh
