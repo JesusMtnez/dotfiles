@@ -44,19 +44,13 @@
   :ensure t
   :defer t)
 
-;; Company Tern Backend
-(use-package company-tern
-  :ensure t
-  :defer t)
-
 ;; Company
 (use-package company
   :ensure t
   :config (progn (add-hook 'after-init-hook 'global-company-mode)
                  (setq company-idle-delay 0.1)          ; Reduce company auto complete start time
                  (setq company-minimum-prefix-length 1) ; Reduce prefix to start completion
-                 (setq company-show-numbers t)          ; Show number to quick access with M-number
-                 (add-to-list 'company-backends 'company-tern))
+                 (setq company-show-numbers t))         ; Show number to quick access with M-number
   :diminish (company-mode . "CM"))
 ;; TODO: Company integration with helm: https://github.com/yasuyk/helm-company
 
@@ -117,13 +111,6 @@
   :config (progn (add-hook 'font-lock-mode-hook 'hc-highlight-tabs)
                  (add-hook 'font-lock-mode-hook 'hc-highlight-trailing-whitespace)))
 
-;; JS2-mode
-(use-package js2-mode
-  :ensure t
-  :defer t
-  :config (progn (add-hook 'js2-mode-hook (lambda() (tern-mode t))))
-  :mode (("\\.js" . js2-mode)))
-
 ;; Magit
 (use-package magit
   :ensure t
@@ -177,11 +164,6 @@
   :ensure t
   :config (progn (add-hook 'emacs-lisp-mode-hook 'rainbow-delimiters-mode)))
 
-;; Tern
-(use-package tern
-  :ensure t
-  :defer t)
-
 ;; Undo-Tree
 (use-package undo-tree
   :ensure t
@@ -211,6 +193,12 @@
   :ensure t
   :defer t
   :config (progn (add-hook 'web-mode-hook 'emmet-mode)))
+
+;; Which-key
+(use-package which-key
+  :ensure t
+  :defer t
+  :init (progn (which-key-mode)))
 
 ;; YAML mode
 (use-package yaml-mode
