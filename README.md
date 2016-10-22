@@ -14,6 +14,7 @@ git clone --recursive git@github.com:JesusMtnez/.dotfiles.git $HOME/.dotfiles
 
 ### zsh ###
 
+Current configuration uses [**Oh My Zsh**](https://github.com/robbyrussell/oh-my-zsh) framework. It's is included as a git submodule.
 > TODO
 
 ### git ###
