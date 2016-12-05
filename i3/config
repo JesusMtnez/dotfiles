@@ -168,7 +168,7 @@ for_window [window_role="Preferences"] floating enable
 # i3wm status bar
 ##################################################
 bar {
-  status_command i3status -c $HOME/.i3/i3status.conf
+  status_command py3status -c $HOME/.i3/i3status.conf
   position top
 }
 
