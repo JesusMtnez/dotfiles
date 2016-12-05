@@ -1,9 +1,0 @@
-# Disable git submodules
-git:
-  submodules: false
-
-# Ignore install step
-install: true
-
-# Dummy build step
-script: exit 0
