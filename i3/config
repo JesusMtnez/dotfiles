@@ -169,3 +169,7 @@ exec --no-startup-id dunst -config ~/.dunstrc
 
 # Set custom keymap (CapLocks -> Ctrl)
 exec --no-startup-id xmodmap ~/.Xmodmap
+
+# Screenshots (require scrot)
+bindsym Print exec scrot -u 'scrot_%Y-%m-%d_%H%M%S.png' -e 'mv $f ~/Pictures/'
+bindsym --release Shift+Print exec scrot -s 'scrot-%Y-%m-%d_%H%M%S.png' -e 'mv $f ~/Pictures/'
