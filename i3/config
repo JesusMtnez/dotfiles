@@ -170,12 +170,16 @@ for_window [window_role="Preferences"] floating enable
 bar {
   status_command py3status -c $HOME/.i3/i3status.conf
   position top
+  tray_output primary
+  tray_padding 0
+  font pango:Hack, FontAwesome 10
 
-  # Solarized-dark colors
+  # Solarized Dark colors
   colors {
     background #002b36
     statusline #93a1a1
     separator  #268bd2
+    #                  BORDER  BG      TEXT
     focused_workspace  #93a1a1 #93a1a1 #002b36
     active_workspace   #586e75 #586e75 #002b36
     inactive_workspace #073642 #002b36 #839496
