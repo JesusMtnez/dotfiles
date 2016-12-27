@@ -25,13 +25,11 @@ Current configuration uses [**Oh My Zsh**](https://github.com/robbyrussell/oh-my
 
 > TODO
 
-### Emacs ###
-
-> TODO
-
 ### i3 Window Manager ###
 
 > TODO
 
----
-**Author:** *Jesús Martínez-Barquero Herrada*
+### Emacs ###
+
+My Emacs can be found here: [GitLab](https://gitlab.com/JesusMtnez/emacs.d) or
+[GitHub Mirror](https://github.com/JesusMtnez/emacs.d)

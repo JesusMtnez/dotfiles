@@ -2,7 +2,7 @@
 # Author: JesusMtnez
 
 DOT_DIR="$HOME/.dotfiles"
-DOT_FILES="gitconfig gitignore tmux.conf zshrc Xmodmap Xresources dunstrc emacs.d i3"
+DOT_FILES="gitconfig gitignore tmux.conf zshrc Xmodmap Xresources dunstrc i3"
 
 for f in $DOT_FILES; do
   if [ -e $HOME/.$f ]; then

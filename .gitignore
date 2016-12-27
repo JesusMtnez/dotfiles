@@ -2,19 +2,6 @@
 .directory
 .DS_store
 
-# Emacs
-emacs.d/elpa
-emacs.d/ac-comphist.dat
-emacs.d/ido.last
-emacs.d/projectile-bookmarks.eld
-emacs.d/auto-save-list/
-emacs.d/url
-emacs.d/recentf
-emacs.d/eshell
-emacs.d/localrc.el
-emacs.d/.last-package-update-day
-emacs.d/ensime/
-
 # ZSH
 zsh/plugins/**
 
