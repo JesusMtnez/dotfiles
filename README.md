@@ -27,7 +27,16 @@ Current configuration uses [**Oh My Zsh**](https://github.com/robbyrussell/oh-my
 
 ### i3 Window Manager ###
 
-> TODO
+I use `i3wm` as my window manager. It requires:
+
+ - `i3-gaps`
+ - `py3status` as i3status bar.
+ - `scrot` as screenshots tool.
+ - `i3lock` as lockscreen tool.
+ - `rofi` as application launcher.
+ - `playerctl`
+ - `nitrogen` as screen wallpaper tool.
+ - `dunst` as notification daemon.
 
 ### Emacs ###
 
