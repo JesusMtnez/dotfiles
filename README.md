@@ -5,7 +5,7 @@
 Using git over ssh:
 
 ``` shell
-git clone --recursive git@github.com:JesusMtnez/.dotfiles.git $HOME/.dotfiles
+git clone --recursive git@gitlab.com:JesusMtnez/dotfiles.git $HOME/.dotfiles
 ```
 
 :warning: Because `oh-my-zsh` is included as a submodule using `git` over ssh, `git` over https isn`t supported right now :warning:
