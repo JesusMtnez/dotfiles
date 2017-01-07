@@ -170,8 +170,6 @@ for_window [window_role="Preferences"] floating enable
 bar {
   status_command py3status -c $HOME/.i3/i3status.conf
   position top
-  tray_output primary
-  tray_padding 0
   font pango:Hack, FontAwesome 10
 
   # Solarized Dark colors
@@ -190,6 +188,7 @@ bar {
 ##################################################
 # Colors (Solarized Dark)
 ##################################################
+#                       BORDER  BG      TEXT    IND     CHILD
 client.focused          #002b36 #586e75 #fdf6e3 #268bd2
 client.focused_inactive #002b36 #073642 #839496 #073642
 client.unfocused        #002b36 #073642 #839496 #073642
