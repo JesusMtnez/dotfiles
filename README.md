@@ -19,7 +19,7 @@ Current configuration uses [**Oh My Zsh**](https://github.com/robbyrussell/oh-my
 
 ### git ###
 
-> TODO
+ - `diff-so-fancy` pager
 
 ### tmux ###
 
