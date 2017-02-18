@@ -64,3 +64,5 @@ rofi.width: 40
 rofi.levenshtein-sort: false
 rofi.separator-style: solid
 rofi.hide-scrollbar: true
+! ROFI Keybindings
+rofi.kb-cancel: Escape,Control+g,Super+space
