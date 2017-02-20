@@ -68,6 +68,7 @@ bindsym $mod+$mod2+l exec --no-startup-id "$HOME/.dotfiles/bin/lockscreen"
 bindsym $mod+Shift+q kill
 bindsym $mod+t split t
 bindsym $mod+f fullscreen toggle
+bindsym $mod+g fullscreen global
 bindsym $mod+Shift+f floating toggle
 bindsym $mod+a focus parent
 bindsym $mod+d focus child
