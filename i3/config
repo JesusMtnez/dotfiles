@@ -109,7 +109,6 @@ set $default_gaps_outer 2
 
 gaps inner $default_gaps_inner
 gaps outer $default_gaps_outer
-smart_gaps on
 
 set $mode_gaps gaps
 set $mode_gaps_outer outer gaps
