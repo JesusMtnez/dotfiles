@@ -203,4 +203,4 @@ client.urgent           #002b36 #dc322f #fdf6e3 #002b36
 exec_always --no-startup-id nitrogen --restore
 exec --no-startup-id dunst -config ~/.dunstrc
 exec --no-startup-id xmodmap ~/.Xmodmap
-exec --no-startud-id udiskie --automount --notify --tray
+exec udiskie --automount --notify --tray
