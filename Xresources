@@ -69,5 +69,7 @@ rofi.fuzzy: true
 rofi.sidebar-mode: true
 rofi.modi: combi,window
 rofi.combi-modi: run,drun
+rofi.display-combi: Programs
+rofi.display-window: Windows
 ! ROFI Keybindings
 rofi.kb-cancel: Escape,Control+g,Super+space
