@@ -67,5 +67,7 @@ rofi.hide-scrollbar: true
 rofi.monitor: -4
 rofi.fuzzy: true
 rofi.sidebar-mode: true
+rofi.modi: combi,window
+rofi.combi-modi: run,drun
 ! ROFI Keybindings
 rofi.kb-cancel: Escape,Control+g,Super+space
