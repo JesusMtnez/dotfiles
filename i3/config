@@ -61,8 +61,6 @@ bindsym $mod+Shift+0 move container to workspace 10
 # Aplications
 bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+space exec --no-startup-id "rofi -show"
-bindsym Print exec scrot -u 'scrot_%Y-%m-%d_%H%M%S.png' -e 'mv $f ~/Pictures/'
-bindsym --release Shift+Print exec scrot -s 'scrot-%Y-%m-%d_%H%M%S.png' -e 'mv $f ~/Pictures/'
 bindsym $mod+$mod2+l exec --no-startup-id "$HOME/.dotfiles/bin/lockscreen"
 # Actions
 bindsym $mod+Shift+q kill
@@ -88,6 +86,9 @@ bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 bindsym XF86AudioStop exec playerctl stop
+# Screenshots (with Scrot)
+bindsym Print exec --no-startup-id scrot "$HOME/Pictures/scrot_%Y-%m-%d_%H%M%S.png" && notify-send "Screenshot taken"
+bindsym --release Shift+Print exec scrot -s "$HOME/Pictures/scrot_%Y-%m-%d_%H%M%S.png" && notify-send "Screenshot taken"
 
 ##################################################
 # Custom modes
