@@ -89,6 +89,8 @@ bindsym XF86AudioStop exec playerctl stop
 # Screenshots (with Scrot)
 bindsym Print exec --no-startup-id scrot "$HOME/Pictures/scrot_%Y-%m-%d_%H%M%S.png" && notify-send "Screenshot taken"
 bindsym --release Shift+Print exec scrot -s "$HOME/Pictures/scrot_%Y-%m-%d_%H%M%S.png" && notify-send "Screenshot taken"
+bindsym Control+Print exec --no-startup-id sleep 5 && scrot "$HOME/Pictures/scrot_%Y-%m-%d_%H%M%S.png" && notify-send "Screenshot taken"
+bindsym --release Control+Shift+Print exec sleep 5 && notify-send "Screenshot ready" && scrot -s "$HOME/Pictures/scrot_%Y-%m-%d_%H%M%S.png" && notify-send "Screenshot taken"
 
 ##################################################
 # Custom modes
