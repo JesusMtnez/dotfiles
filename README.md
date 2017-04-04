@@ -37,6 +37,7 @@ I use `i3wm` as my window manager. It requires:
  - `scrot` as screenshots tool.
  - `i3lock` as lockscreen tool.
  - `rofi` as application launcher.
+   - `greenclip` as clipboard manager.
  - `playerctl`
  - `nitrogen` as screen wallpaper tool.
  - `dunst` as notification daemon.
