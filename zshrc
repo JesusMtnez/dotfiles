@@ -27,6 +27,7 @@ source $ZSH/oh-my-zsh.sh
 # History configuration
 setopt hist_ignore_all_dups
 setopt hist_ignore_space
+unsetopt nomatch
 
 # Avoid duplicated in PATH
 export -U PATH
