@@ -22,7 +22,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Source other resource
 [ -f $HOME/.localrc ] && source $HOME/.localrc # Local configuration
-[ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh # fzf bindings
+[ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
 
 # History configuration
 setopt hist_ignore_all_dups
