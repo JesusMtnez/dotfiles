@@ -46,6 +46,7 @@ I use `i3wm` as my window manager. It requires:
   - `playerctl`
   - `nitrogen` as screen wallpaper tool.
   - `dunst` as notification daemon.
+  - `arandr` as `xrandr` gui
   - `udiskie` as automounter for removable media
 
 ### Emacs ###
