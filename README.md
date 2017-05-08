@@ -25,7 +25,11 @@ Plugins:
 
 ### tmux ###
 
-> TODO
+- Tmux Plugin Manager ([tpm](https://github.com/tmux-plugins/tpm))
+  - [`tmux-copycat`](https://github.com/tmux-plugins/tmux-copycat)
+  - [`tmux-open`](https://github.com/tmux-plugins/tmux-open)
+  - [`tmux-prefix-highlight`](https://github.com/tmux-plugins/tmux-prefix-highlight)
+  - [`tmux-yank`](https://github.com/tmux-plugins/tmux-yank)
 
 ### i3 Window Manager ###
 
