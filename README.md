@@ -17,11 +17,11 @@ git clone --recursive git@gitlab.com:JesusMtnez/dotfiles.git $HOME/.dotfiles
 Current configuration uses [**Oh My Zsh**](https://github.com/robbyrussell/oh-my-zsh) framework. It's is included as a git submodule.
 
 Plugins:
- - `zsh-syntac-highlight`
+  - `zsh-syntac-highlight`
 
 ### git ###
 
- - `diff-so-fancy` pager
+  - `diff-so-fancy` pager
 
 ### tmux ###
 
@@ -35,18 +35,18 @@ Plugins:
 
 I use `i3wm` as my window manager. It requires:
 
- - `i3-gaps`
- - `i3status`
- - `py3status` as i3status wrapper.
-   - `cower` to fetch pending updates.
- - `scrot` as screenshots tool.
- - `i3lock` as lockscreen tool.
- - `rofi` as application launcher.
-   - `greenclip` as clipboard manager.
- - `playerctl`
- - `nitrogen` as screen wallpaper tool.
- - `dunst` as notification daemon.
- - `udiskie` as automounter for removable media
+  - `i3-gaps`
+  - `i3status`
+  - `py3status` as i3status wrapper.
+    - `cower` to fetch pending updates.
+  - `scrot` as screenshots tool.
+  - `i3lock` as lockscreen tool.
+  - `rofi` as application launcher.
+    - `greenclip` as clipboard manager.
+  - `playerctl`
+  - `nitrogen` as screen wallpaper tool.
+  - `dunst` as notification daemon.
+  - `udiskie` as automounter for removable media
 
 ### Emacs ###
 
