@@ -32,7 +32,8 @@ Plugins:
 I use `i3wm` as my window manager. It requires:
 
  - `i3-gaps`
- - `py3status` as i3status bar.
+ - `i3status`
+ - `py3status` as i3status wrapper.
    - `cower` to fetch pending updates.
  - `scrot` as screenshots tool.
  - `i3lock` as lockscreen tool.
