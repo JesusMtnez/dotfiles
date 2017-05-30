@@ -17,7 +17,8 @@ git clone --recursive git@gitlab.com:JesusMtnez/dotfiles.git $HOME/.dotfiles
 Current configuration uses [**Oh My Zsh**](https://github.com/robbyrussell/oh-my-zsh) framework. It's is included as a git submodule.
 
 Plugins:
-  - `zsh-syntac-highlight`
+  - [`solarized-man`](https://github.com/zlsun/solarized-man)
+  - [`zsh-syntac-highlight`](https://github.com/zsh-users/zsh-syntax-highlighting)
 
 ### git ###
 
