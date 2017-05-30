@@ -14,3 +14,5 @@ export fpath=(/usr/local/share/zsh-completions /usr/local/etc/bash_completion.d/
 # EDITOR
 export EDITOR="emacs -nw"
 export VISUAL=emacs
+
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'

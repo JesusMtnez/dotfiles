@@ -18,6 +18,7 @@ Current configuration uses [**Oh My Zsh**](https://github.com/robbyrussell/oh-my
 
 Plugins:
   - [`solarized-man`](https://github.com/zlsun/solarized-man)
+  - [`zsh-autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions)
   - [`zsh-syntac-highlight`](https://github.com/zsh-users/zsh-syntax-highlighting)
 
 ### git ###
