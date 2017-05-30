@@ -9,7 +9,10 @@ DISABLE_AUTO_TITLE="true"
 COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="yyyy/mm/dd"
 
-plugins=(docker docker-compose git-extras mvn zsh-syntax-highlighting)
+plugins+=(docker docker-compose)
+plugins+=(git-extras)
+plugins+=(mvn)
+plugins+=(zsh-syntax-highlighting)
 
 # These sources are unnecessary since oh-my-zsh framework will load all *.zsh in ZSH_CUSTOM
 # source $ZSH_CUSTOM/alias.zsh
