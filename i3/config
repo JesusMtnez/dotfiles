@@ -211,4 +211,5 @@ exec_always --no-startup-id nitrogen --restore
 exec --no-startup-id dunst -config ~/.dunstrc
 exec --no-startup-id greenclip daemon
 exec --no-startup-id xmodmap ~/.Xmodmap
+exec --no-startup-id setxkbmap -layout us -option ctrl:nocaps -variant altgr-intl
 exec udiskie --automount --notify --tray
