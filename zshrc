@@ -29,6 +29,7 @@ source $ZSH/oh-my-zsh.sh
 [ -f $HOME/.localrc ] && source $HOME/.localrc # Local configuration
 [ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
 [ -f /usr/bin/pyenv ] && eval "$(pyenv init -)" # pyenv
+[ -d ${HOME}/.pyenv/plugins/pyenv-virtualenv ] && eval "$(pyenv virtualenv-init -)" # pyenv-virtualenv
 
 # History configuration
 setopt hist_ignore_all_dups
