@@ -28,6 +28,7 @@ source $ZSH/oh-my-zsh.sh
 # Source other resource
 [ -f $HOME/.localrc ] && source $HOME/.localrc # Local configuration
 [ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
+[ -f /usr/bin/pyenv ] && eval "$(pyenv init -)" # pyenv
 
 # History configuration
 setopt hist_ignore_all_dups
