@@ -10,7 +10,7 @@ Using git over ssh:
 git clone --recursive git@gitlab.com:JesusMtnez/dotfiles.git $HOME/.dotfiles
 ```
 
-:warning: Because `oh-my-zsh` is included as a submodule using `git` over ssh, `git` over https isn`t supported right now :warning:
+> Because `oh-my-zsh` is included as a submodule using `git` over ssh, `git` over https isn't supported right now
 
 ## Configurations
 
