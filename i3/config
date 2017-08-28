@@ -61,7 +61,6 @@ bindsym $mod+Shift+0 move container to workspace 10
 # Aplications
 bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+space exec --no-startup-id "rofi -show"
-bindsym $mod+p exec rofi -no-sidebar-mode -modi "clipboard:greenclip print" -show clipboard
 bindsym $mod+$mod2+l exec --no-startup-id "$HOME/.dotfiles/bin/lockscreen"
 # Actions
 bindsym $mod+Shift+q kill
