@@ -34,6 +34,7 @@ Plugins:
   - [`tmux-open`](https://github.com/tmux-plugins/tmux-open)
   - [`tmux-prefix-highlight`](https://github.com/tmux-plugins/tmux-prefix-highlight)
   - [`tmux-yank`](https://github.com/tmux-plugins/tmux-yank)
+  - [`tmux-onedark-theme`](https://github.com/odedlaz/tmux-onedark-theme)
 
 ### i3 Window Manager ###
 
