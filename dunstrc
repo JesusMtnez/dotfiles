@@ -116,7 +116,7 @@
     # print a notification on startup
     # This is mainly for error detection, since dbus (re-)starts dunst
     # automatically after a crash.
-    startup_notification = false
+    startup_notification = true
 
     # dmenu path
     dmenu = /usr/bin/dmenu -p dunst:
@@ -127,6 +127,10 @@
 [frame]
     width = 0
     color = "#222222"
+    # Align icons left/right/off
+    icon_position = left
+    max_icon_size = 80
+    icon_folders = /usr/share/icons/Numix/48/emblems/:/usr/share/icons/Numix/48/mimetypes/:/usr/share/icons/Numix/48/status/:/usr/share/icons/Numix/48/devices/:/usr/share/icons/Numix/48/notifications/
 
 [shortcuts]
     # shortcuts are specified as [modifier+][modifier+]...key
