@@ -53,6 +53,7 @@ I use `i3wm` as my window manager. It requires:
   - `dunst` as notification daemon.
   - `arandr` as `xrandr` gui
   - `udiskie` as automounter for removable media
+  - `lightdm-webkit-theme-litarvan`: [Litarvan theme](https://github.com/Litarvan/lightdm-webkit-theme-litarvan)
 
 ### Emacs ###
 
