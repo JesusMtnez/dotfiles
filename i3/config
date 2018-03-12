@@ -12,7 +12,8 @@ font pango:Hack, FontAwesome 8
 floating_modifier $mod
 focus_follows_mouse no
 workspace_auto_back_and_forth yes
-#new_window none
+# Custom variables
+set $music_ws 
 
 ##################################################
 # i3 movement keybinds
@@ -38,6 +39,7 @@ bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
+bindsym $mod+m workspace $music_ws
 # move workpspaces
 bindsym $mod+Ctrl+h move workspace to output left
 bindsym $mod+Ctrl+j move workspace to output down
@@ -172,6 +174,7 @@ for_window [window_role="pop-up"] floating enable
 for_window [window_role="bubble"] floating enable
 for_window [window_role="task_dialog"] floating enable
 for_window [window_role="Preferences"] floating enable
+for_window [class="Spotify"] move container to workspace $music_ws
 
 ##################################################
 # i3wm status bar
