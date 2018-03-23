@@ -12,7 +12,6 @@ HIST_STAMPS="yyyy/mm/dd"
 plugins+=(docker docker-compose)
 plugins+=(git-extras)
 plugins+=(mvn)
-plugins+=(solarized-man)
 plugins+=(zsh-autosuggestions)
 plugins+=(zsh-syntax-highlighting)
 
