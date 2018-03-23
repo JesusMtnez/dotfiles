@@ -118,7 +118,7 @@ set $default_gaps_outer 2
 gaps inner $default_gaps_inner
 gaps outer $default_gaps_outer
 
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 1
 smart_borders no_gaps
 
 set $mode_gaps gaps
