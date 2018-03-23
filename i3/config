@@ -198,13 +198,13 @@ bar {
 }
 
 ##################################################
-# Colors (Solarized Dark)
+# Colors (Atom One Dark)
 ##################################################
 #                       BORDER  BG      TEXT    IND     CHILD
-client.focused          #002b36 #586e75 #fdf6e3 #268bd2
-client.focused_inactive #002b36 #073642 #839496 #073642
-client.unfocused        #002b36 #073642 #839496 #073642
-client.urgent           #002b36 #dc322f #fdf6e3 #002b36
+client.focused          #5c6370 #abb2bf #282c34
+client.focused_inactive #5c6370 #5c6370 #282c34
+client.unfocused        #5c6370 #282c34 #5c6370
+client.urgent           #5c6370 #e06c75 #282c34
 
 ##################################################
 # Autolaunch
