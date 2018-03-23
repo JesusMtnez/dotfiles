@@ -184,16 +184,16 @@ bar {
   position top
   font pango:Hack, FontAwesome 10
 
-  # Solarized Dark colors
+  # Atom One Dark
   colors {
-    background #002b36
-    statusline #93a1a1
-    separator  #268bd2
-    #                  BORDER  BG      TEXT
-    focused_workspace  #93a1a1 #93a1a1 #002b36
-    active_workspace   #586e75 #586e75 #002b36
-    inactive_workspace #073642 #002b36 #839496
-    urgent_workspace   #dc322f #dc322f #fdf6e3
+    background #282c34
+    statusline #abb2bf
+    separator  #abb2bf
+    #                  Border  BG      Text
+    focused_workspace  #abb2bf #abb2bf #282c34
+    active_workspace   #5c6370 #5c6370 #282c34
+    inactive_workspace #5c6370 #282c34 #5c6370
+    urgent_workspace   #5c6370 #e06c75 #282c34
   }
 }
 
