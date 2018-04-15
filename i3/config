@@ -89,8 +89,8 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 bindsym XF86AudioStop exec playerctl stop
 # Screen brightness media keys
-bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
 # Screenshots (with Scrot)
 bindsym Print exec --no-startup-id scrot "$HOME/Pictures/scrot_%Y-%m-%d_%H%M%S.png" && notify-send "Screenshot taken"
 bindsym --release Shift+Print exec scrot -s "$HOME/Pictures/scrot_%Y-%m-%d_%H%M%S.png" && notify-send "Screenshot taken"
