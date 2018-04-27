@@ -30,6 +30,9 @@ source $ZSH/oh-my-zsh.sh
 [ -f /usr/bin/pyenv ] && eval "$(pyenv init -)" # pyenv
 [ -d ${HOME}/.pyenv/plugins/pyenv-virtualenv ] && eval "$(pyenv virtualenv-init -)" # pyenv-virtualenv
 
+# GNOME KEYRING DAEMON integration in shell
+[ -n "$DESKTOP_SESSION" ] && export $(gnome-keyring-daemon --start)
+
 # History configuration
 setopt hist_ignore_all_dups
 setopt hist_ignore_space
