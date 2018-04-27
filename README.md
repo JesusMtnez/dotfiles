@@ -43,6 +43,7 @@ I use `i3wm` as my window manager. It requires:
   - `i3status`
   - `py3status` as i3status wrapper.
     - `cower` to fetch pending updates.
+  - `gnome-keyring` as keyring to store secrets.
   - `ttf-hack-ibx`: [Hack font](http://sourcefoundry.org/hack/)
   - `scrot` as screenshots tool.
   - `i3lock` as lockscreen tool.
