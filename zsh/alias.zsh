@@ -20,6 +20,7 @@ alias emacs='emacs -nw'
 if [ `uname` = 'Linux' ]; then
   alias pbcopy='xsel --clipboard --input'
   alias pbpaste='xsel --clipboard --output'
+  alias open='xdg-open'
 fi
 
 # APT tool alias
