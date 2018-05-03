@@ -35,6 +35,7 @@ alias ap='sudo apt purge'
 alias aar='sudo apt autoremove'
 
 # Others
+$(type bat > /dev/null) && alias cat='bat'
 alias RM='rm -rf'
 alias grep='grep --color=auto'
 alias scala='scala -Dscala.color'

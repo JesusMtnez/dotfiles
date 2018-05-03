@@ -14,6 +14,10 @@ git clone --recursive git@gitlab.com:JesusMtnez/dotfiles.git $HOME/.dotfiles
 
 ## Configurations
 
+### CLI tools
+
+- [`bat`](https://github.com/sharkdp/bat) as `cat` with syntax highlight and git support.
+
 ### zsh ###
 
 Current configuration uses [**Oh My Zsh**](https://github.com/robbyrussell/oh-my-zsh) framework. It's is included as a git submodule.
