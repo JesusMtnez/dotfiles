@@ -23,17 +23,6 @@ if [ `uname` = 'Linux' ]; then
   alias open='xdg-open'
 fi
 
-# APT tool alias
-alias a='sudo apt'
-alias as='sudo apt search'
-alias ai='sudo apt install'
-alias aup='sudo apt update'
-alias aug='sudo apt upgrade'
-alias auu='sudo apt update && sudo apt upgrade'
-alias ar='sudo apt remove'
-alias ap='sudo apt purge'
-alias aar='sudo apt autoremove'
-
 # Others
 $(type bat > /dev/null) && alias cat='bat'
 alias RM='rm -rf'
