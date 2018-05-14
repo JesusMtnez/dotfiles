@@ -28,6 +28,7 @@
     ps = push
     pl = pull
     cl = clone
+    clr = clone --recursive
     t = tag
     ra = remote add
     rr = remote rm
