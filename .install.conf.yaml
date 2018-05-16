@@ -1,0 +1,39 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- clean: ['~', '~/.config']
+
+- link:
+    ~/.dunstrc: dunstrc
+    ~/.gitconfig: gitconfig
+    ~/.gitignore: gitignore
+    ~/.i3: i3
+    ~/.tmux.conf: tmux.conf
+    ~/.Xmodmap: Xmodmap
+    ~/.Xresources: Xresources
+    ~/.zshrc: zshrc
+
+- shell:
+
+    - description: "[TMUX] Installing Tmux Plugin Manager (TPM)"
+      command: >
+        [ -d ~/.tmux/plugins/tpm ] ||
+        git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+    -
+      description: "[ZSH] Init Oh-My-Zsh submodule"
+      command: git submodule update --init --recursive -- .oh-my-zsh
+
+    -
+      description: "[ZSH] Installing zsh-syntax-highlighting"
+      command: >
+        [ -d ~/.dotfiles/zsh/plugins/zsh-syntax-highlighting ] ||
+        git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.dotfiles/zsh/plugins/zsh-autosuggestions
+
+    -
+      description: "[ZSH] Installing zsh-autosuggestions"
+      command: >
+        [ -d ~/.dotfiles/zsh/plugins/zsh-autosuggestions ] ||
+        git clone https://github.com/zsh-users/zsh-autosuggestions ~/.dotfiles/zsh/plugins/zsh-autosuggestions
