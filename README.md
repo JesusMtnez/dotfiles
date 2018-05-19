@@ -4,11 +4,19 @@
 
 ## Installation ##
 
-Using git over ssh:
+This dotfiles are manage using `git` and [`dotbot`](https://github.com/anishathalye/dotbot/). The steps to do a complete setup are:
+
+1. Clone the repository.
+2. Execute `<clone-dir>/install`.
+
+
+Example:
 
 ``` shell
-git clone --recursive git@gitlab.com:JesusMtnez/dotfiles.git $HOME/.dotfiles
+> git clone git@gitlab.com:JesusMtnez/dotfiles.git $HOME/.dotfiles
+> $HOME/.dotfiles/install
 ```
+
 
 > Because `oh-my-zsh` is included as a submodule using `git` over ssh, `git` over https isn't supported right now
 
