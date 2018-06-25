@@ -6,6 +6,7 @@
 - clean: ['~', '~/.config']
 
 - link:
+    ~/.config/rofi: config/rofi
     ~/.dunstrc: dunstrc
     ~/.gitconfig: gitconfig
     ~/.gitignore: gitignore
