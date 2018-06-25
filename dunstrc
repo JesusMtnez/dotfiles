@@ -133,7 +133,7 @@
 
     # Align icons left/right/off
     icon_position = left
-    max_icon_size = 128
+    max_icon_size = 48
     icon_folders = /usr/share/icons/Numix/48/emblems/:/usr/share/icons/Numix/48/mimetypes/:/usr/share/icons/Numix/48/status/:/usr/share/icons/Numix/48/devices/:/usr/share/icons/Numix/48/notifications/
 
     frame_width = 1
