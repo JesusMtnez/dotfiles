@@ -8,12 +8,14 @@
 
 - link:
     ~/.config/rofi: config/rofi
-    ~/.sbt/1.0/plugins:
-      path: sbt/plugins/*
+    ~/.config/systemd/user:
+      path: config/systemd/user/*
     ~/.dunstrc: dunstrc
     ~/.gitconfig: gitconfig
     ~/.gitignore: gitignore
     ~/.i3: i3
+    ~/.sbt/1.0/plugins:
+      path: sbt/plugins/*
     ~/.tmux.conf: tmux.conf
     ~/.Xmodmap: Xmodmap
     ~/.Xresources: Xresources
