@@ -2,11 +2,14 @@
     link:
       create: true
       relink: true
+      glob: true
 
 - clean: ['~', '~/.config']
 
 - link:
     ~/.config/rofi: config/rofi
+    ~/.sbt/1.0/plugins:
+      path: sbt/plugins/*
     ~/.dunstrc: dunstrc
     ~/.gitconfig: gitconfig
     ~/.gitignore: gitignore
