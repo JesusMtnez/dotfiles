@@ -4,7 +4,11 @@
       relink: true
       glob: true
 
-- clean: ['~', '~/.config']
+- clean:
+    - '~'
+    - '~/.config/systemd/user/'
+    - '~/.config/rofi/'
+    - '~/.sbt/1.0/plugins/'
 
 - link:
     ~/.config/rofi: config/rofi
