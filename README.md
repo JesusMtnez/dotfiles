@@ -10,7 +10,7 @@ This dotfiles are manage using `git` and [`dotbot`](https://github.com/anishatha
 2. Execute `<clone-dir>/install`.
 
 
-Example:
+### SSH ###
 
 ``` shell
 > git clone git@gitlab.com:JesusMtnez/dotfiles.git $HOME/.dotfiles
@@ -18,7 +18,12 @@ Example:
 ```
 
 
-> Because `oh-my-zsh` is included as a submodule using `git` over ssh, `git` over https isn't supported right now
+### HTTPS ###
+
+``` shell
+> git clone https://gitlab.com/JesusMtnez/dotfiles.git $HOME/.dotfiles
+> $HOME/.dotfiles/install
+```
 
 ## Configurations
 
