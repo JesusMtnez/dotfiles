@@ -29,6 +29,7 @@
     camn = commit --amend --no-edit
     ps = push
     pl = pull
+    plp = pull --prune
     cl = clone
     clr = clone --recursive
     t = tag
