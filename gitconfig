@@ -10,6 +10,8 @@
     whitespace = trailing-space, blank-at-eol, tabs-in-indent
 [push]
     default = upstream
+[fetch]
+    prune = true
 [color]
     ui = auto
 [alias]
@@ -45,9 +47,7 @@
     df = "!f() { git --no-pager diff $@; }; f"
     dfc = "!f() { git --no-pager diff --cached $@; }; f"
     f = fetch
-    fp = fetch --prune
     fa = fetch --all
-    fap = fetch --all --prune
     m = merge
     su = submodule foreach git pull origin master
 [pager]
