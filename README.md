@@ -67,12 +67,12 @@ I use `i3wm` as my window manager. It requires:
   - `py3status` as i3status wrapper.
     - `cower` to fetch pending updates.
   - `gnome-keyring` as keyring to store secrets.
-  - `ttf-hack-ibx`: [Hack font](http://sourcefoundry.org/hack/)
+  - `ttf-hack`: [Hack font](http://sourcefoundry.org/hack/)
   - `scrot` as screenshots tool.
   - `i3lock` as lockscreen tool.
   - `rofi` as application launcher.
   - `playerctl`
-  - `nitrogen` as screen wallpaper tool.
+  - ``feh` as screen wallpaper tool.
   - `dunst` as notification daemon.
   - `arandr` as `xrandr` gui
   - `udiskie` as automounter for removable media
