@@ -35,8 +35,10 @@
         git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
     -
-      description: "[ZSH] Init Oh-My-Zsh submodule"
-      command: git submodule update --init --recursive -- .oh-my-zsh
+      description: "[ZSH] Installing Oh-My-Zsh"
+      command:  >
+        [ -d ~/.oh-my-zsh ] ||
+        git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 
     -
       description: "[ZSH] Installing powerlevel9k theme"

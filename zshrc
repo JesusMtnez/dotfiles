@@ -1,6 +1,6 @@
 # Author: JesusMtnez
 
-export ZSH=$HOME/.dotfiles/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 export ZSH_CUSTOM=$HOME/.dotfiles/zsh
 export UPDATE_ZSH_DAYS=3
 
