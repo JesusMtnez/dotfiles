@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Name=Reboot
+Comment=Reboot the computer
+TryExec=/usr/bin/reboot
+Exec=/usr/bin/reboot
+Icon=system-reboot
+Terminal=false
+Type=Application
+Categories=System;
+Keywords=system;reboot;

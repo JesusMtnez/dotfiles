@@ -18,6 +18,8 @@
     ~/.gitconfig: gitconfig
     ~/.gitignore: gitignore
     ~/.i3: i3
+    ~/.local/share/applications:
+      path: applications/*
     ~/.sbt/1.0/plugins:
       path: sbt/plugins/*
     ~/.tmux.conf: tmux.conf
