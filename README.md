@@ -1,4 +1,8 @@
+[comment]: # (Start Badges)
+
 [![MIT LICENSE](https://img.shields.io/github/license/mashape/apistatus.svg)](/LICENSE)
+
+[comment]: # (End Badges)
 
 # JesusMtnez's dotfiles! #
 
@@ -34,6 +38,8 @@ This dotfiles are manage using `git` and [`dotbot`](https://github.com/anishatha
 ### zsh ###
 
 Current configuration uses [**Oh My Zsh**](https://github.com/robbyrussell/oh-my-zsh) framework. It's is included as a git submodule.
+
+Theme: [`powerlevel9k`](https://github.com/bhilburn/powerlevel9k)
 
 Plugins:
   - [`zsh-autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions)

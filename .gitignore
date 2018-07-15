@@ -4,6 +4,7 @@
 
 # ZSH
 zsh/plugins/**
+!zsh/themes/*.zsh
 
 # Custom
 .backup

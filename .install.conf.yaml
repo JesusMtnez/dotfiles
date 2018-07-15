@@ -37,6 +37,12 @@
       command: git submodule update --init --recursive -- .oh-my-zsh
 
     -
+      description: "[ZSH] Installing powerlevel9k theme"
+      command: >
+        [ -d ~/.dotfiles/zsh/themes/powerlevel9k ] ||
+        git clone https://github.com/bhilburn/powerlevel9k.git ~/.dotfiles/zsh/themes/powerlevel9k
+
+    -
       description: "[ZSH] Installing zsh-syntax-highlighting"
       command: >
         [ -d ~/.dotfiles/zsh/plugins/zsh-syntax-highlighting ] ||

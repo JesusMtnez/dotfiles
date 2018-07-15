@@ -4,7 +4,6 @@ export ZSH=$HOME/.dotfiles/.oh-my-zsh
 export ZSH_CUSTOM=$HOME/.dotfiles/zsh
 export UPDATE_ZSH_DAYS=3
 
-ZSH_THEME="jesusmtnez"
 DISABLE_AUTO_TITLE="true"
 COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="yyyy/mm/dd"
@@ -19,7 +18,8 @@ plugins+=(zsh-syntax-highlighting)
 # source $ZSH_CUSTOM/alias.zsh
 # source $ZSH_CUSTOM/env.zsh
 # source $ZSH_CUSTOM/functions.zsh
-# source $ZSH_CUSTOM/hooks.sh
+# source $ZSH_CUSTOM/hooks.zsh
+# source $ZSH_CUSTOM/theme.zsh
 
 # Launch oh-my-zsh framework
 source $ZSH/oh-my-zsh.sh
