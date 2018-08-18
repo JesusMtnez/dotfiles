@@ -31,6 +31,7 @@
     cam = commit --amend
     camn = commit --amend --no-edit
     ps = push
+    psf = push --force-with-lease
     pl = pull
     plp = pull --prune
     cl = clone
