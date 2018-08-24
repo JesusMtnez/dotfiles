@@ -65,7 +65,7 @@ I use `i3wm` as my window manager. It requires:
   - `i3-gaps`
   - `i3status`
   - `py3status` as i3status wrapper.
-    - `cower` to fetch pending updates.
+  - `numlockx` to enable numeric keypad on boot.
   - `gnome-keyring` as keyring to store secrets.
   - `ttf-hack`: [Hack font](http://sourcefoundry.org/hack/)
   - `scrot` as screenshots tool.
