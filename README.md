@@ -37,7 +37,7 @@ This dotfiles are manage using `git` and [`dotbot`](https://github.com/anishatha
 
 ### zsh ###
 
-Current configuration uses [**Oh My Zsh**](https://github.com/robbyrussell/oh-my-zsh) framework. It's is included as a git submodule.
+Current configuration uses [**Oh My Zsh**](https://github.com/robbyrussell/oh-my-zsh) framework.
 
 Theme: [`powerlevel9k`](https://github.com/bhilburn/powerlevel9k)
 
@@ -71,7 +71,7 @@ I use `i3wm` as my window manager. It requires:
   - `scrot` as screenshots tool.
   - `i3lock` as lockscreen tool.
   - `rofi` as application launcher.
-  - `playerctl`
+  - `playerctl` to control multimedia.
   - ``feh` as screen wallpaper tool.
   - `dunst` as notification daemon.
   - `arandr` as `xrandr` gui
