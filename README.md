@@ -4,6 +4,24 @@
 
 [comment]: # (End Badges)
 
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+**Table of Contents**
+
+- [JesusMtnez's dotfiles!](#jesusmtnezs-dotfiles)
+    - [Installation](#installation)
+        - [SSH](#ssh)
+        - [HTTPS](#https)
+    - [Configurations](#configurations)
+        - [CLI tools](#cli-tools)
+        - [zsh](#zsh)
+        - [git](#git)
+        - [tmux](#tmux)
+        - [i3 Window Manager](#i3-window-manager)
+        - [ArchLinux](#archlinux)
+        - [Emacs](#emacs)
+
+<!-- markdown-toc end -->
+
 # JesusMtnez's dotfiles! #
 
 ## Installation ##
