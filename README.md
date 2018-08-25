@@ -47,7 +47,7 @@ Plugins:
 
 ### git ###
 
-  - `diff-so-fancy` pager
+  - [`diff-so-fancy`](https://github.com/so-fancy/diff-so-fancy) pager
 
 ### tmux ###
 
