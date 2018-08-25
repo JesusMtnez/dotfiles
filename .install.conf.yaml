@@ -8,12 +8,15 @@
     - '~'
     - '~/.config/systemd/user/'
     - '~/.config/rofi/'
+    - '~/.config/tilix/'
     - '~/.sbt/1.0/plugins/'
 
 - link:
     ~/.config/rofi: config/rofi
     ~/.config/systemd/user:
       path: config/systemd/user/*
+    ~/.config/tilix:
+      path: config/tilix/*
     ~/.dunstrc: dunstrc
     ~/.gitconfig: gitconfig
     ~/.gitignore: gitignore

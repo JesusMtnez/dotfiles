@@ -77,6 +77,8 @@ I use `i3wm` as my window manager. It requires:
   - `arandr` as `xrandr` gui
   - `udiskie` as automounter for removable media
   - `lightdm-webkit-theme-litarvan`: [Litarvan theme](https://github.com/Litarvan/lightdm-webkit-theme-litarvan)
+  - [`tilix`](https://gnunn1.github.io/tilix-web/): as gtk3 terminal emulator
+    - [`nord-tilix`](https://git.io/nord-tilix): color scheme
 
 ### Emacs ###
 
