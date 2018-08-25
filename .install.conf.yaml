@@ -32,6 +32,11 @@
 
 - shell:
 
+    - description: "[PACMAN] Adding mirror updating using reflector"
+      command: >
+        sudo mkdir -p /etc/pacman.d/hooks &&
+        sudo ln -sf /home/jmartinez/.dotfiles/pacman.d/hooks/mirrorupgrade.hook /etc/pacman.d/hooks/mirrorupgrade.hook
+
     - description: "[TMUX] Installing Tmux Plugin Manager (TPM)"
       command: >
         [ -d ~/.tmux/plugins/tpm ] ||

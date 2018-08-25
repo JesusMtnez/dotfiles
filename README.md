@@ -80,6 +80,10 @@ I use `i3wm` as my window manager. It requires:
   - [`tilix`](https://gnunn1.github.io/tilix-web/): as gtk3 terminal emulator
     - [`nord-tilix`](https://git.io/nord-tilix): color scheme
 
+### ArchLinux ###
+
+- `mirrorupgrade.hook`: pacman hook to update mirror list on `pacman-mirrorlist` upgrade.
+
 ### Emacs ###
 
 My Emacs can be found here: [GitLab](https://gitlab.com/JesusMtnez/emacs.d) or
