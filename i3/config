@@ -220,5 +220,6 @@ exec --no-startup-id dunst -config ~/.dunstrc
 exec --no-startup-id blueman-applet
 exec --no-startup-id nm-applet
 exec --no-startup-id dropbox start
+exec --no-startup-id synology-drive
 exec --no-startup-id eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
 exec udiskie --automount --notify --tray
