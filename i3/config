@@ -185,6 +185,7 @@ for_window [class="Spotify"] move container to workspace $music_ws
 ##################################################
 bar {
   tray_output primary
+  tray_padding 4
   status_command py3status -c $HOME/.i3/i3status.conf
   position top
   font pango:Hack, FontAwesome 10
