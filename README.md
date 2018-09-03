@@ -86,7 +86,7 @@ I use `i3wm` as my window manager. It requires:
   - `numlockx` to enable numeric keypad on boot.
   - `gnome-keyring` as keyring to store secrets.
   - `ttf-hack`: [Hack font](http://sourcefoundry.org/hack/)
-  - `scrot` as screenshots tool.
+  - [`flameshot`](https://github.com/lupoDharkael/flameshot) as screenshots tool.
   - `i3lock` as lockscreen tool.
   - `rofi` as application launcher.
   - `playerctl` to control multimedia.
