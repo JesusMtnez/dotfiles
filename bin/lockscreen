@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # Lock screen with a blurry screenshot
 
-TMPBG=/tmp/screen.png
-
-scrot $TMPBG					# Take screenshot
-convert $TMPBG -scale 10% -scale 1000% $TMPBG	# Transform screenshot
-i3lock -f -i $TMPBG				# Lock screen
+rm /tmp/screen*.png 2&>1
+flameshot full -p /tmp
+sleep 0.6
+convert /tmp/screenshot_*.png -scale 10% -scale 1000% /tmp/screen.png
+i3lock -f -i /tmp/screen.png
