@@ -87,7 +87,7 @@ I use `i3wm` as my window manager. It requires:
   - `gnome-keyring` as keyring to store secrets.
   - `ttf-hack`: [Hack font](http://sourcefoundry.org/hack/)
   - [`flameshot`](https://github.com/lupoDharkael/flameshot) as screenshots tool.
-  - `i3lock` as lockscreen tool.
+  - [`i3lock-color`](https://github.com/PandorasFox/i3lock-color) as lockscreen tool.
   - `rofi` as application launcher.
   - `playerctl` to control multimedia.
   - ``feh` as screen wallpaper tool.
