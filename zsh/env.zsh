@@ -5,6 +5,8 @@ export TERM='xterm-256color'
 export PATH="/usr/bin:/usr/sbin:/sbin:/bin":$PATH
 # Local bin
 export PATH="/usr/local:/usr/local/bin:/usr/local/sbin":$PATH
+# Machine local bin
+export PATH="$HOME/.local/bin":$PATH
 # My personal bin path
 export PATH="$HOME/.dotfiles/bin":$PATH
 
