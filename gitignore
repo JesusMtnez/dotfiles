@@ -5,5 +5,9 @@
 .ensime
 .ensime_cache/
 
+# Metals
+.metals/
+.bloop/
+
 # IntelliJ Idea
 .idea/
