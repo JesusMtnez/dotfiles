@@ -24,7 +24,6 @@ if [ `uname` = 'Linux' ]; then
 fi
 
 # Others
-$(type bat > /dev/null) && alias cat='bat'
 alias RM='rm -rf'
 alias grep='grep --color=auto'
 alias scala='scala -Dscala.color'
