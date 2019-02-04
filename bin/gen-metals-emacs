@@ -3,7 +3,7 @@
 # Generates metals-emacs binary in `$HOME/jmartinez/.local/bin`
 
 coursier=/tmp/coursier
-metalsV="0.3.3"
+metalsV="0.4.4"
 
 # Get coursier latest version
 curl -L -o $coursier https://git.io/coursier
