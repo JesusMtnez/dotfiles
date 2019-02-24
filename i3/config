@@ -212,7 +212,6 @@ client.urgent           #5c6370 #e06c75 #282c34
 ##################################################
 # Autolaunch
 ##################################################
-exec --no-startup-id xmodmap ~/.Xmodmap
 exec --no-startup-id setxkbmap -layout us -option ctrl:nocaps -variant altgr-intl
 exec --no-startup-id numlockx on
 exec --no-startup-id dunst -config ~/.dunstrc

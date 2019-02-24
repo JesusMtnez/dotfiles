@@ -1,5 +1,0 @@
-clear lock
-clear control
-! Remap Caps_Lock to Control
-add control = Control_L Caps_Lock Control_R
-keycode 66 = Control_L NoSymbol
