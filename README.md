@@ -1,8 +1,7 @@
-[comment]: # (Start Badges)
+[![MIT LICENSE][LICENSE-badge]][LICENSE-link]
 
-[![MIT LICENSE](https://img.shields.io/github/license/mashape/apistatus.svg)](/LICENSE)
-
-[comment]: # (End Badges)
+  [LICENSE-badge]: https://img.shields.io/badge/license-MIT-green.svg?style=flat-square
+  [LICENSE-link]: /LICENSE
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 **Table of Contents**
