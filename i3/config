@@ -217,7 +217,5 @@ exec --no-startup-id numlockx on
 exec --no-startup-id dunst -config ~/.dunstrc
 exec --no-startup-id blueman-applet
 exec --no-startup-id nm-applet
-exec --no-startup-id dropbox start
-exec --no-startup-id synology-drive
 exec --no-startup-id flameshot
 exec udiskie --automount --notify --tray
