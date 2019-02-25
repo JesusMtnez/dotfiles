@@ -27,7 +27,6 @@
       path: sbt/plugins/*
     ~/.tmux.conf: tmux.conf
     ~/.Xresources: Xresources
-    ~/.xsession: xsession
     ~/.zshrc: zshrc
 
 - shell:
