@@ -81,9 +81,9 @@ I use `i3wm` as my window manager. It requires:
 
   - `i3-gaps`
   - `i3status`
+  - [`i3-gnome`](https://github.com/csxr/i3-gnome): integrate `i3` with `GNOME`, providing flawless integration with `gnome-keyring` or `dbus`.
   - `py3status` as i3status wrapper.
   - `numlockx` to enable numeric keypad on boot.
-  - `gnome-keyring` as keyring to store secrets.
   - `ttf-hack`: [Hack font](http://sourcefoundry.org/hack/)
   - [`flameshot`](https://github.com/lupoDharkael/flameshot) as screenshots tool.
   - [`i3lock-color`](https://github.com/PandorasFox/i3lock-color) as lockscreen tool.
