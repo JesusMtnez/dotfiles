@@ -121,7 +121,6 @@ mode $displayMode {
   bindsym Escape mode "default"
 }
 
-
 ##################################################
 # i3-gaps related
 ##################################################
@@ -224,6 +223,7 @@ client.urgent           #5c6370 #e06c75 #282c34
 ##################################################
 # Autolaunch
 ##################################################
+exec --no-startup-id $HOME/.dotfiles/bin/home.sh
 exec --no-startup-id dunst -config ~/.dunstrc
 exec --no-startup-id nm-applet
 exec --no-startup-id numlockx on
