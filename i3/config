@@ -98,7 +98,9 @@ bindsym Print exec --no-startup-id flameshot gui -p "$HOME/Pictures"
 ##################################################
 # Custom modes
 ##################################################
-mode "resize" {
+set $resize "resize"
+bindsym $mod+r mode $resize
+mode $resize {
   bindsym h resize shrink width 10 px or 10 ppt
   bindsym j resize grow height 10 px or 10 ppt
   bindsym k resize shrink height 10 px or 10 ppt
@@ -108,7 +110,17 @@ mode "resize" {
   bindsym Escape mode "default"
 }
 
-bindsym $mod+r mode "resize"
+
+set $displayMode "Set display mode to [l]aptop [h]ome"
+bindsym $mod+x mode $displayMode
+mode $displayMode {
+  bindsym h exec "$HOME/.dotfiles/bin/home.sh"; mode "default"
+  bindsym l exec "$HOME/.dotfiles/bin/laptop.sh"; mode "default"
+
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
+
 
 ##################################################
 # i3-gaps related
