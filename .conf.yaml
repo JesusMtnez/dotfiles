@@ -3,6 +3,10 @@
       create: true
       relink: true
       glob: true
+    shell:
+      quiet: true
+      stdout: false
+      stderr: true
 
 - clean:
     - '~'
