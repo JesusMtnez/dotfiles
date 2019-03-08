@@ -21,21 +21,20 @@
       path: config/systemd/user/*
     ~/.config/tilix:
       path: config/tilix/*
-    ~/.dunstrc: dunstrc
-    ~/.gitconfig: gitconfig
-    ~/.gitignore: gitignore
-    ~/.i3: i3
+    ~/.dunstrc:
+    ~/.gitconfig:
+    ~/.gitignore:
+    ~/.i3:
     ~/.local/share/applications:
       path: applications/*
     ~/.sbt/1.0/plugins:
       path: sbt/plugins/*
-    ~/.tmux.conf: tmux.conf
-    ~/.Xresources: Xresources
-    ~/.Xkbmap: Xkbmap
-    ~/.zshrc: zshrc
+    ~/.tmux.conf:
+    ~/.Xresources:
+    ~/.Xkbmap:
+    ~/.zshrc:
 
 - shell:
-
     - description: "[PACMAN] Adding mirror updating using reflector"
       command: >
         sudo mkdir -p /etc/pacman.d/hooks &&
