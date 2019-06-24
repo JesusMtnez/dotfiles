@@ -3,21 +3,25 @@
 # Generates metals-emacs binary in `$HOME/jmartinez/.local/bin`
 
 coursier=/tmp/coursier
-metalsV="0.5.2"
+metalsVersion=$(curl -s https://oss.sonatype.org/content/repositories/snapshots/org/scalameta/metals_2.12/maven-metadata.xml | grep "<latest>.*</latest>" | sed -e "s#\(.*\)\(<latest>\)\(.*\)\(</latest>\)\(.*\)#\3#g")
+metalsLocation=$HOME/.local/bin/metals-emacs
+
+
+echo "Metals Version: $metalsVersion"
+echo "Metals Location: $metalsLocation"
 
 # Get coursier latest version
-curl -L -o $coursier https://git.io/coursier
+curl -sL -o $coursier https://git.io/coursier
 chmod +x $coursier
+
+# Clean old metals
+rm $metalsLocation
 
 # Generate `metals-emacs` executable
 $coursier bootstrap \
-  --java-opt -XX:+UseG1GC \
-  --java-opt -XX:+UseStringDeduplication  \
   --java-opt -Xss4m \
-  --java-opt -Xms1G \
-  --java-opt -Xmx4G  \
+  --java-opt -Xms100m \
   --java-opt -Dmetals.client=emacs \
-  --java-opt -Dmetals.http=true \
-  org.scalameta:metals_2.12:$metalsV \
-  -r sonatype:releases \
-  -o /home/jmartinez/.local/bin/metals-emacs -f
+  org.scalameta:metals_2.12:$metalsVersion \
+  -r sonatype:snapshots \
+  -o $metalsLocation -f
