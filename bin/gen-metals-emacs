@@ -3,7 +3,7 @@
 # Generates metals-emacs binary in `$HOME/jmartinez/.local/bin`
 
 coursier=/tmp/coursier
-metalsVersion=$(curl -s https://oss.sonatype.org/content/repositories/snapshots/org/scalameta/metals_2.12/maven-metadata.xml | grep "<latest>.*</latest>" | sed -e "s#\(.*\)\(<latest>\)\(.*\)\(</latest>\)\(.*\)#\3#g")
+metalsVersion=$(curl -s https://oss.sonatype.org/content/repositories/snapshots/org/scalameta/metals_2.12/ | grep -oP "\d\.\d\.\d\+[\d]+\-[a-z0-9]+\-SNAPSHOT" | uniq | sort -t+ -k 1,1 -k 2,2n | tail -n1)
 metalsLocation=$HOME/.local/bin/metals-emacs
 
 
