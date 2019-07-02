@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Generates metals-emacs binary in `$HOME/jmartinez/.local/bin`
+# Generates metals-emacs binary in `$HOME/.local/bin`
 
 coursier=/tmp/coursier
 metalsVersion=$(curl -s https://oss.sonatype.org/content/repositories/snapshots/org/scalameta/metals_2.12/ | grep -oP "\d\.\d\.\d\+[\d]+\-[a-z0-9]+\-SNAPSHOT" | uniq | sort -t+ -k 1,1 -k 2,2n | tail -n1)
