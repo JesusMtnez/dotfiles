@@ -39,4 +39,4 @@ POWERLEVEL9K_SHORTEN_DELIMITER=""
 # PYENV
 POWERLEVEL9K_PYTHON_ICON=""
 
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="powerlevel10k/powerlevel10k"

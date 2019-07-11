@@ -56,7 +56,7 @@ This dotfiles are manage using `git` and [`dotbot`](https://github.com/anishatha
 
 Current configuration uses [**Oh My Zsh**](https://github.com/robbyrussell/oh-my-zsh) framework.
 
-Theme: [`powerlevel9k`](https://github.com/bhilburn/powerlevel9k)
+Theme: [`powerlevel10k`](https://github.com/romkatv/powerlevel10k)
 
 Plugins:
   - [`zsh-autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions)

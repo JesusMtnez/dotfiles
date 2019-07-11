@@ -54,8 +54,8 @@
     -
       description: "[ZSH] Installing powerlevel9k theme"
       command: >
-        [ -d ~/.dotfiles/zsh/themes/powerlevel9k ] ||
-        git clone https://github.com/bhilburn/powerlevel9k.git ~/.dotfiles/zsh/themes/powerlevel9k
+        [ -d ~/.dotfiles/zsh/themes/powerlevel10k ] ||
+        git clone https://github.com/romkatv/powerlevel10k ~/.dotfiles/zsh/themes/powerlevel10k
 
     -
       description: "[ZSH] Installing zsh-syntax-highlighting"
