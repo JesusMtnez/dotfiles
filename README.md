@@ -13,7 +13,6 @@
     - [Configurations](#configurations)
         - [CLI tools](#cli-tools)
         - [zsh](#zsh)
-        - [git](#git)
         - [tmux](#tmux)
         - [i3 Window Manager](#i3-window-manager)
         - [ArchLinux](#archlinux)
@@ -51,6 +50,7 @@ This dotfiles are manage using `git` and [`dotbot`](https://github.com/anishatha
 ### CLI tools
 
 - [`bat`](https://github.com/sharkdp/bat) as `cat` with syntax highlight and git support.
+- [`diff-so-fancy`](https://github.com/so-fancy/diff-so-fancy) pager
 
 ### zsh ###
 
@@ -61,10 +61,6 @@ Theme: [`powerlevel10k`](https://github.com/romkatv/powerlevel10k)
 Plugins:
   - [`zsh-autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions)
   - [`zsh-syntac-highlight`](https://github.com/zsh-users/zsh-syntax-highlighting)
-
-### git ###
-
-  - [`diff-so-fancy`](https://github.com/so-fancy/diff-so-fancy) pager
 
 ### tmux ###
 
@@ -79,23 +75,26 @@ Plugins:
 
 I use `i3wm` as my window manager. It requires:
 
-  - `i3-gaps`
-  - `i3status`
+  - [`i3-gaps`](https://github.com/Airblader/i3)
+  - [`i3status`](https://github.com/i3/i3status)
   - [`i3-gnome`](https://github.com/csxr/i3-gnome): integrate `i3` with `GNOME`, providing flawless integration with `gnome-keyring` or `dbus`.
-  - `py3status` as i3status wrapper.
+    - [`arc-gtk-theme`](https://github.com/horst3180/arc-theme/): _Arch Darker_ theme
+    - [`papirus-icon-theme`](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme): icon pack
+    - [`capitaine-cursors`](https://github.com/keeferrourke/capitaine-cursors): dark cursor theme
+  - [`py3status`](https://github.com/ultrabug/py3status) as i3status wrapper.
   - `numlockx` to enable numeric keypad on boot.
   - `ttf-hack`: [Hack font](http://sourcefoundry.org/hack/)
   - [`flameshot`](https://github.com/lupoDharkael/flameshot) as screenshots tool.
   - [`i3lock-color`](https://github.com/PandorasFox/i3lock-color) as lockscreen tool.
-  - `rofi` as application launcher.
-  - `playerctl` to control multimedia.
-  - ``feh` as screen wallpaper tool.
-  - `dunst` as notification daemon.
-  - `arandr` as `xrandr` gui
-  - `udiskie` as automounter for removable media
+  - [`rofi`](https://github.com/davatorium/rofi) as application launcher.
+  - [`playerctl`](https://github.com/acrisci/playerctl) to control multimedia.
+  - [`feh`](https://github.com/derf/feh) as screen wallpaper tool.
+  - [`dunst`](https://github.com/dunst-project/dunst) as notification daemon.
+  - [`arandr`](https://gitlab.com/arandr/arandr) as `xrandr` gui
+  - [`udiskie`](https://github.com/coldfix/udiskie) as automounter for removable media
   - `lightdm-webkit-theme-litarvan`: [Litarvan theme](https://github.com/Litarvan/lightdm-webkit-theme-litarvan)
   - [`tilix`](https://gnunn1.github.io/tilix-web/): as gtk3 terminal emulator
-    - [`nord-tilix`](https://git.io/nord-tilix): color scheme
+    - [`one-dark`](https://git.io/v7Qaw): color scheme
 
 ### ArchLinux ###
 
