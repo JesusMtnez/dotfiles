@@ -10,18 +10,19 @@
 
 - clean:
     - '~'
+    - '~/.config/dunst/'
     - '~/.config/systemd/user/'
     - '~/.config/rofi/'
     - '~/.config/tilix/'
     - '~/.sbt/1.0/plugins/'
 
 - link:
+    ~/.config/dunst: config/dunst
     ~/.config/rofi: config/rofi
     ~/.config/systemd/user:
       path: config/systemd/user/*
     ~/.config/tilix:
       path: config/tilix/*
-    ~/.dunstrc:
     ~/.gitconfig:
     ~/.gitignore:
     ~/.i3:
