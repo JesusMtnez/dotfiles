@@ -134,7 +134,7 @@
     # Align icons left/right/off
     icon_position = left
     max_icon_size = 48
-    icon_folders = /usr/share/icons/Numix/48/emblems/:/usr/share/icons/Numix/48/mimetypes/:/usr/share/icons/Numix/48/status/:/usr/share/icons/Numix/48/devices/:/usr/share/icons/Numix/48/notifications/
+    icon_folders = /usr/share/icons/Papirus/48x48/emblems/:/usr/share/icons/Papirus/48x48/mimetypes/:/usr/share/icons/Papirus/48x48/status/:/usr/share/icons/Papirus/48x48/devices/:/usr/share/icons/Papirus/48x48/apps/
 
     frame_width = 1
     frame_color = "#222222"
