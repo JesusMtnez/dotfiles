@@ -225,7 +225,6 @@ client.urgent           #5c6370 #e06c75 #282c34
 # Autolaunch
 ##################################################
 exec --no-startup-id "xrandr --output HDMI1 --primary --mode 3440x1440 --pos 0x0 --rotate normal --output eDP1  --off --output DP2 --off"
-exec --no-startup-id dunst -config ~/.dunstrc
 exec --no-startup-id nm-applet
 exec --no-startup-id numlockx on
 exec --no-startup-id flameshot
