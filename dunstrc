@@ -136,8 +136,8 @@
     max_icon_size = 48
     icon_folders = /usr/share/icons/Papirus/48x48/emblems/:/usr/share/icons/Papirus/48x48/mimetypes/:/usr/share/icons/Papirus/48x48/status/:/usr/share/icons/Papirus/48x48/devices/:/usr/share/icons/Papirus/48x48/apps/
 
-    frame_width = 1
-    frame_color = "#222222"
+    frame_width = 3
+    frame_color = "#000000"
 
 [shortcuts]
     # shortcuts are specified as [modifier+][modifier+]...key
@@ -161,17 +161,17 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the '#' and following  would be interpreted as a comment.
-    background = "#222222"
-    foreground = "#888888"
+    background = "#5c6370"
+    foreground = "#000000"
     timeout = 10
 
 [urgency_normal]
-    background = "#334A5D"
+    background = "#56b6c2"
     foreground = "#ffffff"
     timeout = 10
 
 [urgency_critical]
-    background = "#ffff00"
+    background = "#f44747"
     foreground = "#000000"
     timeout = 0
 
