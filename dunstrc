@@ -1,6 +1,6 @@
 # <- this tricks vim into using syntax highlighting
 [global]
-    font = "FontAwesome, Hack 8"
+    font = "Hack, Noto Color Emoji 8"
 
     # allow a small subset of html markup:
     # <b>bold</b>

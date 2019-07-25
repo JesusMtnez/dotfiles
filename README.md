@@ -84,6 +84,7 @@ I use `i3wm` as my window manager. It requires:
   - [`py3status`](https://github.com/ultrabug/py3status) as i3status wrapper.
   - `numlockx` to enable numeric keypad on boot.
   - `ttf-hack`: [Hack font](http://sourcefoundry.org/hack/)
+  - `noto-fonts-emoji`: Font to enable emoji support
   - [`flameshot`](https://github.com/lupoDharkael/flameshot) as screenshots tool.
   - [`i3lock-color`](https://github.com/PandorasFox/i3lock-color) as lockscreen tool.
   - [`rofi`](https://github.com/davatorium/rofi) as application launcher.
