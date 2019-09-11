@@ -197,7 +197,7 @@ bar {
   tray_padding 4
   status_command py3status -c $HOME/.i3/i3status.conf
   position top
-  font pango:Hack, FontAwesome 10
+  font pango:Hack 9
 
   # Atom One Dark
   colors {
