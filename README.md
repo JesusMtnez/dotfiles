@@ -59,6 +59,7 @@ Current configuration uses [**Oh My Zsh**](https://github.com/robbyrussell/oh-my
 Theme: [`powerlevel10k`](https://github.com/romkatv/powerlevel10k)
 
 Plugins:
+  - [`autoupdate`](https://github.com/TamCore/autoupdate-oh-my-zsh-plugins)
   - [`zsh-autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions)
   - [`zsh-syntac-highlight`](https://github.com/zsh-users/zsh-syntax-highlighting)
 

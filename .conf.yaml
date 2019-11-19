@@ -59,6 +59,12 @@
         git clone https://github.com/romkatv/powerlevel10k ~/.dotfiles/zsh/themes/powerlevel10k
 
     -
+      description: "[ZSH] Installing autoupdate-zsh-plugin"
+      command: >
+        [ -d ~/.dotfiles/zsh/plugins/autoupdate ] ||
+        git clone https://github.com/TamCore/autoupdate-oh-my-zsh-plugins.git ~/.dotfiles/zsh/plugins/autoupdate
+
+    -
       description: "[ZSH] Installing zsh-syntax-highlighting"
       command: >
         [ -d ~/.dotfiles/zsh/plugins/zsh-syntax-highlighting ] ||
