@@ -53,7 +53,7 @@
         git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 
     -
-      description: "[ZSH] Installing powerlevel9k theme"
+      description: "[ZSH] Installing powerlevel10k theme"
       command: >
         [ -d ~/.dotfiles/zsh/themes/powerlevel10k ] ||
         git clone https://github.com/romkatv/powerlevel10k ~/.dotfiles/zsh/themes/powerlevel10k
