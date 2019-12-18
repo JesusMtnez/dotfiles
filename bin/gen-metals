@@ -1,0 +1,83 @@
+#!/usr/bin/env amm
+
+import $ivy.`org.jsoup:jsoup:1.12.1`
+
+import ammonite.ops.%%
+import ammonite.ops.ImplicitWd._
+
+import org.jsoup._
+
+import os._
+
+import scala.collection.JavaConverters._
+
+@main
+def main(args: String*) = {
+  val version = getVersion
+  val emacsPath = home / ".local" / "bin" / "metals-emacs"
+  val vscodePath = home / ".config" / "VSCodium"  / "User" / "settings.json"
+
+  println(s"Metals Version: ${version}")
+
+  updateVSCodium(vscodePath)(version)
+  updateEmacs(emacsPath)(version)
+}
+
+case class DynVer(stable: String, count: String, full: String)
+object DynVer {
+  val regex = """((\d\.\d\.\d)\+([\d]+)\-[a-z0-9]+-SNAPSHOT)/""".r
+  implicit def ord: Ordering[DynVer] = Ordering.by(v => (v.stable, v.count.toInt))
+}
+
+private val updateVSCodium: Path => String => Unit = vscodePath => version => {
+  val settingsJson = ujson.read(read(vscodePath))
+
+  settingsJson("metals.serverVersion") = version
+
+  write.over(vscodePath, settingsJson.render(2, true))
+
+  println(s"VSCodium updated: ${vscodePath}")
+}
+
+private val updateEmacs: Path => String => Unit = emacsPath => version => {
+    val coursierPath = root / "tmp" / "coursier"
+
+    getCoursier(coursierPath)
+
+    %%(coursierPath.toString,
+       "bootstrap",
+       "--java-opt", "-Dmetals.client=emacs",
+       s"org.scalameta:metals_2.12:$version",
+       "-r", "sonatype:snapshots",
+       "-o", s"$emacsPath",
+       "-f")
+
+    println(s"Emacs updated: ${emacsPath}")
+  }
+
+private val getVersion: String = {
+  Jsoup
+    .connect("https://oss.sonatype.org/content/repositories/snapshots/org/scalameta/metals_2.12/")
+    .execute()
+    .parse()
+    .select("body > table > tbody > tr > td > a")
+    .eachText
+    .asScala
+    .toList
+    .flatMap { version =>
+      version match {
+        case DynVer.regex(full, stable, count) => Option(DynVer(stable, count, full))
+        case _ => Option.empty[DynVer]
+      }
+    }
+    .sorted
+    .last
+    .full
+}
+
+private val getCoursier: Path => Unit = coursierPath =>
+  requests.get.stream("https://git.io/coursier")(
+      onDownload = inputStream => {
+          write.over(coursierPath, inputStream, Integer.parseInt("744", 8))
+        }
+    )
