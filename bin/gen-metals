@@ -76,8 +76,8 @@ private val getVersion: String = {
 }
 
 private val getCoursier: Path => Unit = coursierPath =>
-  requests.get.stream("https://git.io/coursier")(
-      onDownload = inputStream => {
-          write.over(coursierPath, inputStream, Integer.parseInt("744", 8))
-        }
-    )
+  write.over(
+    coursierPath,
+    requests.get.stream("https://git.io/coursier"),
+    Integer.parseInt("744", 8)
+  )
