@@ -56,10 +56,13 @@ private val updateEmacs: Path => String => Unit = emacsPath => version => {
   }
 
 private val getVersion: String = {
+  val response: Connection.Response =
+    Jsoup
+      .connect("https://oss.sonatype.org/content/repositories/snapshots/org/scalameta/metals_2.12/")
+      .execute()
+
   Jsoup
-    .connect("https://oss.sonatype.org/content/repositories/snapshots/org/scalameta/metals_2.12/")
-    .execute()
-    .parse()
+    .parse(response.body)
     .select("body > table > tbody > tr > td > a")
     .eachText
     .asScala
