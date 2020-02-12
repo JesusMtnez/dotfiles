@@ -81,6 +81,6 @@ private val getVersion: String = {
 private val getCoursier: Path => Unit = coursierPath =>
   write.over(
     coursierPath,
-    requests.get.stream("https://git.io/coursier"),
+    requests.get.stream("https://git.io/coursier-cli-linux"),
     Integer.parseInt("744", 8)
   )
