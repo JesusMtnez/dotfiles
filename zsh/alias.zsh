@@ -26,3 +26,5 @@ fi
 # Others
 alias RM='rm -rf'
 alias grep='grep --color=auto'
+
+alias amm='amm --no-remote-logging'
