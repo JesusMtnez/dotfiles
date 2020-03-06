@@ -26,5 +26,3 @@ fi
 # Others
 alias RM='rm -rf'
 alias grep='grep --color=auto'
-alias scala='scala -Dscala.color'
-alias mvn='mvn-color'
