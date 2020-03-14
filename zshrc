@@ -2,7 +2,7 @@
 
 export ZSH=$HOME/.oh-my-zsh
 export ZSH_CUSTOM=$HOME/.dotfiles/zsh
-export UPDATE_ZSH_DAYS=3
+export UPDATE_ZSH_DAYS=1
 
 DISABLE_AUTO_TITLE="true"
 COMPLETION_WAITING_DOTS="true"
