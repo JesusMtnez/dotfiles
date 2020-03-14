@@ -8,6 +8,7 @@
 # Metals
 .metals/
 .bloop/
+project/metals.sbt
 
 # IntelliJ Idea
 .idea/
