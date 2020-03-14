@@ -31,7 +31,6 @@
     ~/.sbt/1.0/plugins:
       path: sbt/plugins/*
     ~/.tmux.conf:
-    ~/.Xresources:
     ~/.Xkbmap:
     ~/.zshrc:
 
