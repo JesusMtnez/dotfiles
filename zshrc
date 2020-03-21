@@ -29,6 +29,7 @@ source $ZSH/oh-my-zsh.sh
 [ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
 [ -f /usr/bin/pyenv ] && eval "$(pyenv init -)" # pyenv
 [ -d ${HOME}/.pyenv/plugins/pyenv-virtualenv ] && eval "$(pyenv virtualenv-init -)" # pyenv-virtualenv
+[ -f $HOME/.rvm/scripts/rvm ] && source $HOME/.rvm/scripts/rvm
 
 # GNOME KEYRING DAEMON integration in shell
 [ -n "$DESKTOP_SESSION" ] && export $(gnome-keyring-daemon --start)
