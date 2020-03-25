@@ -15,6 +15,7 @@
         - [zsh](#zsh)
         - [tmux](#tmux)
         - [i3 Window Manager](#i3-window-manager)
+        - [VSCodium](#vscodium)
         - [ArchLinux](#archlinux)
         - [Emacs](#emacs)
 
@@ -97,6 +98,10 @@ I use `i3wm` as my window manager. It requires:
   - `lightdm-webkit-theme-litarvan`: [Litarvan theme](https://github.com/Litarvan/lightdm-webkit-theme-litarvan)
   - [`tilix`](https://gnunn1.github.io/tilix-web/): as gtk3 terminal emulator
     - [`one-dark`](https://git.io/v7Qaw): color scheme
+
+### VSCodium ###
+
+My minimal personal configuration for VSCodium is avaiable too.
 
 ### ArchLinux ###
 
