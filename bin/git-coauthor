@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# Original source: https://github.com/tj/git-extras
+
+set -e -o pipefail
+
+name=$1
+email=$2
+
+test -z "$name" && echo "co-author name required." 1>&2 && exit 1
+test -z "$email" && echo "co-author email required." 1>&2 && exit 1
+
+declare msg="$(git log --format=%B -n1)"
+declare coauthor="Co-authored-by: $name <$email>"
+
+if [[ "$msg" == *"$coauthor"* ]]; then
+  echo "Nothing to add, coauthor already in the commit."
+else
+  git commit --amend -m "$msg" -m "$coauthor"
+fi
