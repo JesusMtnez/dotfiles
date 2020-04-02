@@ -14,7 +14,6 @@
     - '~/.config/systemd/user/'
     - '~/.config/rofi/'
     - '~/.config/tilix/'
-    - '~/.config/VSCodium/User/'
     - '~/.sbt/1.0/plugins/'
 
 - link:
@@ -24,8 +23,6 @@
       path: config/systemd/user/*
     ~/.config/tilix:
       path: config/tilix/*
-    ~/.config/VSCodium/User:
-      path: config/VSCodium/User/*
     ~/.gitconfig:
     ~/.gitignore:
     ~/.i3:
