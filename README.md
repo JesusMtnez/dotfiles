@@ -87,7 +87,7 @@ I use `i3wm` as my window manager. It requires:
   - `ttf-hack`: [Hack font](http://sourcefoundry.org/hack/)
   - `noto-fonts-emoji`: Font to enable emoji support
   - [`flameshot`](https://github.com/lupoDharkael/flameshot) as screenshots tool.
-  - [`i3lock-color`](https://github.com/PandorasFox/i3lock-color) as lockscreen tool.
+  - [`betterlockscreen`](https://github.com/pavanjadhaw/betterlockscreen) as lockscreen tool.
   - [`rofi`](https://github.com/davatorium/rofi) as application launcher.
   - [`playerctl`](https://github.com/acrisci/playerctl) to control multimedia.
   - [`feh`](https://github.com/derf/feh) as screen wallpaper tool.

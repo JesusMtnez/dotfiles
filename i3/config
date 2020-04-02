@@ -64,7 +64,7 @@ bindsym $mod+Shift+0 move container to workspace 10
 bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+space exec --no-startup-id "rofi -show drun"
 bindsym $mod+Tab exec --no-startup-id "rofi -show window"
-bindsym $mod+$mod2+l exec --no-startup-id "$HOME/.dotfiles/bin/lockscreen"
+bindsym $mod+$mod2+l exec --no-startup-id "betterlockscreen -l blur"
 # Actions
 bindsym $mod+Shift+q kill
 bindsym $mod+t split t
