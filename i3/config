@@ -188,6 +188,7 @@ for_window [window_role="bubble"] floating enable
 for_window [window_role="task_dialog"] floating enable
 for_window [window_role="Preferences"] floating enable
 for_window [class="Spotify"] move container to workspace $music_ws
+for_window [class="Jitsi Meet"] floating enable
 
 ##################################################
 # i3wm status bar
