@@ -16,13 +16,17 @@ zplug "zsh-users/zsh-autosuggestions", depth:'1'
 zplug 'zsh-users/zsh-syntax-highlighting', depth:'1', defer:'2'
 zplug "b4b4r07/enhancd", use:'init.sh', depth:'1'
 
-# Local config
-zplug '$HOME/.dotfiles/zsh', from:'local', defer:'2'
-
 if zplug check "b4b4r07/enhancd"; then
   ENHANCD_FILTER="fzf"
   ENHANCD_COMPLETION_BEHAVIOR='list'
 fi
+
+# Local config
+source $HOME/.dotfiles/zsh/alias.zsh
+source $HOME/.dotfiles/zsh/env.zsh
+source $HOME/.dotfiles/zsh/functions.zsh
+source $HOME/.dotfiles/zsh/hooks.zsh
+source $HOME/.dotfiles/zsh/theme.zsh
 
 zplug check || zplug install
 
