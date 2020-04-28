@@ -11,16 +11,30 @@ import os._
 
 import scala.collection.JavaConverters._
 
+@doc("Update metals for all platforms")
 @main
-def main(args: String*) = {
+def all(emacs: Path = home / ".local" / "bin" / "metals-emacs",
+        vscodium: Path = home / ".config" / "VSCodium" / "User" / "settings.json") = {
   val version = getVersion
-  val emacsPath = home / ".local" / "bin" / "metals-emacs"
-  val vscodePath = home / ".config" / "VSCodium"  / "User" / "settings.json"
-
   println(s"Metals Version: ${version}")
+  updateVSCodium(vscodium)(version)
+  updateEmacs(emacs)(version)
+}
 
-  updateVSCodium(vscodePath)(version)
-  updateEmacs(emacsPath)(version)
+@doc("Update metals for Emacs")
+@main
+def emacs(path: Path = home / ".local" / "bin" / "metals-emacs") = {
+  val version = getVersion
+  println(s"Metals Version: ${version}")
+  updateEmacs(path)(version)
+}
+
+@doc("Update metals for VSCodium")
+@main
+def vscodium(path: Path = home / ".config" / "VSCodium" / "User" / "settings.json") = {
+  val version = getVersion
+  println(s"Metals Version: ${version}")
+  updateVSCodium(path)(version)
 }
 
 case class DynVer(stable: String, count: String, full: String)
