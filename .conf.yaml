@@ -46,31 +46,7 @@
         git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
     -
-      description: "[ZSH] Installing Oh-My-Zsh"
-      command:  >
-        [ -d ~/.oh-my-zsh ] ||
-        git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
-
-    -
-      description: "[ZSH] Installing powerlevel10k theme"
+      description: "[ZSH] Installing zplug"
       command: >
-        [ -d ~/.dotfiles/zsh/themes/powerlevel10k ] ||
-        git clone https://github.com/romkatv/powerlevel10k ~/.dotfiles/zsh/themes/powerlevel10k
-
-    -
-      description: "[ZSH] Installing autoupdate-zsh-plugin"
-      command: >
-        [ -d ~/.dotfiles/zsh/plugins/autoupdate ] ||
-        git clone https://github.com/TamCore/autoupdate-oh-my-zsh-plugins.git ~/.dotfiles/zsh/plugins/autoupdate
-
-    -
-      description: "[ZSH] Installing zsh-syntax-highlighting"
-      command: >
-        [ -d ~/.dotfiles/zsh/plugins/zsh-syntax-highlighting ] ||
-        git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.dotfiles/zsh/plugins/zsh-autosuggestions
-
-    -
-      description: "[ZSH] Installing zsh-autosuggestions"
-      command: >
-        [ -d ~/.dotfiles/zsh/plugins/zsh-autosuggestions ] ||
-        git clone https://github.com/zsh-users/zsh-autosuggestions ~/.dotfiles/zsh/plugins/zsh-autosuggestions
+        [ -d ~/.zplug ] ||
+        git clone https://github.com/zplug/zplug ~/.zplug

@@ -1,44 +1,45 @@
-# Author: JesusMtnez
+ZPLUG_HOME=$HOME/.zplug
+source $ZPLUG_HOME/init.zsh
 
-export ZSH=$HOME/.oh-my-zsh
-export ZSH_CUSTOM=$HOME/.dotfiles/zsh
-export UPDATE_ZSH_DAYS=1
+__zplug::io::file::generate
 
-ZLE_RPROMPT_INDENT=0
-DISABLE_AUTO_TITLE="true"
-COMPLETION_WAITING_DOTS="true"
-HIST_STAMPS="yyyy/mm/dd"
+zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 
-plugins+=(docker docker-compose)
-plugins+=(git-extras)
-plugins+=(autoupdate)
-plugins+=(zsh-autosuggestions)
-plugins+=(zsh-syntax-highlighting)
+# Themes
+zplug 'romkatv/powerlevel10k', as:'theme', depth:'1'
 
-# These sources are unnecessary since oh-my-zsh framework will load all *.zsh in ZSH_CUSTOM
-# source $ZSH_CUSTOM/alias.zsh
-# source $ZSH_CUSTOM/env.zsh
-# source $ZSH_CUSTOM/functions.zsh
-# source $ZSH_CUSTOM/hooks.zsh
-# source $ZSH_CUSTOM/theme.zsh
+# Plugins
+zplug "lib/history", from:'oh-my-zsh', depth:'1'
+zplug "junegunn/fzf", use:"shell/*.zsh", depth:'1'
+zplug "zsh-users/zsh-autosuggestions", depth:'1'
+zplug 'zsh-users/zsh-syntax-highlighting', depth:'1', defer:'2'
+zplug "b4b4r07/enhancd", use:'init.sh', depth:'1'
 
-# Launch oh-my-zsh framework
-source $ZSH/oh-my-zsh.sh
+# Local config
+zplug '$HOME/.dotfiles/zsh', from:'local', defer:'2'
 
-# Source other resource
-[ -f $HOME/.localrc ] && source $HOME/.localrc # Local configuration
-[ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
-[ -f /usr/bin/pyenv ] && eval "$(pyenv init -)" # pyenv
-[ -d ${HOME}/.pyenv/plugins/pyenv-virtualenv ] && eval "$(pyenv virtualenv-init -)" # pyenv-virtualenv
-[ -f $HOME/.rvm/scripts/rvm ] && source $HOME/.rvm/scripts/rvm
+if zplug check "b4b4r07/enhancd"; then
+  ENHANCD_FILTER="fzf"
+  ENHANCD_COMPLETION_BEHAVIOR='list'
+fi
 
-# GNOME KEYRING DAEMON integration in shell
-[ -n "$DESKTOP_SESSION" ] && export $(gnome-keyring-daemon --start)
+zplug check || zplug install
 
 # History configuration
 setopt hist_ignore_all_dups
 setopt hist_ignore_space
 unsetopt nomatch
+
+zplug load
+
+# Source other resource
+# [ -f $HOME/.localrc ] && source $HOME/.localrc # Local configuration
+# [ -f /usr/bin/pyenv ] && eval "$(pyenv init -)" # pyenv
+# [ -d ${HOME}/.pyenv/plugins/pyenv-virtualenv ] && eval "$(pyenv virtualenv-init -)" # pyenv-virtualenv
+# [ -f $HOME/.rvm/scripts/rvm ] && source $HOME/.rvm/scripts/rvm
+
+# GNOME KEYRING DAEMON integration in shell
+[ -n "$DESKTOP_SESSION" ] && export $(gnome-keyring-daemon --start)
 
 # Avoid duplicated in PATH
 export -U PATH

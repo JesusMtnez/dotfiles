@@ -54,12 +54,12 @@ This dotfiles are manage using `git` and [`dotbot`](https://github.com/anishatha
 
 ### zsh ###
 
-Current configuration uses [**Oh My Zsh**](https://github.com/robbyrussell/oh-my-zsh) framework.
+Current configuration uses [**zplug**](https://github.com/zplug/zplug) framework.
 
 Theme: [`powerlevel10k`](https://github.com/romkatv/powerlevel10k)
 
 Plugins:
-  - [`autoupdate`](https://github.com/TamCore/autoupdate-oh-my-zsh-plugins)
+  - [`enhancd`](https://github.com/b4b4r07/enhancd)
   - [`zsh-autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions)
   - [`zsh-syntac-highlight`](https://github.com/zsh-users/zsh-syntax-highlighting)
 
