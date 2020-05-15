@@ -111,12 +111,14 @@ mode $resize {
 }
 
 
-set $displayMode "Set display mode to [l]aptop [h]ome or execute [a]randr"
+set $displayMode "Set display mode to [l]aptop [h]ome [w]ork [m]ovie or execute [a]randr"
 bindsym $mod+x mode $displayMode
 mode $displayMode {
   bindsym a exec "arandr"; mode "default"
-  bindsym h exec "xrandr --output HDMI1 --primary --mode 3440x1440 --pos 0x0 --rotate normal --dpi 109 --output eDP1  --off --output DP2 --off"; mode "default"
-  bindsym l exec "xrandr --output eDP1  --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI1 --off --output DP2 --off"; mode "default"
+  bindsym l exec "xrandr --output eDP1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI1 --off"; mode "default"
+  bindsym h exec "xrandr --output eDP1 --primary --mode 1920x1080 --pos 0x1080 --rotate normal --output HDMI1 --mode 1920x1080 --pos 0x0 --rotate normal"; mode "default"
+  bindsym w exec "xrandr --output eDP1 --mode 1920x1080 --pos 3440x360 --rotate normal --output HDMI1 --primary --mode 3440x1440 --pos 0x0 --rotate normal"; mode "default"
+  bindsym m exec "xrandr --output eDP1 --off --output HDMI1 --primary --mode 1920x1080 --pos 0x0 --rotate normal"; mode "default"
 
   bindsym Return mode "default"
   bindsym Escape mode "default"
@@ -225,7 +227,7 @@ client.urgent           #5c6370 #e06c75 #282c34
 ##################################################
 # Autolaunch
 ##################################################
-exec --no-startup-id "xrandr --output HDMI1 --primary --mode 3440x1440 --pos 0x0 --rotate normal --output eDP1  --off --output DP2 --off"
+exec --no-startup-id "xrandr --output eDP1 --mode 1920x1080 --pos 3440x360 --rotate normal --output HDMI1 --primary --mode 3440x1440 --pos 0x0 --rotate normal"
 exec --no-startup-id nm-applet
 exec --no-startup-id numlockx on
 exec --no-startup-id flameshot
