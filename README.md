@@ -15,7 +15,6 @@
         - [zsh](#zsh)
         - [tmux](#tmux)
         - [i3 Window Manager](#i3-window-manager)
-        - [ArchLinux](#archlinux)
         - [Emacs](#emacs)
 
 <!-- markdown-toc end -->
@@ -61,7 +60,7 @@ Theme: [`powerlevel10k`](https://github.com/romkatv/powerlevel10k)
 Plugins:
   - [`enhancd`](https://github.com/b4b4r07/enhancd)
   - [`zsh-autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions)
-  - [`zsh-syntac-highlight`](https://github.com/zsh-users/zsh-syntax-highlighting)
+  - [`zsh-syntax-highlight`](https://github.com/zsh-users/zsh-syntax-highlighting)
 
 ### tmux ###
 

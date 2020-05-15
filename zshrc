@@ -40,6 +40,7 @@ unsetopt nomatch
 zplug load
 
 # Source other resource
+[ -x "$(command -v direnv)" ] && eval "$(direnv hook zsh)"
 # [ -f $HOME/.localrc ] && source $HOME/.localrc # Local configuration
 # [ -f /usr/bin/pyenv ] && eval "$(pyenv init -)" # pyenv
 # [ -d ${HOME}/.pyenv/plugins/pyenv-virtualenv ] && eval "$(pyenv virtualenv-init -)" # pyenv-virtualenv
