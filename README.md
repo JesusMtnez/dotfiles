@@ -84,7 +84,7 @@ I use `i3wm` as my window manager. It requires:
     - [`capitaine-cursors`](https://github.com/keeferrourke/capitaine-cursors): dark cursor theme
   - [`py3status`](https://github.com/ultrabug/py3status) as i3status wrapper.
   - `numlockx` to enable numeric keypad on boot.
-  - `ttf-hack`: [Hack font](http://sourcefoundry.org/hack/)
+  - `nerd-font-fira-code`: [FuraCode Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode)
   - `noto-fonts-emoji`: Font to enable emoji support
   - [`flameshot`](https://github.com/lupoDharkael/flameshot) as screenshots tool.
   - [`betterlockscreen`](https://github.com/pavanjadhaw/betterlockscreen) as lockscreen tool.

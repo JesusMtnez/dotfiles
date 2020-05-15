@@ -7,7 +7,7 @@ set $mod2 Mod1
 # Font settings
 font pango:monospace 8 # Fallback 2
 font pango:DejaVu Sans Mono 8 # Fallback 1
-font pango:Hack, FontAwesome 8
+font pango:FuraCode Nerd Font 8
 # Other settings
 floating_modifier $mod
 focus_follows_mouse no
@@ -198,7 +198,7 @@ bar {
   tray_padding 4
   status_command py3status -c $HOME/.i3/i3status.conf
   position top
-  font pango:Hack 9
+  font pango:FuraCode Nerd Font 9
 
   # Atom One Dark
   colors {
