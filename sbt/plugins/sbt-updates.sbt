@@ -1,1 +1,1 @@
-addSbtPlugin("org.jmotor.sbt" % "sbt-dependency-updates" % "1.2.1")
+addSbtPlugin("org.jmotor.sbt" % "sbt-dependency-updates" % "1.2.2")
