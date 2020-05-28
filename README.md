@@ -87,6 +87,7 @@ I use `i3wm` as my window manager. It requires:
   - `otf-fira-code-symbol`: [Fira Code Symbol Font](https://github.com/tonsky/FiraCode/files/412440/FiraCode-Regular-Symbol.zip)
   - `noto-fonts-emoji`: Font to enable emoji support
   - [`flameshot`](https://github.com/lupoDharkael/flameshot) as screenshots tool.
+  - [`peek`](https://github.com/phw/peek) as screen recording tool.
   - [`betterlockscreen`](https://github.com/pavanjadhaw/betterlockscreen) as lockscreen tool.
   - [`rofi`](https://github.com/davatorium/rofi) as application launcher.
   - [`playerctl`](https://github.com/acrisci/playerctl) to control multimedia.
