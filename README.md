@@ -84,6 +84,7 @@ I use `i3wm` as my window manager. It requires:
   - [`py3status`](https://github.com/ultrabug/py3status) as i3status wrapper.
   - `numlockx` to enable numeric keypad on boot.
   - `nerd-font-fira-code`: [FuraCode Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode)
+  - `otf-fira-code-symbol`: [Fira Code Symbol Font](https://github.com/tonsky/FiraCode/files/412440/FiraCode-Regular-Symbol.zip)
   - `noto-fonts-emoji`: Font to enable emoji support
   - [`flameshot`](https://github.com/lupoDharkael/flameshot) as screenshots tool.
   - [`betterlockscreen`](https://github.com/pavanjadhaw/betterlockscreen) as lockscreen tool.
