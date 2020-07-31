@@ -23,25 +23,26 @@
 
 ## Installation ##
 
-This dotfiles are manage using `git` and [`dotbot`](https://github.com/anishathalye/dotbot/). The steps to do a complete setup are:
+This dotfiles are manage using [`nix`](https://nixos.wiki/wiki/Nix) and [`home-manager`](https://github.com/rycee/home-manager). The steps to do a complete setup are:
 
-1. Clone the repository.
-2. Execute `<clone-dir>/install`.
-
+1. Clone the repository and go inside the folder
+2. Link `home.nix`: `ln -sf $PWD ~/.config/nixpkgs/home.nix`.
+3. Execute: `home-manager switch`.
 
 ### SSH ###
 
 ``` shell
-> git clone git@gitlab.com:JesusMtnez/dotfiles.git $HOME/.dotfiles
-> $HOME/.dotfiles/install
+git clone git@gitlab.com:JesusMtnez/dotfiles.git $HOME/.dotfiles
+ln -sf ~/.dotfiles/home.nix ~/.config/nixpkgs/home.nix
+home-manager switch
 ```
-
 
 ### HTTPS ###
 
 ``` shell
-> git clone https://gitlab.com/JesusMtnez/dotfiles.git $HOME/.dotfiles
-> $HOME/.dotfiles/install
+git clone https://gitlab.com/JesusMtnez/dotfiles.git $HOME/.dotfiles
+ln -sf ~/.dotfiles/home.nix ~/.config/nixpkgs/home.nix
+home-manager switch
 ```
 
 ## Configurations
