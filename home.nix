@@ -6,11 +6,18 @@
     # path = https://github.com/rycee/home-manager/archive/release-18.09.tar.gz;
   };
 
-  home.stateVersion = "20.03";
-
-  home.packages = [
-    pkgs.direnv
-    pkgs.lorri
+  home.packages = with pkgs; [
+    feh
+    direnv
+    lorri
+    bat
+    git
+    gitAndTools.diff-so-fancy
+    numlockx
+    tmux
+    # TODO Handle tpm / plugins installation
+    # TODO Rofi fails to start: rofi glibLocales
+    # TODO zsh / zplug integration https://github.com/rycee/home-manager/blob/1b210e7143547ce0f41e8082b8d27e9c7d220351/modules/programs/zplug.nix
   ];
 
   services.lorri.enable = true;
