@@ -15,6 +15,15 @@
 
   services.lorri.enable = true;
 
+  # TODO Timer not working
+  services.random-background = {
+    enable = true;
+    display = "fill";
+    imageDirectory = "%h/Pictures/wallpapers";
+    interval = "30sec";
+    enableXinerama = false;
+  };
+
   home.file = {
 
     ".gitignore".source = ./gitignore;
