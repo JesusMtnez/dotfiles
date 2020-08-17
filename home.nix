@@ -37,6 +37,7 @@
     ".gitconfig".source = ./gitconfig;
     ".tmux.conf".source = ./tmux.conf;
     ".Xkbmap".source = ./Xkbmap;
+    ".xprofile".source = ./xprofile;
     ".zshrc".source = ./zshrc;
 
     ".i3" = {
