@@ -6,6 +6,11 @@
     # path = https://github.com/rycee/home-manager/archive/release-18.09.tar.gz;
   };
 
+  programs.emacs = {
+    enable = true;
+    package = pkgs.emacs;
+  };
+
   home.packages = with pkgs; [
     feh
     direnv
