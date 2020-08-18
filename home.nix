@@ -1,9 +1,12 @@
 { config, pkgs, ... }:
 
+let
+  homedir = builtins.getEnv "HOME";
+in
 {
   programs.home-manager = {
     enable = true;
-    # path = https://github.com/rycee/home-manager/archive/release-18.09.tar.gz;
+    path = https://github.com/rycee/home-manager/archive/master.tar.gz;
   };
 
   programs.emacs = {
@@ -54,6 +57,7 @@
     gitAndTools.diff-so-fancy
     numlockx
     tmux
+    jq
     # TODO Handle tpm / plugins installation
     # TODO Rofi fails to start: rofi glibLocales
     # TODO zsh / zplug integration https://github.com/rycee/home-manager/blob/1b210e7143547ce0f41e8082b8d27e9c7d220351/modules/programs/zplug.nix
@@ -61,7 +65,7 @@
 
   services.lorri.enable = true;
 
-  # TODO Timer not working
+  # TODO Service is not started: https://github.com/rycee/home-manager#graphical-services
   services.random-background = {
     enable = true;
     display = "fill";
