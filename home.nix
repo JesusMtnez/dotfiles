@@ -58,8 +58,10 @@ in
     numlockx
     tmux
     jq
+    rofi
+    glibcLocales
+
     # TODO Handle tpm / plugins installation
-    # TODO Rofi fails to start: rofi glibLocales
     # TODO zsh / zplug integration https://github.com/rycee/home-manager/blob/1b210e7143547ce0f41e8082b8d27e9c7d220351/modules/programs/zplug.nix
   ];
 
