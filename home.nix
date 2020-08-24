@@ -49,17 +49,15 @@ in
   };
 
   home.packages = with pkgs; [
-    feh
     direnv
-    lorri
     bat
     git
     gitAndTools.diff-so-fancy
     numlockx
     tmux
     jq
-    rofi
     glibcLocales
+    rofi
 
     # TODO Handle tpm / plugins installation
     # TODO zsh / zplug integration https://github.com/rycee/home-manager/blob/1b210e7143547ce0f41e8082b8d27e9c7d220351/modules/programs/zplug.nix
@@ -76,6 +74,27 @@ in
     enableXinerama = false;
   };
 
+
+  xdg.configFile."systemd/user" = {
+    source = ./config/systemd/user;
+    recursive = true;
+  };
+
+  xdg.configFile."dunst" = {
+    source = ./config/dunst;
+    recursive = true;
+  };
+
+  xdg.configFile."rofi" = {
+    source = ./config/rofi;
+    recursive = true;
+  };
+
+  xdg.configFile."tilix" = {
+    source = ./config/tilix;
+    recursive = true;
+  };
+
   home.file = {
 
     ".gitignore".source = ./gitignore;
@@ -87,26 +106,6 @@ in
 
     ".i3" = {
       source = ./i3;
-      recursive = true;
-    };
-
-    ".config/systemd/user" = {
-      source = ./config/systemd/user;
-      recursive = true;
-    };
-
-    ".config/dunst" = {
-      source = ./config/dunst;
-      recursive = true;
-    };
-
-    ".config/rofi" = {
-      source = ./config/rofi;
-      recursive = true;
-    };
-
-    ".config/tilix" = {
-      source = ./config/tilix;
       recursive = true;
     };
 
