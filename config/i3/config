@@ -198,7 +198,7 @@ for_window [class="Jitsi Meet"] floating enable
 bar {
   tray_output primary
   tray_padding 4
-  status_command py3status -c $HOME/.i3/i3status.conf
+  status_command py3status -c $HOME/.config/i3/i3status.conf
   position top
   font pango:FuraCode Nerd Font 9
 
@@ -227,7 +227,7 @@ client.urgent           #5c6370 #e06c75 #282c34
 ##################################################
 # Autolaunch
 ##################################################
-exec --no-startup-id "xrandr --output eDP1 --mode 1920x1080 --pos 3440x360 --rotate normal --output HDMI1 --primary --mode 3440x1440 --pos 0x0 --rotate normal"
+exec --no-startup-id "xrandr --output eDP1 --off --output HDMI1 --primary --mode 3440x1440 --pos 0x0 --rotate normal"
 exec --no-startup-id nm-applet
 exec --no-startup-id numlockx on
 exec --no-startup-id flameshot

@@ -95,6 +95,11 @@ in
     recursive = true;
   };
 
+  xdg.configFile."i3" = {
+    source = ./config/i3;
+    recursive = true;
+  };
+
   home.file = {
 
     ".gitignore".source = ./gitignore;
@@ -103,11 +108,6 @@ in
     ".Xkbmap".source = ./Xkbmap;
     ".xprofile".source = ./xprofile;
     ".zshrc".source = ./zshrc;
-
-    ".i3" = {
-      source = ./i3;
-      recursive = true;
-    };
 
     ".sbt/1.0/plugins" = {
       source = ./sbt/plugins;
