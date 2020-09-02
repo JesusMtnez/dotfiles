@@ -55,8 +55,12 @@ in
     enableFishIntegration = false;
   };
 
+  programs.direnv = {
+    enable = true;
+    enableNixDirenvIntegration = true;
+  };
+
   home.packages = with pkgs; [
-    direnv
     bat
     git
     gitAndTools.diff-so-fancy
@@ -69,8 +73,6 @@ in
     # TODO Handle tpm / plugins installation
     # TODO zsh / zplug integration https://github.com/rycee/home-manager/blob/1b210e7143547ce0f41e8082b8d27e9c7d220351/modules/programs/zplug.nix
   ];
-
-  services.lorri.enable = true;
 
   # TODO Service is not started: https://github.com/rycee/home-manager#graphical-services
   services.random-background = {
