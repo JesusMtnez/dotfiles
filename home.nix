@@ -48,6 +48,13 @@ in
     # extensions = with pkgs.vscode-extensions; [];
   };
 
+  programs.fzf = {
+    enable = true;
+    enableZshIntegration = true;
+    enableBashIntegration = false;
+    enableFishIntegration = false;
+  };
+
   home.packages = with pkgs; [
     direnv
     bat
