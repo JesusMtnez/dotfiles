@@ -75,6 +75,7 @@ in
 
     jitsi-meet-electron
     keepassxc
+    slack
   ];
 
   # TODO Service is not started: https://github.com/rycee/home-manager#graphical-services
