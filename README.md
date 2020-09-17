@@ -26,7 +26,7 @@
 This dotfiles are manage using [`nix`](https://nixos.wiki/wiki/Nix) and [`home-manager`](https://github.com/rycee/home-manager). The steps to do a complete setup are:
 
 1. Clone the repository and go inside the folder
-2. Link `home.nix`: `ln -sf $PWD ~/.config/nixpkgs/home.nix`.
+2. Link `home.nix`: `ln -sf $PWD/hosts/$HOSTNAME/default.nix ~/.config/nixpkgs/home.nix`.
 3. Execute: `home-manager switch`.
 
 ### SSH ###

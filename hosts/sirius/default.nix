@@ -2,8 +2,11 @@
 
 let
   homedir = builtins.getEnv "HOME";
+  dotfiles = homedir + "/.dotfiles";
 in
 {
+  nixpkgs.config.allowUnfree = true;
+
   programs.home-manager = {
     enable = true;
     path = https://github.com/rycee/home-manager/archive/master.tar.gz;
@@ -41,7 +44,7 @@ in
       "workbench.colorTheme" = "One Dark Pro";
       "liveshare.anonymousGuestApproval" = "accept";
       "metals.bloopSbtAlreadyInstalled" = true;
-      "metals.serverVersion" = "0.9.2";
+      "metals.serverVersion" = "0.9.3";
     };
     # TODO Manage extensions
     # https://nixos.wiki/wiki/VSCodium
@@ -88,46 +91,45 @@ in
 
 
   xdg.configFile."systemd/user" = {
-    source = ./config/systemd/user;
+    source = dotfiles + "/config/systemd/user";
     recursive = true;
   };
 
   xdg.configFile."dunst" = {
-    source = ./config/dunst;
+    source = dotfiles + "/config/dunst";
     recursive = true;
   };
 
   xdg.configFile."rofi" = {
-    source = ./config/rofi;
+    source = dotfiles + "/config/rofi";
     recursive = true;
   };
 
   xdg.configFile."tilix" = {
-    source = ./config/tilix;
+    source = dotfiles + "/config/tilix";
     recursive = true;
   };
 
   xdg.configFile."i3" = {
-    source = ./config/i3;
+    source = dotfiles + "/config/i3";
     recursive = true;
   };
 
   home.file = {
-
-    ".gitignore".source = ./gitignore;
-    ".gitconfig".source = ./gitconfig;
-    ".tmux.conf".source = ./tmux.conf;
-    ".Xkbmap".source = ./Xkbmap;
-    ".xprofile".source = ./xprofile;
-    ".zshrc".source = ./zshrc;
+    ".gitignore".source = dotfiles + "/gitignore";
+    ".gitconfig".source = dotfiles + "/gitconfig";
+    ".tmux.conf".source = dotfiles + "/tmux.conf";
+    ".Xkbmap".source = dotfiles + "/Xkbmap";
+    ".xprofile".source = dotfiles + "/xprofile";
+    ".zshrc".source = dotfiles + "/zshrc";
 
     ".sbt/1.0/plugins" = {
-      source = ./sbt/plugins;
+      source = dotfiles+ "/sbt/plugins";
       recursive = true;
     };
 
     ".local/share/applications" = {
-      source = ./applications;
+      source = dotfiles + "/applications";
       recursive = true;
     };
   };
