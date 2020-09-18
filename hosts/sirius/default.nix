@@ -12,6 +12,10 @@ in
     path = https://github.com/rycee/home-manager/archive/master.tar.gz;
   };
 
+  imports = [
+    ../../applications/utils
+  ];
+
   programs.emacs = {
     enable = true;
     package = pkgs.emacs;
