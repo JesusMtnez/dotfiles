@@ -13,6 +13,7 @@ in
   };
 
   imports = [
+    ../../applications/sbt
     ../../applications/utils
   ];
 
@@ -128,11 +129,6 @@ in
     ".Xkbmap".source = dotfiles + "/Xkbmap";
     ".xprofile".source = dotfiles + "/xprofile";
     ".zshrc".source = dotfiles + "/zshrc";
-
-    ".sbt/1.0/plugins" = {
-      source = dotfiles+ "/sbt/plugins";
-      recursive = true;
-    };
 
     ".local/share/applications" = {
       source = dotfiles + "/applications";
