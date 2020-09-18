@@ -21,6 +21,7 @@ in
     ../../applications/rofi
     ../../applications/sbt
     ../../applications/tilix
+    ../../applications/tmux
     ../../applications/utils
 
     # TODO Service is not started: https://github.com/rycee/home-manager#graphical-services
@@ -31,11 +32,9 @@ in
     bat
     kubectl
     numlockx
-    tmux
     jq
     glibcLocales # Fix rofi in arch-linux
 
-    # TODO Handle tpm / plugins installation
     # TODO zsh / zplug integration https://github.com/rycee/home-manager/blob/1b210e7143547ce0f41e8082b8d27e9c7d220351/modules/programs/zplug.nix
 
     keepassxc
@@ -59,7 +58,6 @@ in
   };
 
   home.file = {
-    ".tmux.conf".source = dotfiles + "/tmux.conf";
     ".Xkbmap".source = dotfiles + "/Xkbmap";
     ".xprofile".source = dotfiles + "/xprofile";
     ".zshrc".source = dotfiles + "/zshrc";
