@@ -71,10 +71,5 @@ in
     ".Xkbmap".source = dotfiles + "/Xkbmap";
     ".xprofile".source = dotfiles + "/xprofile";
     ".zshrc".source = dotfiles + "/zshrc";
-
-    ".local/share/applications" = {
-      source = dotfiles + "/applications";
-      recursive = true;
-    };
   };
 }
