@@ -67,6 +67,7 @@ in
     bat
     git
     gitAndTools.diff-so-fancy
+    gitAndTools.gh
     numlockx
     tmux
     jq
