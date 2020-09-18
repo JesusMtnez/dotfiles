@@ -17,15 +17,13 @@ in
     ../../applications/direnv
     ../../applications/emacs
     ../../applications/fzf
+    ../../applications/git
     ../../applications/sbt
     ../../applications/utils
   ];
 
   home.packages = with pkgs; [
     bat
-    git
-    gitAndTools.diff-so-fancy
-    gitAndTools.gh
     kubectl
     numlockx
     tmux
@@ -76,8 +74,6 @@ in
   };
 
   home.file = {
-    ".gitignore".source = dotfiles + "/gitignore";
-    ".gitconfig".source = dotfiles + "/gitconfig";
     ".tmux.conf".source = dotfiles + "/tmux.conf";
     ".Xkbmap".source = dotfiles + "/Xkbmap";
     ".xprofile".source = dotfiles + "/xprofile";

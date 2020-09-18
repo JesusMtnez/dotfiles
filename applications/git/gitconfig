@@ -11,6 +11,8 @@
     whitespace = trailing-space, blank-at-eol, tabs-in-indent
 [commit]
     gpgsign = true
+[pull]
+    ff = only
 [push]
     default = upstream
 [fetch]
