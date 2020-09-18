@@ -68,6 +68,7 @@ in
     git
     gitAndTools.diff-so-fancy
     gitAndTools.gh
+    kubectl
     numlockx
     tmux
     jq
