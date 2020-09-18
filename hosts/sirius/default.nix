@@ -20,6 +20,9 @@ in
     ../../applications/git
     ../../applications/sbt
     ../../applications/utils
+
+    # TODO Service is not started: https://github.com/rycee/home-manager#graphical-services
+    ../../services/random-background
   ];
 
   home.packages = with pkgs; [
@@ -37,16 +40,6 @@ in
     keepassxc
     slack
   ];
-
-  # TODO Service is not started: https://github.com/rycee/home-manager#graphical-services
-  services.random-background = {
-    enable = true;
-    display = "fill";
-    imageDirectory = "%h/Pictures/wallpapers";
-    interval = "30sec";
-    enableXinerama = false;
-  };
-
 
   xdg.configFile."systemd/user" = {
     source = dotfiles + "/config/systemd/user";
