@@ -34,7 +34,6 @@ in
   home.packages = with pkgs; [
     bat
     kubectl
-    numlockx
     jq
     glibcLocales # Fix rofi in arch-linux
 
