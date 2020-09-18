@@ -18,6 +18,7 @@ in
     ../../applications/emacs
     ../../applications/fzf
     ../../applications/git
+    ../../applications/i3
     ../../applications/rofi
     ../../applications/sbt
     ../../applications/tilix
@@ -49,11 +50,6 @@ in
   # TODO Migrate to services/dunst
   xdg.configFile."dunst" = {
     source = dotfiles + "/config/dunst";
-    recursive = true;
-  };
-
-  xdg.configFile."i3" = {
-    source = dotfiles + "/config/i3";
     recursive = true;
   };
 
