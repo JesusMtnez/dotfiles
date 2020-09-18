@@ -2,6 +2,7 @@
 
 let
   homedir = builtins.getEnv "HOME";
+
   dotfiles = homedir + "/.dotfiles";
 in
 {
@@ -15,6 +16,7 @@ in
   imports = [
     ../../applications/codium
     ../../applications/direnv
+    ../../applications/dunst
     ../../applications/emacs
     ../../applications/fzf
     ../../applications/git
@@ -42,16 +44,8 @@ in
     slack
   ];
 
-  xdg.configFile."systemd/user" = {
-    source = dotfiles + "/config/systemd/user";
-    recursive = true;
-  };
-
-  # TODO Migrate to services/dunst
-  xdg.configFile."dunst" = {
-    source = dotfiles + "/config/dunst";
-    recursive = true;
-  };
+  # TODO Generate dunst service using nix, to link to the proper dunst link
+  xdg.configFile."systemd/user/dunst.service".source = ./dunst.service;
 
   home.file = {
     ".Xkbmap".source = dotfiles + "/Xkbmap";

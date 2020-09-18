@@ -6,8 +6,7 @@ PartOf=graphical-session.target
 [Service]
 Type=dbus
 BusName=org.freedesktop.Notifications
-ExecStart=/usr/bin/dunst
+ExecStart=/home/jmartinez/.nix-profile/bin/dunst
 
 [Install]
 WantedBy=default.target
-
