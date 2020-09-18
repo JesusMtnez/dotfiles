@@ -20,6 +20,7 @@ in
     ../../applications/git
     ../../applications/rofi
     ../../applications/sbt
+    ../../applications/tilix
     ../../applications/utils
 
     # TODO Service is not started: https://github.com/rycee/home-manager#graphical-services
@@ -49,11 +50,6 @@ in
   # TODO Migrate to services/dunst
   xdg.configFile."dunst" = {
     source = dotfiles + "/config/dunst";
-    recursive = true;
-  };
-
-  xdg.configFile."tilix" = {
-    source = dotfiles + "/config/tilix";
     recursive = true;
   };
 
