@@ -18,6 +18,7 @@ in
     ../../applications/emacs
     ../../applications/fzf
     ../../applications/git
+    ../../applications/rofi
     ../../applications/sbt
     ../../applications/utils
 
@@ -31,8 +32,7 @@ in
     numlockx
     tmux
     jq
-    glibcLocales
-    rofi
+    glibcLocales # Fix rofi in arch-linux
 
     # TODO Handle tpm / plugins installation
     # TODO zsh / zplug integration https://github.com/rycee/home-manager/blob/1b210e7143547ce0f41e8082b8d27e9c7d220351/modules/programs/zplug.nix
@@ -46,13 +46,9 @@ in
     recursive = true;
   };
 
+  # TODO Migrate to services/dunst
   xdg.configFile."dunst" = {
     source = dotfiles + "/config/dunst";
-    recursive = true;
-  };
-
-  xdg.configFile."rofi" = {
-    source = dotfiles + "/config/rofi";
     recursive = true;
   };
 
