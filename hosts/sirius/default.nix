@@ -25,6 +25,7 @@ in
     ../../applications/tilix
     ../../applications/tmux
     ../../applications/utils
+    ../../applications/zsh
 
     # TODO Service is not started: https://github.com/rycee/home-manager#graphical-services
     ../../services/random-background
@@ -46,8 +47,15 @@ in
   xdg.configFile."systemd/user/dunst.service".source = ./dunst.service;
 
   home.file = {
-    ".Xkbmap".source = ../../Xkbmap;
-    ".xprofile".source = ../../xprofile;
-    ".zshrc".source = ../../zshrc;
+    ".Xkbmap".text = "-layout us -variant altgr-intl -option ctrl:nocaps";
+    ".xprofile".text = ''
+      export XDG_DATA_DIRS=$HOME/.nix-profile/share:$HOME/.local/share:/usr/local/share:/usr/share
+
+      # Fix in Arch: https://github.com/NixOS/nix/issues/599#issuecomment-147200966
+      #              https://github.com/NixOS/nixpkgs/issues/6878
+      if type nix-env > /dev/null; then
+        export LOCALE_ARCHIVE=`nix-env --installed --no-name --out-path --query glibc-locales`/lib/locale/locale-archive
+      fi
+    '';
   };
 }
