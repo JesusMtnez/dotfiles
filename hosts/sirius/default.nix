@@ -21,6 +21,7 @@ in
     ../../applications/fzf
     ../../applications/git
     ../../applications/i3
+    ../../applications/neovim
     ../../applications/rofi
     ../../applications/sbt
     ../../applications/tilix
