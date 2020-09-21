@@ -2,8 +2,6 @@
 
 let
   homedir = builtins.getEnv "HOME";
-
-  dotfiles = homedir + "/.dotfiles";
 in
 {
   nixpkgs.config.allowUnfree = true;
@@ -48,8 +46,8 @@ in
   xdg.configFile."systemd/user/dunst.service".source = ./dunst.service;
 
   home.file = {
-    ".Xkbmap".source = dotfiles + "/Xkbmap";
-    ".xprofile".source = dotfiles + "/xprofile";
-    ".zshrc".source = dotfiles + "/zshrc";
+    ".Xkbmap".source = ../../Xkbmap;
+    ".xprofile".source = ../../xprofile;
+    ".zshrc".source = ../../zshrc;
   };
 }

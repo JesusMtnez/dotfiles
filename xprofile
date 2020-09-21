@@ -1,6 +1,7 @@
 export XDG_DATA_DIRS=$HOME/.nix-profile/share:$HOME/.local/share:/usr/local/share:/usr/share
 
 # Fix in Arch: https://github.com/NixOS/nix/issues/599#issuecomment-147200966
+#              https://github.com/NixOS/nixpkgs/issues/6878
 if type nix-env > /dev/null; then
     export LOCALE_ARCHIVE=`nix-env --installed --no-name --out-path --query glibc-locales`/lib/locale/locale-archive
 fi
