@@ -46,6 +46,8 @@ in
   # TODO Generate dunst service using nix, to link to the proper dunst link
   xdg.configFile."systemd/user/dunst.service".source = ./dunst.service;
 
+  systemd.user.startServices = true;
+
   home.file = {
     ".Xkbmap".text = "-layout us -variant altgr-intl -option ctrl:nocaps";
     ".xprofile".text = ''
