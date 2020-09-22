@@ -27,7 +27,7 @@
       "workbench.colorTheme" = "One Dark Pro";
       "liveshare.anonymousGuestApproval" = "accept";
       "metals.bloopSbtAlreadyInstalled" = true;
-      "metals.serverVersion" = "0.9.3";
+      "metals.serverVersion" = "0.9.4";
     };
     # TODO Manage extensions
     # https://nixos.wiki/wiki/VSCodium
