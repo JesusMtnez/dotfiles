@@ -58,6 +58,8 @@ in
       if type nix-env > /dev/null; then
         export LOCALE_ARCHIVE=`nix-env --installed --no-name --out-path --query glibc-locales`/lib/locale/locale-archive
       fi
+
+      systemctl --user start random-background
     '';
   };
 }
