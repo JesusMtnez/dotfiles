@@ -1,5 +1,0 @@
-- defaults:
-    shell:
-      quiet: true
-      stdout: false
-      stderr: true
