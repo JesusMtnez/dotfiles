@@ -9,9 +9,3 @@
       command: >
         [ -d ~/.tmux/plugins/tpm ] ||
         git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-
-    -
-      description: "[ZSH] Installing zplug"
-      command: >
-        [ -d ~/.zplug ] ||
-        git clone https://github.com/zplug/zplug ~/.zplug
