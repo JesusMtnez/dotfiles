@@ -1,6 +1,5 @@
 { pkgs, ... }:
 {
-  # TODO Use home-manager tmux module instead
   # TODO Handle tpm / plugins installation
   # TODO Handle tat
 
