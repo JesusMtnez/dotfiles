@@ -8,8 +8,6 @@
 
 - [JesusMtnez's dotfiles!](#jesusmtnezs-dotfiles)
     - [Installation](#installation)
-        - [SSH](#ssh)
-        - [HTTPS](#https)
     - [Configurations](#configurations)
         - [CLI tools](#cli-tools)
         - [zsh](#zsh)
@@ -29,22 +27,6 @@ This dotfiles are manage using [`nix`](https://nixos.wiki/wiki/Nix) and [`home-m
 2. Link `home.nix`: `ln -sf $PWD/hosts/$HOSTNAME/default.nix ~/.config/nixpkgs/home.nix`.
 3. Execute: `home-manager switch`.
 
-### SSH ###
-
-``` shell
-git clone git@gitlab.com:JesusMtnez/dotfiles.git $HOME/.dotfiles
-ln -sf ~/.dotfiles/home.nix ~/.config/nixpkgs/home.nix
-home-manager switch
-```
-
-### HTTPS ###
-
-``` shell
-git clone https://gitlab.com/JesusMtnez/dotfiles.git $HOME/.dotfiles
-ln -sf ~/.dotfiles/home.nix ~/.config/nixpkgs/home.nix
-home-manager switch
-```
-
 ## Configurations
 
 ### CLI tools
@@ -61,7 +43,9 @@ Theme: [`powerlevel10k`](https://github.com/romkatv/powerlevel10k)
 Plugins:
   - [`enhancd`](https://github.com/b4b4r07/enhancd)
   - [`zsh-autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions)
-  - [`zsh-syntax-highlight`](https://github.com/zsh-users/zsh-syntax-highlighting)
+  - [`zsh-completions`](https://github.com/zsh-users/zsh-completions)
+  - [`fast-syntax-highlighting`](https://github.com/zdharma/fast-syntax-highlighting)
+  - [`zsh-autopair`](https://github.com/hlissner/zsh-autopair)
 
 ### tmux ###
 
