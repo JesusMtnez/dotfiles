@@ -6,5 +6,8 @@
 zsh/plugins/**
 zsh/themes/**
 
+# Nix
+result
+
 # Custom
 .backup

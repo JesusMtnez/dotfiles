@@ -1,0 +1,49 @@
+# Bootstrap zplug
+ZPLUG_HOME=$HOME/.zplug
+[ ! -d ~/.zplug ] && git clone https://github.com/zplug/zplug $ZPLUG_HOME
+source $ZPLUG_HOME/init.zsh
+
+__zplug::io::file::generate
+
+zplug 'zplug/zplug', hook-build:'zplug --self-manage'
+
+# Themes
+zplug 'romkatv/powerlevel10k', as:'theme', depth:'1'
+
+# Plugins
+zplug "lib/completion", from:'oh-my-zsh', depth:'1'
+zplug "lib/history", from:'oh-my-zsh', depth:'1'
+zplug "lib/key-bindings", from:'oh-my-zsh', depth:'1'
+zplug "junegunn/fzf", use:"shell/*.zsh", depth:'1', defer:'3'
+zplug "zsh-users/zsh-autosuggestions", depth:'1'
+zplug "zsh-users/zsh-completions", depth:'1'
+zplug "b4b4r07/enhancd", use:'init.sh', depth:'1'
+zplug "zdharma/fast-syntax-highlighting", depth:'1', defer:'2'
+zplug "hlissner/zsh-autopair", depth:'1', defer:'2'
+
+if zplug check "b4b4r07/enhancd"; then
+  ENHANCD_FILTER="fzf"
+  ENHANCD_COMPLETION_BEHAVIOR='list'
+fi
+
+# Local config
+zplug "$HOME/.config/zsh", from:'local'
+
+zplug check || zplug install
+
+# History configuration
+setopt hist_ignore_all_dups
+setopt hist_ignore_space
+unsetopt nomatch
+
+zplug load
+
+# Source other resource
+[ -x "$(command -v direnv)" ] && eval "$(direnv hook zsh)"
+# [ -f $HOME/.localrc ] && source $HOME/.localrc # Local configuration
+
+# GNOME KEYRING DAEMON integration in shell
+[ -n "$DESKTOP_SESSION" ] && export $(gnome-keyring-daemon --start)
+
+# Avoid duplicated in PATH
+export -U PATH
