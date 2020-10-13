@@ -17,17 +17,23 @@
       "files.insertFinalNewline" = true;
       "files.trimFinalNewlines" = true;
       "files.trimTrailingWhitespace" = true;
+      "files.watcherExclude" = {
+        "**/.ammonite" = true;
+        "**/.bloop" = true;
+        "**/.metals" = true;
+        "**/target" = true;
+      };
+      "liveshare.anonymousGuestApproval" = "accept";
+      "metals.bloopSbtAlreadyInstalled" = true;
+      "metals.serverVersion" = "0.9.4";
       "oneDarkPro.vivid" = true;
       "terminal.integrated.cursorStyle" = "line";
       "terminal.integrated.fontFamily" = "'FuraCode Nerd Font'";
       "terminal.integrated.fontSize" = 12;
       "window.restoreFullscreen" = true;
       "window.zoomLevel" = 0;
-      "workbench.iconTheme" = "material-icon-theme";
       "workbench.colorTheme" = "One Dark Pro";
-      "liveshare.anonymousGuestApproval" = "accept";
-      "metals.bloopSbtAlreadyInstalled" = true;
-      "metals.serverVersion" = "0.9.4";
+      "workbench.iconTheme" = "material-icon-theme";
     };
     # TODO Manage extensions
     # https://nixos.wiki/wiki/VSCodium
