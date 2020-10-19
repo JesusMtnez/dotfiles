@@ -12,6 +12,7 @@ in
   };
 
   imports = [
+    ../../applications/ammonite
     ../../applications/codium
     ../../applications/direnv
     ../../applications/dunst
