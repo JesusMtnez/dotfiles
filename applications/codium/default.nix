@@ -1,5 +1,13 @@
 { pkgs, ... }:
-{
+let
+  vscoss.vscode-ansible = pkgs.vscode-utils.extensionFromVscodeMarketplace {
+    name = "vscode-ansible";
+    publisher = "vscoss";
+    version = "0.5.2";
+    sha256 = "0r1aqfc969354j8b1k9xsg682fynbk4xjp196f3yknlwj66jnpwx";
+  };
+
+in {
   programs.vscode = {
     enable = true;
     package = pkgs.vscodium;
@@ -35,8 +43,13 @@
       "workbench.colorTheme" = "One Dark Pro";
       "workbench.iconTheme" = "material-icon-theme";
     };
-    # TODO Manage extensions
-    # https://nixos.wiki/wiki/VSCodium
-    # extensions = with pkgs.vscode-extensions; [];
+
+    extensions = with pkgs.vscode-extensions; [
+      bbenoist.Nix
+      scala-lang.scala
+      scalameta.metals
+      ms-vsliveshare.vsliveshare
+      vscoss.vscode-ansible
+    ];
   };
 }
