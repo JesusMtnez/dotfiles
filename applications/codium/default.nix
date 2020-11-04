@@ -7,6 +7,27 @@ let
     sha256 = "0r1aqfc969354j8b1k9xsg682fynbk4xjp196f3yknlwj66jnpwx";
   };
 
+  rubymaniac.vscode-direnv = pkgs.vscode-utils.extensionFromVscodeMarketplace {
+    name = "vscode-direnv";
+    publisher = "rubymaniac";
+    version = "0.0.2";
+    sha256 = "1gml41bc77qlydnvk1rkaiv95rwprzqgj895kxllqy4ps8ly6nsd";
+  };
+
+  pkief.material-icon-theme = pkgs.vscode-utils.extensionFromVscodeMarketplace {
+    name = "material-icon-theme";
+    publisher = "pkief";
+    version = "4.4.0";
+    sha256 = "1m9mis59j9xnf1zvh67p5rhayaa9qxjiw9iw847nyl9vsy73w8ya";
+  };
+
+  zhuangtongfa.material-theme = pkgs.vscode-utils.extensionFromVscodeMarketplace {
+    name = "material-theme";
+    publisher = "zhuangtongfa";
+    version = "3.9.3";
+    sha256 = "09k1x3k12wsc80gjw0vn0d3nkhqhjwbyf4z56kb2fsd490hyhl5s";
+  };
+
 in {
   programs.vscode = {
     enable = true;
@@ -50,6 +71,10 @@ in {
       scalameta.metals
       ms-vsliveshare.vsliveshare
       vscoss.vscode-ansible
+      redhat.vscode-yaml
+      rubymaniac.vscode-direnv
+      pkief.material-icon-theme
+      zhuangtongfa.material-theme
     ];
   };
 }
