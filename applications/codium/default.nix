@@ -43,7 +43,7 @@ in {
       "explorer.confirmDelete" = false;
       "files.autoSave" = "afterDelay";
       "files.autoSaveDelay" = 500;
-      "files.insertFinalNewline" = true;
+      "files.insertFinalNewline" = false;
       "files.trimFinalNewlines" = true;
       "files.trimTrailingWhitespace" = true;
       "files.watcherExclude" = {
