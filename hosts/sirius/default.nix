@@ -20,7 +20,7 @@ in
     ../../applications/neovim
     ../../applications/rofi
     ../../applications/sbt
-    # ../../applications/tilix
+    ../../applications/tilix
     ../../applications/tmux
     ../../applications/utils
     ../../applications/zsh

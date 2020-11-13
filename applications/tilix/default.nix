@@ -1,5 +1,8 @@
-{ pkgs, ... }:
-{
+{ ... }:
+let
+  sources = import ../../nix/sources.nix;
+  pkgs = import sources.nixpkgs {};
+in {
   home.packages = [ pkgs.tilix ];
 
   xdg.configFile."tilix/schemes/one-dark.json".text = builtins.readFile (
