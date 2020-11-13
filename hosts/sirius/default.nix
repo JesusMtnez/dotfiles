@@ -6,10 +6,7 @@ in
 {
   nixpkgs.config.allowUnfree = true;
 
-  programs.home-manager = {
-    enable = true;
-    path = https://github.com/rycee/home-manager/archive/master.tar.gz;
-  };
+  programs.home-manager.enable = true;
 
   imports = [
     ../../applications/ammonite
