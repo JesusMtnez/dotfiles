@@ -54,7 +54,6 @@ in {
       };
       "liveshare.anonymousGuestApproval" = "accept";
       "metals.bloopSbtAlreadyInstalled" = true;
-      "metals.serverVersion" = "0.9.4";
       "oneDarkPro.vivid" = true;
       "terminal.integrated.cursorStyle" = "line";
       "terminal.integrated.fontFamily" = "'FuraCode Nerd Font'";
