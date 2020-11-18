@@ -11,6 +11,7 @@ in
   imports = [
     ../../applications/ammonite
     ../../applications/codium
+    ../../applications/coursier
     ../../applications/direnv
     ../../applications/dunst
     ../../applications/emacs
