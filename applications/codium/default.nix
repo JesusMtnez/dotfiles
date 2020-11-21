@@ -28,6 +28,13 @@ let
     sha256 = "09k1x3k12wsc80gjw0vn0d3nkhqhjwbyf4z56kb2fsd490hyhl5s";
   };
 
+  scalameta.metals = pkgs.vscode-utils.extensionFromVscodeMarketplace {
+    name = "metals";
+    publisher = "scalameta";
+    version = "1.9.7";
+    sha256 = "0v599yssvk358gxfxnyzzkyk0y5krsbp8n4rkp9wb2ncxqsqladr";
+  };
+
 in {
   programs.vscode = {
     enable = true;
@@ -67,8 +74,9 @@ in {
     extensions = with pkgs.vscode-extensions; [
       bbenoist.Nix
       scala-lang.scala
-      scalameta.metals
       ms-vsliveshare.vsliveshare
+    ] ++ [
+      scalameta.metals
       vscoss.vscode-ansible
       redhat.vscode-yaml
       rubymaniac.vscode-direnv
