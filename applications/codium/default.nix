@@ -14,6 +14,13 @@ let
     sha256 = "1gml41bc77qlydnvk1rkaiv95rwprzqgj895kxllqy4ps8ly6nsd";
   };
 
+  mattn.lisp = pkgs.vscode-utils.extensionFromVscodeMarketplace {
+    name = "lisp";
+    publisher = "mattn";
+    version = "0.1.11";
+    sha256 = "1is81gmik2lc4wkil682lc34p1qcymb6xfwc942ig1msd33qv1g3";
+  };
+
   pkief.material-icon-theme = pkgs.vscode-utils.extensionFromVscodeMarketplace {
     name = "material-icon-theme";
     publisher = "pkief";
@@ -77,6 +84,7 @@ in {
       ms-vsliveshare.vsliveshare
     ] ++ [
       scalameta.metals
+      mattn.lisp
       vscoss.vscode-ansible
       redhat.vscode-yaml
       rubymaniac.vscode-direnv
