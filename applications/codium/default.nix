@@ -31,8 +31,8 @@ let
   zhuangtongfa.material-theme = pkgs.vscode-utils.extensionFromVscodeMarketplace {
     name = "material-theme";
     publisher = "zhuangtongfa";
-    version = "3.9.3";
-    sha256 = "09k1x3k12wsc80gjw0vn0d3nkhqhjwbyf4z56kb2fsd490hyhl5s";
+    version = "3.9.7";
+    sha256 = "19a5kashczc99aqn24410i4glvxir4i387zp8i3hn592ijdvilhy";
   };
 
   scalameta.metals = pkgs.vscode-utils.extensionFromVscodeMarketplace {
