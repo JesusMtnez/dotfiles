@@ -38,8 +38,8 @@ let
   scalameta.metals = pkgs.vscode-utils.extensionFromVscodeMarketplace {
     name = "metals";
     publisher = "scalameta";
-    version = "1.9.8";
-    sha256 = "1xgs0qx4nw9hf7ck16zairyk0n6sj41cjy47r107a7vjmzg2v80z";
+    version = "1.9.9";
+    sha256 = "0frfymwrd2hcj0fkzlsgdmsjb0nn869vinlhm5my8sgy09vjj4dn";
   };
 
 in {
