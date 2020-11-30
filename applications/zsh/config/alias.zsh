@@ -27,7 +27,5 @@ fi
 alias RM='rm -rf'
 alias grep='grep --color=auto'
 
-alias amm='amm --no-remote-logging'
-
 alias vbox='VBoxManage'
 compdef vbox=VBoxManage
