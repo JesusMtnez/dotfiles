@@ -11,7 +11,7 @@ import os._
 
 import scala.collection.JavaConverters._
 
-@doc("Update metals for all platforms")
+@arg(doc = "Update metals for all platforms")
 @main
 def all(emacs: Path = home / ".local" / "bin" / "metals-emacs",
         vscodium: Path = home / ".config" / "VSCodium" / "User" / "settings.json") = {
@@ -21,7 +21,7 @@ def all(emacs: Path = home / ".local" / "bin" / "metals-emacs",
   updateEmacs(emacs)(version)
 }
 
-@doc("Update metals for Emacs")
+@arg(doc = "Update metals for Emacs")
 @main
 def emacs(path: Path = home / ".local" / "bin" / "metals-emacs") = {
   val version = getVersion
@@ -29,7 +29,7 @@ def emacs(path: Path = home / ".local" / "bin" / "metals-emacs") = {
   updateEmacs(path)(version)
 }
 
-@doc("Update metals for VSCodium")
+@arg(doc = "Update metals for VSCodium")
 @main
 def vscodium(path: Path = home / ".config" / "VSCodium" / "User" / "settings.json") = {
   val version = getVersion
