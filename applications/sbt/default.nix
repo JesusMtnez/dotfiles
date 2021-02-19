@@ -1,5 +1,10 @@
-{ ... }:
+{ pkgs, ... }:
 {
+
+  home.packages = [
+    (pkgs.sbt.override { jre = pkgs.jdk11_headless; })
+  ];
+
   home.file.".sbt/1.0/plugins/globalPlugins.sbt".text = ''
     addSbtPlugin("ch.epfl.scala"    % "sbt-bloop"                 % "1.4.4")
     addSbtPlugin("net.virtual-void" % "sbt-dependency-graph"      % "0.10.0-RC1")
