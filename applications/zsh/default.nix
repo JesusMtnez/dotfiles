@@ -1,8 +1,8 @@
 { pkgs, ... }:
 {
+  # TODO Install zplug with nix https://github.com/rycee/home-manager/blob/1b210e7143547ce0f41e8082b8d27e9c7d220351/modules/programs/zplug.nix
 
-  # TODO Install zsh with nix
-  # TODO Install zplug with nix
+  home.packages = [ pkgs.zsh ];
 
   home.file.".zshrc".source = ./zshrc;
 
