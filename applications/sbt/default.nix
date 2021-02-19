@@ -13,4 +13,8 @@
     addSbtPlugin("io.spray"         % "sbt-revolver"              % "0.9.1")
     addSbtPlugin("ch.epfl.scala"    % "sbt-scalafix"              % "0.9.25")
   '';
+
+  home.file.".sbt/1.0/global.sbt".text = ''
+    credentials += Credentials(Path.userHome / ".sbt" / ".credentials")
+  '';
 }
