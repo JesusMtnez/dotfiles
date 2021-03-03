@@ -17,7 +17,7 @@
       }
       {
         org = "com.github.cb372";
-        artifact = "sbt-explicit=dependencies";
+        artifact = "sbt-explicit-dependencies";
         version = "0.2.16";
       }
       {
