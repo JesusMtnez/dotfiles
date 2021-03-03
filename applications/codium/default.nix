@@ -5,7 +5,6 @@ let
     publisher = "vscoss";
     version = "0.6.0";
     sha256 = "0iqy8k16k4f3gdchmhcviklhwcbzx308295qzhrsi59jlm58c0x2";
-
   };
 
   rubymaniac.vscode-direnv = pkgs.vscode-utils.extensionFromVscodeMarketplace {
@@ -39,8 +38,8 @@ let
   scalameta.metals = pkgs.vscode-utils.extensionFromVscodeMarketplace {
     name = "metals";
     publisher = "scalameta";
-    version = "1.9.13";
-    sha256 = "0vrg25ygmyjx1lwif2ypyv688b290ycfn1qf0izxbmgi2z3f0wf9";
+    version = "1.10.0";
+    sha256 = "0ajrq4pq3x17j3x8pxshp89nmvl0l39mzza8azsimh3f7yysnfh4";
   };
 
 in {
@@ -68,7 +67,10 @@ in {
         "**/target" = true;
       };
       "liveshare.anonymousGuestApproval" = "accept";
-      "metals.bloopSbtAlreadyInstalled" = true;
+      "metals" = {
+        "bloopSbtAlreadyInstalled" = true;
+        "showInferredType" = true;
+      };
       "oneDarkPro.vivid" = true;
       "terminal.integrated.cursorStyle" = "line";
       "terminal.integrated.fontFamily" = "'FuraCode Nerd Font'";
