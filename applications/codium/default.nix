@@ -42,13 +42,10 @@ let
     sha256 = "0ajrq4pq3x17j3x8pxshp89nmvl0l39mzza8azsimh3f7yysnfh4";
   };
 
-  sources = import ../../nix/sources.nix;
-  pin = import sources.vscodium {};
-
 in {
   programs.vscode = {
     enable = true;
-    package = pin.vscodium;
+    package = pkgs.vscodium;
     userSettings = {
       "editor.fontFamily" = "'FuraCode Nerd Font'";
       "editor.fontLigatures" = true;
