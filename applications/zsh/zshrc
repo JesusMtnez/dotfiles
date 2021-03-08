@@ -40,10 +40,7 @@ zplug load
 
 # Source other resource
 [ -x "$(command -v direnv)" ] && eval "$(direnv hook zsh)"
-# [ -f $HOME/.localrc ] && source $HOME/.localrc # Local configuration
-
-# GNOME KEYRING DAEMON integration in shell
-[ -n "$DESKTOP_SESSION" ] && export $(gnome-keyring-daemon --start)
+[ -f $HOME/.localrc ] && source $HOME/.localrc # Local configuration
 
 # Avoid duplicated in PATH
 export -U PATH
