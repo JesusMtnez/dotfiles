@@ -31,7 +31,7 @@ let
 in {
   home.packages = [
     # System
-    poweroff reboot suspend
+    # poweroff reboot suspend
 
     # Browers
     firefoxPrivate
