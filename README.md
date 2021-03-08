@@ -1,21 +1,11 @@
 [![MIT LICENSE][LICENSE-badge]][LICENSE-link]
+[![Built with nix][NIX-badge]][NIX-link]
+
 
   [LICENSE-badge]: https://img.shields.io/badge/license-MIT-green.svg?style=flat-square
   [LICENSE-link]: /LICENSE
-
-<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
-**Table of Contents**
-
-- [JesusMtnez's dotfiles!](#jesusmtnezs-dotfiles)
-    - [Installation](#installation)
-    - [Configurations](#configurations)
-        - [CLI tools](#cli-tools)
-        - [zsh](#zsh)
-        - [tmux](#tmux)
-        - [i3 Window Manager](#i3-window-manager)
-        - [Emacs](#emacs)
-
-<!-- markdown-toc end -->
+  [NIX-badge]: https://img.shields.io/badge/Built_With-Nix-5277C3.svg?logo=nixos&labelColor=73C3D5&style=flat-square
+  [NIX-link]: https://builtwithnix.org
 
 # JesusMtnez's dotfiles! #
 
@@ -24,10 +14,32 @@
 This dotfiles are manage using [`nix`](https://nixos.wiki/wiki/Nix) and [`home-manager`](https://github.com/rycee/home-manager). The steps to do a complete setup are:
 
 1. Clone the repository and go inside the folder
-2. Link `home.nix`: `ln -sf $PWD/hosts/$HOSTNAME/default.nix ~/.config/nixpkgs/home.nix`.
-3. Execute: `home-manager switch`.
 
-## Configurations
+```
+nix-shell -p git --run "git clone git@gitlab.com:JesusMtnez/dotfiles $HOME/.dotfiles"
+```
+
+2. Link `home.nix`:
+
+```
+mkdir -p $HOME/.config/nixpkgs
+ln -sf $HOME/.dotfiles/hosts/$HOSTNAME/default.nix ~/.config/nixpkgs/home.nix
+```
+3. Execute: `$HOME/.dotfiles/switch`.
+
+## Machines
+
+### Active
+
+- [`sirius`](./hosts/sirius/README.md): Work machine, based on [Pop_OS](https://pop.system76.com/).
+
+### Decommissioned
+
+- [`sirius-arch`](./hosts/sirius-arch): Old `sirius` configuration, based on [Arco Linux](https://arcolinux.com/).
+
+## Common tools
+
+> TODO Review section, may have out-dated information.
 
 ### CLI tools
 
