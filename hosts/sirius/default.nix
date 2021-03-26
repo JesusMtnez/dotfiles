@@ -2,6 +2,10 @@
 
 let
   homedir = builtins.getEnv "HOME";
+
+  sources = import ../../nix/sources.nix;
+  nixpkgs = sources."nixpkgs";
+  stablepkgs = import nixpkgs {};
 in
 {
   nixpkgs.config.allowUnfree = true;
@@ -29,7 +33,7 @@ in
 
     # Cli tools
     bat
-    kubectl
+    stablepkgs.kubectl
     jq
     xsel
     httpie
