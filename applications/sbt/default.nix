@@ -32,8 +32,4 @@
       }
     ];
   };
-
-  home.file.".sbt/1.0/global.sbt".text = ''
-    credentials += Credentials(Path.userHome / ".sbt" / ".credentials")
-  '';
 }
