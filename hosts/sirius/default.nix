@@ -2,6 +2,7 @@
 
 let
   homedir = builtins.getEnv "HOME";
+  jdk = pkgs.graalvm11-ce;
 in
 {
   nixpkgs.config.allowUnfree = true;
@@ -35,8 +36,8 @@ in
     httpie
 
     # Global dev tools
-    graalvm11-ce
-    (pkgs.bloop.override { jre = pkgs.graalvm11-ce; })
+    jdk
+    (bloop.override { jre = jdk; })
 
     # Graphics
     keepassxc
