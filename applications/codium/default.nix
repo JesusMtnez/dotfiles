@@ -25,8 +25,8 @@ let
   redhat.vscode-yaml = pkgs.vscode-utils.extensionFromVscodeMarketplace {
     name = "vscode-yaml";
     publisher = "redhat";
-    version = "0.16.0";
-    sha256 = "0fvc33gmyskvd7hgar5xnwck42bc8fbdyx1i7fqmnkk69k1yjd3a";
+    version = "0.17.0";
+    sha256 = "0hg8bwknp2z20f6qbv4wsyc92ykw5rz5s8lr7lxw81nxmidf5201";
   };
 
   rubymaniac.vscode-direnv = pkgs.vscode-utils.extensionFromVscodeMarketplace {
@@ -50,11 +50,11 @@ let
     sha256 = "0ajrq4pq3x17j3x8pxshp89nmvl0l39mzza8azsimh3f7yysnfh4";
   };
 
-  vscoss.vscode-ansible = pkgs.vscode-utils.extensionFromVscodeMarketplace {
+  zbr.vscode-ansible = pkgs.vscode-utils.extensionFromVscodeMarketplace {
     name = "vscode-ansible";
-    publisher = "vscoss";
-    version = "0.6.0";
-    sha256 = "0iqy8k16k4f3gdchmhcviklhwcbzx308295qzhrsi59jlm58c0x2";
+    publisher = "zbr";
+    version = "0.3.0";
+    sha256 = "1m20dppazhi00gnwxrjf8ybbaiwgpw1795l3ln9a9fm6ddnq2jpr";
   };
 
   zhuangtongfa.material-theme = pkgs.vscode-utils.extensionFromVscodeMarketplace {
@@ -115,7 +115,7 @@ in {
       rubymaniac.vscode-direnv
       scala-lang.scala
       scalameta.metals
-      vscoss.vscode-ansible
+      zbr.vscode-ansible
       zhuangtongfa.material-theme
     ];
   };
