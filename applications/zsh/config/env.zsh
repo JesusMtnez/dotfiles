@@ -1,5 +1,6 @@
 # TERM
 export TERM='xterm-256color'
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 # Bin
 export PATH="/usr/bin:/usr/sbin:/sbin:/bin":$PATH
