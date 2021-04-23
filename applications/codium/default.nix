@@ -25,8 +25,8 @@ let
   redhat.vscode-yaml = pkgs.vscode-utils.extensionFromVscodeMarketplace {
     name = "vscode-yaml";
     publisher = "redhat";
-    version = "0.17.0";
-    sha256 = "0hg8bwknp2z20f6qbv4wsyc92ykw5rz5s8lr7lxw81nxmidf5201";
+    version = "0.18.0";
+    sha256 = "0hl6bpynr6a5b7c94lxa9wsdxfii83008s0fyay9k60c14wfaxa2";
   };
 
   rubymaniac.vscode-direnv = pkgs.vscode-utils.extensionFromVscodeMarketplace {
@@ -39,29 +39,29 @@ let
   scala-lang.scala = pkgs.vscode-utils.extensionFromVscodeMarketplace {
     name = "scala";
     publisher = "scala-lang";
-    version = "0.5.2";
-    sha256 = "1b8ydigspgr2cni86cqrd0md61ks62y9qca3ia6dq11pvfdwxbsd";
+    version = "0.5.3";
+    sha256 = "0isw8jh845hj2fw7my1i19b710v3m5qsjy2faydb529ssdqv463p";
   };
 
   scalameta.metals = pkgs.vscode-utils.extensionFromVscodeMarketplace {
     name = "metals";
     publisher = "scalameta";
-    version = "1.10.2";
-    sha256 = "05a9g7c9j6axm5nza80n1vdc78gana6628mry2xp7a00v5382pbl";
+    version = "1.10.3";
+    sha256 = "0m4qm1z1j6gfqjjnxl8v48ga7zkaspjy3gcnkrch3aj4fyafjl09";
   };
 
   zbr.vscode-ansible = pkgs.vscode-utils.extensionFromVscodeMarketplace {
     name = "vscode-ansible";
     publisher = "zbr";
-    version = "0.3.0";
-    sha256 = "1m20dppazhi00gnwxrjf8ybbaiwgpw1795l3ln9a9fm6ddnq2jpr";
+    version = "0.3.2";
+    sha256 = "1b26c3qh4ppgfj0p59m2mzkyfxdpagjb1vlhqlbdk6wa9vpxhkmf";
   };
 
   zhuangtongfa.material-theme = pkgs.vscode-utils.extensionFromVscodeMarketplace {
     name = "material-theme";
     publisher = "zhuangtongfa";
-    version = "3.10.11";
-    sha256 = "050f4ms4mkc8zn4fwfbrfp08s4sk3w5p24bdri744n0kmq27aqlk";
+    version = "3.10.13";
+    sha256 = "0i0l1nmbniic5qmxs3v09z7hazbrwi167cgh0hl2cvb49kdsalc6";
   };
 
 in {
