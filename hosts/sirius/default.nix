@@ -27,6 +27,7 @@ in
 
   home.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "FiraCode" ]; })
+    fira-code-symbols
 
     # Cli tools
     bat
