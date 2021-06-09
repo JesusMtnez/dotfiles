@@ -18,15 +18,15 @@ let
   pkief.material-icon-theme = pkgs.vscode-utils.extensionFromVscodeMarketplace {
     name = "material-icon-theme";
     publisher = "PKief";
-    version = "4.6.0";
-    sha256 = "0jid21l8mdh0bism7yl0awkbj9802fb880rkpnva43p61npybvcb";
+    version = "4.7.0";
+    sha256 = "0n8xv62l9z31gndv1lhwrsm9qjp5vliqwgn9vsp86xd0hs5ycm2w";
   };
 
   redhat.vscode-yaml = pkgs.vscode-utils.extensionFromVscodeMarketplace {
     name = "vscode-yaml";
     publisher = "redhat";
-    version = "0.18.0";
-    sha256 = "0hl6bpynr6a5b7c94lxa9wsdxfii83008s0fyay9k60c14wfaxa2";
+    version = "0.19.2";
+    sha256 = "14rb6r09myakj2amhadnafk8abq4in5q6h4wrnksmzn0b6khk3dl";
   };
 
   rubymaniac.vscode-direnv = pkgs.vscode-utils.extensionFromVscodeMarketplace {
@@ -46,22 +46,22 @@ let
   scalameta.metals = pkgs.vscode-utils.extensionFromVscodeMarketplace {
     name = "metals";
     publisher = "scalameta";
-    version = "1.10.3";
-    sha256 = "0m4qm1z1j6gfqjjnxl8v48ga7zkaspjy3gcnkrch3aj4fyafjl09";
+    version = "1.10.6";
+    sha256 = "11ihg8d94hfg731r280wj9nvymgd2plaw01my1mfibjxlaf1h2i3";
   };
 
   zbr.vscode-ansible = pkgs.vscode-utils.extensionFromVscodeMarketplace {
     name = "vscode-ansible";
     publisher = "zbr";
-    version = "0.3.2";
-    sha256 = "1b26c3qh4ppgfj0p59m2mzkyfxdpagjb1vlhqlbdk6wa9vpxhkmf";
+    version = "0.4.4";
+    sha256 = "132dly5h9j9vnk3sx6g32idw9sdy2sy3nn2kpb1hg9k8r0ma73c5";
   };
 
   zhuangtongfa.material-theme = pkgs.vscode-utils.extensionFromVscodeMarketplace {
     name = "material-theme";
     publisher = "zhuangtongfa";
-    version = "3.10.13";
-    sha256 = "0i0l1nmbniic5qmxs3v09z7hazbrwi167cgh0hl2cvb49kdsalc6";
+    version = "3.10.14";
+    sha256 = "1dyinvp7qm5pjgylzf94rfak41p3yxwp5qp76sbdvlgnb9pss8z8";
   };
 
 in {
