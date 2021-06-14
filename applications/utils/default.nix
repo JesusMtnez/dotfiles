@@ -28,7 +28,8 @@ let
     icon = "system-suspend";
     exec = "/usr/bin/systemctl suspend";
   };
-in {
+in
+{
   home.packages = [
     # System
     # poweroff reboot suspend

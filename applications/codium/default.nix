@@ -64,7 +64,8 @@ let
     sha256 = "1dyinvp7qm5pjgylzf94rfak41p3yxwp5qp76sbdvlgnb9pss8z8";
   };
 
-in {
+in
+{
   programs.vscode = {
     enable = true;
     package = pkgs.vscodium;

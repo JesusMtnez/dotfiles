@@ -1,13 +1,15 @@
 let
   sources = import ./nix/sources.nix;
   nixpkgs = sources."nixpkgs-unstable";
-  pkgs = import nixpkgs {};
-in pkgs.mkShell rec {
+  pkgs = import nixpkgs { };
+in
+pkgs.mkShell rec {
   name = "home-manager-shell";
 
   buildInputs = with pkgs; [
     niv
-    (import sources.home-manager {inherit pkgs;}).home-manager
+    nixpkgs-fmt
+    (import sources.home-manager { inherit pkgs; }).home-manager
   ];
 
   shellHook = ''
