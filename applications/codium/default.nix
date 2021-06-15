@@ -1,11 +1,11 @@
 { pkgs, ... }:
 let
 
-  bbenoist.nix = pkgs.vscode-utils.extensionFromVscodeMarketplace {
-    name = "Nix";
-    publisher = "bbenoist";
-    version = "1.0.1";
-    sha256 = "0zd0n9f5z1f0ckzfjr38xw2zzmcxg1gjrava7yahg5cvdcw6l35b";
+  jnoortheen.nix-ide = pkgs.vscode-utils.extensionFromVscodeMarketplace {
+    name = "nix-ide";
+    publisher = "jnoortheen";
+    version = "0.1.12";
+    sha256 = "1wkc5mvxv7snrpd0py6x83aci05b9fb9v4w9pl9d1hyaszqbfnif";
   };
 
   mattn.lisp = pkgs.vscode-utils.extensionFromVscodeMarketplace {
@@ -109,7 +109,7 @@ in
 
     extensions = [
       pkgs.vscode-extensions.ms-vsliveshare.vsliveshare
-      bbenoist.nix
+      jnoortheen.nix-ide
       mattn.lisp
       pkief.material-icon-theme
       redhat.vscode-yaml
