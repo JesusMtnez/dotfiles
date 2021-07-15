@@ -14,14 +14,14 @@
   {
     name = "material-icon-theme";
     publisher = "PKief";
-    version = "4.7.0";
-    sha256 = "0n8xv62l9z31gndv1lhwrsm9qjp5vliqwgn9vsp86xd0hs5ycm2w";
+    version = "4.8.0";
+    sha256 = "06xsb1dqqdgr9ack0d92rc96qkhymyfba4msm884l52scd6jr7mx";
   }
   {
     name = "vscode-yaml";
     publisher = "redhat";
-    version = "0.20.0";
-    sha256 = "14dzr1b0dfc4iv0cc45ix3f21xhah8x15zas6mdg6qjp0labmh4c";
+    version = "0.21.1";
+    sha256 = "1phc4s0iglbiq77ih4g5llmmvdldf3rvyfdqfca2dn0vapdg73hv";
   }
   {
     name = "vscode-direnv";
@@ -32,14 +32,14 @@
   {
     name = "scala";
     publisher = "scala-lang";
-    version = "0.5.3";
-    sha256 = "0isw8jh845hj2fw7my1i19b710v3m5qsjy2faydb529ssdqv463p";
+    version = "0.5.4";
+    sha256 = "1a27yq29g9md98cm1gsb0sjw9hy1jsnqzxd91r7vq7infvcc1i26";
   }
   {
     name = "metals";
     publisher = "scalameta";
-    version = "1.10.6";
-    sha256 = "11ihg8d94hfg731r280wj9nvymgd2plaw01my1mfibjxlaf1h2i3";
+    version = "1.10.7";
+    sha256 = "0b11n54fafydlm7il6qrd7yh45rfaj6qqcjzk381dynnqa5xz8yw";
   }
   {
     name = "vscode-ansible";
@@ -50,8 +50,8 @@
   {
     name = "material-theme";
     publisher = "zhuangtongfa";
-    version = "3.10.14";
-    sha256 = "1dyinvp7qm5pjgylzf94rfak41p3yxwp5qp76sbdvlgnb9pss8z8";
+    version = "3.10.15";
+    sha256 = "0ws1vyb03kffrb9y0bqwlk5v3099zc3g2idkra8bpwipjrqnykfx";
   }
   {
     name = "plantuml";
