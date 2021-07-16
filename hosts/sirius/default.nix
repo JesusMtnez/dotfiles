@@ -3,9 +3,13 @@
 let
   homedir = builtins.getEnv "HOME";
   jdk = pkgs.graalvm11-ce;
+  emacsOverlay = import (import ../../nix/sources.nix)."emacs-overlay";
 in
 {
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs = {
+    config.allowUnfree = true;
+    overlays = [ emacsOverlay ];
+  };
 
   programs.home-manager.enable = true;
 
