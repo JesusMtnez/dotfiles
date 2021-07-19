@@ -30,6 +30,8 @@ in
   fonts.fontconfig.enable = true;
 
   home.packages = with pkgs; [
+    cachix
+
     (nerdfonts.override { fonts = [ "FiraCode" ]; })
     fira-code-symbols
 
