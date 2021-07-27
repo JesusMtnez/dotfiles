@@ -38,8 +38,8 @@
   {
     name = "metals";
     publisher = "scalameta";
-    version = "1.10.7";
-    sha256 = "0b11n54fafydlm7il6qrd7yh45rfaj6qqcjzk381dynnqa5xz8yw";
+    version = "1.10.8";
+    sha256 = "0mq98ianpbm6n9iw35vm1xwm8i2wrjbj4025zw097b2ic7izvgxn";
   }
   {
     name = "vscode-ansible";
@@ -50,8 +50,8 @@
   {
     name = "material-theme";
     publisher = "zhuangtongfa";
-    version = "3.10.15";
-    sha256 = "0ws1vyb03kffrb9y0bqwlk5v3099zc3g2idkra8bpwipjrqnykfx";
+    version = "3.11.1";
+    sha256 = "1n5s4228m7mc057izvv46v2899gdi1dz9jbsa1lj8q27nlr7ipxc";
   }
   {
     name = "plantuml";
