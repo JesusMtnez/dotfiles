@@ -53,10 +53,4 @@
     version = "3.11.1";
     sha256 = "1n5s4228m7mc057izvv46v2899gdi1dz9jbsa1lj8q27nlr7ipxc";
   }
-  {
-    name = "plantuml";
-    publisher = "jebbs";
-    version = "2.15.1";
-    sha256 = "030rrzadp39byjh792r0wz4mms622plsf9amkics843nf09zzgkv";
-  }
 ]
