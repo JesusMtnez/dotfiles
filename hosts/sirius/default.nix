@@ -55,17 +55,5 @@ in
     ".xprofile".text = ''
       export XDG_DATA_DIRS=$HOME/.nix-profile/share:$HOME/.local/share:/usr/local/share:/usr/share
     '';
-
-    ".sbt/1.0/global.sbt".text = ''
-      credentials += Credentials(Path.userHome / ".sbt" / ".credentials")
-    '';
-
-    ".sbt/repositories".text = ''
-      [repositories]
-        local
-        ivy-releases: https://artifactory.banno-tools.com/artifactory/ivy-releases/, [organization]/[module]/(scala_[scalaVersion]/)(sbt_[sbtVersion]/)[revision]/[type]s/[artifact](-[classifier]).[ext]
-        libs-release: https://artifactory.banno-tools.com/artifactory/libs-release/
-        maven-central
-    '';
   };
 }
