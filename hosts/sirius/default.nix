@@ -38,6 +38,7 @@ in
     # Cli tools
     bat
     kubectl
+    google-cloud-sdk
     jq
     xsel
     httpie
