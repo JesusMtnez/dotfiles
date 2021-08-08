@@ -20,8 +20,8 @@
   {
     name = "vscode-yaml";
     publisher = "redhat";
-    version = "0.21.1";
-    sha256 = "1phc4s0iglbiq77ih4g5llmmvdldf3rvyfdqfca2dn0vapdg73hv";
+    version = "0.22.0";
+    sha256 = "1ffsah3pwxfa8ya2c0a3q1wh5ngh621zgidfwl8iggnrl7nbwl3k";
   }
   {
     name = "vscode-direnv";
@@ -50,7 +50,7 @@
   {
     name = "material-theme";
     publisher = "zhuangtongfa";
-    version = "3.11.1";
-    sha256 = "1n5s4228m7mc057izvv46v2899gdi1dz9jbsa1lj8q27nlr7ipxc";
+    version = "3.11.2";
+    sha256 = "0z4kx4rbz7s1ha8v9fn204sr8bliyk3ny4i6cg1xp2djp6dz3vi1";
   }
 ]
