@@ -1,9 +1,15 @@
 [
   {
+    name = "vscode-direnv";
+    publisher = "cab404";
+    version = "1.0.0";
+    sha256 = "0xikkhbzb5cd0a96smj5mr1sz5zxrmryhw56m0139sbg7zwwfwps";
+  }
+  {
     name = "nix-ide";
     publisher = "jnoortheen";
-    version = "0.1.12";
-    sha256 = "1wkc5mvxv7snrpd0py6x83aci05b9fb9v4w9pl9d1hyaszqbfnif";
+    version = "0.1.15";
+    sha256 = "17y5k0049zb78xqpah73hkw8l56kcshqb0qz4m7a59rqv5gzfk6c";
   }
   {
     name = "lisp";
@@ -14,20 +20,14 @@
   {
     name = "material-icon-theme";
     publisher = "PKief";
-    version = "4.8.0";
-    sha256 = "06xsb1dqqdgr9ack0d92rc96qkhymyfba4msm884l52scd6jr7mx";
+    version = "4.9.0";
+    sha256 = "133mmcvbmks3xp2wlay00gzbnqmjm019ziksaz4xadc7r19cy0fv";
   }
   {
     name = "vscode-yaml";
     publisher = "redhat";
     version = "0.22.0";
     sha256 = "1ffsah3pwxfa8ya2c0a3q1wh5ngh621zgidfwl8iggnrl7nbwl3k";
-  }
-  {
-    name = "vscode-direnv";
-    publisher = "rubymaniac";
-    version = "0.0.2";
-    sha256 = "1gml41bc77qlydnvk1rkaiv95rwprzqgj895kxllqy4ps8ly6nsd";
   }
   {
     name = "scala";
@@ -50,7 +50,7 @@
   {
     name = "material-theme";
     publisher = "zhuangtongfa";
-    version = "3.11.2";
-    sha256 = "0z4kx4rbz7s1ha8v9fn204sr8bliyk3ny4i6cg1xp2djp6dz3vi1";
+    version = "3.11.3";
+    sha256 = "1pc42hslrqnchjic34kj4200ciyxr15x0xvvar41j2khg81dxv9x";
   }
 ]
