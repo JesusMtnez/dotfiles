@@ -6,6 +6,12 @@
     sha256 = "0xikkhbzb5cd0a96smj5mr1sz5zxrmryhw56m0139sbg7zwwfwps";
   }
   {
+    name = "rest-client";
+    publisher = "humao";
+    version = "0.24.5";
+    sha256 = "1hj294nsmlzvhbvwv4wyf7mgfw64q4pgkjzzgyjfc26pzyaxb4bn";
+  }
+  {
     name = "nix-ide";
     publisher = "jnoortheen";
     version = "0.1.15";
