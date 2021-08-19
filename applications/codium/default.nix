@@ -13,6 +13,11 @@ in
       "editor.fontLigatures" = true;
       "editor.fontSize" = 12;
       "editor.fontWeight" = "normal";
+      "editor.minimap" = {
+        "maxColumn" = 60;
+        "renderCharacters" = false;
+        "size" = "fit";
+      };
       "editor.renderWhitespace" = "all";
       "editor.tabSize" = 2;
       "editor.wordWrapColumn" = 100;
