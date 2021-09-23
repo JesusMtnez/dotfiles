@@ -28,7 +28,7 @@
       {
         org = "ch.epfl.scala";
         artifact = "sbt-scalafix";
-        version = "0.9.29";
+        version = "0.9.31";
       }
     ];
   };
