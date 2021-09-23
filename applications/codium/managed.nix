@@ -14,8 +14,8 @@
   {
     name = "nix-ide";
     publisher = "jnoortheen";
-    version = "0.1.15";
-    sha256 = "17y5k0049zb78xqpah73hkw8l56kcshqb0qz4m7a59rqv5gzfk6c";
+    version = "0.1.16";
+    sha256 = "04ky1mzyjjr1mrwv3sxz4mgjcq5ylh6n01lvhb19h3fmwafkdxbp";
   }
   {
     name = "lisp";
@@ -26,8 +26,8 @@
   {
     name = "material-icon-theme";
     publisher = "PKief";
-    version = "4.9.0";
-    sha256 = "133mmcvbmks3xp2wlay00gzbnqmjm019ziksaz4xadc7r19cy0fv";
+    version = "4.10.0";
+    sha256 = "119zpdx2hx9d1xb3d9d773b88i2awr62ivmmnhxm9zp77x9y6b70";
   }
   {
     name = "vscode-yaml";
@@ -44,19 +44,19 @@
   {
     name = "metals";
     publisher = "scalameta";
-    version = "1.10.8";
-    sha256 = "0mq98ianpbm6n9iw35vm1xwm8i2wrjbj4025zw097b2ic7izvgxn";
+    version = "1.10.11";
+    sha256 = "10zh04ib6prjc2mlyihp8a6j4j428j7xp64kak1y356shvmccqzs";
   }
   {
     name = "vscode-ansible";
     publisher = "zbr";
-    version = "0.4.5";
-    sha256 = "07n9095yvmxjk8i4j87whp2ik3ky8ni61dqpxp7pi22k300n34vb";
+    version = "0.4.6";
+    sha256 = "1xaikvk8g0rkpqs7w1mdxxvlvbbbzdvayxpgn4kv3k2qd9r07h04";
   }
   {
     name = "material-theme";
     publisher = "zhuangtongfa";
-    version = "3.11.3";
-    sha256 = "1pc42hslrqnchjic34kj4200ciyxr15x0xvvar41j2khg81dxv9x";
+    version = "3.11.4";
+    sha256 = "0cj8yjq7lgpjw72jsk4lq0czasq9svy5nmcyw4yvkp187ahkjfny";
   }
 ]
