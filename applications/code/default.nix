@@ -7,7 +7,7 @@ in
 {
   programs.vscode = {
     enable = true;
-    package = pkgs.vscodium;
+    package = pkgs.vscode;
     userSettings = {
       "editor.fontFamily" = "'FuraCode Nerd Font'";
       "editor.fontLigatures" = true;
@@ -32,10 +32,6 @@ in
         "**/.bloop" = true;
         "**/.metals" = true;
         "**/target" = true;
-      };
-      "liveshare" = {
-        "anonymousGuestApproval" = "accept";
-        "authenticationProvider" = "GitHub";
       };
       "metals" = {
         "bloopSbtAlreadyInstalled" = true;
