@@ -14,8 +14,8 @@
   {
     name = "nix-ide";
     publisher = "jnoortheen";
-    version = "0.1.16";
-    sha256 = "04ky1mzyjjr1mrwv3sxz4mgjcq5ylh6n01lvhb19h3fmwafkdxbp";
+    version = "0.1.18";
+    sha256 = "1v3j67j8bydyqba20b2wzsfximjnbhknk260zkc0fid1xzzb2sbn";
   }
   {
     name = "lisp";
@@ -32,8 +32,8 @@
   {
     name = "vscode-yaml";
     publisher = "redhat";
-    version = "0.22.0";
-    sha256 = "1ffsah3pwxfa8ya2c0a3q1wh5ngh621zgidfwl8iggnrl7nbwl3k";
+    version = "0.23.0";
+    sha256 = "0hdly0cxj13fs5q06nlcic3yhv6jq641q01y07sxl9xaprb0n2dm";
   }
   {
     name = "scala";
@@ -56,7 +56,7 @@
   {
     name = "material-theme";
     publisher = "zhuangtongfa";
-    version = "3.11.4";
-    sha256 = "0cj8yjq7lgpjw72jsk4lq0czasq9svy5nmcyw4yvkp187ahkjfny";
+    version = "3.13.2";
+    sha256 = "1pb96xdm8342i1l4xp7wdbpfv353pjf6l0c3xkgw0lgfzvd0xshy";
   }
 ]
