@@ -48,10 +48,10 @@
     sha256 = "10zh04ib6prjc2mlyihp8a6j4j428j7xp64kak1y356shvmccqzs";
   }
   {
-    name = "vscode-ansible";
-    publisher = "zbr";
-    version = "0.4.6";
-    sha256 = "1xaikvk8g0rkpqs7w1mdxxvlvbbbzdvayxpgn4kv3k2qd9r07h04";
+    name = "ansible";
+    publisher = "redhat";
+    version = "0.4.5";
+    sha256 = "1bb1rly7v97d8671jzbwlwqplk13q2brjm6azhax3jclm30d0dzy";
   }
   {
     name = "material-theme";
