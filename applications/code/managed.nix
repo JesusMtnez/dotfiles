@@ -32,8 +32,8 @@
   {
     name = "vscode-yaml";
     publisher = "redhat";
-    version = "0.23.0";
-    sha256 = "0hdly0cxj13fs5q06nlcic3yhv6jq641q01y07sxl9xaprb0n2dm";
+    version = "1.0.0";
+    sha256 = "10pbc8vyvv6rmghnlx3pc5jbh4jf9qg25f20glfczsphi2bv036k";
   }
   {
     name = "scala";
