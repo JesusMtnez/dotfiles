@@ -24,7 +24,7 @@ in
       "explorer.confirmDelete" = false;
       "files.autoSave" = "afterDelay";
       "files.autoSaveDelay" = 500;
-      "files.insertFinalNewline" = false;
+      "files.insertFinalNewline" = true;
       "files.trimFinalNewlines" = true;
       "files.trimTrailingWhitespace" = true;
       "files.watcherExclude" = {

@@ -30,28 +30,28 @@
     sha256 = "119zpdx2hx9d1xb3d9d773b88i2awr62ivmmnhxm9zp77x9y6b70";
   }
   {
+    name = "ansible";
+    publisher = "redhat";
+    version =  "0.7.0";
+    sha256 = "1ryzywcywlkpdd3qnrjmlxbls89q5iqxbs9qh3r2vhm071hhm2hb";
+  }
+  {
     name = "vscode-yaml";
     publisher = "redhat";
-    version = "1.0.0";
-    sha256 = "10pbc8vyvv6rmghnlx3pc5jbh4jf9qg25f20glfczsphi2bv036k";
+    version = "1.2.0";
+    sha256 = "0s68a6h9ri6bwinrd94ppxpcmklvp77gxvrjxkhg3gr5q7377hiy";
   }
   {
     name = "scala";
     publisher = "scala-lang";
-    version = "0.5.4";
-    sha256 = "1a27yq29g9md98cm1gsb0sjw9hy1jsnqzxd91r7vq7infvcc1i26";
+    version = "0.5.5";
+    sha256 = "1gqgamm97sq09za8iyb06jf7hpqa2mlkycbx6zpqwvlwd3a92qr1";
   }
   {
     name = "metals";
     publisher = "scalameta";
-    version = "1.10.11";
-    sha256 = "10zh04ib6prjc2mlyihp8a6j4j428j7xp64kak1y356shvmccqzs";
-  }
-  {
-    name = "ansible";
-    publisher = "redhat";
-    version = "0.4.5";
-    sha256 = "1bb1rly7v97d8671jzbwlwqplk13q2brjm6azhax3jclm30d0dzy";
+    version = "1.10.15";
+    sha256 = "1yzvwdxipilxpg50sh1glm6p2mmn75pzq8kadk7cyl1kqlqd40ii";
   }
   {
     name = "material-theme";
