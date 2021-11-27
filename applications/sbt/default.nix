@@ -8,7 +8,7 @@
       {
         org = "ch.epfl.scala";
         artifact = "sbt-bloop";
-        version = "1.4.9";
+        version = "1.4.11";
       }
       {
         org = "org.jmotor.sbt";
