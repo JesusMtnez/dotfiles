@@ -14,9 +14,7 @@ in
   programs.home-manager.enable = true;
 
   imports = [
-    ../../applications/ammonite
     ../../applications/code
-    ../../applications/coursier
     ../../applications/direnv
     ../../applications/emacs
     ../../applications/fzf
@@ -32,6 +30,7 @@ in
   home.packages = with pkgs; [
     cachix
 
+    # Fonts
     (nerdfonts.override { fonts = [ "FiraCode" ]; })
     fira-code-symbols
 
@@ -45,9 +44,11 @@ in
 
     # Global dev tools
     jdk
+    (ammonite_2_13.override { jre = jdk; })
+    (coursier.override { jre = jdk; })
     (bloop.override { jre = jdk; })
 
-    # Graphics
+    # Applications
     keepassxc
     slack
   ];
