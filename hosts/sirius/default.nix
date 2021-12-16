@@ -19,7 +19,6 @@ in
     ../../applications/emacs
     ../../applications/fzf
     ../../applications/git
-    ../../applications/neovim
     ../../applications/sbt
     ../../applications/utils
     ../../applications/zsh
@@ -36,8 +35,6 @@ in
 
     # Cli tools
     bat
-    kubectl
-    google-cloud-sdk
     jq
     xsel
     httpie
