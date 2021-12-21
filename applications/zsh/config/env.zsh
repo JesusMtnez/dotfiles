@@ -3,9 +3,9 @@ export TERM='xterm-256color'
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 # Bin
-export PATH="/usr/bin:/usr/sbin:/sbin:/bin":$PATH
+# export PATH="/usr/bin:/usr/sbin:/sbin:/bin":$PATH
 # Local bin
-export PATH="/usr/local:/usr/local/bin:/usr/local/sbin":$PATH
+# export PATH="/usr/local:/usr/local/bin:/usr/local/sbin":$PATH
 # Machine local bin
 export PATH="$HOME/.local/bin":$PATH
 # My personal bin path
