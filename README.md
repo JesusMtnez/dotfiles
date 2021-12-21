@@ -16,7 +16,7 @@ This dotfiles are manage using [`nix`](https://nixos.wiki/wiki/Nix) and [`home-m
 1. Clone the repository and go inside the folder
 
 ```
-nix-shell -p git --run "git clone git@gitlab.com:JesusMtnez/dotfiles $HOME/.dotfiles"
+nix-shell -p git --run "git clone git@github.com:JesusMtnez/dotfiles $HOME/.dotfiles"
 ```
 
 2. Link `home.nix`:
@@ -31,10 +31,11 @@ ln -sf $HOME/.dotfiles/hosts/$HOSTNAME/default.nix ~/.config/nixpkgs/home.nix
 
 ### Active
 
-- [`sirius`](./hosts/sirius/README.md): Work machine, based on [Pop_OS](https://pop.system76.com/).
+- [`sirius`](./hosts/sirius/README.md): Work machine, based on **OSX**.
 
 ### Decommissioned
 
+- [`sirius-pop`](./hosts/sirius-pop/README.md): Old work machine, based on [Pop_OS](https://pop.system76.com/)
 - [`sirius-arch`](./hosts/sirius-arch): Old `sirius` configuration, based on [Arco Linux](https://arcolinux.com/).
 
 ## Common tools

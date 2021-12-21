@@ -1,5 +1,5 @@
 # General information
 
 **Host**: `sirius`
-**Based OS**: [Pop_OS](https://pop.system76.com/)
-**DE**: GNOME
+**Based OS**: [macOS Monterey 12.1](https://www.apple.com/es/macos/monterey/)
+**WM**: [Amethyst](https://ianyh.com/amethyst/)
