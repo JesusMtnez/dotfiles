@@ -3,7 +3,7 @@
 
   programs.sbt = {
     enable = true;
-    package = (pkgs.sbt.override { jre = pkgs.graalvm11-ce; });
+    package = (pkgs.sbt.override { jre = pkgs.openjdk11; });
     plugins = [
       {
         org = "ch.epfl.scala";
@@ -32,4 +32,10 @@
       }
     ];
   };
+
+  home.file.".sbt/1.0/credentials.sbt".text =
+    ''
+      credentials += Credentials(Path.userHome / ".secrets" / "credentials")
+      credentials += Credentials(Path.userHome / ".secrets" / "credentials_old")
+    '';
 }
