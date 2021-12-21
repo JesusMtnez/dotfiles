@@ -49,7 +49,7 @@ in
     };
 
     extensions = (with pkgs.vscode-extensions; [
-      ms-vsliveshare.vsliveshare
+      # ms-vsliveshare.vsliveshare
     ]) ++ managedExtensions;
   };
 }

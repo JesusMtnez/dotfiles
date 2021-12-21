@@ -32,7 +32,7 @@
   {
     name = "ansible";
     publisher = "redhat";
-    version =  "0.7.1";
+    version = "0.7.1";
     sha256 = "18z9h80y2ci391gyvv3f28lqs6l7rh1c0pidamksczcc3h5minhg";
   }
   {
