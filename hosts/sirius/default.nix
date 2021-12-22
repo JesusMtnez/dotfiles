@@ -2,7 +2,7 @@
 
 let
   homedir = builtins.getEnv "HOME";
-  jdk = pkgs.openjdk11;
+  jdk = pkgs.jdk11;
   emacsOverlay = import (import ../../nix/sources.nix)."emacs-overlay";
 in
 {
@@ -25,6 +25,11 @@ in
 
   fonts.fontconfig.enable = true;
 
+  programs.java = {
+    enable = true;
+    package = jdk;
+  };
+
   home.packages = with pkgs; [
     cachix
 
@@ -39,7 +44,6 @@ in
     httpie
 
     # Global dev tools
-    jdk
     (ammonite_2_13.override { jre = jdk; })
     (coursier.override { jre = jdk; })
     # (bloop.override { jre = jdk; })
