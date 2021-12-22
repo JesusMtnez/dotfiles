@@ -3,12 +3,12 @@
 let
   homedir = builtins.getEnv "HOME";
   jdk = pkgs.openjdk11;
-  # emacsOverlay = import (import ../../nix/sources.nix)."emacs-overlay";
+  emacsOverlay = import (import ../../nix/sources.nix)."emacs-overlay";
 in
 {
   nixpkgs = {
     config.allowUnfree = true;
-    # overlays = [ emacsOverlay ];
+    overlays = [ emacsOverlay ];
   };
 
   programs.home-manager.enable = true;
@@ -16,7 +16,7 @@ in
   imports = [
     ../../applications/code
     ../../applications/direnv
-    # ../../applications/emacs
+    ../../applications/emacs
     ../../applications/fzf
     ../../applications/git
     ../../applications/sbt
