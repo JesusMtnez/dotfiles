@@ -36,6 +36,7 @@ in
       "metals" = {
         "bloopSbtAlreadyInstalled" = true;
         "showInferredType" = true;
+        "javaHome" = pkgs.jdk11.home;
       };
       "oneDarkPro.vivid" = true;
       "terminal.integrated.cursorStyle" = "line";
