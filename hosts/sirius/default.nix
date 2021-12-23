@@ -48,7 +48,7 @@ in
     (coursier.override { jre = jdk; })
     # (bloop.override { jre = jdk; })
     kubectl
-    awscli
+    awscli2
 
     # Applications
     # keepassxc - incompatible
