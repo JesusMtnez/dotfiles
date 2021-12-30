@@ -13,3 +13,6 @@ project/metals.sbt
 
 # IntelliJ Idea
 .idea/
+
+# Visual Studio Code
+.vscode/
