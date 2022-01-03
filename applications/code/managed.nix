@@ -14,8 +14,8 @@
   {
     name = "nix-ide";
     publisher = "jnoortheen";
-    version = "0.1.18";
-    sha256 = "1v3j67j8bydyqba20b2wzsfximjnbhknk260zkc0fid1xzzb2sbn";
+    version = "0.1.19";
+    sha256 = "1ms96ij6z4bysdhqgdaxx2znvczyhzx57iifbqws50m1c3m7pkx7";
   }
   {
     name = "lisp";
