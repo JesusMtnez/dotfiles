@@ -56,7 +56,7 @@
   {
     name = "material-theme";
     publisher = "zhuangtongfa";
-    version = "3.13.8";
-    sha256 = "0ngx1i0xhxnr9vdmx077vxzrn287hzfjnjg7k2kqiq5yz325q08g";
+    version = "3.13.9";
+    sha256 = "0k12hb9vsgrvwpfyrc7qx51yrapdw8b0l1pafdzb84przzb8vlbg";
   }
 ]
