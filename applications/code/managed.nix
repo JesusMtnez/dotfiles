@@ -20,8 +20,8 @@
   {
     name = "lisp";
     publisher = "mattn";
-    version = "0.1.11";
-    sha256 = "1is81gmik2lc4wkil682lc34p1qcymb6xfwc942ig1msd33qv1g3";
+    version = "0.1.12";
+    sha256 = "0k10d77ffl6ybmk7mrpmlsawzwppp87aix2a2i24jq7lqnnqb9n7";
   }
   {
     name = "material-icon-theme";
