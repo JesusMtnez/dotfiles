@@ -16,11 +16,6 @@
         version = "1.2.2";
       }
       {
-        org = "com.github.cb372";
-        artifact = "sbt-explicit-dependencies";
-        version = "0.2.16";
-      }
-      {
         org = "io.spray";
         artifact = "sbt-revolver";
         version = "0.9.1";
