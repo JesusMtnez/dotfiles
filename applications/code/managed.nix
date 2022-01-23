@@ -50,8 +50,8 @@
   {
     name = "metals";
     publisher = "scalameta";
-    version = "1.12.2";
-    sha256 = "1cgksqyscb829wa27qv9qkd193b520ih3rdgi5rj36lbzlldkm8s";
+    version = "1.12.5";
+    sha256 = "0nw6i30vgzkwlkd6ain40vj4zkx0gixag53n9np1082v44xsipyv";
   }
   {
     name = "material-theme";
