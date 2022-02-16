@@ -26,8 +26,8 @@
   {
     name = "material-icon-theme";
     publisher = "PKief";
-    version = "4.12.1";
-    sha256 = "1c434f2za01rrfbcfyk0k3pkr29bl12f8il1y7dsr4yxkafsfrd6";
+    version = "4.13.0";
+    sha256 = "0b5z08v34q10xlbjbb5sn3zdwq6bflhd96z3dqsiakywhrsxi0jm";
   }
   {
     name = "ansible";
