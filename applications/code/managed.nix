@@ -6,6 +6,12 @@
     sha256 = "0xikkhbzb5cd0a96smj5mr1sz5zxrmryhw56m0139sbg7zwwfwps";
   }
   {
+    name = "gitlens";
+    publisher = "eamodio";
+    version = "12.0.1";
+    sha256 = "1xv1vzx643qa8jhjpnpv2wrymz38w130vm0idkcl77lh209r5i8x";
+  }
+  {
     name = "rest-client";
     publisher = "humao";
     version = "0.24.6";
