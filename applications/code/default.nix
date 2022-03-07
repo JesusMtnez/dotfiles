@@ -51,6 +51,7 @@ in
 
     extensions = (with pkgs.vscode-extensions; [
       # ms-vsliveshare.vsliveshare
+      ms-python.python
     ]) ++ managedExtensions;
   };
 }
