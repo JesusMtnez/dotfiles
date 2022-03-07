@@ -30,6 +30,12 @@
     sha256 = "0k10d77ffl6ybmk7mrpmlsawzwppp87aix2a2i24jq7lqnnqb9n7";
   }
   {
+    name = "nimvscode";
+    publisher = "nimsaem";
+    version = "0.1.25";
+    sha256 = "1zyq0kgmv6fsmva9apsrk076i510854q68yzs7hvkfw2b44c6k3z";
+  }
+  {
     name = "material-icon-theme";
     publisher = "PKief";
     version = "4.13.0";
