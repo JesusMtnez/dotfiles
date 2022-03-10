@@ -50,8 +50,8 @@
   {
     name = "vscode-yaml";
     publisher = "redhat";
-    version = "1.5.0";
-    sha256 = "0dj9mqfq45alm2a7napra8i6xgw0wgcggmkzh5sma7kl8636lxb6";
+    version = "1.5.1";
+    sha256 = "1qsjsfggfya282rh618fc89cfgpxii7yv2kyh5is6x2r2606cy15";
   }
   {
     name = "scala";
