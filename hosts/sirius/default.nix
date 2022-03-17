@@ -2,15 +2,14 @@
 
 let
   homedir = builtins.getEnv "HOME";
-  jdk = pkgs.jdk11;
   emacsOverlay = import (import ../../nix/sources.nix)."emacs-overlay";
 in
 {
   nixpkgs = {
     config.allowUnfree = true;
     config.packageOverrides = {
-      jdk = pkgs.jdk11;
-      jre = pkgs.jdk11;
+      jdk = pkgs.jdk17;
+      jre = pkgs.jdk17;
     };
     overlays = [ emacsOverlay ];
   };
@@ -29,10 +28,7 @@ in
 
   fonts.fontconfig.enable = true;
 
-  programs.java = {
-    enable = true;
-    package = jdk;
-  };
+  programs.java.enable = true;
 
   home.packages = with pkgs; [
     cachix
