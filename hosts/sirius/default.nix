@@ -8,6 +8,10 @@ in
 {
   nixpkgs = {
     config.allowUnfree = true;
+    config.packageOverrides = {
+      jdk = pkgs.jdk11;
+      jre = pkgs.jdk11;
+    };
     overlays = [ emacsOverlay ];
   };
 
@@ -44,8 +48,8 @@ in
     httpie
 
     # Global dev tools
-    (ammonite_2_13.override { jre = jdk; })
-    (coursier.override { jre = jdk; })
+    ammonite_2_13
+    coursier
     # (bloop.override { jre = jdk; })
     kubectl
     awscli2

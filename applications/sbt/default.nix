@@ -3,7 +3,6 @@
 
   programs.sbt = {
     enable = true;
-    package = (pkgs.sbt.override { jre = pkgs.jdk11; });
     plugins = [
       {
         org = "ch.epfl.scala";
