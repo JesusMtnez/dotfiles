@@ -1,2 +1,0 @@
-FILES=$(git ls-files '*.nix' | grep -v 'nix/.*' | tr '\n' ' ')
-nix-shell --run "nixpkgs-fmt $FILES"

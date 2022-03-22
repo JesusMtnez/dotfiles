@@ -24,6 +24,7 @@ in
     ../../applications/git
     ../../applications/sbt
     ../../applications/zsh
+    ../../scripts
   ];
 
   fonts.fontconfig.enable = true;

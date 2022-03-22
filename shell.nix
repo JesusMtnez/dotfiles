@@ -8,9 +8,8 @@ in
 pkgs.mkShell rec {
   name = "home-manager-shell";
 
-  buildInputs = with pkgs; [
+  buildInputs = [
     (import niv { }).niv
-    nixpkgs-fmt
     (import home-manager { inherit pkgs; }).home-manager
   ];
 
