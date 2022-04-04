@@ -38,8 +38,8 @@
   {
     name = "material-icon-theme";
     publisher = "PKief";
-    version = "4.14.1";
-    sha256 = "1d6wv5jxg4syz9dlj3q4rrv1cfk86hlff5132qga7j6y8z8f4x9q";
+    version = "4.15.0";
+    sha256 = "1bs78k27ypq298zyhclcj3xac9xlj7f3zpy6jh2gv9x8fbwnqp3x";
   }
   {
     name = "ansible";
