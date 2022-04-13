@@ -8,8 +8,8 @@ in
   nixpkgs = {
     config.allowUnfree = true;
     config.packageOverrides = {
-      jdk = pkgs.jdk11;
-      jre = pkgs.jdk11;
+      jdk = pkgs.graalvm11-ce;
+      jre = pkgs.graalvm11-ce;
     };
     overlays = [ emacsOverlay ];
   };
