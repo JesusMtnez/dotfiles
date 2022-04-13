@@ -8,8 +8,8 @@
   {
     name = "gitlens";
     publisher = "eamodio";
-    version = "12.0.5";
-    sha256 = "0zfawv9nn88x8m30h7ryax0c7p68najl23a51r88a70hqppzxshw";
+    version = "12.0.6";
+    sha256 = "1d7gzxsyxrhvvx2md6gbcwiawd8f3jarxfbv2qhj7xl1phd7zja3";
   }
   {
     name = "rest-client";
