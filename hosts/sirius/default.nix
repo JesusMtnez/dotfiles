@@ -38,18 +38,12 @@ in
     # Cli tools
     bat
     jq
-    # xsel
     httpie
 
     # Global dev tools
     ammonite_2_13
     coursier
-    # (bloop.override { jre = jdk; })
     kubectl
     awscli2
-
-    # Applications
-    # keepassxc - incompatible
-    # slack - https://github.com/NixOS/nixpkgs/issues/123440
   ];
 }
