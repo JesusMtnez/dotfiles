@@ -14,7 +14,7 @@
 
     extraConfig = {
       core = {
-        editor = "${pkgs.emacs}/bin/emacs -nw";
+        editor = "${pkgs.emacs-nox}/bin/emacs -nw";
         autocrlf = "input";
         whitespace = "trailing-space,blank-at-eol,tabs-in-indent";
       };

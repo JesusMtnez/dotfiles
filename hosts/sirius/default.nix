@@ -19,7 +19,6 @@ in
   imports = [
     ../../applications/code
     ../../applications/direnv
-    ../../applications/emacs
     ../../applications/fzf
     ../../applications/git
     ../../applications/sbt
