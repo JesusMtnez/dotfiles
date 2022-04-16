@@ -2,7 +2,6 @@
 
 let
   homedir = builtins.getEnv "HOME";
-  emacsOverlay = import (import ../../nix/sources.nix)."emacs-overlay";
 in
 {
   nixpkgs = {
@@ -11,7 +10,6 @@ in
       jdk = pkgs.graalvm11-ce;
       jre = pkgs.graalvm11-ce;
     };
-    overlays = [ emacsOverlay ];
   };
 
   programs.home-manager.enable = true;
