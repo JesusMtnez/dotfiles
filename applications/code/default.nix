@@ -1,7 +1,7 @@
 { pkgs, ... }:
 let
 
-  managedExtensions = (map pkgs.vscode-utils.extensionFromVscodeMarketplace (import ./managed.nix));
+  managedExtensions = (map pkgs.vscode-utils.extensionFromVscodeMarketplace (builtins.fromJSON (builtins.readFile ./managed.json)));
 
 in
 {
