@@ -41,8 +41,8 @@
       ca = "commit --all";
       cm = "commit --message";
       cma = "commit --all --message";
-      cam = "commit --ammend";
-      camn = "commit --ammend --no-edit";
+      cam = "commit --amend";
+      camn = "commit --amend --no-edit";
       ps = "push";
       psf = "push --force-with-lease";
       pl = "pull";
