@@ -47,6 +47,9 @@ in
       "workbench.colorTheme" = "One Dark Pro";
       "workbench.iconTheme" = "material-icon-theme";
       "redhat.telemetry.enabled" = false;
+      "[python]" = {
+        "editor.tabSize" = 4;
+      };
     };
 
     extensions = (with pkgs.vscode-extensions; [
