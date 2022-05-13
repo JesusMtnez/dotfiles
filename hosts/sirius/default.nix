@@ -38,7 +38,6 @@ in
     # Cli tools
     bat
     jq
-    httpie
 
     # Global dev tools
     ammonite_2_13
