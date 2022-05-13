@@ -3,6 +3,13 @@ let
 
   managedExtensions = (map pkgs.vscode-utils.extensionFromVscodeMarketplace (builtins.fromJSON (builtins.readFile ./managed.json)));
 
+  updateScript = pkgs.writers.writePython3Bin "code-ext-update"
+    {
+      libraries = [ pkgs.python3Packages.requests ];
+      flakeIgnore = [ "E501" ];
+    }
+    (builtins.readFile ./update.py);
+
 in
 {
   programs.vscode = {
@@ -57,4 +64,8 @@ in
       ms-python.python
     ]) ++ managedExtensions;
   };
+
+  home.packages = [
+    updateScript
+  ];
 }

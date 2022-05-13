@@ -14,6 +14,7 @@ let
 
       "update")
         nix-shell --run "niv update"
+        code-ext-update
       ;;
 
       "build")
