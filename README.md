@@ -32,6 +32,10 @@ ln -sf $HOME/.dotfiles/hosts/$HOSTNAME/default.nix ~/.config/nixpkgs/home.nix
 ### Active
 
 - [`sirius`](./hosts/sirius/README.md): Work machine, based on **OSX**.
+- [`albus`](./hosts/albus/README.md): Personal machine, based on **NixOS**.
+  ```
+    nixos-rebuild switch --use-remote-sudo --flake .
+  ```
 
 ### Decommissioned
 
