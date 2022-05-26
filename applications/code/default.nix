@@ -12,6 +12,7 @@ let
 
 in
 {
+
   programs.vscode = {
     enable = true;
     package = pkgs.vscode;
@@ -67,5 +68,6 @@ in
 
   home.packages = [
     updateScript
+     (pkgs.nerdfonts.override { fonts = [ "FiraCode" ]; })
   ];
 }
