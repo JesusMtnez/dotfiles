@@ -74,8 +74,11 @@
   };
 
   environment.systemPackages = with pkgs; [
+    # kde
     kwin-tiling
+    papirus-icon-theme
 
+    # others
     cachix
     brave
     firefox
@@ -84,6 +87,7 @@
     synology-drive-client
     joplin-desktop
     spotify
+    bitwarden
   ];
 
   powerManagement.enable = true;
