@@ -77,40 +77,23 @@
         inputs = { inherit nixpkgs-darwin; };
         system = "aarch64-darwin";
         modules = [
-          ./hosts/sirius/darwin-configuration.nix
+          ./hosts/common.nix
+          ./hosts/sirius/configuration.nix
 
           home.darwinModule {
             home-manager = {
-              useGlobalPkgs = false;
-
+              useGlobalPkgs = true;
               useUserPackages = true;
-
-              users.jmartinez = {
-                  imports = [
-                  ./applications/code
-                  ./applications/direnv
-                  ./applications/fzf
-                  ./applications/git
-                  ./applications/sbt
-                  ./applications/zsh
-                ];
-
-                fonts.fontconfig.enable = true;
-
-                programs = {
-                  bat.enable = true;
-                  home-manager.enable = true;
-                  # gpg.enable = true;
-                  java.enable = true;
-                  jq.enable = true;
-                  # ssh.enable = true;
-                };
+              extraSpecialArgs = {
+                inherit (inputs);
               };
+              users.jmartinez = import ./hosts/sirius/default.nix;
             };
           }
         ];
       };
     };
+
 
     darwinPkgs = self.darwinConfigurations."sirius".pkgs;
   };

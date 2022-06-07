@@ -4,14 +4,6 @@ let
   homedir = builtins.getEnv "HOME";
 in
 {
-  nixpkgs = {
-    config.allowUnfree = true;
-    config.packageOverrides = {
-      jdk = pkgs.graalvm11-ce;
-      jre = pkgs.graalvm11-ce;
-    };
-  };
-
   programs.home-manager.enable = true;
 
   imports = [
@@ -21,7 +13,7 @@ in
     ../../applications/git
     ../../applications/sbt
     ../../applications/zsh
-    ../../scripts
+    # ../../scripts
   ];
 
   fonts.fontconfig.enable = true;
@@ -31,10 +23,6 @@ in
   home.packages = with pkgs; [
     cachix
 
-    # Fonts
-    (nerdfonts.override { fonts = [ "FiraCode" ]; })
-    fira-code-symbols
-
     # Cli tools
     bat
     jq
@@ -43,6 +31,6 @@ in
     ammonite_2_13
     coursier
     kubectl
-    awscli2
+    # awscli2
   ];
 }
