@@ -13,21 +13,19 @@ let
       ;;
 
       "update")
-        nix-shell --run "niv update"
+        nix flake update
         code-ext-update
       ;;
 
       "build")
-        nix-shell --run "home-manager build"
       ;;
 
       "switch")
-        nix-shell --run "home-manager switch"
       ;;
 
       "news")
-        nix-shell --run "home-manager news"
       ;;
+
       *)
         echo "Usage:"
         echo "dot command"
