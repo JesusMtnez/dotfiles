@@ -17,7 +17,7 @@ in
     enable = true;
     package = pkgs.vscode;
     userSettings = {
-      "editor.fontFamily" = "'FuraCode Nerd Font'";
+      "editor.fontFamily" = "'FiraCode Nerd Font'";
       "editor.fontLigatures" = true;
       "editor.fontSize" = 12;
       "editor.fontWeight" = "normal";
