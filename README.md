@@ -32,6 +32,13 @@ ln -sf $HOME/.dotfiles/hosts/$HOSTNAME/default.nix ~/.config/nixpkgs/home.nix
 ## Machines
 
 - [`sirius`](./hosts/sirius/README.md): Work machine, based on **OSX**.
+
+```
+# Bootstrap nix-darwin in your osx system
+nix build .#darwinConfigurations.bootstrap.system --extra-experimental-features nix-command --extra-experimental-features flakes
+./result/sw/bin/darwin-rebuild switch --flake .#bootstrap
+```
+
 - [`albus`](./hosts/albus/README.md): Personal machine, based on **NixOS**.
   ```
     nixos-rebuild switch --use-remote-sudo --flake .
