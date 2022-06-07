@@ -8,6 +8,7 @@ zsh/themes/**
 
 # Nix
 result
+.direnv/
 
 # Custom
 .backup

@@ -1,20 +1,10 @@
-let
-  sources = import ./nix/sources.nix;
-  nixpkgs = sources.nixpkgs-unstable;
-  home-manager = sources.home-manager;
-  niv = sources.niv;
-  pkgs = import nixpkgs { };
-in
-pkgs.mkShell rec {
-  name = "home-manager-shell";
-
-  buildInputs = [
-    (import niv { }).niv
-    (import home-manager { inherit pkgs; }).home-manager
-  ];
-
-  shellHook = ''
-    export NIX_PATH="nixpkgs=${nixpkgs}:home-manager=${home-manager}"
-  '';
-  # export HOME_MANAGER_CONFIG="./home.nix"
-}
+(import
+  (
+    let lock = builtins.fromJSON (builtins.readFile ./flake.lock); in
+    fetchTarball {
+      url = "https://github.com/edolstra/flake-compat/archive/${lock.nodes.flake-compat.locked.rev}.tar.gz";
+      sha256 = lock.nodes.flake-compat.locked.narHash;
+    }
+  )
+  { src = ./.; }
+).shellNix
