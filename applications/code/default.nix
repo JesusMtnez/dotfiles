@@ -68,6 +68,5 @@ in
 
   home.packages = [
     updateScript
-     (pkgs.nerdfonts.override { fonts = [ "FiraCode" ]; })
   ];
 }
