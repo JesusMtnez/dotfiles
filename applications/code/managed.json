@@ -20,8 +20,8 @@
   {
     "name": "material-icon-theme",
     "publisher": "PKief",
-    "version": "4.17.0",
-    "sha256": "1dmmqc003v45pmiz6yccpnvw94hbvbg7fhy24njii0kwpxbv4q7l"
+    "version": "4.18.0",
+    "sha256": "18qxxpn5j3gcxhqf4rih123bbvcvngc6fribvhcqkl691drwhkmg"
   },
   {
     "name": "ansible",
