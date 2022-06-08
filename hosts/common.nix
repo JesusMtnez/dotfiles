@@ -24,8 +24,4 @@
     (nerdfonts.override { fonts = [ "FiraCode" ]; })
     fira-code-symbols
   ];
-
-  services.nix-daemon.enable = true;
-
-  users.nix.configureBuildUsers = true;
 }
