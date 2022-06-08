@@ -38,6 +38,7 @@
         albus = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
+            ./hosts/common.nix
             ./hosts/albus/configuration.nix
 
             home.nixosModules.home-manager
