@@ -13,7 +13,7 @@ in
     ../../applications/git
     ../../applications/sbt
     ../../applications/zsh
-    # ../../scripts
+    ../../scripts
   ];
 
   fonts.fontconfig.enable = true;
@@ -31,6 +31,6 @@ in
     ammonite_2_13
     coursier
     kubectl
-    # awscli2
+    awscli2
   ];
 }
