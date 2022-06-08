@@ -95,6 +95,7 @@
           modules = [
             ./hosts/common.nix
             ./hosts/sirius/configuration.nix
+            ./hosts/sirius/homebrew.nix
 
             home.darwinModule
             {
