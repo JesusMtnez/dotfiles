@@ -20,8 +20,8 @@
   {
     "name": "material-icon-theme",
     "publisher": "PKief",
-    "version": "4.18.0",
-    "sha256": "18qxxpn5j3gcxhqf4rih123bbvcvngc6fribvhcqkl691drwhkmg"
+    "version": "4.18.1",
+    "sha256": "1mp504i45dy4fx07m921mmzsrblhvkhslm5skq8vv36qfpazivl3"
   },
   {
     "name": "ansible",
@@ -32,8 +32,8 @@
   {
     "name": "vscode-yaml",
     "publisher": "redhat",
-    "version": "1.7.0",
-    "sha256": "1bbjpaypp0mq5akww5f0pkpq01j0xhhvkfr44f4lb2rdhr5nmnvc"
+    "version": "1.8.0",
+    "sha256": "1djd4mxnfrrlgiyrqjrrchza3q229sy57d71dggvf6f5k2wnj1qv"
   },
   {
     "name": "scala",
@@ -44,13 +44,13 @@
   {
     "name": "metals",
     "publisher": "scalameta",
-    "version": "1.17.1",
-    "sha256": "1x8az3j7kn534fzwahd6513l3d4a198qpgafbjm3wdr7jdic6w4x"
+    "version": "1.17.3",
+    "sha256": "1khw7jj3zl0nqh2s1saqmzmj5pp9d7f1r5cszh370x7mvzawns4w"
   },
   {
     "name": "material-theme",
     "publisher": "zhuangtongfa",
-    "version": "3.13.29",
-    "sha256": "08m49qawrl3n31l2wjjfrwq73jil43hjbyyk48vbxcq2mj1kqi0c"
+    "version": "3.14.3",
+    "sha256": "17c4v8wi3ic1a6kd8qapmwcad7pz5lc1znzx72713iwkyn8p0bjb"
   }
 ]
