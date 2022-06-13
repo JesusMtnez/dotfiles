@@ -13,6 +13,7 @@
       "homebrew/cask-drivers"
       "homebrew/cask-fonts"
       "homebrew/core"
+      "homebrew/services"
     ];
 
     brews = [
@@ -20,6 +21,7 @@
       "gnupg"
       "protobuf"
       "switchaudio-osx"
+      "syncthing"
       "watch"
     ];
 
@@ -29,7 +31,6 @@
       "calibre"
       "coconutbattery"
       "dbeaver-community"
-      "devtoys"
       "discord"
       "dropbox"
       "font-sf-pro"
