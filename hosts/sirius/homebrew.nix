@@ -33,6 +33,7 @@
       "dbeaver-community"
       "discord"
       "dropbox"
+      "firefox"
       "font-sf-pro"
       "google-chrome"
       "graphql-playground"
