@@ -21,7 +21,6 @@
       "gnupg"
       "protobuf"
       "switchaudio-osx"
-      "syncthing"
       "watch"
     ];
 
@@ -52,6 +51,7 @@
       "shottr"
       "slack"
       "spotify"
+      "syncthing"
       "synology-drive"
       "vlc"
       "whatsapp"
