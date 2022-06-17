@@ -8,8 +8,8 @@
   {
     "name": "gitlens",
     "publisher": "eamodio",
-    "version": "12.1.0",
-    "sha256": "0bpb22j7njy5jgqhhnpk1i3mlf288gc4iyn1zr41z03xrdn4wvh3"
+    "version": "12.1.1",
+    "sha256": "0i1wxgc61rrf11zff0481dg9s2lmv1ngpwx8nb2ygf6lh0axr7cj"
   },
   {
     "name": "nix-ide",
@@ -44,13 +44,13 @@
   {
     "name": "metals",
     "publisher": "scalameta",
-    "version": "1.17.6",
-    "sha256": "01dnfr0lpw284afzlfmx4xlr2skbz1q3p6q9qj1nl3600z2xad4v"
+    "version": "1.17.7",
+    "sha256": "0gyjf1phgqfqmg0sgrglb1v8cna25av7hz4yw59hrgdvdmwza52c"
   },
   {
     "name": "material-theme",
     "publisher": "zhuangtongfa",
-    "version": "3.14.3",
-    "sha256": "17c4v8wi3ic1a6kd8qapmwcad7pz5lc1znzx72713iwkyn8p0bjb"
+    "version": "3.15.0",
+    "sha256": "078i80b6j27xj160xkgdcnvjv5wyjkyyvkfpnvmmfbf93nd9pir2"
   }
 ]
