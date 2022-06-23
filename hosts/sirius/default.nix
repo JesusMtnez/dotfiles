@@ -33,4 +33,6 @@ in
     kubectl
     awscli2
   ];
+
+  home.stateVersion = "22.11";
 }
