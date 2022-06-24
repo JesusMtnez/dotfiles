@@ -42,7 +42,8 @@
   # Enable the X11 windowing system.
   services.xserver = {
     enable = true;
-    displayManager.sddm.enable = true;
+    # displayManager.sddm.enable = true;
+    displayManager.lightdm.enable = true;
     desktopManager.plasma5 = {
       enable = true;
       useQtScaling = true;
