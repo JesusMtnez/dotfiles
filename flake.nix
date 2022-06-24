@@ -73,6 +73,8 @@
                     defaultCacheTtl = 1800;
                     enableSshSupport = true;
                   };
+
+                  home.stateVersion = "22.11";
                 };
               };
             }
