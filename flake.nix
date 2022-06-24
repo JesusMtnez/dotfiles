@@ -74,6 +74,8 @@
                     enableSshSupport = true;
                   };
 
+                  services.syncthing.enable = true;
+
                   home.stateVersion = "22.11";
                 };
               };
