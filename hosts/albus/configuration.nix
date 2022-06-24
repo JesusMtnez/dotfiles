@@ -89,6 +89,7 @@
     joplin-desktop
     spotify
     bitwarden
+    zoom-us
   ];
 
   powerManagement.enable = true;
