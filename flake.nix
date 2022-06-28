@@ -12,6 +12,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    home-stable = {
+      url = "github:nix-community/home-manager/release-22.05";
+      inputs.nixpkgs.follows = "nixpkgs-darwin";
+    };
+
     darwin = {
       url = "github:lnl7/nix-darwin/master";
       inputs.nixpkgs.follows = "nixpkgs-darwin";
@@ -23,7 +28,7 @@
     };
   };
 
-  outputs = inputs @ { self, nixpkgs, home, darwin, nixpkgs-darwin, ... }:
+  outputs = inputs @ { self, nixpkgs, home, darwin, nixpkgs-darwin, home-stable, ... }:
     let
       systems = [
         "x86_64-linux"
@@ -102,7 +107,7 @@
             ./hosts/sirius/configuration.nix
             ./hosts/sirius/homebrew.nix
 
-            home.darwinModule
+            home-stable.darwinModule
             {
               home-manager = {
                 useGlobalPkgs = true;
@@ -116,8 +121,6 @@
           ];
         };
       };
-
-      darwinPkgs = self.darwinConfigurations."sirius".pkgs;
 
       devShell = forAllSystems
         (system:
