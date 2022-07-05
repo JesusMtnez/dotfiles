@@ -20,8 +20,8 @@
   {
     "name": "material-icon-theme",
     "publisher": "PKief",
-    "version": "4.18.1",
-    "sha256": "1mp504i45dy4fx07m921mmzsrblhvkhslm5skq8vv36qfpazivl3"
+    "version": "4.19.0",
+    "sha256": "1azkkp4bnd7n8v0m4325hfrr6p6ikid88xbxaanypji25pnyq5a4"
   },
   {
     "name": "ansible",
@@ -44,8 +44,8 @@
   {
     "name": "metals",
     "publisher": "scalameta",
-    "version": "1.17.10",
-    "sha256": "0vi51l1g26y027g0ag989ygb4rcn11kmxmgb2b9kwbc328s31n3x"
+    "version": "1.18.0",
+    "sha256": "0s0bsif0by4akppskzahbkddsaiy366dkppq10cyqsdk4k1x2ljf"
   },
   {
     "name": "material-theme",
