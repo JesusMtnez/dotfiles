@@ -57,7 +57,7 @@ def get_latest_version(name: str, publisher: str) -> Extension:
         with open(tmp + "/extension/package.json") as f:
             latest_version = json.load(f)["version"]
 
-        with os.popen("nix-hash --flat --base32 --type sha256 " + extension_zip) as cmd:
+        with os.popen("nix hash file --base32 --type sha256 " + extension_zip) as cmd:
             hash = cmd.read().rstrip()
     return Extension(name, publisher, latest_version, hash)
 
