@@ -26,8 +26,8 @@
   {
     "name": "ansible",
     "publisher": "redhat",
-    "version": "0.10.0",
-    "sha256": "0fhhyvzn6vcyhlmb5w5vnis3qyn96h8id7fjcp3pv3j3yg9fnw3i"
+    "version": "0.11.10",
+    "sha256": "1m7bym10k2dn1fkfpj2bkybwzhdanxnsn0fpghwybgyjpzy99z15"
   },
   {
     "name": "vscode-yaml",
