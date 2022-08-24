@@ -2,7 +2,7 @@
 {
   services.nix-daemon.enable = true;
 
-  users.nix.configureBuildUsers = true;
+  nix.configureBuildUsers = true;
 
   nixpkgs.config.packageOverrides = {
     jdk = pkgs.graalvm11-ce;
