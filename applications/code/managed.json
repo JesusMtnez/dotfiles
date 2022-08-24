@@ -14,26 +14,26 @@
   {
     "name": "nix-ide",
     "publisher": "jnoortheen",
-    "version": "0.1.20",
-    "sha256": "16mmivdssjky11gmih7zp99d41m09r0ii43n17d4i6xwivagi9a3"
+    "version": "0.1.23",
+    "sha256": "0i5zqfz2ic57z9b4v6mrs68dzhvgpnr5984srjapi0nzm30k127b"
   },
   {
     "name": "material-icon-theme",
     "publisher": "PKief",
-    "version": "4.19.0",
-    "sha256": "1azkkp4bnd7n8v0m4325hfrr6p6ikid88xbxaanypji25pnyq5a4"
+    "version": "4.20.0",
+    "sha256": "0zb1g1qdn0ws3xnpd7kz4g4drx99m691172b8hpgli37z7zlvw9r"
   },
   {
     "name": "ansible",
     "publisher": "redhat",
-    "version": "0.11.12",
-    "sha256": "0cmn3l3slv6s1q4jix6wfjgyf22388vbmhcv4cricvn8n2d1kdwq"
+    "version": "0.12.30",
+    "sha256": "1vbipbzmcpjq81cq5w72spfq4a5jkv5f3fpyrly53h3wpn68lijv"
   },
   {
     "name": "vscode-yaml",
     "publisher": "redhat",
-    "version": "1.9.1",
-    "sha256": "10m70sahl7vf8y82gqz9yk6bk4k4b923xn5rk7fax1nqw0pkln2w"
+    "version": "1.10.20220805",
+    "sha256": "1vizliwc49ndjcla0hq6rymdfqi1bix79zcyw0sbbmh19d82fqi7"
   },
   {
     "name": "scala",
@@ -44,8 +44,8 @@
   {
     "name": "metals",
     "publisher": "scalameta",
-    "version": "1.18.8",
-    "sha256": "1x6hwlq9m20w4kzyi59zvwjd3xg94g18r7q4mq5hl8jqwfdcqdj4"
+    "version": "1.19.7",
+    "sha256": "1hxfha1997xp1xadwkj9wf96cf69h63bi9mp8zqrparbgzaqj8jb"
   },
   {
     "name": "material-theme",
