@@ -8,8 +8,8 @@
   {
     "name": "gitlens",
     "publisher": "eamodio",
-    "version": "12.2.0",
-    "sha256": "141ha0wfhgkrzqch07jsr7dzgm8fjyzxkhzicz0clnmafczllgja"
+    "version": "12.2.1",
+    "sha256": "0anbva4c348rl003jdrqmngqqjxmi7mfi6gm489b3c4xz551kli6"
   },
   {
     "name": "nix-ide",
