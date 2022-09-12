@@ -43,6 +43,7 @@
       { name = "joplin"; }
       { name = "karabiner-elements"; }
       { name = "keepassxc"; }
+      { name = "marta"; }
       { name = "mongodb-compass"; }
       { name = "mounty"; }
       { name = "notion"; }
