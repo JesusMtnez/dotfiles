@@ -20,7 +20,10 @@
       };
 
       pull.ff = "only";
-      push.default = "upstream";
+      push = {
+        default = "simple";
+        autoSetupRemote = true;
+      };
       fetch.prune = "true";
       color.ui = "auto";
 
