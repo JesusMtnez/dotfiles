@@ -35,7 +35,7 @@
       { name = "dropbox"; }
       { name = "firefox"; }
       { name = "font-sf-pro"; }
-      { name = "google-chrome"; }
+      { name = "google-chrome"; greedy = true;}
       { name = "graphql-playground"; }
       { name = "hiddenbar"; }
       { name = "iterm2"; }
@@ -43,6 +43,8 @@
       { name = "joplin"; }
       { name = "karabiner-elements"; }
       { name = "keepassxc"; }
+      { name = "libreoffice"; }
+      { name = "libreoffice-language-pack"; }
       { name = "marta"; }
       { name = "mongodb-compass"; }
       { name = "mounty"; }
