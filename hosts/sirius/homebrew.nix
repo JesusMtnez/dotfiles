@@ -35,7 +35,7 @@
       { name = "dropbox"; }
       { name = "firefox"; }
       { name = "font-sf-pro"; }
-      { name = "google-chrome"; greedy = true;}
+      { name = "google-chrome"; greedy = true; }
       { name = "graphql-playground"; }
       { name = "hiddenbar"; }
       { name = "iterm2"; }
