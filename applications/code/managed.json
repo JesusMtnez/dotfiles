@@ -44,8 +44,8 @@
   {
     "name": "metals",
     "publisher": "scalameta",
-    "version": "1.19.9",
-    "sha256": "0jkj5bn7cyv9bgc14kmzncybkm4zi3dsfrkxg7vqak5my1jnypdr"
+    "version": "1.19.11",
+    "sha256": "1b76fm3zvlhm3f50q0dbc11rldbwy6qlgsdwz1zqql2y2qmp9qqz"
   },
   {
     "name": "material-theme",
