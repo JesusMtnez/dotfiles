@@ -1,7 +1,7 @@
 { pkgs, ... }:
 let
 
-  managedExtensions = (map pkgs.vscode-utils.extensionFromVscodeMarketplace (builtins.fromJSON (builtins.readFile ./managed.json)));
+  managedExtensions = map pkgs.vscode-utils.extensionFromVscodeMarketplace (builtins.fromJSON (builtins.readFile ./managed.json));
 
   updateScript = pkgs.writers.writePython3Bin "code-ext-update"
     {
