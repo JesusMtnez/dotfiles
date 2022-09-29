@@ -89,6 +89,7 @@
     spotify
     bitwarden
     zoom-us
+    onlyoffice-bin
   ];
 
   powerManagement.enable = true;
