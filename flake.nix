@@ -3,12 +3,12 @@
   description = "JesusMtnez's dotfiles flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-22.05";
 
     nixpkgs-darwin.url = "github:nixos/nixpkgs/nixpkgs-22.05-darwin";
 
     home = {
-      url = "github:nix-community/home-manager/master";
+      url = "github:nix-community/home-manager/release-22.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -81,7 +81,7 @@
 
                   services.syncthing.enable = true;
 
-                  home.stateVersion = "22.11";
+                  home.stateVersion = "22.05";
                 };
               };
             }
