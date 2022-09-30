@@ -17,6 +17,10 @@ let
         code-ext-update
       ;;
 
+      "clean")
+        nix-collect-garbage -d
+        sudo nix-collect-garbage -d
+
       "build")
       ;;
 
