@@ -12,7 +12,7 @@
       {
         org = "org.jmotor.sbt";
         artifact = "sbt-dependency-updates";
-        version = "1.2.5";
+        version = "1.2.7";
       }
       {
         org = "io.spray";
