@@ -41,7 +41,6 @@
       { name = "iterm2"; }
       { name = "itsycal"; }
       { name = "joplin"; }
-      { name = "karabiner-elements"; }
       { name = "keepassxc"; }
       { name = "libreoffice"; }
       { name = "libreoffice-language-pack"; }
@@ -51,7 +50,6 @@
       { name = "notion"; }
       { name = "openvpn-connect"; }
       { name = "raycast"; }
-      { name = "shottr"; }
       { name = "slack"; }
       { name = "spotify"; }
       { name = "syncthing"; }
