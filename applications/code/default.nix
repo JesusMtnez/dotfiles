@@ -50,6 +50,7 @@ in
       "terminal.integrated.cursorStyle" = "line";
       "terminal.integrated.fontFamily" = "'FuraCode Nerd Font'";
       "terminal.integrated.fontSize" = 12;
+      "update.mode" = "none";
       "window.restoreFullscreen" = true;
       "window.zoomLevel" = 0;
       "workbench.colorTheme" = "One Dark Pro";
