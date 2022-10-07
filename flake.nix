@@ -21,11 +21,6 @@
       url = "github:lnl7/nix-darwin/master";
       inputs.nixpkgs.follows = "nixpkgs-darwin";
     };
-
-    flake-compat = {
-      url = "github:edolstra/flake-compat";
-      flake = false;
-    };
   };
 
   outputs = inputs @ { self, nixpkgs, home, darwin, nixpkgs-darwin, home-stable, ... }:
