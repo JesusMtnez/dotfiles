@@ -54,6 +54,7 @@
       { name = "spotify"; }
       { name = "syncthing"; }
       { name = "synology-drive"; }
+      { name = "thunderbird"; }
       { name = "vlc"; }
       { name = "whatsapp"; }
       { name = "zoom"; }
