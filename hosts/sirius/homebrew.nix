@@ -51,6 +51,7 @@
       { name = "openvpn-connect"; }
       { name = "raycast"; }
       { name = "slack"; }
+      { name = "sleek"; }
       { name = "spotify"; }
       { name = "syncthing"; }
       { name = "synology-drive"; }
