@@ -20,8 +20,8 @@
   {
     "name": "nix-ide",
     "publisher": "jnoortheen",
-    "version": "0.1.23",
-    "sha256": "0i5zqfz2ic57z9b4v6mrs68dzhvgpnr5984srjapi0nzm30k127b"
+    "version": "0.2.1",
+    "sha256": "0bibb3r4cb7chnx6vpyl41ig12pc0cbg0sb8f2khs52c71nk4bn8"
   },
   {
     "name": "material-icon-theme",
