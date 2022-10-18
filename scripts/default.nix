@@ -8,8 +8,7 @@ let
 
     case $1 in
       "fmt")
-        FILES=$(${git}/bin/git ls-files '*.nix' | grep -v 'nix/.*' | tr '\n' ' ')
-        ${nixpkgs-fmt}/bin/nixpkgs-fmt $FILES
+        ${nixpkgs-fmt}/bin/nixpkgs-fmt .
       ;;
 
       "update")
