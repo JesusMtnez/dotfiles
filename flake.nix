@@ -5,25 +5,18 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-22.05";
 
-    nixpkgs-darwin.url = "github:nixos/nixpkgs/nixpkgs-22.05-darwin";
-
     home = {
       url = "github:nix-community/home-manager/release-22.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    home-stable = {
-      url = "github:nix-community/home-manager/release-22.05";
-      inputs.nixpkgs.follows = "nixpkgs-darwin";
-    };
-
     darwin = {
       url = "github:lnl7/nix-darwin/master";
-      inputs.nixpkgs.follows = "nixpkgs-darwin";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = inputs @ { self, nixpkgs, home, darwin, nixpkgs-darwin, home-stable, ... }:
+  outputs = inputs @ { self, nixpkgs, home, darwin, ... }:
     let
       systems = [
         "x86_64-linux"
@@ -87,7 +80,7 @@
       darwinConfigurations = {
         bootstrap = darwin.lib.darwinSystem {
           system = "aarch64-darwin"; # TODO Make it compatible with system "x86_64-darwin"
-          inputs = { inherit nixpkgs-darwin; };
+          inputs = { inherit nixpkgs; };
           modules = [
             ./hosts/common.nix
             ./hosts/darwin-bootstrap.nix
@@ -95,14 +88,14 @@
         };
 
         sirius = darwin.lib.darwinSystem {
-          inputs = { inherit nixpkgs-darwin; };
+          inputs = { inherit nixpkgs; };
           system = "aarch64-darwin";
           modules = [
             ./hosts/common.nix
             ./hosts/sirius/configuration.nix
             ./hosts/sirius/homebrew.nix
 
-            home-stable.darwinModule
+            home.darwinModule
             {
               home-manager = {
                 useGlobalPkgs = true;
