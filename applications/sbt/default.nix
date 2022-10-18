@@ -10,11 +10,6 @@
         version = "1.4.11";
       }
       {
-        org = "org.jmotor.sbt";
-        artifact = "sbt-dependency-updates";
-        version = "1.2.7";
-      }
-      {
         org = "io.spray";
         artifact = "sbt-revolver";
         version = "0.9.1";
