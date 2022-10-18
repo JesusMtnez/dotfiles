@@ -5,6 +5,8 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-22.05";
 
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+
     home = {
       url = "github:nix-community/home-manager/release-22.05";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -16,7 +18,7 @@
     };
   };
 
-  outputs = inputs @ { self, nixpkgs, home, darwin, ... }:
+  outputs = inputs @ { self, nixpkgs, nixpkgs-unstable, home, darwin, ... }:
     let
       systems = [
         "x86_64-linux"
@@ -78,6 +80,7 @@
       };
 
       darwinConfigurations = {
+
         bootstrap = darwin.lib.darwinSystem {
           system = "aarch64-darwin"; # TODO Make it compatible with system "x86_64-darwin"
           inputs = { inherit nixpkgs; };
