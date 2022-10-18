@@ -20,4 +20,4 @@ jobs:
       uses: cachix/install-nix-action@v18
 
     - name: "check formatting"
-      run: "git ls-files '*.nix' | xargs nix develop -c nixpkgs-fmt --check"
+      run: "nix develop -c nixpkgs-fmt --check ."
