@@ -10,8 +10,8 @@ on:
     paths-ignore: [ "README.md", "LICENSE"]
 
 jobs:
-  ci:
-    name: Build dotfiles
+  format:
+    name: check formatting
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3.1.0
