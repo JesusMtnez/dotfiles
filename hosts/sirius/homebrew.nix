@@ -55,6 +55,7 @@
       { name = "spotify"; }
       { name = "syncthing"; }
       { name = "synology-drive"; }
+      { name = "telegram-desktop"; }
       { name = "thunderbird"; }
       { name = "vlc"; }
       { name = "whatsapp"; }
