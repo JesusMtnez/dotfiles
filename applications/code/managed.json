@@ -14,8 +14,8 @@
   {
     "name": "gitlab-workflow",
     "publisher": "GitLab",
-    "version": "3.54.0",
-    "sha256": "1ikl882gj9l9zfnblk5bmqcklmx59zgnpw79asidq37409ryghah"
+    "version": "3.55.0",
+    "sha256": "0zr953m960gnr1gg1ikv8ywgqdpb6na92fsm0jarak9cm1zkpvg6"
   },
   {
     "name": "nix-ide",
