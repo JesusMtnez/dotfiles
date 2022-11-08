@@ -1,7 +1,8 @@
-{ ... }:
+{ unstable, ... }:
 {
   programs.fzf = {
     enable = true;
+    package = unstable.fzf;
     enableZshIntegration = true;
     enableBashIntegration = false;
     enableFishIntegration = false;

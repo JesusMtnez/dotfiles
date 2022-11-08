@@ -1,7 +1,7 @@
 { pkgs, unstable, ... }:
 let
 
-  managedExtensions = map pkgs.vscode-utils.extensionFromVscodeMarketplace (builtins.fromJSON (builtins.readFile ./managed.json));
+  managedExtensions = map unstable.vscode-utils.extensionFromVscodeMarketplace (builtins.fromJSON (builtins.readFile ./managed.json));
 
   updateScript = pkgs.writers.writePython3Bin "code-ext-update"
     {
@@ -61,11 +61,11 @@ in
       };
     };
 
-    extensions = (with pkgs.vscode-extensions; [
+    extensions = [
       # ms-vsliveshare.vsliveshare
-      ms-python.python
-      matklad.rust-analyzer # rust-lang.rust-analyzer
-    ]) ++ managedExtensions;
+      pkgs.vscode-extensions.ms-python.python
+      unstable.vscode-extensions.rust-lang.rust-analyzer
+    ] ++ managedExtensions;
   };
 
   home.packages = [
