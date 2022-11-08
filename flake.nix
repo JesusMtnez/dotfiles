@@ -5,7 +5,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-22.05";
 
-    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    unstable.url = "github:nixos/nixpkgs";
 
     home = {
       url = "github:nix-community/home-manager/release-22.05";
@@ -18,7 +18,7 @@
     };
   };
 
-  outputs = inputs @ { self, nixpkgs, nixpkgs-unstable, home, darwin, ... }:
+  outputs = inputs @ { self, nixpkgs, unstable, home, darwin, ... }:
     let
       systems = [
         "x86_64-linux"
@@ -27,6 +27,14 @@
       ];
 
       forAllSystems = nixpkgs.lib.genAttrs systems;
+
+      mkPkgsFor = system: pkgset:
+        import pkgset {
+          inherit system;
+          config = {
+            allowUnfree = true;
+          };
+        };
     in
     {
       nixosConfigurations = {
@@ -41,6 +49,10 @@
               home-manager = {
                 useGlobalPkgs = true;
                 useUserPackages = true;
+                extraSpecialArgs = {
+                  inherit (inputs);
+                  unstable = mkPkgsFor "x86_64-linux" unstable;
+                };
                 users.jmartinez = {
 
                   imports = [
@@ -105,6 +117,7 @@
                 useUserPackages = true;
                 extraSpecialArgs = {
                   inherit (inputs);
+                  unstable = mkPkgsFor "aarch64-darwin" unstable;
                 };
                 users.jmartinez = import ./hosts/sirius/default.nix;
               };

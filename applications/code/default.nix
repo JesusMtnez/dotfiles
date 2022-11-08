@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, unstable, ... }:
 let
 
   managedExtensions = map pkgs.vscode-utils.extensionFromVscodeMarketplace (builtins.fromJSON (builtins.readFile ./managed.json));
@@ -15,7 +15,7 @@ in
 
   programs.vscode = {
     enable = true;
-    package = pkgs.vscode;
+    package = unstable.vscode;
     userSettings = {
       "editor.fontFamily" = "'FiraCode Nerd Font'";
       "editor.fontLigatures" = true;
