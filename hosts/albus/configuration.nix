@@ -85,6 +85,7 @@
     cachix
     brave
     firefox
+    thunderbird-bin
     keepassxc
     dropbox
     synology-drive-client
