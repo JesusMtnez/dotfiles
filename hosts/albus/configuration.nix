@@ -71,7 +71,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.jmartinez = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ];
+    extraGroups = [ "wheel" "docker" "network"];
     shell = pkgs.zsh;
   };
 
@@ -94,6 +94,8 @@
   ];
 
   powerManagement.enable = true;
+
+  virtualisation.docker.enable = true;
 
   system.stateVersion = "22.05";
 }
