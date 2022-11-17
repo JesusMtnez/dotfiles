@@ -42,13 +42,15 @@
   # Enable the X11 windowing system.
   services.xserver = {
     enable = true;
-    displayManager.sddm.enable = true;
-    desktopManager.plasma5 = {
+
+    desktopManager.xfce = {
       enable = true;
-      useQtScaling = true;
-      kdeglobals = { };
-      kwinrc = { };
+      noDesktop = false;
+      enableXfwm = true;
+      enableScreensaver = false;
     };
+
+    displayManager.gdm.enable = true;
 
     layout = "us";
     xkbVariant = "altgr-intl";
@@ -74,8 +76,7 @@
   };
 
   environment.systemPackages = with pkgs; [
-    # kde
-    kwin-tiling
+    arc-theme
     papirus-icon-theme
 
     # others
