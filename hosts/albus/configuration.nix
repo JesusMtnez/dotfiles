@@ -73,7 +73,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.jmartinez = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "docker" "network"];
+    extraGroups = [ "wheel" "docker" "network" ];
     shell = pkgs.zsh;
   };
 
