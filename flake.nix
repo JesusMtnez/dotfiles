@@ -81,7 +81,10 @@
                     enableSshSupport = true;
                   };
 
-                  services.syncthing.enable = true;
+                  services.syncthing = {
+                    enable = true;
+                    extraOptions = [ "--allow-newer-config" ];
+                  };
 
                   home.stateVersion = "22.05";
                 };
