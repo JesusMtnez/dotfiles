@@ -10,14 +10,6 @@
     '';
   };
 
-  nixpkgs = {
-    config.allowUnfree = true;
-    config.packageOverrides = {
-      jdk = pkgs.graalvm11-ce;
-      jre = pkgs.graalvm11-ce;
-    };
-  };
-
   boot = {
     kernelPackages = pkgs.linuxPackages_5_15;
     blacklistedKernelModules = [ "nouveau" ];

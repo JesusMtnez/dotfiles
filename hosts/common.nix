@@ -1,6 +1,12 @@
 { pkgs, ... }:
 {
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs = {
+    config.allowUnfree = true;
+    config.packageOverrides = {
+      jdk = pkgs.graalvm11-ce;
+      jre = pkgs.graalvm11-ce;
+    };
+  };
 
   nix.extraOptions = ''
     keep-derivations = true
