@@ -21,7 +21,6 @@
       { name = "pinentry"; }
       { name = "gnupg"; }
       { name = "protobuf"; }
-      { name = "switchaudio-osx"; }
       { name = "watch"; }
     ];
 
@@ -47,7 +46,6 @@
       { name = "marta"; }
       { name = "mongodb-compass"; }
       { name = "mounty"; }
-      { name = "notion"; }
       { name = "openvpn-connect"; }
       { name = "raycast"; }
       { name = "slack"; }
@@ -56,10 +54,7 @@
       { name = "syncthing"; }
       { name = "synology-drive"; }
       { name = "tabby"; }
-      { name = "telegram-desktop"; }
       { name = "thunderbird"; }
-      { name = "vlc"; }
-      { name = "whatsapp"; }
       { name = "zoom"; }
     ];
   };
