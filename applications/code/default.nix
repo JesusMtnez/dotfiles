@@ -49,7 +49,7 @@ in
       };
       "oneDarkPro.vivid" = true;
       "terminal.integrated.cursorStyle" = "line";
-      "terminal.integrated.fontFamily" = "'FuraCode Nerd Font'";
+      "terminal.integrated.fontFamily" = "'FiraCode Nerd Font'";
       "terminal.integrated.fontSize" = 12;
       "update.mode" = "none";
       "window.restoreFullscreen" = true;
