@@ -29,6 +29,7 @@ in
       "editor.renderWhitespace" = "all";
       "editor.tabSize" = 2;
       "editor.wordWrapColumn" = 100;
+      "editor.bracketPairColorization.enabled" = true;
       "explorer.confirmDelete" = false;
       "files.autoSave" = "afterDelay";
       "files.autoSaveDelay" = 500;
