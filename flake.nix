@@ -3,12 +3,12 @@
   description = "JesusMtnez's dotfiles flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-22.05";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-22.11";
 
     unstable.url = "github:nixos/nixpkgs";
 
     home = {
-      url = "github:nix-community/home-manager/release-22.05";
+      url = "github:nix-community/home-manager/release-22.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -86,7 +86,7 @@
                     extraOptions = [ "--allow-newer-config" ];
                   };
 
-                  home.stateVersion = "22.05";
+                  home.stateVersion = "22.11";
                 };
               };
             }
