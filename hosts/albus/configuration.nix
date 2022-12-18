@@ -86,6 +86,7 @@
     bitwarden
     zoom-us
     onlyoffice-bin
+    libreoffice-fresh
   ];
 
   powerManagement.enable = true;
