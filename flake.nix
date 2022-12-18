@@ -53,41 +53,7 @@
                   inherit (inputs);
                   unstable = mkPkgsFor "x86_64-linux" unstable;
                 };
-                users.jmartinez = {
-
-                  imports = [
-                    ./applications/code
-                    ./applications/direnv
-                    ./applications/fzf
-                    ./applications/git
-                    ./applications/sbt
-                    ./applications/zsh
-                  ];
-
-                  fonts.fontconfig.enable = true;
-
-                  programs = {
-                    bat.enable = true;
-                    home-manager.enable = true;
-                    gpg.enable = true;
-                    java.enable = true;
-                    jq.enable = true;
-                    ssh.enable = true;
-                  };
-
-                  services.gpg-agent = {
-                    enable = true;
-                    defaultCacheTtl = 1800;
-                    enableSshSupport = true;
-                  };
-
-                  services.syncthing = {
-                    enable = true;
-                    extraOptions = [ "--allow-newer-config" ];
-                  };
-
-                  home.stateVersion = "22.11";
-                };
+                users.jmartinez = import ./hosts/albus/default.nix;
               };
             }
           ];

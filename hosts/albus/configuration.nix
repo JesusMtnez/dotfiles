@@ -73,20 +73,9 @@
     arc-theme
     papirus-icon-theme
 
-    # others
     cachix
     brave
     firefox
-    thunderbird-bin
-    keepassxc
-    dropbox
-    synology-drive-client
-    joplin-desktop
-    spotify
-    bitwarden
-    zoom-us
-    onlyoffice-bin
-    libreoffice-fresh
   ];
 
   powerManagement.enable = true;
