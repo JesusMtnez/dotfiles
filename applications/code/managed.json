@@ -8,14 +8,14 @@
   {
     "name": "gitlens",
     "publisher": "eamodio",
-    "version": "13.0.4",
-    "sha256": "09flyiw7xqgyxyqmjw604dacpw6d00ghvr4nj356b89127k7xzdz"
+    "version": "2022.12.1619",
+    "sha256": "0gwz49yiqjc23782g3xc5ahragqx3s6ki1277lkljjnmbi8d7wni"
   },
   {
     "name": "gitlab-workflow",
     "publisher": "GitLab",
-    "version": "3.57.1",
-    "sha256": "0ls8ml6sgg92qkblcj0rimmfbg86ykmjyr4gz6gawjlvqwgn3n6d"
+    "version": "3.57.3",
+    "sha256": "0pa5zs1bghsq1rv4hg395y842xyf5xdlgakrclia0yjs7lixniwv"
   },
   {
     "name": "nix-ide",
@@ -26,20 +26,20 @@
   {
     "name": "material-icon-theme",
     "publisher": "PKief",
-    "version": "4.22.0",
-    "sha256": "0irrivfidgjqfd205gh27r2ccj2anvqgvq7lfaaf92wrrc2zvlsk"
+    "version": "4.23.0",
+    "sha256": "1z6ygmq3id62d1ql35ghv5bwc0jzlgh6chgfzlfvp811m12r44v8"
   },
   {
     "name": "ansible",
     "publisher": "redhat",
-    "version": "1.0.101",
-    "sha256": "1wq384vv36i4rxh3m4iv27426hqx0zcj40mbdhjpa8cmhsh0a8s0"
+    "version": "1.0.106",
+    "sha256": "17s4fms4zhcgsv6pa8gqzkm0bwmynhdvmlz5adn2qvfsrrdbzixh"
   },
   {
     "name": "vscode-yaml",
     "publisher": "redhat",
-    "version": "1.10.1",
-    "sha256": "1z5z9w43ap0aashhjzgbfcdfpk5yzrfk0rgrynsc7an5bbsd9485"
+    "version": "1.11.10112022",
+    "sha256": "0i53n9whcfpds9496r4pa27j3zmd4jc1kpkf4m4rfxzswwngg47x"
   },
   {
     "name": "scala",
@@ -50,8 +50,8 @@
   {
     "name": "metals",
     "publisher": "scalameta",
-    "version": "1.20.6",
-    "sha256": "1p98sqqr4s06lp552i65s2hphzf4ibc8hkjd0w1sb0i5raygdmik"
+    "version": "1.20.9",
+    "sha256": "15xs5d3hh0ighc8g707mb2r0kkpxx2rwd8id9h2ndb4xa2cpaqim"
   },
   {
     "name": "material-theme",
