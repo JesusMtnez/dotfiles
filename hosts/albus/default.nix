@@ -1,4 +1,7 @@
 { config, pkgs, unstable, ... }:
+let
+  sleek = pkgs.callPackage ../../applications/sleek { };
+in
 {
   imports = [
     ../../applications/code
@@ -27,6 +30,8 @@
   };
 
   home.packages = with pkgs; [
+    sleek
+
     calibre
     evince
     gimp-with-plugins
