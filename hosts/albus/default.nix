@@ -47,6 +47,7 @@ in
     tdesktop
     vlc
     whatsapp-for-linux
+    ulauncher
   ];
 
   services.dropbox.enable = true;
