@@ -90,7 +90,7 @@
     cachix
     brave
     firefox
-    xarchiver
+    gnome.file-roller
   ];
 
   powerManagement.enable = true;
