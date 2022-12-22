@@ -53,6 +53,12 @@
     libinput.enable = true;
   };
 
+  programs.thunar.plugins = with pkgs.xfce; [
+    thunar-archive-plugin
+    thunar-dropbox-plugin
+    thunar-volman
+  ];
+
   services.gnome.gnome-keyring.enable = true;
 
   services.avahi = {
@@ -84,6 +90,7 @@
     cachix
     brave
     firefox
+    xarchiver
   ];
 
   powerManagement.enable = true;
