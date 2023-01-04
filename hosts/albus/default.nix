@@ -45,6 +45,7 @@ in
     zoom-us
     thunderbird-bin
     tdesktop
+    transmission-remote-gtk
     vlc
     whatsapp-for-linux
     ulauncher
