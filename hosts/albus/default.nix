@@ -33,11 +33,10 @@ in
     sleek
 
     calibre
-    evince
     gimp-with-plugins
     joplin-desktop
     keepassxc
-    libreoffice-fresh
+    libreoffice-qt
     masterpdfeditor4
     onlyoffice-bin
     spotify
@@ -45,10 +44,8 @@ in
     zoom-us
     thunderbird-bin
     tdesktop
-    transmission-remote-gtk
     vlc
     whatsapp-for-linux
-    ulauncher
   ];
 
   services.dropbox.enable = true;

@@ -34,15 +34,13 @@
   # Enable the X11 windowing system.
   services.xserver = {
     enable = true;
-
-    desktopManager.xfce = {
+    displayManager.sddm.enable = true;
+    desktopManager.plasma5 = {
       enable = true;
-      noDesktop = false;
-      enableXfwm = true;
-      enableScreensaver = false;
+      useQtScaling = true;
+      kdeglobals = { };
+      kwinrc = { };
     };
-
-    displayManager.gdm.enable = true;
 
     layout = "us";
     xkbVariant = "altgr-intl";
@@ -53,15 +51,9 @@
     libinput.enable = true;
   };
 
-  programs.thunar.plugins = with pkgs.xfce; [
-    thunar-archive-plugin
-    thunar-dropbox-plugin
-    thunar-volman
-  ];
-
-  security.pam.services.gdm.enableGnomeKeyring = true;
+  # security.pam.services.gdm.enableGnomeKeyring = true;
   services.gnome.gnome-keyring.enable = true;
-  programs.seahorse.enable = true;
+  # programs.seahorse.enable = true;
 
   services.avahi = {
     enable = true;
@@ -86,16 +78,17 @@
   };
 
   environment.systemPackages = with pkgs; [
-    arc-theme
+    # kde
+    kwin-tiling
     papirus-icon-theme
 
     cachix
     brave
     firefox
-    gnome.file-roller
+    # gnome.file-roller
   ];
 
-  powerManagement.enable = true;
+  # powerManagement.enable = true;
 
   virtualisation.docker.enable = true;
 
