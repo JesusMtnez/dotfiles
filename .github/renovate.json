@@ -1,0 +1,14 @@
+{
+  "enabled": true,
+  "semanticCommits": "enabled",
+  "dependencyDashboard": true,
+  "dependencyDashboardTitle": "Renovate Dashboard",
+  "rebaseWhen": "conflicted",
+  "lockFileMaintenance": {
+    "enabled": true,
+    "extends": ["every monday at 5am"]
+  },
+  "nix": {
+    "enabled": true
+  }
+}
