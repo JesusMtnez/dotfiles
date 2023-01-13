@@ -6,7 +6,7 @@
   "rebaseWhen": "conflicted",
   "lockFileMaintenance": {
     "enabled": true,
-    "extends": ["every monday at 5am"]
+    "extends": ["schedule:daily"]
   },
   "nix": {
     "enabled": true
