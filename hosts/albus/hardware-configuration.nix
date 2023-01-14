@@ -29,7 +29,7 @@
   swapDevices =
     [{ device = "/dev/disk/by-uuid/42153018-f7ce-4390-9182-c04858cb4da3"; }];
 
-  powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
+  powerManagement.cpuFreqGovernor = lib.mkDefault "performance";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
   # high-resolution display
   hardware.video.hidpi.enable = lib.mkDefault true;
