@@ -11,7 +11,7 @@
   };
 
   boot = {
-    kernelPackages = pkgs.linuxPackages_5_15;
+    kernelPackages = pkgs.linuxPackages_6_1;
     blacklistedKernelModules = [ "nouveau" ];
 
     loader = {
