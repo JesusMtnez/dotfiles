@@ -51,9 +51,7 @@
     libinput.enable = true;
   };
 
-  # security.pam.services.gdm.enableGnomeKeyring = true;
   services.gnome.gnome-keyring.enable = true;
-  # programs.seahorse.enable = true;
 
   services.avahi = {
     enable = true;
@@ -85,10 +83,7 @@
     cachix
     brave
     firefox
-    # gnome.file-roller
   ];
-
-  # powerManagement.enable = true;
 
   virtualisation.docker.enable = true;
 
