@@ -34,7 +34,6 @@
 
   i18n.defaultLocale = "en_US.UTF-8";
 
-  # Enable the X11 windowing system.
   services.xserver = {
     enable = true;
     displayManager.sddm.enable = true;
@@ -67,8 +66,16 @@
   };
 
   sound.enable = true;
-  hardware.pulseaudio.enable = true;
-  hardware.bluetooth.enable = true;
+
+  hardware.pulseaudio = {
+    enable = true;
+    package = pkgs.pulseaudioFull;
+  };
+
+  hardware.bluetooth = {
+    enable = true;
+    package = pkgs.bluezFull;
+  };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.jmartinez = {
