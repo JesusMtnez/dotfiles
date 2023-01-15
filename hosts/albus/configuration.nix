@@ -12,12 +12,15 @@
 
   boot = {
     kernelPackages = pkgs.linuxPackages_6_1;
+
     blacklistedKernelModules = [ "nouveau" ];
 
     loader = {
       systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
     };
+
+    supportedFilesystems = [ "ntfs "];
   };
 
   time.timeZone = "Europe/Madrid";
@@ -63,7 +66,6 @@
     drivers = [ pkgs.brlaser ];
   };
 
-  # Enable sound.
   sound.enable = true;
   hardware.pulseaudio.enable = true;
   hardware.bluetooth.enable = true;
