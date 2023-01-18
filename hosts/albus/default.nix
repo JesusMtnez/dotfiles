@@ -51,6 +51,11 @@ in
   services.syncthing = {
     enable = true;
     extraOptions = [ "--allow-newer-config" ];
+    tray = {
+      enable = true;
+      package = pkgs.syncthingtray;
+      command = "syncthingtray --wait";
+    };
   };
 
   home.stateVersion = "22.11";
