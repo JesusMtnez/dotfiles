@@ -40,10 +40,10 @@ in
     masterpdfeditor4
     onlyoffice-bin
     spotify
-    zoom-us
     thunderbird-bin
     tdesktop
     vlc
+    zoom-us
   ];
 
   services.dropbox.enable = true;
