@@ -40,12 +40,10 @@ in
     masterpdfeditor4
     onlyoffice-bin
     spotify
-    synology-drive-client
     zoom-us
     thunderbird-bin
     tdesktop
     vlc
-    whatsapp-for-linux
   ];
 
   services.dropbox.enable = true;
