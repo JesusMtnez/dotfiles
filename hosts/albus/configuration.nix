@@ -20,7 +20,7 @@
       efi.canTouchEfiVariables = true;
     };
 
-    supportedFilesystems = [ "ntfs "];
+    supportedFilesystems = [ "ntfs" ];
   };
 
   time.timeZone = "Europe/Madrid";
