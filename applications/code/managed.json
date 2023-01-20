@@ -8,14 +8,14 @@
   {
     "name": "gitlens",
     "publisher": "eamodio",
-    "version": "2023.1.1215",
-    "sha256": "05plv2z7wkvahsc4lsl5scj615pksqmbqmxk1f1hlkqr2hxnxm2n"
+    "version": "2023.1.1904",
+    "sha256": "12hkxa9n4qi8sm0738rhkxn0813arvr9bnp8kzhqpc4dr9a2iz91"
   },
   {
     "name": "gitlab-workflow",
     "publisher": "GitLab",
-    "version": "3.58.0",
-    "sha256": "01lwvhcqqacwsklj94asjqj9cz3mh9ff7n67pp01dk7l2xcqi1k3"
+    "version": "3.59.2",
+    "sha256": "1wn5f80wwkld9iy5klp5v14zdkpcz3gxfvrhj3sv83gsb51c50qp"
   },
   {
     "name": "nix-ide",
@@ -56,7 +56,7 @@
   {
     "name": "material-theme",
     "publisher": "zhuangtongfa",
-    "version": "3.15.6",
-    "sha256": "0c6dwy6z3980hbf9njf8b8bvd602q2d6bflkrwqd93n9c0fa4n1d"
+    "version": "3.15.7",
+    "sha256": "1hxh5wg39h5k3p2cgh8vdh7l0pxsrw2cvfwbhsx8ifs8748qagi5"
   }
 ]
