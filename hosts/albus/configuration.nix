@@ -88,6 +88,7 @@
     # kde
     kwin-tiling
     papirus-icon-theme
+    libsForQt5.ark
 
     cachix
     brave
