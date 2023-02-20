@@ -87,7 +87,6 @@
   environment.systemPackages = with pkgs; [
     # kde
     kwin-tiling
-    papirus-icon-theme
     libsForQt5.ark
 
     cachix
