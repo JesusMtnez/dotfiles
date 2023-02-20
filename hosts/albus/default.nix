@@ -39,6 +39,7 @@ in
     libreoffice-qt
     masterpdfeditor4
     onlyoffice-bin
+    portfolio
     spotify
     thunderbird-bin
     tdesktop
