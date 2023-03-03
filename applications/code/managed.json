@@ -8,8 +8,8 @@
   {
     "name": "gitlens",
     "publisher": "eamodio",
-    "version": "2023.2.2411",
-    "sha256": "1sb2gcv5simc4rm8fx0zyryz7nsbmm9jbxzrh2n4x8852db1cjvf"
+    "version": "2023.3.204",
+    "sha256": "0nnmp0igdvx28rsm7ivcnpa0nf95ngfijnl2j98kq7rm1xfspqy6"
   },
   {
     "name": "gitlab-workflow",
@@ -50,8 +50,8 @@
   {
     "name": "metals",
     "publisher": "scalameta",
-    "version": "1.21.3",
-    "sha256": "1dx7w8skmh55ccfncb6lrxnxh3f1dd7fvp3ky4i7nl9vwwzr2w6q"
+    "version": "1.22.0",
+    "sha256": "1zrq1xsdhhd09i7dsff3fb0g59s1z9gqg948jlcj8vxg5fa3whrd"
   },
   {
     "name": "material-theme",
