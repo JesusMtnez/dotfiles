@@ -17,7 +17,7 @@ in
     enable = true;
     enableExtensionUpdateCheck = false;
     enableUpdateCheck = false;
-    package = unstable.vscode;
+    package = pkgs.vscode;
     userSettings = {
       "editor.fontFamily" = "'FiraCode Nerd Font'";
       "editor.fontLigatures" = true;
