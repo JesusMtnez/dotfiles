@@ -40,6 +40,7 @@ in
     masterpdfeditor4
     onlyoffice-bin
     portfolio
+    protonvpn-gui
     spotify
     tdesktop
     thunderbird-bin
