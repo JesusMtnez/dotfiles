@@ -41,8 +41,9 @@ in
     onlyoffice-bin
     portfolio
     spotify
-    thunderbird-bin
     tdesktop
+    thunderbird-bin
+    todo-txt-cli
     vlc
     zoom-us
   ];
