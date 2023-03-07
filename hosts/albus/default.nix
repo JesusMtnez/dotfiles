@@ -29,17 +29,14 @@ in
     enableSshSupport = true;
   };
 
-  home.packages = with pkgs; [
+  home.packages = [
     sleek
-
-    calibre
+  ] ++ (with pkgs; [
     gimp-with-plugins
     joplin-desktop
     keepassxc
     libreoffice-qt
     masterpdfeditor4
-    onlyoffice-bin
-    portfolio
     protonvpn-gui
     spotify
     tdesktop
@@ -47,7 +44,10 @@ in
     todo-txt-cli
     vlc
     zoom-us
-  ];
+  ]) ++ (with unstable; [
+    calibre
+    portfolio
+  ]);
 
   services.dropbox.enable = true;
 
