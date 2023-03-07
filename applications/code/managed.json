@@ -8,8 +8,8 @@
   {
     "name": "gitlens",
     "publisher": "eamodio",
-    "version": "2023.3.204",
-    "sha256": "0nnmp0igdvx28rsm7ivcnpa0nf95ngfijnl2j98kq7rm1xfspqy6"
+    "version": "13.3.2",
+    "sha256": "0v33rwpry3bbmr8z404i1hsfpmsnizhs3p6csrvqxz5872d1v3p2"
   },
   {
     "name": "gitlab-workflow",
