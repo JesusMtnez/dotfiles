@@ -1,5 +1,6 @@
 { config, pkgs, unstable, ... }:
 let
+  autofirma = pkgs.callPackage ../../applications/autofirma { };
   sleek = pkgs.callPackage ../../applications/sleek { };
 in
 {
@@ -30,6 +31,7 @@ in
   };
 
   home.packages = [
+    # autofirma
     sleek
   ] ++ (with pkgs; [
     gimp-with-plugins
