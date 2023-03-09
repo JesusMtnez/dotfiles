@@ -27,22 +27,17 @@
     casks = [
       { name = "amethyst"; }
       { name = "brave-browser"; }
-      { name = "calibre"; }
       { name = "coconutbattery"; }
       { name = "dbeaver-community"; }
-      { name = "discord"; }
       { name = "dropbox"; }
       { name = "firefox"; }
       { name = "font-sf-pro"; }
       { name = "google-chrome"; greedy = true; }
       { name = "graphql-playground"; }
       { name = "hiddenbar"; }
-      { name = "iterm2"; }
       { name = "itsycal"; }
       { name = "joplin"; }
       { name = "keepassxc"; }
-      { name = "libreoffice"; }
-      { name = "libreoffice-language-pack"; }
       { name = "marta"; }
       { name = "mongodb-compass"; }
       { name = "mounty"; }
@@ -52,7 +47,6 @@
       { name = "sleek"; }
       { name = "spotify"; }
       { name = "syncthing"; }
-      { name = "synology-drive"; }
       { name = "tabby"; }
       { name = "thunderbird"; }
       { name = "zoom"; }
