@@ -1,7 +1,7 @@
-{ pkgs, unstable, ... }:
+{ pkgs, ... }:
 let
 
-  managedExtensions = map unstable.vscode-utils.extensionFromVscodeMarketplace (builtins.fromJSON (builtins.readFile ./managed.json));
+  managedExtensions = map pkgs.vscode-utils.extensionFromVscodeMarketplace (builtins.fromJSON (builtins.readFile ./managed.json));
 
   updateScript = pkgs.writers.writePython3Bin "code-ext-update"
     {
@@ -14,10 +14,11 @@ in
 {
 
   programs.vscode = {
+    package = pkgs.vscode;
     enable = true;
     enableExtensionUpdateCheck = false;
     enableUpdateCheck = false;
-    package = pkgs.vscode;
+    mutableExtensionsDir = false;
     userSettings = {
       "editor.fontFamily" = "'FiraCode Nerd Font'";
       "editor.fontLigatures" = true;
@@ -63,11 +64,10 @@ in
         "editor.tabSize" = 4;
       };
     };
-
     extensions = [
       # ms-vsliveshare.vsliveshare
       pkgs.vscode-extensions.ms-python.python
-      unstable.vscode-extensions.rust-lang.rust-analyzer
+      pkgs.vscode-extensions.rust-lang.rust-analyzer
     ] ++ managedExtensions;
   };
 

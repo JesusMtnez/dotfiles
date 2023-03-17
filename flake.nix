@@ -3,9 +3,8 @@
   description = "JesusMtnez's dotfiles flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-22.11";
 
-    unstable.url = "github:nixos/nixpkgs";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-22.11";
 
     home = {
       url = "github:nix-community/home-manager/release-22.11";
@@ -13,12 +12,19 @@
     };
 
     darwin = {
-      url = "github:lnl7/nix-darwin/master";
+      url = "github:lnl7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    nixpkgs-master.url = "github:nixos/nixpkgs";
+
+    home-master = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs-master";
     };
   };
 
-  outputs = inputs @ { self, nixpkgs, unstable, home, darwin, ... }:
+  outputs = inputs @ { self, nixpkgs, home, darwin, nixpkgs-master, home-master, ... }:
     let
       systems = [
         "x86_64-linux"
@@ -38,20 +44,20 @@
     in
     {
       nixosConfigurations = {
-        albus = nixpkgs.lib.nixosSystem {
+        albus = nixpkgs-master.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
             ./hosts/common.nix
             ./hosts/albus/configuration.nix
 
-            home.nixosModules.home-manager
+            home-master.nixosModules.home-manager
             {
               home-manager = {
                 useGlobalPkgs = true;
                 useUserPackages = true;
                 extraSpecialArgs = {
                   inherit (inputs);
-                  unstable = mkPkgsFor "x86_64-linux" unstable;
+                  unstable = mkPkgsFor "x86_64-linux" nixpkgs-master;
                 };
                 users.jmartinez = import ./hosts/albus/default.nix;
               };
@@ -86,7 +92,7 @@
                 useUserPackages = true;
                 extraSpecialArgs = {
                   inherit (inputs);
-                  unstable = mkPkgsFor "aarch64-darwin" unstable;
+                  unstable = mkPkgsFor "aarch64-darwin" nixpkgs-master;
                 };
                 users.jmartinez = import ./hosts/sirius/default.nix;
               };
