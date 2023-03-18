@@ -1,8 +1,8 @@
-{ pkgs, unstable, ... }:
+{ pkgs, ... }:
 {
   programs.git = {
     enable = true;
-    package = unstable.gitAndTools.gitFull;
+    package = pkgs.gitAndTools.gitFull;
 
     userName = "JesusMtnez";
     userEmail = "jesusmartinez93@gmail.com";
@@ -28,8 +28,8 @@
       color.ui = "auto";
 
       pager = {
-        diff = "${unstable.gitAndTools.diff-so-fancy}/bin/diff-so-fancy | less --tabs=4 -RFX";
-        show = "${unstable.gitAndTools.diff-so-fancy}/bin/diff-so-fancy | less --tabs=4 -RFX";
+        diff = "${pkgs.gitAndTools.diff-so-fancy}/bin/diff-so-fancy | less --tabs=4 -RFX";
+        show = "${pkgs.gitAndTools.diff-so-fancy}/bin/diff-so-fancy | less --tabs=4 -RFX";
       };
     };
 
@@ -97,7 +97,7 @@
     ];
   };
 
-  home.packages = with unstable.gitAndTools; [
+  home.packages = with pkgs.gitAndTools; [
     gh
     glab
   ];

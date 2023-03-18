@@ -44,7 +44,7 @@
     in
     {
       nixosConfigurations = {
-        albus = nixpkgs-master.lib.nixosSystem {
+        albus = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
             ./hosts/common.nix
@@ -53,11 +53,12 @@
             home-master.nixosModules.home-manager
             {
               home-manager = {
-                useGlobalPkgs = true;
+                useGlobalPkgs = false;
                 useUserPackages = true;
                 extraSpecialArgs = {
                   inherit (inputs);
-                  unstable = mkPkgsFor "x86_64-linux" nixpkgs-master;
+                  pkgs = mkPkgsFor "x86_64-linux" nixpkgs-master;
+                  # unstable = mkPkgsFor "x86_64-linux" nixpkgs-master;
                 };
                 users.jmartinez = import ./hosts/albus/default.nix;
               };

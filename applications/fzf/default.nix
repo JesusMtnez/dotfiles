@@ -1,4 +1,4 @@
-{ unstable, ... }:
+{ ... }:
 {
   programs.fzf = {
     enable = true;

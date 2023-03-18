@@ -1,4 +1,4 @@
-{ config, pkgs, unstable, ... }:
+{ config, pkgs, ... }:
 let
   autofirma = pkgs.callPackage ../../applications/autofirma { };
   sleek = pkgs.callPackage ../../applications/sleek { };
@@ -34,11 +34,13 @@ in
     # autofirma
     sleek
   ] ++ (with pkgs; [
-    gimp-with-plugins
+    calibre
+    gimp
     joplin-desktop
     keepassxc
     libreoffice-qt
     masterpdfeditor4
+    portfolio
     protonvpn-gui
     spotify
     tdesktop
@@ -46,9 +48,6 @@ in
     todo-txt-cli
     vlc
     zoom-us
-  ]) ++ (with unstable; [
-    calibre
-    portfolio
   ]);
 
   services.dropbox.enable = true;
@@ -63,5 +62,5 @@ in
     };
   };
 
-  home.stateVersion = "22.11";
+  home.stateVersion = "23.05";
 }
