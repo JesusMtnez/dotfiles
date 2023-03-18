@@ -18,13 +18,9 @@
 
     nixpkgs-master.url = "github:nixos/nixpkgs";
 
-    home-master = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs-master";
-    };
   };
 
-  outputs = inputs @ { self, nixpkgs, home, darwin, nixpkgs-master, home-master, ... }:
+  outputs = inputs @ { self, nixpkgs, home, darwin, nixpkgs-master, ... }:
     let
       systems = [
         "x86_64-linux"
@@ -50,15 +46,14 @@
             ./hosts/common.nix
             ./hosts/albus/configuration.nix
 
-            home-master.nixosModules.home-manager
+            home.nixosModules.home-manager
             {
               home-manager = {
-                useGlobalPkgs = false;
+                useGlobalPkgs = true;
                 useUserPackages = true;
                 extraSpecialArgs = {
                   inherit (inputs);
-                  pkgs = mkPkgsFor "x86_64-linux" nixpkgs-master;
-                  # unstable = mkPkgsFor "x86_64-linux" nixpkgs-master;
+                  latestPkgs = mkPkgsFor "x86_64-linux" nixpkgs-master;
                 };
                 users.jmartinez = import ./hosts/albus/default.nix;
               };

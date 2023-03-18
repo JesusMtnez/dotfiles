@@ -16,9 +16,8 @@ in
   programs.vscode = {
     package = pkgs.vscode;
     enable = true;
-    enableExtensionUpdateCheck = false;
-    enableUpdateCheck = false;
     mutableExtensionsDir = false;
+
     userSettings = {
       "editor.fontFamily" = "'FiraCode Nerd Font'";
       "editor.fontLigatures" = true;
@@ -34,6 +33,7 @@ in
       "editor.wordWrapColumn" = 100;
       "editor.bracketPairColorization.enabled" = true;
       "explorer.confirmDelete" = false;
+      "extensions.autoCheckUpdates" = false;
       "files.autoSave" = "afterDelay";
       "files.autoSaveDelay" = 500;
       "files.insertFinalNewline" = true;
@@ -60,13 +60,15 @@ in
       "workbench.colorTheme" = "One Dark Pro";
       "workbench.iconTheme" = "material-icon-theme";
       "redhat.telemetry.enabled" = false;
-      "[python]" = {
-        "editor.tabSize" = 4;
-      };
+
+      "[nix]"."editor.tabSize" = 2;
+      "[python]"."editor.tabSize" = 4;
+      "[scala]"."editor.tabSize" = 2;
     };
+
     extensions = [
       # ms-vsliveshare.vsliveshare
-      # pkgs.vscode-extensions.ms-python.python
+      pkgs.vscode-extensions.ms-python.python
       pkgs.vscode-extensions.rust-lang.rust-analyzer
     ] ++ managedExtensions;
   };

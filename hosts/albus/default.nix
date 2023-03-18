@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, latestPkgs, ... }:
 let
   autofirma = pkgs.callPackage ../../applications/autofirma { };
   sleek = pkgs.callPackage ../../applications/sleek { };
@@ -40,7 +40,7 @@ in
     keepassxc
     libreoffice-qt
     masterpdfeditor4
-    portfolio
+    latestPkgs.portfolio
     protonvpn-gui
     spotify
     tdesktop
@@ -62,5 +62,5 @@ in
     };
   };
 
-  home.stateVersion = "23.05";
+  home.stateVersion = "22.11";
 }
