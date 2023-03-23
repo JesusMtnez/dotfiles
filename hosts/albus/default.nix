@@ -34,6 +34,7 @@ in
     # autofirma
     sleek
   ] ++ (with pkgs; [
+    audacity
     calibre
     gimp
     joplin-desktop
