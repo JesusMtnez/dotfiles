@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, latestPkgs, ... }:
 let
 
   managedExtensions = map pkgs.vscode-utils.extensionFromVscodeMarketplace (builtins.fromJSON (builtins.readFile ./managed.json));
@@ -14,9 +14,9 @@ in
 {
 
   programs.vscode = {
-    package = pkgs.vscode;
+    package = latestPkgs.vscode;
     enable = true;
-    mutableExtensionsDir = false;
+    # mutableExtensionsDir = false;
 
     userSettings = {
       "editor.fontFamily" = "'FiraCode Nerd Font'";
