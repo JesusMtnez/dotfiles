@@ -38,8 +38,8 @@
   {
     "name": "vscode-yaml",
     "publisher": "redhat",
-    "version": "1.12.1",
-    "sha256": "1dsbfc167r3069a8x3skdj1pcmr1gqqliy8f66zv2dcr1gapciy1"
+    "version": "1.12.2",
+    "sha256": "193spsdrfwl6yf1c9k10c6s6azyq15h4jgz76gqz44c4d2yx0c8j"
   },
   {
     "name": "scala",
