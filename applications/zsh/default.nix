@@ -106,7 +106,7 @@
         }
         {
           name = "b4b4r07/enhancd";
-          tags = [ "use:init.sh" "depth:1" ];
+          tags = [ "use:init.sh" "depth:1" "at:f0e8f7175a4322477bb600817dda7ff8dffbde86"];
         }
         {
           name = "zdharma-continuum/fast-syntax-highlighting";
