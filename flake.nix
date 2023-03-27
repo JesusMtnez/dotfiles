@@ -88,7 +88,7 @@
                 useUserPackages = true;
                 extraSpecialArgs = {
                   inherit (inputs);
-                  unstable = mkPkgsFor "aarch64-darwin" nixpkgs-master;
+                  latestPkgs = mkPkgsFor "aarch64-darwin" nixpkgs-master;
                 };
                 users.jmartinez = import ./hosts/sirius/default.nix;
               };
