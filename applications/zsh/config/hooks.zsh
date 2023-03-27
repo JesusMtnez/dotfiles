@@ -1,4 +1,4 @@
 # Change PWD hook
-# function chpwd() {
-#     ls -lh
-# }
+function chpwd() {
+    ls -lh
+}
