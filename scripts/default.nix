@@ -17,6 +17,8 @@ let
       ;;
 
       "clean")
+        nix-store --gc
+        sudo nix-store --gc
         nix-collect-garbage -d
         sudo nix-collect-garbage -d
       ;;
