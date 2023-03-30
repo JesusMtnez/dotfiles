@@ -39,6 +39,7 @@ in
     gimp
     joplin-desktop
     keepassxc
+    krename
     libreoffice-qt
     masterpdfeditor4
     latestPkgs.portfolio
