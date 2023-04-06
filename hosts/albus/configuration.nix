@@ -42,6 +42,11 @@
       useQtScaling = true;
       kdeglobals = { };
       kwinrc = { };
+
+      excludePackages = with pkgs.libsForQt5; [
+        elisa
+        khelpcenter
+      ];
     };
 
     layout = "us";
