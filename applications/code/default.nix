@@ -68,8 +68,6 @@ in
 
     extensions = [
       # ms-vsliveshare.vsliveshare
-      pkgs.vscode-extensions.ms-python.python
-      pkgs.vscode-extensions.rust-lang.rust-analyzer
     ] ++ managedExtensions;
   };
 
