@@ -64,5 +64,11 @@
     "publisher": "rust-lang",
     "version": "0.4.1470",
     "sha256": "0h6whqqvwzc37rwhwj9ysn5csyxd07lvkvdvd76dxfzqxx2ml3x9"
+  },
+  {
+    "name": "vscode-pull-request-github",
+    "publisher": "GitHub",
+    "version": "0.63.2023040609",
+    "sha256": "1iahn136djgwipb8r24bdzcmgw78xfl6gvlqbvl5h4scyiifq98z"
   }
 ]
