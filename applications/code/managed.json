@@ -26,8 +26,8 @@
   {
     "name": "material-icon-theme",
     "publisher": "PKief",
-    "version": "4.25.0",
-    "sha256": "0abk642gdf3d4n7nynr835gcb091qwnvjpdlig7ga5sxns5zfl7y"
+    "version": "4.26.0",
+    "sha256": "03jqsdl3d5wrfkhiya7ilqhihahjxf8pqmd9bdhvkymxpqiyffgb"
   },
   {
     "name": "ansible",
