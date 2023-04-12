@@ -32,9 +32,6 @@ in
     coursier
     kubectl
     awscli2
-
-    # Apps
-    jetbrains.idea-community
   ];
 
   # Home-manager does not link installed applications to the user environment.

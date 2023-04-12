@@ -26,7 +26,6 @@
 
     casks = [
       { name = "amethyst"; }
-      { name = "brave-browser"; }
       { name = "coconutbattery"; }
       { name = "dbeaver-community"; }
       { name = "dropbox"; }
