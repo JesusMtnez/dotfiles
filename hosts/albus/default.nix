@@ -35,7 +35,9 @@ in
     sleek
   ] ++ (with pkgs; [
     audacity
+    bloop
     calibre
+    coursier
     gimp
     joplin-desktop
     keepassxc
