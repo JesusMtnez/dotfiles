@@ -29,9 +29,13 @@ in
 
     # Global dev tools
     ammonite_2_13
-    coursier
-    kubectl
     awscli2
+    colima
+    coursier
+    docker-client
+    docker-buildx
+    docker-compose
+    kubectl
   ];
 
   home.stateVersion = "22.11";
