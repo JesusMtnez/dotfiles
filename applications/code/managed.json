@@ -8,14 +8,14 @@
   {
     "name": "gitlens",
     "publisher": "eamodio",
-    "version": "13.5.0",
-    "sha256": "1bdi44y85218r3lf2xh9fgzadyvwx7fm5ylafxqix2vwmnjrc5nc"
+    "version": "2023.4.1305",
+    "sha256": "1aiw4r6gv3x18krpdgnx721s3a4jg0fa6l5hp4865kzjfv7m0032"
   },
   {
     "name": "gitlab-workflow",
     "publisher": "GitLab",
-    "version": "3.60.0",
-    "sha256": "0p7cb2fby42gv1xadcxf69vqvqscmmhz965j98yg418zqkm3wzdc"
+    "version": "3.61.0",
+    "sha256": "1gl8m2baw2w7zybnj4bi79w7q7vbz1w5bfcwyv09cipmzwzyyr3j"
   },
   {
     "name": "nix-ide",
@@ -32,8 +32,8 @@
   {
     "name": "ansible",
     "publisher": "redhat",
-    "version": "1.3.50",
-    "sha256": "1nrbwbhq6g3nk77666vm1pqj0fkfidynckc24s6jjzk8a03q1civ"
+    "version": "2.0.58",
+    "sha256": "1hm0f6adalyyls2bxw8spqpvgbvzz2jarwq6siy85ggn4csw9c6l"
   },
   {
     "name": "vscode-yaml",
@@ -62,7 +62,7 @@
   {
     "name": "vscode-pull-request-github",
     "publisher": "GitHub",
-    "version": "0.63.2023040609",
-    "sha256": "1iahn136djgwipb8r24bdzcmgw78xfl6gvlqbvl5h4scyiifq98z"
+    "version": "0.63.2023041410",
+    "sha256": "1wvz7sy65jx69mdnd871zl5rc8ihyj2bzd25ydrrzb3445c2dnvl"
   }
 ]
