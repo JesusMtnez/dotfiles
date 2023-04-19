@@ -10,6 +10,7 @@ in
     ../../applications/fzf
     ../../applications/git
     ../../applications/sbt
+    ../../applications/todotxt.nix
     ../../applications/zsh
   ];
 
@@ -49,7 +50,6 @@ in
     spotify
     tdesktop
     thunderbird-bin
-    todo-txt-cli
     vlc
     zoom-us
   ]);

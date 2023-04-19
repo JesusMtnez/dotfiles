@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, latestPkgs, ... }:
 
 let
   homedir = builtins.getEnv "HOME";
@@ -12,6 +12,7 @@ in
     ../../applications/fzf
     ../../applications/git
     ../../applications/sbt
+    ../../applications/todotxt.nix
     ../../applications/zsh
     ../../scripts
   ];
