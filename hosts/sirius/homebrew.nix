@@ -2,9 +2,10 @@
 {
   homebrew = {
     enable = true;
-    onActivation.autoUpdate = true;
-    onActivation.upgrade = true;
+    onActivation.autoUpdate = false;
+    onActivation.upgrade = false;
     onActivation.cleanup = "zap";
+    global.autoUpdate = false;
     global.brewfile = true;
     global.lockfiles = true;
 
@@ -37,7 +38,6 @@
       { name = "itsycal"; }
       { name = "joplin"; }
       { name = "keepassxc"; }
-      { name = "marta"; }
       { name = "mongodb-compass"; }
       { name = "mounty"; }
       { name = "openvpn-connect"; }
