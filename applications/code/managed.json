@@ -64,5 +64,11 @@
     "publisher": "GitHub",
     "version": "0.63.2023041912",
     "sha256": "03g3s9cazbhzcdaiqyfm71y87mp1466wcs72vvawv550ih4a9mfc"
+  },
+  {
+    "name": "flix",
+    "publisher": "flix",
+    "version": "0.99.0",
+    "sha256": "1bxgns6pxabw0m2pxsc6y1y20y8nmc565ish5i6pl7knimzrgjq3"
   }
 ]
