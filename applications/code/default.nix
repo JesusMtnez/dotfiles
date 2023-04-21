@@ -47,9 +47,10 @@ in
         "**/target" = true;
       };
       "metals" = {
-        "bloopSbtAlreadyInstalled" = true;
-        "showInferredType" = true;
         "javaHome" = pkgs.jdk.home;
+        "suggestLatestUpgrade" = false;
+        "showInferredType" = true;
+        "bloopSbtAlreadyInstalled" = true;
       };
       "oneDarkPro.vivid" = true;
       "terminal.integrated.cursorStyle" = "line";
