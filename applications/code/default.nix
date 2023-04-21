@@ -52,6 +52,11 @@ in
         "showInferredType" = true;
         "bloopSbtAlreadyInstalled" = true;
       };
+      "nix" = {
+        "enableLanguageServer" = true;
+        "formatterPath" = "${pkgs.nixpkgs-fmt}/bin/nixpkgs-fmt";
+        "serverPath" = "${pkgs.rnix-lsp}/bin/rnix-lsp";
+      };
       "oneDarkPro.vivid" = true;
       "terminal.integrated.cursorStyle" = "line";
       "terminal.integrated.fontFamily" = "'FiraCode Nerd Font'";
