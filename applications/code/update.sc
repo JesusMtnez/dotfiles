@@ -1,4 +1,6 @@
-#!/usr/bin/env -S scala-cli shebang -S 3
+#!/usr/bin/env -S scala-cli shebang
+
+//> using scala 3
 
 //> using lib "com.lihaoyi::requests::0.8.0"
 //> using lib "com.lihaoyi::upickle::3.1.0"
