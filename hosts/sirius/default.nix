@@ -36,7 +36,7 @@ in
     docker-buildx
     docker-compose
     kubectl
-    scala-cli
+    latestPkgs.scala-cli
   ];
 
   home.stateVersion = "22.11";

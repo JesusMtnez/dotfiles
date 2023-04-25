@@ -10,5 +10,8 @@ zsh/themes/**
 result
 .direnv/
 
+## Scala
+**/.scala-build/
+
 # Custom
 .backup
