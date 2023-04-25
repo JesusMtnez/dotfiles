@@ -29,7 +29,6 @@ in
     jq
 
     # Global dev tools
-    ammonite_2_13
     awscli2
     colima
     coursier
@@ -37,6 +36,7 @@ in
     docker-buildx
     docker-compose
     kubectl
+    latestPkgs.scala-cli
   ];
 
   home.stateVersion = "22.11";
