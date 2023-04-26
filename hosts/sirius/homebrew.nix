@@ -38,6 +38,7 @@
       { name = "itsycal"; }
       { name = "joplin"; }
       { name = "keepassxc"; }
+      { name = "marta"; }
       { name = "mongodb-compass"; }
       { name = "mounty"; }
       { name = "openvpn-connect"; }
