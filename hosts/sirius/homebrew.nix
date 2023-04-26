@@ -38,6 +38,8 @@
       { name = "itsycal"; }
       { name = "joplin"; }
       { name = "keepassxc"; }
+      { name = "libreoffice"; }
+      { name = "libreoffice-language-pack"; }
       { name = "marta"; }
       { name = "mongodb-compass"; }
       { name = "mounty"; }
