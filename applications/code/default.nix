@@ -75,5 +75,6 @@ in
 
   home.packages = [
     updateScript
+    pkgs.unzip
   ];
 }
