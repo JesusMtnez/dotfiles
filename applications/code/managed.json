@@ -6,12 +6,6 @@
     "sha256": "0xikkhbzb5cd0a96smj5mr1sz5zxrmryhw56m0139sbg7zwwfwps"
   },
   {
-    "name": "gitlens",
-    "publisher": "eamodio",
-    "version": "2023.4.2605",
-    "sha256": "0wjjkwqy66dn05973qwgnicvm92lc3g2awfpdsly6j4xjcrfwax3"
-  },
-  {
     "name": "gitlab-workflow",
     "publisher": "GitLab",
     "version": "3.61.0",
@@ -58,12 +52,6 @@
     "publisher": "zhuangtongfa",
     "version": "3.15.8",
     "sha256": "1s7dlklzlyma3yv5bnahla8yg2qm7hn7dq46lpm5szcisarqc19z"
-  },
-  {
-    "name": "vscode-pull-request-github",
-    "publisher": "GitHub",
-    "version": "0.63.2023042613",
-    "sha256": "1imiskr5yxxl2myq6wa194naa1ycvh16bx0f4v495mysrbg2gsjy"
   },
   {
     "name": "flix",

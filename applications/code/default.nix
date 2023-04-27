@@ -2,6 +2,7 @@
 let
 
   managedExtensions = map pkgs.vscode-utils.extensionFromVscodeMarketplace (builtins.fromJSON (builtins.readFile ./managed.json));
+  manualExtensions = map pkgs.vscode-utils.extensionFromVscodeMarketplace (builtins.fromJSON (builtins.readFile ./manual.json));
   updateScript = pkgs.writeScriptBin "code-update" (builtins.readFile ./update.sc);
 in
 {
@@ -70,7 +71,7 @@ in
       # ms-vsliveshare.vsliveshare
       latestPkgs.vscode-extensions.ms-python.python
       latestPkgs.vscode-extensions.rust-lang.rust-analyzer
-    ] ++ managedExtensions;
+    ] ++ managedExtensions ++ manualExtensions;
   };
 
   home.packages = [
