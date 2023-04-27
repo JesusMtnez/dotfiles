@@ -8,8 +8,8 @@
   {
     "name": "gitlens",
     "publisher": "eamodio",
-    "version": "2023.4.2405",
-    "sha256": "1d3k961bxj021hvls9bhd0qi1i21rbg6kgcz91n7db8xsnqzjv6c"
+    "version": "2023.4.2605",
+    "sha256": "0wjjkwqy66dn05973qwgnicvm92lc3g2awfpdsly6j4xjcrfwax3"
   },
   {
     "name": "gitlab-workflow",
@@ -62,8 +62,8 @@
   {
     "name": "vscode-pull-request-github",
     "publisher": "GitHub",
-    "version": "0.63.2023042409",
-    "sha256": "14kv4a0d620cz6bgigfavppz2l383c7jrqmgxcp1bn7vsw0chzfa"
+    "version": "0.63.2023042613",
+    "sha256": "1imiskr5yxxl2myq6wa194naa1ycvh16bx0f4v495mysrbg2gsjy"
   },
   {
     "name": "flix",
