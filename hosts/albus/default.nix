@@ -47,6 +47,7 @@ in
     masterpdfeditor4
     latestPkgs.portfolio
     protonvpn-gui
+    latestPkgs.scala-cli
     spotify
     tdesktop
     thunderbird-bin
