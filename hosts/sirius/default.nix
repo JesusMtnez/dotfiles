@@ -7,6 +7,7 @@ in
   programs.home-manager.enable = true;
 
   imports = [
+    ../../applications/alacritty.nix
     ../../applications/code
     ../../applications/direnv
     ../../applications/fzf

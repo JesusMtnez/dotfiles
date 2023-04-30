@@ -5,6 +5,7 @@ let
 in
 {
   imports = [
+    ../../applications/alacritty.nix
     ../../applications/code
     ../../applications/direnv
     ../../applications/fzf
