@@ -8,8 +8,8 @@
   {
     "name": "gitlab-workflow",
     "publisher": "GitLab",
-    "version": "3.61.0",
-    "sha256": "1gl8m2baw2w7zybnj4bi79w7q7vbz1w5bfcwyv09cipmzwzyyr3j"
+    "version": "3.62.0",
+    "sha256": "170d65mjab9g4713yvlm48kswkmxybm3b7zgd4xipcdlfnkc2597"
   },
   {
     "name": "nix-ide",
@@ -20,8 +20,8 @@
   {
     "name": "material-icon-theme",
     "publisher": "PKief",
-    "version": "4.26.0",
-    "sha256": "03jqsdl3d5wrfkhiya7ilqhihahjxf8pqmd9bdhvkymxpqiyffgb"
+    "version": "4.27.0",
+    "sha256": "1gz7mxb5ib1yz6gxgkq2451929cfhgpwsgyqz1v2jmlpkkm9vvvj"
   },
   {
     "name": "ansible",
@@ -56,7 +56,7 @@
   {
     "name": "flix",
     "publisher": "flix",
-    "version": "0.99.0",
-    "sha256": "1bxgns6pxabw0m2pxsc6y1y20y8nmc565ish5i6pl7knimzrgjq3"
+    "version": "1.0.0",
+    "sha256": "0611awlc38hww52j6safmwqd75q7q957ghp3ifgg0bv5nq4m76x3"
   }
 ]
