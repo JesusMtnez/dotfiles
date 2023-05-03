@@ -11,10 +11,8 @@
 
     taps = [
       { name = "homebrew/bundle"; }
-      { name = "homebrew/cask"; }
       { name = "homebrew/cask-drivers"; }
       { name = "homebrew/cask-fonts"; }
-      { name = "homebrew/core"; }
       { name = "homebrew/services"; }
     ];
 
@@ -38,19 +36,14 @@
       { name = "itsycal"; }
       { name = "joplin"; }
       { name = "keepassxc"; }
-      { name = "libreoffice"; }
-      { name = "libreoffice-language-pack"; }
       { name = "marta"; }
       { name = "mongodb-compass"; }
       { name = "mounty"; }
       { name = "openvpn-connect"; }
       { name = "raycast"; }
       { name = "slack"; }
-      { name = "sleek"; }
       { name = "spotify"; }
       { name = "syncthing"; }
-      { name = "tabby"; }
-      { name = "thunderbird"; }
       { name = "zoom"; }
     ];
   };
