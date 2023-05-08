@@ -13,7 +13,8 @@ let
 
       "update")
         nix flake update
-        code-ext-update
+        code-update
+        # upgrade nix in darwin: https://nixos.org/manual/nix/stable/installation/upgrading.html
       ;;
 
       "clean")
