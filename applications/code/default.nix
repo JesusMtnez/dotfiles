@@ -1,8 +1,8 @@
 { pkgs, latestPkgs, ... }:
 let
 
-  managedExtensions = map pkgs.vscode-utils.extensionFromVscodeMarketplace (builtins.fromJSON (builtins.readFile ./managed.json));
-  manualExtensions = map pkgs.vscode-utils.extensionFromVscodeMarketplace (builtins.fromJSON (builtins.readFile ./manual.json));
+  managedExtensions = pkgs.vscode-utils.extensionsFromVscodeMarketplace (builtins.fromJSON (builtins.readFile ./managed.json));
+  manualExtensions = pkgs.vscode-utils.extensionsFromVscodeMarketplace (builtins.fromJSON (builtins.readFile ./manual.json));
   updateScript = pkgs.writeScriptBin "code-update" (builtins.readFile ./update.sc);
 in
 {
