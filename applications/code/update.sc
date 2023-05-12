@@ -58,16 +58,57 @@ def showDiff(current: List[Extension], latest: List[Extension]): List[String] =
       else diff
     )
 
-val json: os.Path =
+val managedJson: os.Path =
   os.home / ".dotfiles" / "applications" / "code" / "managed.json"
 
+val manualJson: os.Path =
+  os.home / ".dotfiles" / "applications" / "code" / "manual.json"
+
+def updateManaged() =
 val currentExtensions: List[Extension] =
-  upickle.default.read[List[Extension]](os.read(json))
+    upickle.default.read[List[Extension]](os.read(managedJson))
 val updatedExtensions: List[Extension] =
   currentExtensions.map(e => getLatestVersion(e.name, e.publisher))
 os.write.over(
-  json,
+    managedJson,
   upickle.default.write(updatedExtensions, indent = 2) ++ "\n"
 )
+  showDiff(currentExtensions, updatedExtensions).map(println)
+end updateManaged
 
-showDiff(currentExtensions, updatedExtensions).map(println)
+def rehash(name: String, publisher: String, version: String): Extension =
+  val wd = os.temp.dir()
+  val extZip = os.temp(dir = wd, suffix = ".zip")
+
+  requests.get
+    .stream(
+      s"https://${publisher}.gallery.vsassets.io/_apis/public/gallery/publisher/${publisher}/extension/${name}/${version}/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage"
+    )
+    .readBytesThrough(os.write.over(extZip, _))
+
+  val hash = os
+    .proc(
+      "nix",
+      "hash",
+      "file",
+      "--base32",
+      "--type",
+      "sha256",
+      extZip.toString
+    )
+    .call(wd)
+    .out
+    .trim()
+
+  Extension(name, publisher, version, hash)
+end rehash
+
+def rehashManual() =
+  val extensions = upickle.default.read[List[Extension]](os.read(manualJson))
+  val rehashed = extensions.map(e => rehash(e.name, e.publisher, e.version))
+  os.write.over(manualJson, upickle.default.write(rehashed, indent = 2) ++ "\n")
+end rehashManual
+
+// MAIN
+updateManaged()
+rehashManual()
