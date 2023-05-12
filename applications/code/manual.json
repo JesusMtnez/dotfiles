@@ -3,12 +3,12 @@
     "name": "vscode-pull-request-github",
     "publisher": "GitHub",
     "version": "0.64.0",
-    "sha256": "sha256-tgQD3o5uMbWofVx7FPyWT1yaeu2e4aPxterN4yXA33U="
+    "sha256": "0xfzq0jy7kganpqs7qcyxmx9lp2gjvy18yswgnlbacbfivg0615n"
   },
   {
     "name": "gitlens",
     "publisher": "eamodio",
-    "version": "13.5.0",
-    "sha256": "1bdi44y85218r3lf2xh9fgzadyvwx7fm5ylafxqix2vwmnjrc5nc"
+    "version": "13.6.0",
+    "sha256": "1rvm09fzl02dn5m32nlczh83mm8k5hc493myyz2n2bc98960bgvd"
   }
 ]

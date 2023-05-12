@@ -50,13 +50,13 @@
   {
     "name": "material-theme",
     "publisher": "zhuangtongfa",
-    "version": "3.15.8",
-    "sha256": "1s7dlklzlyma3yv5bnahla8yg2qm7hn7dq46lpm5szcisarqc19z"
+    "version": "3.15.13",
+    "sha256": "0gapamd6n280zlygfkdjyq1f3fdw3s44jj5bpq7i8k39q5c6cr24"
   },
   {
     "name": "flix",
     "publisher": "flix",
-    "version": "1.0.0",
-    "sha256": "0611awlc38hww52j6safmwqd75q7q957ghp3ifgg0bv5nq4m76x3"
+    "version": "1.1.0",
+    "sha256": "096zxx453n1p5wq8hglcknabc6vyzvm96zyhhg0smv64x1bbb3kz"
   }
 ]
