@@ -65,14 +65,14 @@ val manualJson: os.Path =
   os.home / ".dotfiles" / "applications" / "code" / "manual.json"
 
 def updateManaged() =
-val currentExtensions: List[Extension] =
+  val currentExtensions: List[Extension] =
     upickle.default.read[List[Extension]](os.read(managedJson))
-val updatedExtensions: List[Extension] =
-  currentExtensions.map(e => getLatestVersion(e.name, e.publisher))
-os.write.over(
+  val updatedExtensions: List[Extension] =
+    currentExtensions.map(e => getLatestVersion(e.name, e.publisher))
+  os.write.over(
     managedJson,
-  upickle.default.write(updatedExtensions, indent = 2) ++ "\n"
-)
+    upickle.default.write(updatedExtensions, indent = 2) ++ "\n"
+  )
   showDiff(currentExtensions, updatedExtensions).map(println)
 end updateManaged
 
