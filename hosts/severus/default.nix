@@ -8,6 +8,7 @@ in
 
   imports = [
     ../../applications/alacritty.nix
+    ../../applications/code
     ../../applications/direnv
     ../../applications/fzf
     ../../applications/git
