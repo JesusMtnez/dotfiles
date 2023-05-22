@@ -18,10 +18,13 @@ in
 
   fonts.fontconfig.enable = true;
 
+  programs.java.enable = true;
+
   home.packages = with pkgs; [
     bat
     cachix
     jq
+    latestPkgs.scala-cli
   ];
 
   home.stateVersion = "22.11";
