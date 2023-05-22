@@ -22,8 +22,8 @@
     '';
 
     sessionVariables = {
-      EDITOR = "emacs -nw";
-      VISUAL = "emacs";
+      EDITOR = "${pkgs.neovim}/bin/nvim";
+      VISUAL = "${pkgs.neovim}/bin/nvim";
       ENHANCD_FILTER = "fzf";
       ENHANCD_COMPLETION_BEHAVIOR = "list";
       MANPAGER = "sh -c 'col -bx | ${pkgs.bat}/bin/bat -l man -p'";
@@ -52,10 +52,6 @@
         l = "${pkgs.exa}/bin/exa -l";
         la = "${pkgs.exa}/bin/exa -a";
         ll = "${pkgs.exa}/bin/exa -la";
-
-        # Emacs
-        e = "${pkgs.emacs}/bin/emacs -nw";
-        emacs = "${pkgs.emacs}/bin/emacs -nw";
 
         # Others
         RM = "rm -rf";
