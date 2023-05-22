@@ -33,6 +33,7 @@
       { name = "raycast"; }
       { name = "spotify"; }
       { name = "syncthing"; }
+      { name = "synology-drive"; }
     ];
   };
 }
