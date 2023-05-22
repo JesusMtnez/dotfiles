@@ -30,6 +30,7 @@
       { name = "keepassxc"; }
       { name = "marta"; }
       { name = "mounty"; }
+      { name = "openvpn-connect"; }
       { name = "raycast"; }
       { name = "spotify"; }
       { name = "syncthing"; }
