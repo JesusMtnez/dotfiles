@@ -8,8 +8,8 @@
   {
     "name": "gitlab-workflow",
     "publisher": "GitLab",
-    "version": "3.62.0",
-    "sha256": "170d65mjab9g4713yvlm48kswkmxybm3b7zgd4xipcdlfnkc2597"
+    "version": "3.63.0",
+    "sha256": "1jcxzzbajmscxg9wibaq6nj1rz3lc0s60mw9diwi2akai96x1mha"
   },
   {
     "name": "nix-ide",
@@ -26,8 +26,8 @@
   {
     "name": "ansible",
     "publisher": "redhat",
-    "version": "2.0.58",
-    "sha256": "1hm0f6adalyyls2bxw8spqpvgbvzz2jarwq6siy85ggn4csw9c6l"
+    "version": "2.2.70",
+    "sha256": "16qqvmsljvmbdq4la3i6l2xdcbm8m7fz0l409wbgvwv04m0xjwr7"
   },
   {
     "name": "vscode-yaml",
@@ -44,8 +44,8 @@
   {
     "name": "metals",
     "publisher": "scalameta",
-    "version": "1.23.1",
-    "sha256": "1sqsclkhfnrhfczwlki4g82w4q0dqdg73532zcb17519krd0i2ih"
+    "version": "1.23.2",
+    "sha256": "12cdxnfhqksnhf1xwnblcz32i6cpvggyqdhwl62hs32gs4psri4i"
   },
   {
     "name": "material-theme",
