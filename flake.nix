@@ -95,6 +95,29 @@
             }
           ];
         };
+
+        severus = darwin.lib.darwinSystem {
+          inputs = { inherit nixpkgs; };
+          system = "x86_64-darwin";
+          modules = [
+            ./hosts/common.nix
+            ./hosts/severus/configuration.nix
+            ./hosts/severus/homebrew.nix
+
+            home.darwinModule
+            {
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                extraSpecialArgs = {
+                  inherit (inputs);
+                  latestPkgs = mkPkgsFor "x86_64-darwin" nixpkgs-master;
+                };
+                users.jmartinez = import ./hosts/severus/default.nix;
+              };
+            }
+          ];
+        };
       };
 
       devShell = forAllSystems
