@@ -4,7 +4,6 @@ let
   homedir = builtins.getEnv "HOME";
 in
 {
-  programs.home-manager.enable = true;
 
   imports = [
     ../../applications/alacritty.nix
@@ -20,14 +19,15 @@ in
 
   fonts.fontconfig.enable = true;
 
-  programs.java.enable = true;
+  programs = {
+    bat.enable = true;
+    home-manager.enable = true;
+    java.enable = true;
+    jq.enable = true;
+  };
 
   home.packages = with pkgs; [
     cachix
-
-    # Cli tools
-    bat
-    jq
 
     # Global dev tools
     awscli2
