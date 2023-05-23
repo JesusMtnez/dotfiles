@@ -31,6 +31,7 @@
       { name = "marta"; }
       { name = "mounty"; }
       { name = "openvpn-connect"; }
+      { name = "portfolioperformance"; }
       { name = "raycast"; }
       { name = "spotify"; }
       { name = "syncthing"; }
