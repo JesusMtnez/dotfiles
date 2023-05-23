@@ -4,8 +4,6 @@ let
   homedir = builtins.getEnv "HOME";
 in
 {
-  programs.home-manager.enable = true;
-
   imports = [
     ../../applications/alacritty.nix
     ../../applications/code
@@ -18,12 +16,15 @@ in
 
   fonts.fontconfig.enable = true;
 
-  programs.java.enable = true;
+  programs = {
+    bat.enable = true;
+    home-manager.enable = true;
+    java.enable = true;
+    jq.enable = true;
+  };
 
   home.packages = with pkgs; [
-    bat
     cachix
-    jq
     latestPkgs.scala-cli
   ];
 
