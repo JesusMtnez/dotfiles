@@ -35,14 +35,11 @@
       { name = "hiddenbar"; }
       { name = "itsycal"; }
       { name = "joplin"; }
-      { name = "keepassxc"; }
       { name = "marta"; }
       { name = "mongodb-compass"; }
       { name = "mounty"; }
       { name = "openvpn-connect"; }
-      { name = "raycast"; }
       { name = "slack"; }
-      { name = "spotify"; }
       { name = "syncthing"; }
       { name = "zoom"; }
     ];
