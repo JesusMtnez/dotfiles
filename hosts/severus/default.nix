@@ -25,7 +25,11 @@ in
 
   home.packages = with pkgs; [
     cachix
+    latestPkgs.joplin-desktop
+    latestPkgs.keepassxc
+    latestPkgs.raycast
     latestPkgs.scala-cli
+    latestPkgs.spotify
   ];
 
   home.stateVersion = "22.11";

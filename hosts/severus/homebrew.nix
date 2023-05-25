@@ -26,14 +26,10 @@
       { name = "firefox"; }
       { name = "font-sf-pro"; }
       { name = "google-chrome"; greedy = true; }
-      { name = "joplin"; }
-      { name = "keepassxc"; }
       { name = "marta"; }
       { name = "mounty"; }
       { name = "openvpn-connect"; }
       { name = "portfolioperformance"; }
-      { name = "raycast"; }
-      { name = "spotify"; }
       { name = "syncthing"; }
       { name = "synology-drive"; }
     ];
