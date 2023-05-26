@@ -40,6 +40,7 @@
       { name = "mounty"; }
       { name = "openvpn-connect"; }
       { name = "slack"; }
+      { name = "spotify"; }
       { name = "syncthing"; }
       { name = "zoom"; }
     ];

@@ -29,7 +29,6 @@ in
     latestPkgs.keepassxc
     latestPkgs.raycast
     latestPkgs.scala-cli
-    latestPkgs.spotify
   ];
 
   home.stateVersion = "22.11";

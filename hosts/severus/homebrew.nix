@@ -30,6 +30,7 @@
       { name = "mounty"; }
       { name = "openvpn-connect"; }
       { name = "portfolioperformance"; }
+      { name = "spotify"; }
       { name = "syncthing"; }
       { name = "synology-drive"; }
     ];
