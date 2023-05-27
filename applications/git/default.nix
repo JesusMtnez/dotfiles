@@ -14,7 +14,7 @@
 
     extraConfig = {
       core = {
-        editor = "${pkgs.neovim}/bin/nvim";
+        editor = "${pkgs.neovim}/bin/nvim +startinsert!";
         autocrlf = "input";
         whitespace = "trailing-space,blank-at-eol,tabs-in-indent";
       };

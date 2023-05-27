@@ -22,7 +22,7 @@
     '';
 
     sessionVariables = {
-      EDITOR = "${pkgs.neovim}/bin/nvim";
+      EDITOR = "${pkgs.neovim}/bin/nvim +startinsert";
       VISUAL = "${pkgs.neovim}/bin/nvim";
       ENHANCD_FILTER = "fzf";
       ENHANCD_COMPLETION_BEHAVIOR = "list";
