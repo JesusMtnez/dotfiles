@@ -32,8 +32,8 @@
   {
     "name": "vscode-yaml",
     "publisher": "redhat",
-    "version": "1.12.2",
-    "sha256": "193spsdrfwl6yf1c9k10c6s6azyq15h4jgz76gqz44c4d2yx0c8j"
+    "version": "1.13.0",
+    "sha256": "07ayfsxsgb4i2bp3g1wf4chgx09468gy4gj70nlj1198fld1amgh"
   },
   {
     "name": "scala",
@@ -44,19 +44,19 @@
   {
     "name": "metals",
     "publisher": "scalameta",
-    "version": "1.23.2",
-    "sha256": "12cdxnfhqksnhf1xwnblcz32i6cpvggyqdhwl62hs32gs4psri4i"
+    "version": "1.23.3",
+    "sha256": "1h2pymvpva3w2sz4fcq7mjqq7r2n8w2875sgpzwwlcs4i3llda93"
   },
   {
     "name": "material-theme",
     "publisher": "zhuangtongfa",
-    "version": "3.15.13",
-    "sha256": "0gapamd6n280zlygfkdjyq1f3fdw3s44jj5bpq7i8k39q5c6cr24"
+    "version": "3.15.14",
+    "sha256": "1rf8k6hrxkny8f9l3gd2sqsz7w4cqmx8ga5g7fpj3mdhc4bsmys7"
   },
   {
     "name": "flix",
     "publisher": "flix",
-    "version": "1.2.0",
-    "sha256": "02dq48s2mclfq59v14rqwrbrx3x32mx43jdmbs5xr1kg56ilh5zc"
+    "version": "1.4.0",
+    "sha256": "0adrs3v0vzzd2a3d6h7g7q8gn9hmrbi3449mr413r93fwgqqcym2"
   }
 ]
