@@ -53,6 +53,7 @@
                 useUserPackages = true;
                 extraSpecialArgs = {
                   inherit (inputs);
+                  isWorkstation = false;
                   latestPkgs = mkPkgsFor "x86_64-linux" nixpkgs-master;
                 };
                 users.jmartinez = import ./hosts/albus/default.nix;
@@ -88,6 +89,7 @@
                 useUserPackages = true;
                 extraSpecialArgs = {
                   inherit (inputs);
+                  isWorkstation = true;
                   latestPkgs = mkPkgsFor "aarch64-darwin" nixpkgs-master;
                 };
                 users.jmartinez = import ./hosts/sirius/default.nix;
@@ -111,6 +113,7 @@
                 useUserPackages = true;
                 extraSpecialArgs = {
                   inherit (inputs);
+                  isWorkstation = false;
                   latestPkgs = mkPkgsFor "x86_64-darwin" nixpkgs-master;
                 };
                 users.jmartinez = import ./hosts/severus/default.nix;

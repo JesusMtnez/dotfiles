@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, isWorkstation, ... }:
 {
 
   programs.sbt = {
@@ -22,9 +22,11 @@
     ];
   };
 
-  home.file.".sbt/1.0/credentials.sbt".text =
-    ''
-      credentials += Credentials(Path.userHome / ".secrets" / "credentials")
-      credentials += Credentials(Path.userHome / ".secrets" / "credentials_old")
-    '';
+  home.file.".sbt/1.0/credentials.sbt" = lib.mkIf isWorkstation {
+    text =
+      ''
+        credentials += Credentials(Path.userHome / ".secrets" / "credentials")
+        credentials += Credentials(Path.userHome / ".secrets" / "credentials_old")
+      '';
+  };
 }
