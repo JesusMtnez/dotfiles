@@ -1,5 +1,5 @@
 # General information
 
 **Host**: `albus`
-**Based OS**: [NixOS 22.11](https://nixos.org/blog/announcements.html#nixos-22.11/)
+**Based OS**: [NixOS 23.05](https://nixos.org/blog/announcements.html#nixos-23.05/)
 **DE**: [KDE Plasma](https://kde.org/plasma-desktop/)
