@@ -16,7 +16,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixpkgs-master.url = "github:nixos/nixpkgs";
+    nixpkgs-master.url = "github:nixos/nixpkgs/master";
 
   };
 
@@ -24,6 +24,7 @@
     let
       systems = [
         "x86_64-linux"
+        "aarch64-linux"
         "x86_64-darwin"
         "aarch64-darwin"
       ];
@@ -57,6 +58,28 @@
                   latestPkgs = mkPkgsFor "x86_64-linux" nixpkgs-master;
                 };
                 users.jmartinez = import ./hosts/albus/default.nix;
+              };
+            }
+          ];
+        };
+
+        sirius = nixpkgs.lib.nixosSystem {
+          system = "aarch64-linux";
+          modules = [
+            ./hosts/common.nix
+            ./hosts/linux/sirius/configuration.nix
+
+            home.nixosModules.home-manager
+            {
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                extraSpecialArgs = {
+                  inherit (inputs);
+                  isWorkstation = false;
+                  latestPkgs = mkPkgsFor "aarch64-linux" nixpkgs-master;
+                };
+                users.jesus = import ./hosts/linux/sirius/default.nix;
               };
             }
           ];
