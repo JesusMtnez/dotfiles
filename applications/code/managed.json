@@ -14,8 +14,8 @@
   {
     "name": "material-icon-theme",
     "publisher": "PKief",
-    "version": "4.27.0",
-    "sha256": "1gz7mxb5ib1yz6gxgkq2451929cfhgpwsgyqz1v2jmlpkkm9vvvj"
+    "version": "4.28.0",
+    "sha256": "1hyfr6caahcihnr8hp42zhlwif87jgvjf25xglhk7yg4jdqdvv8c"
   },
   {
     "name": "ansible",
@@ -38,14 +38,14 @@
   {
     "name": "metals",
     "publisher": "scalameta",
-    "version": "1.23.3",
-    "sha256": "1h2pymvpva3w2sz4fcq7mjqq7r2n8w2875sgpzwwlcs4i3llda93"
+    "version": "1.23.4",
+    "sha256": "0j09lxg1s2idrvcjjl32xz1bds0a4psbpbipkqsa89qz03cf5y2q"
   },
   {
     "name": "material-theme",
     "publisher": "zhuangtongfa",
-    "version": "3.15.14",
-    "sha256": "1rf8k6hrxkny8f9l3gd2sqsz7w4cqmx8ga5g7fpj3mdhc4bsmys7"
+    "version": "3.15.15",
+    "sha256": "0py86zzfxwr2k2ywq9n29ka0xblpq5m8k1yyn8z8zkpik1mljl2d"
   },
   {
     "name": "flix",
