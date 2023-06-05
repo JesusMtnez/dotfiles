@@ -42,11 +42,6 @@
       useQtScaling = true;
       kdeglobals = { };
       kwinrc = { };
-
-      excludePackages = with pkgs.libsForQt5; [
-        elisa
-        khelpcenter
-      ];
     };
 
     layout = "us";
@@ -57,6 +52,13 @@
 
     libinput.enable = true;
   };
+
+  environment.plasma5.excludePackages = with pkgs; [
+    libsForQt5.elisa
+    kate
+    libsForQt5.khelpcenter
+    konsole
+  ];
 
   services.avahi = {
     enable = true;
@@ -88,13 +90,9 @@
   };
 
   environment.systemPackages = with pkgs; [
-    # kde
-    kwin-tiling
     libsForQt5.ark
-
     cachix
-    brave
-    firefox
+    git
   ];
 
   virtualisation.docker.enable = true;
