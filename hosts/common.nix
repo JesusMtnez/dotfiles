@@ -15,6 +15,7 @@
   '';
 
   nix.settings = {
+    auto-optimise-store = true;
     substituters = [
       "https://cache.nixos.org/"
     ];
