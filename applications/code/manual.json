@@ -2,8 +2,8 @@
   {
     "name": "vscode-pull-request-github",
     "publisher": "GitHub",
-    "version": "0.64.0",
-    "sha256": "0xfzq0jy7kganpqs7qcyxmx9lp2gjvy18yswgnlbacbfivg0615n"
+    "version": "0.66.0",
+    "sha256": "0p31brls3s23z6xzm8chjyci83yc0zd5arg186j841mzgwsha45f"
   },
   {
     "name": "gitlens",
