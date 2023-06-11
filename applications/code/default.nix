@@ -10,7 +10,7 @@ in
   programs.vscode = {
     package = latestPkgs.vscode;
     enable = true;
-    # mutableExtensionsDir = false;
+    mutableExtensionsDir = false;
 
     userSettings = {
       "editor.fontFamily" = "'FiraCode Nerd Font'";
