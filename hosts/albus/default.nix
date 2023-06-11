@@ -36,7 +36,6 @@ in
     sleek
   ] ++ (with pkgs; [
     audacity
-    brave
     calibre
     firefox
     gimp
