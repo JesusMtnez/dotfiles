@@ -41,7 +41,6 @@ in
         "**/target" = true;
       };
       "metals" = {
-        "javaHome" = pkgs.jdk.home;
         "suggestLatestUpgrade" = false;
         "showInferredType" = true;
         "bloopSbtAlreadyInstalled" = true;

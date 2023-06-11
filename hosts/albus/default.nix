@@ -10,7 +10,6 @@ in
     ../../applications/direnv
     ../../applications/fzf
     ../../applications/git
-    ../../applications/sbt
     ../../applications/todotxt.nix
     ../../applications/zsh
   ];
@@ -38,9 +37,7 @@ in
   ] ++ (with pkgs; [
     audacity
     brave
-    bloop
     calibre
-    coursier
     firefox
     gimp
     joplin-desktop
