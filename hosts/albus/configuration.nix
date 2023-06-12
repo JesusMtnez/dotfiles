@@ -77,6 +77,10 @@
     drivers = [ pkgs.brlaser ];
   };
 
+  hardware.opengl.enable = true;
+
+  hardware.nvidia.modesetting.enable = true;
+
   sound.enable = true;
 
   hardware.pulseaudio = {
