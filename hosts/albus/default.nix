@@ -1,4 +1,4 @@
-{ config, pkgs, latestPkgs, ... }:
+{ config, pkgs, latestPkgs, lib, ... }:
 let
   autofirma = pkgs.callPackage ../../applications/autofirma { };
   sleek = pkgs.callPackage ../../applications/sleek { };
@@ -61,10 +61,11 @@ in
     extraOptions = [ "--allow-newer-config" ];
     tray = {
       enable = true;
-      package = pkgs.syncthingtray;
-      command = "syncthingtray --wait";
+      package = pkgs.syncthingtray-minimal;
     };
   };
+
+  systemd.user.services.syncthingtray.Service.ExecStart = lib.mkForce "${pkgs.bash}/bin/bash -c '${pkgs.coreutils}/bin/sleep 5; ${pkgs.syncthingtray-minimal}/bin/syncthingtray'";
 
   home.stateVersion = "23.05";
 }
