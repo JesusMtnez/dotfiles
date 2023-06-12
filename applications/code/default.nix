@@ -10,7 +10,7 @@ in
   programs.vscode = {
     package = latestPkgs.vscode;
     enable = true;
-    # mutableExtensionsDir = false;
+    mutableExtensionsDir = false;
 
     userSettings = {
       "editor.fontFamily" = "'FiraCode Nerd Font'";
@@ -41,7 +41,6 @@ in
         "**/target" = true;
       };
       "metals" = {
-        "javaHome" = pkgs.jdk.home;
         "suggestLatestUpgrade" = false;
         "showInferredType" = true;
         "bloopSbtAlreadyInstalled" = true;

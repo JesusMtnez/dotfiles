@@ -1,4 +1,4 @@
-{ config, pkgs, latestPkgs, ... }:
+{ config, pkgs, latestPkgs, lib, ... }:
 let
   autofirma = pkgs.callPackage ../../applications/autofirma { };
   sleek = pkgs.callPackage ../../applications/sleek { };
@@ -10,7 +10,6 @@ in
     ../../applications/direnv
     ../../applications/fzf
     ../../applications/git
-    ../../applications/sbt
     ../../applications/todotxt.nix
     ../../applications/zsh
   ];
@@ -37,10 +36,7 @@ in
     sleek
   ] ++ (with pkgs; [
     audacity
-    brave
-    bloop
     calibre
-    coursier
     firefox
     gimp
     joplin-desktop
@@ -65,10 +61,11 @@ in
     extraOptions = [ "--allow-newer-config" ];
     tray = {
       enable = true;
-      package = pkgs.syncthingtray;
-      command = "syncthingtray --wait";
+      package = pkgs.syncthingtray-minimal;
     };
   };
+
+  systemd.user.services.syncthingtray.Service.ExecStart = lib.mkForce "${pkgs.bash}/bin/bash -c '${pkgs.coreutils}/bin/sleep 5; ${pkgs.syncthingtray-minimal}/bin/syncthingtray'";
 
   home.stateVersion = "23.05";
 }

@@ -8,15 +8,22 @@
     extraOptions = ''
       experimental-features = nix-command flakes
     '';
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "-d";
+    };
   };
 
   boot = {
     kernelPackages = pkgs.linuxPackages_6_1;
+    # https://www.kernel.org/category/releases.html
 
     blacklistedKernelModules = [ "nouveau" ];
 
     loader = {
       systemd-boot.enable = true;
+      systemd-boot.configurationLimit = 5;
       efi.canTouchEfiVariables = true;
     };
 
