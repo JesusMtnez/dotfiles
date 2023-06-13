@@ -28,7 +28,12 @@
   };
 
   services.xserver.enable = true;
-  services.xserver.displayManager.sddm.enable = true;
+  services.xserver.displayManager = {
+    sddm.enable = true;
+    autoLogin.enable = true;
+    autoLogin.user = "jesus";
+    defaultSession = "plasmawayland";
+  };
   services.xserver.desktopManager.plasma5.enable = true;
 
   services.xserver = {
@@ -58,10 +63,6 @@
     shell = pkgs.zsh;
   };
 
-  # Enable automatic login for the user.
-  services.xserver.displayManager.autoLogin.enable = true;
-  services.xserver.displayManager.autoLogin.user = "jesus";
-
   environment.systemPackages = with pkgs; [
     libsForQt5.ark
 
@@ -76,6 +77,11 @@
     libsForQt5.khelpcenter
     konsole
   ];
+
+  environment.sessionVariables = {
+    NIXOS_OZONE_WL = "1";
+    MOZ_ENABLE_WAYLAND = "1";
+  };
 
   services.openssh.enable = true;
 
