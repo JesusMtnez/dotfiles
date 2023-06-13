@@ -43,7 +43,13 @@
 
   services.xserver = {
     enable = true;
-    displayManager.sddm.enable = true;
+    excludePackages = [ pkgs.xterm ];
+
+    displayManager = {
+      sddm.enable = true;
+      defaultSession = "plasmawayland";
+    };
+
     desktopManager.plasma5 = {
       enable = true;
       useQtScaling = true;
@@ -66,6 +72,11 @@
     libsForQt5.khelpcenter
     konsole
   ];
+
+  environment.sessionVariables = {
+    NIXOS_OZONE_WL = "1";
+    MOZ_ENABLE_WAYLAND = "1";
+  };
 
   services.avahi = {
     enable = true;
