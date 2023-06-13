@@ -105,9 +105,14 @@
 
   sound.enable = true;
 
-  hardware.pulseaudio = {
+  hardware.pulseaudio.enable = false;
+  security.rtkit.enable = true;
+  services.pipewire = {
     enable = true;
-    package = pkgs.pulseaudioFull;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+    jack.enable = true;
   };
 
   hardware.bluetooth = {
