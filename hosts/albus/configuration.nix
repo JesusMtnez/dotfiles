@@ -129,8 +129,10 @@
 
   environment.systemPackages = with pkgs; [
     libsForQt5.ark
+
     cachix
     git
+    neovim
   ];
 
   virtualisation.docker.enable = true;
