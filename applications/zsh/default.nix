@@ -48,11 +48,6 @@
         # l = "ls -lFh"; # long list, show type, human readable
         # ll = "ls -lAFh"; # long list, show almost all, show type, human readeable
 
-        ls = "${pkgs.exa}/bin/exa";
-        l = "${pkgs.exa}/bin/exa -l";
-        la = "${pkgs.exa}/bin/exa -a";
-        ll = "${pkgs.exa}/bin/exa -la";
-
         # Others
         RM = "rm -rf";
         grep = "grep --color=auto";

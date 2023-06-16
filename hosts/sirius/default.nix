@@ -21,6 +21,12 @@ in
 
   programs = {
     bat.enable = true;
+    exa = {
+      enable = true;
+      enableAliases = true;
+      icons = true;
+      git = true;
+    };
     home-manager.enable = true;
     java.enable = true;
     jq.enable = true;
