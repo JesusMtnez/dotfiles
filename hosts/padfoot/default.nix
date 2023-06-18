@@ -12,6 +12,12 @@
 
   programs = {
     bat.enable = true;
+    exa = {
+      enable = true;
+      enableAliases = true;
+      icons = true;
+      git = true;
+    };
     home-manager.enable = true;
     gpg.enable = true;
     ssh.enable = true;
