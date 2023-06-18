@@ -26,8 +26,6 @@
     casks = [
       { name = "amethyst"; }
       { name = "coconutbattery"; }
-      { name = "dbeaver-community"; }
-      { name = "dropbox"; }
       { name = "firefox"; }
       { name = "font-sf-pro"; }
       { name = "google-chrome"; greedy = true; }
