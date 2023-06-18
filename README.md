@@ -47,3 +47,8 @@ ln -sf $HOME/.dotfiles/hosts/$HOSTNAME/default.nix ~/.config/nixpkgs/home.nix
   ```
     nixos-rebuild switch --use-remote-sudo --flake .#albus
   ```
+
+- [`padfoot`](./host/padfoot/README.md): Virtual Machine inside `sirius` host, based on **NixOS** with _aarch64-linux_ architecture.
+  ```
+    nixos-rebuild switch --use-remote-sudo --flake .#padfoot
+  ```
