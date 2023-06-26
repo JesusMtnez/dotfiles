@@ -20,8 +20,8 @@
   {
     "name": "ansible",
     "publisher": "redhat",
-    "version": "2.3.74",
-    "sha256": "0b7g14dzk4xpf9ffn4bsmarij2rwdcbq9gpi344l5ijrxisjld7g"
+    "version": "2.4.78",
+    "sha256": "1xcja7ncgav1nmycmfm6jwh6r86wpjz7jzxab4yddbhk1cl51djz"
   },
   {
     "name": "vscode-yaml",
@@ -38,8 +38,8 @@
   {
     "name": "metals",
     "publisher": "scalameta",
-    "version": "1.23.5",
-    "sha256": "0q2dlg89hvf57di9r1axjahq92gyvsay25nk1mqwfkglkq1q0an6"
+    "version": "1.23.6",
+    "sha256": "00mc2jp2qv9m1brsgk9rkqcxmcv82s1p4pzaclxgnhhqyflyknsa"
   },
   {
     "name": "material-theme",
@@ -50,7 +50,7 @@
   {
     "name": "flix",
     "publisher": "flix",
-    "version": "1.4.0",
-    "sha256": "0adrs3v0vzzd2a3d6h7g7q8gn9hmrbi3449mr413r93fwgqqcym2"
+    "version": "1.5.0",
+    "sha256": "0v8kslxr78c5hqwpjsbz0cq38iqbymrlv6gd5124k0ybwzs1rxc9"
   }
 ]
