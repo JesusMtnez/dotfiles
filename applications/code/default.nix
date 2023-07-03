@@ -17,11 +17,9 @@ in
       "editor.fontLigatures" = true;
       "editor.fontSize" = 12;
       "editor.fontWeight" = "normal";
-      "editor.minimap" = {
-        "maxColumn" = 60;
-        "renderCharacters" = false;
-        "size" = "fit";
-      };
+      "editor.minimap.maxColumn" = 60;
+      "editor.minimap.renderCharacters" = false;
+      "editor.minimap.size" = "fit";
       "editor.renderWhitespace" = "all";
       "editor.tabSize" = 2;
       "editor.wordWrapColumn" = 100;
@@ -40,16 +38,12 @@ in
         "**/.metals" = true;
         "**/target" = true;
       };
-      "metals" = {
-        "suggestLatestUpgrade" = false;
-        "showInferredType" = true;
-        "bloopSbtAlreadyInstalled" = true;
-      };
-      "nix" = {
-        "enableLanguageServer" = true;
-        "formatterPath" = "${pkgs.nixpkgs-fmt}/bin/nixpkgs-fmt";
-        "serverPath" = "${pkgs.rnix-lsp}/bin/rnix-lsp";
-      };
+      "metals.suggestLatestUpgrade" = false;
+      "metals.showInferredType" = true;
+      "metals.bloopSbtAlreadyInstalled" = true;
+      "nix.enableLanguageServer" = true;
+      "nix.formatterPath" = "${pkgs.nixpkgs-fmt}/bin/nixpkgs-fmt";
+      "nix.serverPath" = "${pkgs.rnix-lsp}/bin/rnix-lsp";
       "oneDarkPro.vivid" = true;
       "terminal.integrated.cursorStyle" = "line";
       "terminal.integrated.fontFamily" = "'FiraCode Nerd Font'";
