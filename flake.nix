@@ -6,6 +6,8 @@
 
     nixpkgs.url = "github:nixos/nixpkgs/nixos-23.05";
 
+    nixpkgs-master.url = "github:nixos/nixpkgs/master";
+
     home = {
       url = "github:nix-community/home-manager/release-23.05";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -16,11 +18,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixpkgs-master.url = "github:nixos/nixpkgs/master";
-
+    nix-vscode-extensions = {
+      url = "github:nix-community/nix-vscode-extensions";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = inputs @ { self, nixpkgs, home, darwin, nixpkgs-master, ... }:
+  outputs = inputs @ { self, nixpkgs, home, darwin, nixpkgs-master, nix-vscode-extensions, ... }:
     let
       systems = [
         "x86_64-linux"
@@ -43,6 +47,9 @@
       nixosConfigurations = {
         albus = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
+          specialArgs = {
+            nix-vscode-extensions-overlay = nix-vscode-extensions.overlays.default;
+          };
           modules = [
             ./hosts/common.nix
             ./hosts/albus/configuration.nix
@@ -65,6 +72,9 @@
 
         padfoot = nixpkgs.lib.nixosSystem {
           system = "aarch64-linux";
+          specialArgs = {
+            nix-vscode-extensions-overlay = nix-vscode-extensions.overlays.default;
+          };
           modules = [
             ./hosts/common.nix
             ./hosts/padfoot/configuration.nix
@@ -100,6 +110,9 @@
         sirius = darwin.lib.darwinSystem {
           inputs = { inherit nixpkgs; };
           system = "aarch64-darwin";
+          specialArgs = {
+            nix-vscode-extensions-overlay = nix-vscode-extensions.overlays.default;
+          };
           modules = [
             ./hosts/common.nix
             ./hosts/sirius/configuration.nix
@@ -124,6 +137,9 @@
         severus = darwin.lib.darwinSystem {
           inputs = { inherit nixpkgs; };
           system = "x86_64-darwin";
+          specialArgs = {
+            nix-vscode-extensions-overlay = nix-vscode-extensions.overlays.default;
+          };
           modules = [
             ./hosts/common.nix
             ./hosts/severus/configuration.nix

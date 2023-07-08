@@ -1,10 +1,4 @@
 { pkgs, latestPkgs, ... }:
-let
-
-  managedExtensions = pkgs.vscode-utils.extensionsFromVscodeMarketplace (builtins.fromJSON (builtins.readFile ./managed.json));
-  manualExtensions = pkgs.vscode-utils.extensionsFromVscodeMarketplace (builtins.fromJSON (builtins.readFile ./manual.json));
-  updateScript = pkgs.writeScriptBin "code-update" (builtins.readFile ./update.sc);
-in
 {
 
   programs.vscode = {
@@ -60,15 +54,20 @@ in
       "[scala]"."editor.tabSize" = 2;
     };
 
-    extensions = [
-      # latestPkgs.ms-vsliveshare.vsliveshare
-      # latestPkgs.vscode-extensions.ms-python.python
-      latestPkgs.vscode-extensions.rust-lang.rust-analyzer
-    ] ++ managedExtensions ++ manualExtensions;
+    extensions = with pkgs.vscode-marketplace; [
+      cab404.vscode-direnv
+      eamodio.gitlens
+      flix.flix
+      jnoortheen.nix-ide
+      ms-python.python
+      ms-vsliveshare.vsliveshare
+      pkief.material-icon-theme
+      redhat.ansible
+      redhat.vscode-yaml
+      rust-lang.rust-analyzer
+      scala-lang.scala
+      scalameta.metals
+      zhuangtongfa.material-theme
+    ];
   };
-
-  home.packages = [
-    updateScript
-    pkgs.unzip
-  ];
 }

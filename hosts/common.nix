@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, nix-vscode-extensions-overlay, ... }:
 {
   nixpkgs = {
     config.allowUnfree = true;
@@ -7,6 +7,10 @@
       jdk = pkgs.graalvm17-ce;
     };
   };
+
+  nixpkgs.overlays = [
+    nix-vscode-extensions-overlay
+  ];
 
   nix.extraOptions = ''
     keep-derivations = true
