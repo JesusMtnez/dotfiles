@@ -58,6 +58,7 @@
       cab404.vscode-direnv
       eamodio.gitlens
       flix.flix
+      github.vscode-github-actions
       jnoortheen.nix-ide
       ms-python.python
       ms-vsliveshare.vsliveshare
