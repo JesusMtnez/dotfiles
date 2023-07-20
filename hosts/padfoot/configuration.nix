@@ -68,7 +68,6 @@
 
     cachix
     git
-    neovim
   ];
 
   environment.plasma5.excludePackages = with pkgs; [

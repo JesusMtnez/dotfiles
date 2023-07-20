@@ -132,7 +132,6 @@
 
     cachix
     git
-    neovim
   ];
 
   virtualisation.docker.enable = true;

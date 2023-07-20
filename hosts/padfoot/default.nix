@@ -5,6 +5,7 @@
     ../../applications/direnv
     ../../applications/fzf
     ../../applications/git
+    ../../applications/neovim.nix
     ../../applications/zsh
   ];
 

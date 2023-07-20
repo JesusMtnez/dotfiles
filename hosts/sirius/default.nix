@@ -11,6 +11,7 @@ in
     ../../applications/direnv
     ../../applications/fzf
     ../../applications/git
+    ../../applications/neovim.nix
     ../../applications/sbt
     ../../applications/todotxt.nix
     ../../applications/zsh
