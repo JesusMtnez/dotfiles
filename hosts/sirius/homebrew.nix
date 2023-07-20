@@ -40,6 +40,7 @@
       { name = "slack"; }
       { name = "spotify"; }
       { name = "syncthing"; }
+      { name = "thunderbird"; }
       { name = "utm"; }
       { name = "zoom"; }
     ];
