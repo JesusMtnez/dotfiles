@@ -2,6 +2,7 @@
 
 let
   homedir = builtins.getEnv "HOME";
+  bloop-jvm = pkgs.callPackage ../../applications/bloop-jvm.nix { };
 in
 {
 
@@ -38,6 +39,7 @@ in
 
     # Global dev tools
     awscli2
+    bloop-jvm
     colima
     coursier
     docker-client
