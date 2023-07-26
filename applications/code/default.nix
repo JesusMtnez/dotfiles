@@ -68,6 +68,7 @@
       rust-lang.rust-analyzer
       scala-lang.scala
       scalameta.metals
+      vscodevim.vim
       zhuangtongfa.material-theme
     ];
   };
