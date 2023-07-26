@@ -46,7 +46,7 @@ in
     calibre
     firefox
     gimp
-    joplin-desktop
+    latestPkgs.joplin-desktop
     keepassxc
     krename
     libreoffice-qt
