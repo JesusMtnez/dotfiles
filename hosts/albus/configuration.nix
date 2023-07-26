@@ -54,6 +54,7 @@
 
   services.xserver = {
     enable = true;
+    dpi = 96;
     excludePackages = [ pkgs.xterm ];
 
     displayManager = {
@@ -75,6 +76,10 @@
     videoDrivers = [ "nvidia" ];
 
     libinput.enable = true;
+  };
+
+  environment.variables = {
+    GDK_SCALE = "0.5";
   };
 
   environment.plasma5.excludePackages = with pkgs; [
