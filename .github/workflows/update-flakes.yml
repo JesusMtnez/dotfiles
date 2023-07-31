@@ -1,4 +1,6 @@
 ---
+name: update flakes
+
 on:
   workflow_dispatch: # allows manual triggering
   schedule:
