@@ -25,6 +25,7 @@ jobs:
           token: ${{ secrets.NIX_FLAKES_UPDATE_TOKEN }}
           inputs: "nixpkgs nixpkgs-master home darwin"
           pr-title: "chore(flakes): update flake.lock"
+          commit-msg: "chore(flakes): update flake.lock"
           git-author-name: "JesusMtnez[bot]"
           git-author-email: "github-actions[bot]@users.noreply.github.com"
           git-committer-name: "JesusMtnez[bot]"

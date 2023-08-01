@@ -26,6 +26,7 @@ jobs:
           inputs: "nix-vscode-extensions"
           token: ${{ secrets.NIX_FLAKES_UPDATE_TOKEN }}
           pr-title: "chore(vscode): update nix-vscode-extensions input"
+          commit-msg: "chore(vscode): update nix-vscode-extensions input"
           git-author-name: "JesusMtnez[bot]"
           git-author-email: "github-actions[bot]@users.noreply.github.com"
           git-committer-name: "JesusMtnez[bot]"
