@@ -1,10 +1,10 @@
 ---
-name: update flakes
+name: update nix-vscode-extensions input
 
 on:
   workflow_dispatch: # allows manual triggering
   schedule:
-    - cron: '0 4 * * 1' # runs weekly on Monday at 04:00 UTC
+    - cron: '0 4 * * *' # runs daily at 04:00 UTC
 
 jobs:
   lockfile:
@@ -20,12 +20,20 @@ jobs:
             access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
 
       - name: update flake.lock
+        id: update
         uses: DeterminateSystems/update-flake-lock@v19
         with:
+          inputs: "nix-vscode-extensions"
           token: ${{ secrets.NIX_FLAKES_UPDATE_TOKEN }}
-          inputs: "nixpkgs nixpkgs-master home darwin"
-          pr-title: "chore(flakes): update flake.lock"
+          pr-title: "chore(vscode): update nix-vscode-extensions input"
           git-author-name: "JesusMtnez[bot]"
           git-author-email: "github-actions[bot]@users.noreply.github.com"
           git-committer-name: "JesusMtnez[bot]"
           git-committer-email: "github-actions[bot]@users.noreply.github.com"
+
+      - name: set automerge for the pr
+        if: ${{ steps.update.outputs.pull-request-operation }} == 'created'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ steps.update.outputs.pull-request-number }}
+        run: gh pr merge --auto --squash --delete-branch $PR
