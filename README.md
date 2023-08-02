@@ -11,34 +11,36 @@
 
 ## Installation ##
 
-> TODO Upgrade installation to use nix flakes only
-
 This dotfiles are manage using [`nix`](https://nixos.wiki/wiki/Nix) and [`home-manager`](https://github.com/rycee/home-manager). The steps to do a complete setup are:
 
 1. Clone the repository and go inside the folder
 
 ```
-nix-shell -p git --run "git clone git@github.com:JesusMtnez/dotfiles $HOME/.dotfiles"
+nix run github:nixos/nixpkgs#git -- clone git@github.com:JesusMtnez/dotfiles $HOME/.dotfiles
 ```
 
-2. Link `home.nix`:
+2. Build and switch the host machine.
+
+If it is a NixOS host:
 
 ```
-mkdir -p $HOME/.config/nixpkgs
-ln -sf $HOME/.dotfiles/hosts/$HOSTNAME/default.nix ~/.config/nixpkgs/home.nix
+nixos-rebuild switch --flakes $HOME/.dotfiles/.
 ```
-3. Execute: `$HOME/.dotfiles/switch`.
+
+If it is a MacOSX host:
+
+```
+# Use bootstrap flake to setup nix-darwin in you system first
+nix build .#darwinConfigurations.bootstrap.system --extra-experimental-features nix-command --extra-experimental-features flakes
+./result/sw/bin/darwin-rebuild switch --flake $HOME/.dotfiles/.#bootstrap
+
+# Using nix-darwin, build and switch to your configuration
+darwin-rebuild switch --flake  $HOME/.dotfiles/.
+```
 
 ## Machines
 
 - [`sirius`](./hosts/sirius/README.md): Work machine, based on **OSX**.
-
-  ```
-    # Bootstrap nix-darwin in your osx system
-    nix build .#darwinConfigurations.bootstrap.system --extra-experimental-features nix-command --extra-experimental-features flakes
-    ./result/sw/bin/darwin-rebuild switch --flake .#bootstrap
-  ```
-
   ```
     darwin-rebuild switch --flakes .#sirius
   ```
