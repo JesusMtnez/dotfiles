@@ -3,8 +3,8 @@
   nixpkgs = {
     config.allowUnfree = true;
     config.packageOverrides = {
-      jre = pkgs.graalvm17-ce;
-      jdk = pkgs.graalvm17-ce;
+      jre = pkgs.jdk17;
+      jdk = pkgs.jdk17;
     };
   };
 
