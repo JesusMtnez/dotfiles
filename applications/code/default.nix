@@ -7,8 +7,7 @@
     mutableExtensionsDir = false;
 
     userSettings = {
-      # "editor.fontFamily" = "'FiraCode Nerd Font'";
-      "editor.fontFamily" = "Iosevka Nerd Font";
+      "editor.fontFamily" = "'FiraCode Nerd Font'";
       "editor.fontLigatures" = true;
       "editor.fontSize" = 12;
       "editor.fontWeight" = "normal";
@@ -41,7 +40,7 @@
       "nix.serverPath" = "${pkgs.rnix-lsp}/bin/rnix-lsp";
       "oneDarkPro.vivid" = true;
       "terminal.integrated.cursorStyle" = "line";
-      "terminal.integrated.fontFamily" = "'Iosevka Nerd Font'";
+      "terminal.integrated.fontFamily" = "'FiraCode Nerd Font'";
       "terminal.integrated.fontSize" = 12;
       "update.mode" = "none";
       "window.restoreFullscreen" = true;

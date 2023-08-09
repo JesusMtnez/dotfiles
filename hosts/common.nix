@@ -34,7 +34,7 @@
 
   fonts.fontDir.enable = true;
   fonts.fonts = with pkgs; [
-    (nerdfonts.override { fonts = [ "FiraCode" "Iosevka" ]; })
+    (nerdfonts.override { fonts = [ "FiraCode" ]; })
     fira-code-symbols
   ];
 }
