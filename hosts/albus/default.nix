@@ -11,7 +11,6 @@ in
     ../../applications/fzf
     ../../applications/git
     ../../applications/neovim.nix
-    ../../applications/todotxt.nix
     ../../applications/zsh
   ];
 
