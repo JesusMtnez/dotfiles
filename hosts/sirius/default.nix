@@ -16,7 +16,6 @@ in
     ../../applications/sbt
     ../../applications/todotxt.nix
     ../../applications/zsh
-    ../../scripts
   ];
 
   home.sessionVariables = {

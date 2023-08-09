@@ -12,7 +12,6 @@ in
     ../../applications/git
     ../../applications/neovim.nix
     ../../applications/zsh
-    ../../scripts
   ];
 
   fonts.fontconfig.enable = true;
