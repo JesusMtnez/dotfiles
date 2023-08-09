@@ -12,6 +12,8 @@
       key = "D54244C88732F2A1";
     };
 
+    diff-so-fancy.enable = true;
+
     extraConfig = {
       core = {
         editor = "${pkgs.neovim}/bin/nvim +startinsert!";
@@ -20,17 +22,15 @@
       };
 
       pull.ff = "only";
+
       push = {
         default = "simple";
         autoSetupRemote = true;
       };
-      fetch.prune = "true";
-      color.ui = "auto";
 
-      pager = {
-        diff = "${pkgs.gitAndTools.diff-so-fancy}/bin/diff-so-fancy | less --tabs=4 -RFX";
-        show = "${pkgs.gitAndTools.diff-so-fancy}/bin/diff-so-fancy | less --tabs=4 -RFX";
-      };
+      fetch.prune = "true";
+
+      color.ui = "auto";
     };
 
     aliases = {
