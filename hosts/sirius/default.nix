@@ -19,6 +19,12 @@ in
     ../../scripts
   ];
 
+  home.sessionVariables = {
+    # Support colima+docker for testcontainer: https://java.testcontainers.org/supported_docker_environment/
+    TESTCONTAINERS_DOCKER_SOCKET_OVERRIDE = "/var/run/docker.sock";
+    DOCKER_HOST = "unix://\${HOME}/.colima/docker.sock";
+  };
+
   fonts.fontconfig.enable = true;
 
   programs = {
