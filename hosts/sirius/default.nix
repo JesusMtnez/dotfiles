@@ -26,7 +26,12 @@ in
   fonts.fontconfig.enable = true;
 
   programs = {
-    bat.enable = true;
+    bat = {
+      enable = true;
+      config = {
+        theme = "TwoDark";
+      };
+    };
     exa = {
       enable = true;
       enableAliases = true;
