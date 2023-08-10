@@ -27,7 +27,6 @@
       ENHANCD_FILTER = "fzf";
       ENHANCD_COMPLETION_BEHAVIOR = "list";
       MANPAGER = "sh -c 'col -bx | ${pkgs.bat}/bin/bat -l man -p'";
-      PATH = "$HOME/.dotfiles/bin:$HOME/.local/bin:$PATH";
       TERM = "xterm-256color";
       ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE = "fg=60";
     };
