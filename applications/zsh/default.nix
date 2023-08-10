@@ -131,10 +131,4 @@
     recursive = true;
     source = ./config;
   };
-
-  home.file.".local/bin" = {
-    recursive = true;
-    source = ./bin;
-  };
-
 }

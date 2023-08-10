@@ -1,7 +1,0 @@
-#!/usr/bin/env sh
-# Source: https://github.com/r00k/dotfiles/blob/master/zsh/functions#L16
-# Delete a branch in local and remote
-
-((!$#)) && echo No branch selected, command ignored! && exit 1
-
-git branch -D $1 && git push origin :$1
