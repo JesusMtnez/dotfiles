@@ -41,15 +41,8 @@
       {
         # Run as sudo
         please = "sudo -E $(fc -ln 1)";
-        fuck = "sudo -E $(fc -ln 1)";
-
-        # ls = if pkgs.stdenv.hostPlatform.isDarwin then "ls -G " else "ls --color=auto";
-        # la = "ls -A"; # show almost all
-        # l = "ls -lFh"; # long list, show type, human readable
-        # ll = "ls -lAFh"; # long list, show almost all, show type, human readeable
 
         # Others
-        RM = "rm -rf";
         grep = "grep --color=auto";
       }
       (lib.mkIf pkgs.stdenv.hostPlatform.isLinux {
