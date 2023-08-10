@@ -1,5 +1,8 @@
 { pkgs, lib, ... }:
 {
+
+  xdg.configFile."zsh/theme.zsh".source = ./theme.zsh;
+
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -34,6 +37,22 @@
     initExtra = ''
       # Source other resource
       [ -f $HOME/.localrc ] && source $HOME/.localrc # Local configuration
+
+      # Act as git status if no parameters.
+      g() {
+        if [[ $# > 0 ]]; then
+          git $@
+        else
+          git status -sb
+        fi
+      }
+      compdef g=git
+
+      # Change PWD hook
+      function chpwd() {
+          exa -lh # ls -lh
+      }
+
     '';
 
     shellAliases = lib.mkMerge [
@@ -50,7 +69,6 @@
         open = "xdg-open";
       })
     ];
-    # };
 
     zplug = {
       enable = true;
@@ -117,10 +135,5 @@
         }
       ];
     };
-  };
-
-  xdg.configFile."zsh" = {
-    recursive = true;
-    source = ./config;
   };
 }
