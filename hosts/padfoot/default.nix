@@ -3,7 +3,6 @@
     ../../applications/alacritty.nix
     ../../applications/code
     ../../applications/direnv
-    ../../applications/fzf
     ../../applications/git
     ../../applications/neovim.nix
     ../../applications/zsh
@@ -12,13 +11,6 @@
   fonts.fontconfig.enable = true;
 
   programs = {
-    bat.enable = true;
-    exa = {
-      enable = true;
-      enableAliases = true;
-      icons = true;
-      git = true;
-    };
     home-manager.enable = true;
     gpg.enable = true;
     ssh.enable = true;

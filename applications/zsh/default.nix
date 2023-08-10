@@ -136,4 +136,24 @@
       ];
     };
   };
+
+  programs.bat = {
+    enable = true;
+    config = {
+      theme = "TwoDark";
+    };
+  };
+
+  programs.exa = {
+    enable = true;
+    enableAliases = true;
+    icons = true;
+    git = true;
+  };
+
+  programs.fzf = {
+    enable = true;
+    enableZshIntegration = true;
+    enableBashIntegration = false;
+  };
 }
