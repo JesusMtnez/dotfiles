@@ -25,18 +25,6 @@ in
   fonts.fontconfig.enable = true;
 
   programs = {
-    bat = {
-      enable = true;
-      config = {
-        theme = "TwoDark";
-      };
-    };
-    exa = {
-      enable = true;
-      enableAliases = true;
-      icons = true;
-      git = true;
-    };
     home-manager.enable = true;
     java.enable = true;
     jq.enable = true;
