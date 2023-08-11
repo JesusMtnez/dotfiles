@@ -52,7 +52,6 @@
       function chpwd() {
           exa -lh # ls -lh
       }
-
     '';
 
     shellAliases = lib.mkMerge [
