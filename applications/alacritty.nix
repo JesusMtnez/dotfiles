@@ -8,7 +8,7 @@
 
       font = {
         normal = {
-          family = "FiraCode Nerd Font";
+          family = "IosevkaTerm Nerd Font";
           style = "Regular";
         };
         size = if pkgs.stdenv.hostPlatform.isDarwin then 12.0 else 9.0;
