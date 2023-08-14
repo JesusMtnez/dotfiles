@@ -27,13 +27,12 @@
     LC_TIME = "es_ES.UTF-8";
   };
 
-  services.xserver.enable = true;
-  services.xserver.displayManager = {
-    sddm.enable = true;
-    autoLogin.enable = true;
-    autoLogin.user = "jesus";
-    defaultSession = "plasmawayland";
+  services.xserver = {
+    enable = true;
+    dpi = 96;
+    excludePackages = [ pkgs.xterm ];
   };
+  services.xserver.displayManager.sddm.enable = true;
   services.xserver.desktopManager.plasma5.enable = true;
 
   services.xserver = {
@@ -41,7 +40,13 @@
     xkbVariant = "mac";
   };
 
+  environment.variables = {
+    GDK_SCALE = "0.5";
+  };
+
   services.xserver.libinput.enable = true;
+
+  security.polkit.enable = true;
 
   # Enable sound with pipewire.
   sound.enable = true;
@@ -76,11 +81,6 @@
     libsForQt5.khelpcenter
     konsole
   ];
-
-  environment.sessionVariables = {
-    NIXOS_OZONE_WL = "1";
-    MOZ_ENABLE_WAYLAND = "1";
-  };
 
   services.openssh.enable = true;
 
