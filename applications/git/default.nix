@@ -98,6 +98,8 @@
   };
 
   home.packages = with pkgs.gitAndTools; [
-    gh glab tea
+    gh
+    glab
+    tea
   ];
 }
