@@ -20,7 +20,7 @@ jobs:
             access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
 
       - name: update flake.lock
-        uses: DeterminateSystems/update-flake-lock@v19
+        uses: DeterminateSystems/update-flake-lock@v20
         with:
           token: ${{ secrets.NIX_FLAKES_UPDATE_TOKEN }}
           inputs: "nixpkgs nixpkgs-master home darwin"

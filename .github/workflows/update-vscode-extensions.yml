@@ -21,7 +21,7 @@ jobs:
 
       - name: update flake.lock
         id: update
-        uses: DeterminateSystems/update-flake-lock@v19
+        uses: DeterminateSystems/update-flake-lock@v20
         with:
           inputs: "nix-vscode-extensions"
           token: ${{ secrets.NIX_FLAKES_UPDATE_TOKEN }}
