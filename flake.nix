@@ -64,7 +64,7 @@
                   isWorkstation = false;
                   latestPkgs = mkPkgsFor "x86_64-linux" nixpkgs-master;
                 };
-                users.jmartinez = import ./hosts/albus/default.nix;
+                users.jesus = import ./hosts/albus/default.nix;
               };
             }
           ];

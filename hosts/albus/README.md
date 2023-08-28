@@ -2,4 +2,4 @@
 
 **Host**: `albus`
 **Based OS**: [NixOS 23.05](https://nixos.org/blog/announcements.html#nixos-23.05/)
-**DE**: [KDE Plasma](https://kde.org/plasma-desktop/)
+**DE**: [Xfce 4.18](https://xfce.org/)

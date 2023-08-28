@@ -54,19 +54,21 @@
 
   services.xserver = {
     enable = true;
-    dpi = 96;
     excludePackages = [ pkgs.xterm ];
 
-    displayManager = {
-      sddm.enable = true;
+    displayManager.lightdm = {
+      enable = true;
+      greeters.slick = {
+        enable = true;
+        theme.name = "Adawita-dark";
+        iconTheme = {
+          name = "Papirus-Dark";
+          package = pkgs.papirus-icon-theme;
+        };
+      };
     };
 
-    desktopManager.plasma5 = {
-      enable = true;
-      useQtScaling = true;
-      kdeglobals = { };
-      kwinrc = { };
-    };
+    desktopManager.xfce.enable = true;
 
     layout = "us";
     xkbVariant = "altgr-intl";
@@ -75,22 +77,6 @@
     videoDrivers = [ "nvidia" ];
 
     libinput.enable = true;
-  };
-
-  environment.variables = {
-    GDK_SCALE = "0.5";
-  };
-
-  environment.plasma5.excludePackages = with pkgs; [
-    libsForQt5.elisa
-    kate
-    libsForQt5.khelpcenter
-    konsole
-  ];
-
-  environment.sessionVariables = {
-    NIXOS_OZONE_WL = "1";
-    MOZ_ENABLE_WAYLAND = "1";
   };
 
   services.avahi = {
@@ -107,7 +93,10 @@
 
   hardware.nvidia.modesetting.enable = true;
 
+  security.pam.services.gdm.enableGnomeKeyring = true;
+
   sound.enable = true;
+  sound.mediaKeys.enable = true;
 
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -125,18 +114,62 @@
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.jmartinez = {
+  users.users.jesus = {
     isNormalUser = true;
+    description = "Jesús";
     extraGroups = [ "wheel" "docker" "network" ];
     shell = pkgs.zsh;
   };
 
   environment.systemPackages = with pkgs; [
-    libsForQt5.ark
-
+    # apps
     cachix
-    git
+
+    # xfce apps / tools
+    blueman
+    evince
+    font-manager
+    gnome.file-roller
+    gnome.gnome-disk-utility
+    pavucontrol
+    wmctrl
+    xcolor
+    xdo
+    xdotool
+    xfce.orage
+    xfce.xfce4-appfinder
+    xfce.xfce4-clipman-plugin
+    xfce.xfce4-cpugraph-plugin
+    xfce.xfce4-dict
+    xfce.xfce4-fsguard-plugin
+    xfce.xfce4-genmon-plugin
+    xfce.xfce4-netload-plugin
+    xfce.xfce4-panel
+    xfce.xfce4-pulseaudio-plugin
+    xfce.xfce4-systemload-plugin
+    xfce.xfce4-whiskermenu-plugin
+    xfce.xfce4-xkb-plugin
+    xfce.xfdashboard
+    xorg.xev
+    xtitle
+    xwinmosaic
   ];
+
+  programs = {
+    dconf.enable = true;
+    gnupg.agent = {
+      enable = true;
+      enableSSHSupport = true;
+    };
+    thunar = {
+      enable = true;
+      plugins = with pkgs.xfce; [
+        thunar-archive-plugin
+        thunar-media-tags-plugin
+        thunar-volman
+      ];
+    };
+  };
 
   virtualisation.docker.enable = true;
 

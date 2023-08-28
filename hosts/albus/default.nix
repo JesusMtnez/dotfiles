@@ -1,6 +1,5 @@
 { config, pkgs, latestPkgs, lib, ... }:
 let
-  autofirma = pkgs.callPackage ../../applications/autofirma { };
   sleek = pkgs.callPackage ../../applications/sleek { };
 in
 {
@@ -30,40 +29,46 @@ in
   };
 
   home.packages = [
-    # autofirma
-    sleek
+    # sleek
   ] ++ (with pkgs; [
     audacity
     calibre
+    drawing
     firefox
-    gimp
+    gimp-with-plugins
     latestPkgs.joplin-desktop
     keepassxc
-    krename
-    libreoffice-qt
+    libreoffice
     masterpdfeditor4
     latestPkgs.portfolio
     protonvpn-gui
-    latestPkgs.scala-cli
     spotify
     tdesktop
     thunderbird-bin
     vlc
-    zoom-us
   ]);
 
-  services.dropbox.enable = true;
+  # services.syncthing = {
+  #   enable = true;
+  #   extraOptions = [ "--allow-newer-config" ];
+  #   tray = {
+  #     enable = true;
+  #     package = pkgs.syncthingtray-minimal;
+  #   };
+  # };
 
-  services.syncthing = {
+  # systemd.user.services.syncthingtray.Service.ExecStart = lib.mkForce "${pkgs.bash}/bin/bash -c '${pkgs.coreutils}/bin/sleep 5; ${pkgs.syncthingtray-minimal}/bin/syncthingtray --wait'";
+
+  gtk = {
     enable = true;
-    extraOptions = [ "--allow-newer-config" ];
-    tray = {
-      enable = true;
-      package = pkgs.syncthingtray-minimal;
-    };
-  };
 
-  systemd.user.services.syncthingtray.Service.ExecStart = lib.mkForce "${pkgs.bash}/bin/bash -c '${pkgs.coreutils}/bin/sleep 5; ${pkgs.syncthingtray-minimal}/bin/syncthingtray --wait'";
+    iconTheme = {
+      name = "Papirus-Dark";
+      package = pkgs.papirus-icon-theme;
+    };
+
+    theme.name = "Adwaita-dark";
+  };
 
   home.stateVersion = "23.05";
 }
