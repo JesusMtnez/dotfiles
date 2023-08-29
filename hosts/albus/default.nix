@@ -48,16 +48,15 @@ in
     vlc
   ]);
 
-  # services.syncthing = {
-  #   enable = true;
-  #   extraOptions = [ "--allow-newer-config" ];
-  #   tray = {
-  #     enable = true;
-  #     package = pkgs.syncthingtray-minimal;
-  #   };
-  # };
+  services.syncthing = {
+    enable = true;
+    tray = {
+      enable = true;
+      package = pkgs.syncthingtray-minimal;
+    };
+  };
 
-  # systemd.user.services.syncthingtray.Service.ExecStart = lib.mkForce "${pkgs.bash}/bin/bash -c '${pkgs.coreutils}/bin/sleep 5; ${pkgs.syncthingtray-minimal}/bin/syncthingtray --wait'";
+  systemd.user.services.syncthingtray.Service.ExecStart = lib.mkForce "${pkgs.bash}/bin/bash -c '${pkgs.coreutils}/bin/sleep 5; ${pkgs.syncthingtray-minimal}/bin/syncthingtray --wait'";
 
   gtk = {
     enable = true;
