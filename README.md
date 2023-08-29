@@ -16,7 +16,7 @@ This dotfiles are manage using [`nix`](https://nixos.wiki/wiki/Nix) and [`home-m
 1. Clone the repository and go inside the folder
 
 ```
-nix run github:nixos/nixpkgs#git -- clone git@github.com:JesusMtnez/dotfiles $HOME/.dotfiles
+nix run --extra-experimental-features nix-command --extra-experimental-features flakes github:nixos/nixpkgs#git -- clone git@github.com:JesusMtnez/dotfiles $HOME/.dotfiles
 ```
 
 2. Build and switch the host machine.
@@ -24,7 +24,7 @@ nix run github:nixos/nixpkgs#git -- clone git@github.com:JesusMtnez/dotfiles $HO
 If it is a NixOS host:
 
 ```
-nixos-rebuild switch --flakes $HOME/.dotfiles/.
+nixos-rebuild switch --use-remote-sudo --flakes $HOME/.dotfiles/.
 ```
 
 If it is a MacOSX host:
