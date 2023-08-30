@@ -37,7 +37,5 @@
     (nerdfonts.override { fonts = [ "IosevkaTerm" ]; })
     (iosevka-bin.override { variant = "sgr-iosevka-term"; })
     (iosevka-bin.override { variant = "sgr-iosevka-aile"; })
-    corefonts
-    vistafonts
   ];
 }

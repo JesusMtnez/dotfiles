@@ -173,5 +173,10 @@
 
   virtualisation.docker.enable = true;
 
+  fonts.fonts = with pkgs; [
+    corefonts
+    vistafonts
+  ];
+
   system.stateVersion = "23.05";
 }
