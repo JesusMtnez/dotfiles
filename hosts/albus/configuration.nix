@@ -93,7 +93,9 @@
 
   hardware.nvidia.modesetting.enable = true;
 
+  services.gnome.gnome-keyring.enable = true;
   security.pam.services.gdm.enableGnomeKeyring = true;
+  programs.seahorse.enable = true;
 
   sound.enable = true;
   sound.mediaKeys.enable = true;
