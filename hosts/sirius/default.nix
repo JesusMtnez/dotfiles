@@ -8,9 +8,9 @@ in
 
   imports = [
     ../../applications/alacritty.nix
-    ../../applications/code
-    ../../applications/direnv
-    ../../applications/git
+    ../../applications/code.nix
+    ../../applications/direnv.nix
+    ../../applications/git.nix
     ../../applications/neovim.nix
     ../../applications/sbt.nix
     ../../applications/zsh
