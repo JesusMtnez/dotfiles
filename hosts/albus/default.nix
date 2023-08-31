@@ -9,6 +9,7 @@ in
     ../../applications/direnv
     ../../applications/git
     ../../applications/neovim.nix
+    ../../applications/sbt.nix
     ../../applications/zsh
   ];
 

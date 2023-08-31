@@ -12,7 +12,7 @@ in
     ../../applications/direnv
     ../../applications/git
     ../../applications/neovim.nix
-    ../../applications/sbt
+    ../../applications/sbt.nix
     ../../applications/zsh
   ];
 
