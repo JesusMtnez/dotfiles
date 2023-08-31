@@ -60,7 +60,7 @@
       flix.flix
       github.vscode-github-actions
       jnoortheen.nix-ide
-      ms-python.python
+      pkgs.open-vsx.ms-python.python
       ms-vsliveshare.vsliveshare
       pkief.material-icon-theme
       redhat.ansible
