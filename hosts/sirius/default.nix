@@ -2,7 +2,7 @@
 
 let
   homedir = builtins.getEnv "HOME";
-  bloop-jvm = pkgs.callPackage ../../applications/bloop-jvm.nix { };
+  bloop-jvm = pkgs.callPackage ../../packages/bloop-jvm.nix { };
 in
 {
 

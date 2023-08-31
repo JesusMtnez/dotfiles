@@ -1,6 +1,6 @@
 { config, pkgs, latestPkgs, lib, ... }:
 let
-  sleek = pkgs.callPackage ../../applications/sleek { };
+  sleek = pkgs.callPackage ../../packages/sleek { };
 in
 {
   imports = [
