@@ -56,7 +56,7 @@
 
     extensions = with pkgs.vscode-marketplace; [
       cab404.vscode-direnv
-      eamodio.gitlens
+      pkgs.vscode-marketplace-release.eamodio.gitlens
       flix.flix
       github.vscode-github-actions
       jnoortheen.nix-ide
