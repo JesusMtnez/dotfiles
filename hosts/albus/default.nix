@@ -39,7 +39,7 @@ in
     gimp-with-plugins
     latestPkgs.joplin-desktop
     keepassxc
-    libreoffice
+    libreoffice-fresh
     masterpdfeditor4
     latestPkgs.portfolio
     protonvpn-gui
