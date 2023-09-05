@@ -33,6 +33,7 @@
       { name = "hiddenbar"; }
       { name = "itsycal"; }
       { name = "joplin"; }
+      { name = "logi-options-plus"; }
       { name = "marta"; }
       { name = "mongodb-compass"; }
       { name = "mounty"; }
