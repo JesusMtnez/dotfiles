@@ -3,8 +3,8 @@ name: update nix-vscode-extensions input
 
 on:
   workflow_dispatch: # allows manual triggering
-  schedule:
-    - cron: '0 4 * * *' # runs daily at 04:00 UTC
+  # schedule:
+  #   - cron: '0 4 * * *' # runs daily at 04:00 UTC
 
 jobs:
   lockfile:
