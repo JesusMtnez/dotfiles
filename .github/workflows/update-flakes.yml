@@ -23,7 +23,7 @@ jobs:
         uses: DeterminateSystems/update-flake-lock@v20
         with:
           token: ${{ secrets.NIX_FLAKES_UPDATE_TOKEN }}
-          inputs: "nixpkgs nixpkgs-master home darwin"
+          # inputs: "nixpkgs nixpkgs-master home darwin"
           pr-title: "chore(flake): update flake.lock"
           commit-msg: "chore(flake): update flake.lock"
           branch: "update_flake"
