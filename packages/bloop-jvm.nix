@@ -2,7 +2,7 @@
 
 let
   baseName = "bloop";
-  version = "1.5.10";
+  version = "1.5.11";
   deps = stdenv.mkDerivation {
     name = "${baseName}-deps-${version}";
     buildCommand = ''
@@ -12,7 +12,7 @@ let
       cp $(< deps) $out/share/java/
     '';
     outputHashMode = "recursive";
-    outputHash = "sha256-QqDUOYdoNrjbOfR6GgWtNYZzv6XfS3M5jClJytLQi2A=";
+    outputHash = "sha256-pRIZQesO9hT2uLXFC1PmxRI1JbmzMfFvBP5bKILfuso=";
   };
 in
 stdenv.mkDerivation {
