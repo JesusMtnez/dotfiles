@@ -13,6 +13,9 @@
       dates = "weekly";
       options = "-d";
     };
+    settings = {
+      auto-optimise-store = true;
+    };
   };
 
   boot = {
