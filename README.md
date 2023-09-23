@@ -54,3 +54,9 @@ darwin-rebuild switch --flake  $HOME/.dotfiles/.
   ```
     nixos-rebuild switch --use-remote-sudo --flake .#padfoot
   ```
+
+## Notes
+
+#### gnome-keyring integration in XFCE
+
+In _Settings Manager / Session and Startup / Advanced_ check _Launch GNOME services at startup_
