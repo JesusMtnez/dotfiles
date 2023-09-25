@@ -65,7 +65,7 @@
       pkief.material-icon-theme
       redhat.ansible
       redhat.vscode-yaml
-      pkgs.open-vsx-release.rust-lang.rust-analyzer
+      pkgs.vscode-marketplace-release.rust-lang.rust-analyzer
       scala-lang.scala
       scalameta.metals
       vscodevim.vim
