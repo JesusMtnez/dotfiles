@@ -39,6 +39,7 @@
       { name = "mounty"; }
       { name = "openvpn-connect"; }
       { name = "slack"; }
+      { name = "sleek"; }
       { name = "spotify"; }
       { name = "syncthing"; }
       { name = "thunderbird"; }
