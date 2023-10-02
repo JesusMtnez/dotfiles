@@ -60,3 +60,23 @@ darwin-rebuild switch --flake  $HOME/.dotfiles/.
 #### gnome-keyring integration in XFCE
 
 In _Settings Manager / Session and Startup / Advanced_ check _Launch GNOME services at startup_
+
+### NixOS sqlite database corrupted
+
+1. Check integrity: `sqlite3 /nix/var/nix/db/db.sqlite 'pragma integrity_check'`.
+2. If the result is not `OK`:
+
+```
+# cd /nix/var/nix/db
+# nix-shell -p sqlite
+
+[nix-shell:/nix/var/nix/db]# sqlite3 db.sqlite ".backup 'db.bak.sqlite' "
+
+[nix-shell:/nix/var/nix/db]# sqlite3 db.sqlite
+sqlite> .output db.sql
+sqlite> .dump
+
+[nix-shell:/nix/var/nix/db]# sqlite3 db.new.sqlite < db.sql
+
+[nix-shell:/nix/var/nix/db]# mv db.new.sqlite db.sqlite
+```
