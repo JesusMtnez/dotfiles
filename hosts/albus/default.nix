@@ -1,6 +1,6 @@
 { config, pkgs, latestPkgs, lib, ... }:
 let
-  sleek = pkgs.callPackage ../../packages/sleek { };
+  sleek = pkgs.callPackage ../../packages/sleek.nix { };
 in
 {
   imports = [
@@ -30,7 +30,7 @@ in
   };
 
   home.packages = [
-    # sleek
+    sleek
   ] ++ (with pkgs; [
     audacity
     calibre
