@@ -3,10 +3,8 @@
 with lib;
 let
   cfg = config.services.protonmail-bridge;
-  #Still need to integrate more closely with the email management capabilities of home-manager
 in
 {
-  ##### interface
   options = {
     services.protonmail-bridge = {
       enable = mkOption {

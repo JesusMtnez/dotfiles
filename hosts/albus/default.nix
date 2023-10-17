@@ -12,7 +12,7 @@ in
     ../../applications/sbt.nix
     ../../applications/zsh
 
-    ../../services/protonmail-bridge.nix
+    ../../home-manager/services/protonmail-bridge.nix
   ];
 
   fonts.fontconfig.enable = true;
