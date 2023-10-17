@@ -11,6 +11,8 @@ in
     ../../applications/neovim.nix
     ../../applications/sbt.nix
     ../../applications/zsh
+
+    ../../services/protonmail-bridge.nix
   ];
 
   fonts.fontconfig.enable = true;
@@ -28,6 +30,21 @@ in
     defaultCacheTtl = 1800;
     enableSshSupport = true;
   };
+
+  services.protonmail-bridge = {
+    enable = true;
+    nonInteractive = true;
+  };
+
+  services.syncthing = {
+    enable = true;
+    tray = {
+      enable = true;
+      package = pkgs.syncthingtray-minimal;
+    };
+  };
+
+  systemd.user.services.syncthingtray.Service.ExecStart = lib.mkForce "${pkgs.bash}/bin/bash -c '${pkgs.coreutils}/bin/sleep 5; ${pkgs.syncthingtray-minimal}/bin/syncthingtray --wait'";
 
   home.packages = [
     sleek
@@ -48,16 +65,6 @@ in
     thunderbird-bin
     vlc
   ]);
-
-  services.syncthing = {
-    enable = true;
-    tray = {
-      enable = true;
-      package = pkgs.syncthingtray-minimal;
-    };
-  };
-
-  systemd.user.services.syncthingtray.Service.ExecStart = lib.mkForce "${pkgs.bash}/bin/bash -c '${pkgs.coreutils}/bin/sleep 5; ${pkgs.syncthingtray-minimal}/bin/syncthingtray --wait'";
 
   gtk = {
     enable = true;
