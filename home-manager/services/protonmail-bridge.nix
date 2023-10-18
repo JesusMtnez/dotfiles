@@ -36,11 +36,13 @@ in
     systemd.user.services.protonmail-bridge = {
       Unit = {
         Description = "Protonmail Bridge";
+        Requires = [ "network.target" ];
         After = [ "network.target" ];
       };
 
       Service = {
         Restart = "always";
+        ExecStartPre = "${pkgs.coreutils}/bin/sleep 20";
         ExecStart = "${pkgs.protonmail-bridge}/bin/protonmail-bridge --no-window --log-level ${cfg.logLevel}" + optionalString (cfg.nonInteractive) " --noninteractive";
       };
 
