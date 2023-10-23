@@ -1,6 +1,6 @@
 { config, pkgs, latestPkgs, lib, ... }:
 let
-  sleek = pkgs.callPackage ../../packages/sleek.nix { };
+  # sleek = pkgs.callPackage ../../packages/sleek.nix { };
 in
 {
   imports = [
@@ -47,7 +47,7 @@ in
   systemd.user.services.syncthingtray.Service.ExecStart = lib.mkForce "${pkgs.bash}/bin/bash -c '${pkgs.coreutils}/bin/sleep 5; ${pkgs.syncthingtray-minimal}/bin/syncthingtray --wait'";
 
   home.packages = [
-    sleek
+    # sleek
   ] ++ (with pkgs; [
     audacity
     calibre
