@@ -24,6 +24,7 @@
 
     casks = [
       { name = "amethyst"; }
+      { name = "caffeine"; }
       { name = "coconutbattery"; }
       { name = "firefox"; }
       { name = "font-sf-pro"; }
