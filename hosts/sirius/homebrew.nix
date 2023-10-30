@@ -11,7 +11,6 @@
 
     taps = [
       { name = "homebrew/bundle"; }
-      { name = "homebrew/cask-drivers"; }
       { name = "homebrew/cask-fonts"; }
       { name = "homebrew/services"; }
     ];
