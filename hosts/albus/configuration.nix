@@ -122,13 +122,16 @@
   users.users.jesus = {
     isNormalUser = true;
     description = "Jesús";
-    extraGroups = [ "wheel" "docker" "network" ];
+    extraGroups = [ "wheel" "docker" "network" "libvirtd" ];
     shell = pkgs.zsh;
   };
 
   environment.systemPackages = with pkgs; [
     # apps
     cachix
+
+    # TODO(23.11) use programs.virt-manager.enable = true;
+    virt-manager
 
     # xfce apps / tools
     blueman
@@ -177,6 +180,7 @@
   };
 
   virtualisation.docker.enable = true;
+  virtualisation.libvirtd.enable = true;
 
   fonts.fonts = with pkgs; [
     corefonts
