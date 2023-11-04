@@ -40,11 +40,6 @@ darwin-rebuild switch --flake  $HOME/.dotfiles/.
 
 ## Machines
 
-- [`sirius`](./hosts/sirius/README.md): Work machine, based on **OSX**.
-  ```
-    darwin-rebuild switch --flake .#sirius
-  ```
-
 - [`albus`](./hosts/albus/README.md): Personal machine, based on **NixOS**.
   ```
     nixos-rebuild switch --use-remote-sudo --flake .#albus
