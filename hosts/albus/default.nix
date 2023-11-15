@@ -63,6 +63,7 @@ in
     spotify
     tdesktop
     thunderbird-bin
+    usbimager
     vlc
   ]);
 
