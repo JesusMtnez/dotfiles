@@ -47,6 +47,7 @@
       "window.zoomLevel" = 0;
       "workbench.colorTheme" = "One Dark Pro";
       "workbench.iconTheme" = "material-icon-theme";
+      "workbench.sideBar.location" = "right";
       "redhat.telemetry.enabled" = false;
 
       "[nix]"."editor.tabSize" = 2;
