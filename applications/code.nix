@@ -59,8 +59,10 @@
       cab404.vscode-direnv
       # pkgs.vscode-marketplace-release.eamodio.gitlens
       flix.flix
+      fwcd.kotlin
       github.vscode-github-actions
       jnoortheen.nix-ide
+      mathiasfrohlich.kotlin
       pkgs.open-vsx.ms-python.python
       ms-vsliveshare.vsliveshare
       pkief.material-icon-theme
