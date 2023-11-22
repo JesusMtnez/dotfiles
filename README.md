@@ -1,13 +1,20 @@
-[![MIT LICENSE][LICENSE-badge]][LICENSE-link]
-[![Built with nix][NIX-badge]][NIX-link]
+<div align="center">
 
+<img src="https://raw.githubusercontent.com/NixOS/nixos-artwork/master/logo/nix-snowflake.svg" width="144px">
+
+# JesusMtnez's dotfiles
+
+_all my dotfiles under nix_
+
+[![Built with nix][NIX-badge]][NIX-link]
+[![MIT LICENSE][LICENSE-badge]][LICENSE-link]
+
+</div>
 
   [LICENSE-badge]: https://img.shields.io/badge/license-MIT-green.svg?style=flat-square
   [LICENSE-link]: /LICENSE
-  [NIX-badge]: https://img.shields.io/badge/Built_With-Nix-5277C3.svg?logo=nixos&labelColor=73C3D5&style=flat-square
+  [NIX-badge]: https://img.shields.io/badge/Built_with-nix-5277C3.svg?logo=nixos&labelColor=73C3D5&style=flat-square
   [NIX-link]: https://builtwithnix.org
-
-# JesusMtnez's dotfiles! #
 
 ## Installation ##
 
