@@ -45,9 +45,9 @@ darwin-rebuild switch --flake  $HOME/.dotfiles/.
     nixos-rebuild switch --use-remote-sudo --flake .#albus
   ```
 
-- [`padfoot`](./host/padfoot/README.md): Virtual Machine inside `sirius` host, based on **NixOS** with _aarch64-linux_ architecture.
+- [`severus`](./hosts/severus/README.md): Personal machinve, based on **OSX**
   ```
-    nixos-rebuild switch --use-remote-sudo --flake .#padfoot
+    darwin-rebuild switch --flake .#severus
   ```
 
 ## Notes
