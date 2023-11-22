@@ -69,31 +69,6 @@
             }
           ];
         };
-
-        padfoot = nixpkgs.lib.nixosSystem {
-          system = "aarch64-linux";
-          specialArgs = {
-            nix-vscode-extensions-overlay = nix-vscode-extensions.overlays.default;
-          };
-          modules = [
-            ./hosts/common.nix
-            ./hosts/padfoot/configuration.nix
-
-            home.nixosModules.home-manager
-            {
-              home-manager = {
-                useGlobalPkgs = true;
-                useUserPackages = true;
-                extraSpecialArgs = {
-                  inherit (inputs);
-                  isWorkstation = false;
-                  latestPkgs = mkPkgsFor "aarch64-linux" nixpkgs-master;
-                };
-                users.jesus = import ./hosts/padfoot/default.nix;
-              };
-            }
-          ];
-        };
       };
 
       darwinConfigurations = {
@@ -109,33 +84,6 @@
             ./hosts/darwin-bootstrap.nix
           ];
         };
-
-        # sirius = darwin.lib.darwinSystem {
-        #   inputs = { inherit nixpkgs; };
-        #   system = "aarch64-darwin";
-        #   specialArgs = {
-        #     nix-vscode-extensions-overlay = nix-vscode-extensions.overlays.default;
-        #   };
-        #   modules = [
-        #     ./hosts/common.nix
-        #     ./hosts/sirius/configuration.nix
-        #     ./hosts/sirius/homebrew.nix
-
-        #     home.darwinModule
-        #     {
-        #       home-manager = {
-        #         useGlobalPkgs = true;
-        #         useUserPackages = true;
-        #         extraSpecialArgs = {
-        #           inherit (inputs);
-        #           isWorkstation = true;
-        #           latestPkgs = mkPkgsFor "aarch64-darwin" nixpkgs-master;
-        #         };
-        #         users.jmartinez = import ./hosts/sirius/default.nix;
-        #       };
-        #     }
-        #   ];
-        # };
 
         severus = darwin.lib.darwinSystem {
           inputs = { inherit nixpkgs; };
