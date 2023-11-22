@@ -1,4 +1,4 @@
 # General information
 
-**Host**: `severus`
-**Based OS**: macOS Monterey 12.6.5
+- **Hostname**: `severus`
+- **Operative System**: macOS Monterey 12.6

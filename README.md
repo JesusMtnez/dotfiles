@@ -46,7 +46,7 @@ darwin-rebuild switch --flake  $HOME/.dotfiles/.
 nixos-rebuild switch --use-remote-sudo --flake .#albus
 ```
 
-- [`severus`](./hosts/severus/README.md): Personal machinve, based on **OSX**
+- [`severus`](./hosts/severus/README.md): Personal machine, based on **OSX**
 
 ```
 darwin-rebuild switch --flake .#severus
