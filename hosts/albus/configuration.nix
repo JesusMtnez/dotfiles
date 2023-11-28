@@ -115,7 +115,7 @@
 
   hardware.bluetooth = {
     enable = true;
-    package = pkgs.bluezFull;
+    package = pkgs.bluez;
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -130,9 +130,6 @@
     # apps
     appimage-run
     cachix
-
-    # TODO(23.11) use programs.virt-manager.enable = true;
-    virt-manager
 
     # xfce apps / tools
     blueman
@@ -178,15 +175,16 @@
         thunar-volman
       ];
     };
+    virt-manager.enable = true;
   };
 
   virtualisation.docker.enable = true;
   virtualisation.libvirtd.enable = true;
 
-  fonts.fonts = with pkgs; [
+  fonts.packages = with pkgs; [
     corefonts
     vistafonts
   ];
 
-  system.stateVersion = "23.05";
+  system.stateVersion = "23.11";
 }

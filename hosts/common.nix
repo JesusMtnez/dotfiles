@@ -32,7 +32,7 @@
   programs.zsh.promptInit = "";
 
   fonts.fontDir.enable = true;
-  fonts.fonts = with pkgs; [
+  fonts.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "IosevkaTerm" ]; })
     (iosevka-bin.override { variant = "sgr-iosevka-term"; })
     (iosevka-bin.override { variant = "sgr-iosevka-aile"; })
