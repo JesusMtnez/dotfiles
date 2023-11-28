@@ -19,7 +19,7 @@
   };
 
   boot = {
-    kernelPackages = pkgs.linuxPackages_6_1;
+    kernelPackages = pkgs.linuxPackages_6_6;
     # https://www.kernel.org/category/releases.html
 
     blacklistedKernelModules = [ "nouveau" ];
