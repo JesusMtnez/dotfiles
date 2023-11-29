@@ -1,6 +1,6 @@
 { config, pkgs, latestPkgs, lib, ... }:
 let
-  # sleek = pkgs.callPackage ../../packages/sleek.nix { };
+  sleek = pkgs.callPackage ../../packages/sleek.nix { };
 in
 {
   imports = [
@@ -60,6 +60,7 @@ in
     masterpdfeditor4
     latestPkgs.portfolio
     protonvpn-gui
+    sleek
     spotify
     tdesktop
     thunderbird-bin

@@ -2,11 +2,11 @@
 
 let
   pname = "sleek";
-  version = "1.3.1";
+  version = "2.0.2";
 
   src = fetchurl {
     url = "https://github.com/ransome1/sleek/releases/download/v${version}/sleek-${version}.AppImage";
-    sha256 = "sha256-03lkSQKOSPX+xeTD5CSHmeR3anipdmcG0t65yPpyVvs=";
+    sha256 = "sha256-obXxNH/QLk+/zuMixOvxGGRV4jFObTA70byBTZN8040=";
   };
 
   appimageContents = appimageTools.extract {
@@ -28,7 +28,6 @@ appimageTools.wrapType2 rec {
   extraInstallCommands = ''
     # Strip version from binary name.
     mv $out/bin/${pname}-${version} $out/bin/${pname}
-
 
     install -m 444 \
         -D ${appimageContents}/sleek.desktop \
