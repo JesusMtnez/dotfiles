@@ -42,22 +42,15 @@ nix build .#darwinConfigurations.bootstrap.system --extra-experimental-features 
 ./result/sw/bin/darwin-rebuild switch --flake $HOME/.dotfiles/.#bootstrap
 
 # Using nix-darwin, build and switch to your configuration
-darwin-rebuild switch --flake  $HOME/.dotfiles/.
+darwin-rebuild switch --flake $HOME/.dotfiles/.
 ```
 
 ## Machines
 
-- [`albus`](./hosts/albus/README.md): Personal machine, based on **NixOS**.
-
-```
-nixos-rebuild switch --use-remote-sudo --flake .#albus
-```
-
-- [`severus`](./hosts/severus/README.md): Personal machine, based on **OSX**
-
-```
-darwin-rebuild switch --flake .#severus
-```
+| Name | OS | DE | WM | Use |
+| :-: | - | - | - | - |
+| `albus` | [NixOS 23.11](https://nixos.org/blog/) | [KDE Plasma](https://kde.org/plasma-desktop/) |  KWin | _Personal_ |
+| `severus` | macOS 12.6 | - | - | _Personal_ |
 
 ## Notes
 
