@@ -12,7 +12,7 @@ _using nix to rule them all_
 </div>
 
   [NIX-badge]: https://img.shields.io/badge/nix-blue.svg?logo=nixos&labelColor=73C3D5&style=for-the-badge
-  [NIX-link]: https://builtwithnix.org.org
+  [NIX-link]: https://builtwithnix.org
   [LICENSE-badge]: https://img.shields.io/badge/license-MIT-green.svg?style=for-the-badge
   [LICENSE-link]: /LICENSE
 
