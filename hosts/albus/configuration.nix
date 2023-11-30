@@ -59,19 +59,15 @@
     enable = true;
     excludePackages = [ pkgs.xterm ];
 
-    displayManager.lightdm = {
-      enable = true;
-      greeters.slick = {
-        enable = true;
-        theme.name = "Adawita-dark";
-        iconTheme = {
-          name = "Papirus-Dark";
-          package = pkgs.papirus-icon-theme;
-        };
-      };
+    displayManager = {
+      sddm.enable = true;
+      defaultSession = "plasmawayland";
     };
 
-    desktopManager.xfce.enable = true;
+    desktopManager.plasma5 = {
+      enable = true;
+      useQtScaling = true;
+    };
 
     layout = "us";
     xkbVariant = "altgr-intl";
@@ -97,8 +93,7 @@
   hardware.nvidia.modesetting.enable = true;
 
   services.gnome.gnome-keyring.enable = true;
-  security.pam.services.gdm.enableGnomeKeyring = true;
-  programs.seahorse.enable = true;
+  security.pam.services.sddm.enableGnomeKeyring = true;
 
   sound.enable = true;
   sound.mediaKeys.enable = true;
@@ -131,34 +126,8 @@
     appimage-run
     cachix
 
-    # xfce apps / tools
-    blueman
-    evince
-    font-manager
-    gnome.file-roller
-    gnome.gnome-disk-utility
-    pavucontrol
-    wmctrl
-    xcolor
-    xdo
-    xdotool
-    xfce.orage
-    xfce.xfce4-appfinder
-    xfce.xfce4-clipman-plugin
-    xfce.xfce4-cpugraph-plugin
-    xfce.xfce4-dict
-    xfce.xfce4-fsguard-plugin
-    xfce.xfce4-genmon-plugin
-    xfce.xfce4-netload-plugin
-    xfce.xfce4-panel
-    xfce.xfce4-pulseaudio-plugin
-    xfce.xfce4-systemload-plugin
-    xfce.xfce4-whiskermenu-plugin
-    xfce.xfce4-xkb-plugin
-    xfce.xfdashboard
-    xorg.xev
-    xtitle
-    xwinmosaic
+    # kde apps
+    libsForQt5.ark
   ];
 
   programs = {
@@ -166,14 +135,6 @@
     gnupg.agent = {
       enable = true;
       enableSSHSupport = true;
-    };
-    thunar = {
-      enable = true;
-      plugins = with pkgs.xfce; [
-        thunar-archive-plugin
-        thunar-media-tags-plugin
-        thunar-volman
-      ];
     };
     virt-manager.enable = true;
   };

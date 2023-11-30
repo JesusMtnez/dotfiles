@@ -46,9 +46,7 @@ in
 
   systemd.user.services.syncthingtray.Service.ExecStart = lib.mkForce "${pkgs.bash}/bin/bash -c '${pkgs.coreutils}/bin/sleep 5; ${pkgs.syncthingtray-minimal}/bin/syncthingtray --wait'";
 
-  home.packages = [
-    # sleek
-  ] ++ (with pkgs; [
+  home.packages = with pkgs; [
     audacity
     calibre
     drawing
@@ -56,7 +54,7 @@ in
     gimp-with-plugins
     latestPkgs.joplin-desktop
     keepassxc
-    libreoffice-fresh
+    libreoffice-qt
     masterpdfeditor4
     latestPkgs.portfolio
     protonvpn-gui
@@ -66,18 +64,7 @@ in
     thunderbird-bin
     usbimager
     vlc
-  ]);
-
-  gtk = {
-    enable = true;
-
-    iconTheme = {
-      name = "Papirus-Dark";
-      package = pkgs.papirus-icon-theme;
-    };
-
-    theme.name = "Adwaita-dark";
-  };
+  ];
 
   home.stateVersion = "23.11";
 }
