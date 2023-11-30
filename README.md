@@ -4,17 +4,17 @@
 
 # JesusMtnez's dotfiles
 
-_all my dotfiles under nix_
+_using nix to rule them all_
 
 [![Built with nix][NIX-badge]][NIX-link]
 [![MIT LICENSE][LICENSE-badge]][LICENSE-link]
 
 </div>
 
-  [LICENSE-badge]: https://img.shields.io/badge/license-MIT-green.svg?style=flat-square
+  [NIX-badge]: https://img.shields.io/badge/nix-blue.svg?logo=nixos&labelColor=73C3D5&style=for-the-badge
+  [NIX-link]: https://builtwithnix.org.org
+  [LICENSE-badge]: https://img.shields.io/badge/license-MIT-green.svg?style=for-the-badge
   [LICENSE-link]: /LICENSE
-  [NIX-badge]: https://img.shields.io/badge/Built_with-nix-5277C3.svg?logo=nixos&labelColor=73C3D5&style=flat-square
-  [NIX-link]: https://builtwithnix.org
 
 ## Installation ##
 
