@@ -54,9 +54,13 @@ darwin-rebuild switch --flake $HOME/.dotfiles/.
 
 ## Notes
 
+#### Restore application menu in KDE
+
+In _System Settings / Startup and Shutdown / Background Services_ disable _Application menus daemon_.
+
 #### gnome-keyring integration in XFCE
 
-In _Settings Manager / Session and Startup / Advanced_ check _Launch GNOME services at startup_
+In _Settings Manager / Session and Startup / Advanced_ check _Launch GNOME services at startup_.
 
 ### NixOS sqlite database corrupted
 
