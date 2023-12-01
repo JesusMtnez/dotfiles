@@ -18,11 +18,11 @@ _using nix to rule them all_
 
 ## Machines
 
-| Name | OS | DE | WM | Use |
-| :-: | :-: | :-: | :-: | :-: |
-| `albus` | [NixOS 23.11](https://nixos.org/blog/) | [KDE Plasma](https://kde.org/plasma-desktop/) |  KWin | _Personal_ |
-| `ron` | macOS 14.1 | - | - | _Personal_ |
-| `severus` | macOS 12.6 | - | - | _Personal_ |
+| Name |      | OS  | DE  | WM  | Use |
+| :-:  | :-:  | :-: | :-: | :-: | :-: |
+| `albus` | <img width="18" src="https://cdn.simpleicons.org/nixos" /> | NixOS 23.11 | KDE Plasma 5 |  KWin | _Personal_ |
+| `ron` | <img width="18" src="https://cdn.simpleicons.org/apple" /> | macOS 14.1 | - | - | _Personal_ |
+| `severus` | <img width="18" src="https://cdn.simpleicons.org/apple" /> | macOS 12.6 | - | - | _Personal_ |
 
 ## Installation
 
