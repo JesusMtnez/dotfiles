@@ -16,41 +16,66 @@ _using nix to rule them all_
   [LICENSE-badge]: https://img.shields.io/badge/license-MIT-green.svg?style=for-the-badge
   [LICENSE-link]: /LICENSE
 
-## Installation ##
-
-This dotfiles are manage using [`nix`](https://nixos.wiki/wiki/Nix) and [`home-manager`](https://github.com/rycee/home-manager). The steps to do a complete setup are:
-
-1. Clone the repository and go inside the folder
-
-```
-nix run --extra-experimental-features nix-command --extra-experimental-features flakes github:nixos/nixpkgs#git -- clone git@github.com:JesusMtnez/dotfiles $HOME/.dotfiles
-```
-
-2. Build and switch the host machine.
-
-If it is a NixOS host:
-
-```
-nixos-rebuild switch --use-remote-sudo --flakes $HOME/.dotfiles/.
-```
-
-If it is a MacOSX host:
-
-```
-# Use bootstrap flake to setup nix-darwin in you system first
-nix build .#darwinConfigurations.bootstrap.system --extra-experimental-features nix-command --extra-experimental-features flakes
-./result/sw/bin/darwin-rebuild switch --flake $HOME/.dotfiles/.#bootstrap
-
-# Using nix-darwin, build and switch to your configuration
-darwin-rebuild switch --flake $HOME/.dotfiles/.
-```
-
 ## Machines
 
 | Name | OS | DE | WM | Use |
-| :-: | - | - | - | - |
+| :-: | :-: | :-: | :-: | :-: |
 | `albus` | [NixOS 23.11](https://nixos.org/blog/) | [KDE Plasma](https://kde.org/plasma-desktop/) |  KWin | _Personal_ |
+| `ron` | macOS 14.1 | - | - | _Personal_ |
 | `severus` | macOS 12.6 | - | - | _Personal_ |
+
+## Installation
+
+This dotfiles are manage using [`nix`](https://nixos.wiki/wiki/Nix) and [`home-manager`](https://github.com/rycee/home-manager).
+
+### NixOS setup
+
+1. Clone the repository and go inside the folder
+
+```sh
+nix run --extra-experimental-features nix-command --extra-experimental-features flakes github:nixos/nixpkgs#git -- clone git@github.com:JesusMtnez/dotfiles $HOME/.dotfiles
+```
+
+2. Switch to `$HOSTNAME` flake.
+
+```sh
+nixos-rebuild switch --use-remote-sudo --flakes $HOME/.dotfiles/.
+```
+
+### MacOS setup
+
+Before attempting to use this dotfiles in macOS systems, we need to:
+
+1. Install _Command Line Tools_ (includes `git`)
+```sh
+xcode-select --install
+```
+
+2. Install `homebrew` using its latest [`pkg`][brew-pkg].
+
+```sh
+# Setup brew in PATH
+(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> $HOME/.zprofile
+```
+
+3. Install `nix` using DeterminateSystems [`pkg`][nix-pkg].
+
+  [brew-pkg]: https://github.com/Homebrew/brew/releases
+  [nix-pkg]: https://install.determinate.systems/nix-installer-pkg/stable/Universal
+
+4. Setup `nix-darwin` using `bootstrap` flake.
+
+```sh
+nix build .#darwinConfigurations.bootstrap.system
+./result/sw/bin/darwin-rebuild switch --flake $HOME/.dotfiles/.#bootstrap
+```
+
+5. Switch to `$HOSTNAME` flake.
+
+```sh
+# Using nix-darwin, build and switch to your configuration
+darwin-rebuild switch --flake $HOME/.dotfiles/.
+```
 
 ## Notes
 
