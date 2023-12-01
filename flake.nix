@@ -76,11 +76,7 @@
         bootstrap = darwin.lib.darwinSystem {
           system = "aarch64-darwin"; # TODO Make it compatible with system "x86_64-darwin"
           inputs = { inherit nixpkgs; };
-          specialArgs = {
-            nix-vscode-extensions-overlay = nix-vscode-extensions.overlays.default;
-          };
           modules = [
-            ./hosts/common.nix
             ./hosts/darwin-bootstrap.nix
           ];
         };
