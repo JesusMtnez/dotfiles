@@ -63,11 +63,10 @@ xcode-select --install
   [brew-pkg]: https://github.com/Homebrew/brew/releases
   [nix-pkg]: https://install.determinate.systems/nix-installer-pkg/stable/Universal
 
-4. Setup `nix-darwin` using `bootstrap` flake.
+4. Setup `nix-darwin` applying the flake for the first time.
 
 ```sh
-nix build .#darwinConfigurations.bootstrap.system
-./result/sw/bin/darwin-rebuild switch --flake $HOME/.dotfiles/.#bootstrap
+nix run nix-darwin -- switch --flake $HOME/.dotfiles/.
 ```
 
 5. Switch to `$HOSTNAME` flake.
