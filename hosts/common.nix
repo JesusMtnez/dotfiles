@@ -32,7 +32,8 @@
   programs.zsh.promptInit = "";
 
   fonts.fontDir.enable = true;
-  fonts.packages = with pkgs; [
+  # FIXME: rename to fonts.packages when https://github.com/LnL7/nix-darwin/issues/752
+  fonts.fonts = with pkgs; [
     (nerdfonts.override { fonts = [ "IosevkaTerm" ]; })
     (iosevka-bin.override { variant = "sgr-iosevka-term"; })
     (iosevka-bin.override { variant = "sgr-iosevka-aile"; })
