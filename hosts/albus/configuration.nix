@@ -61,7 +61,6 @@
 
     displayManager = {
       sddm.enable = true;
-      defaultSession = "plasmawayland";
     };
 
     desktopManager.plasma5 = {
