@@ -81,6 +81,33 @@
           ];
         };
 
+        ron = darwin.lib.darwinSystem {
+          inputs = { inherit nixpkgs; };
+          system = "aarch64-darwin";
+          specialArgs = {
+            nix-vscode-extensions-overlay = nix-vscode-extensions.overlays.default;
+          };
+          modules = [
+            ./hosts/common.nix
+            ./hosts/ron/configuration.nix
+            # ./hosts/ron/homebrew.nix
+
+            # home.darwinModule
+            # {
+            #   home-manager = {
+            #     useGlobalPkgs = true;
+            #     useUserPackages = true;
+            #     extraSpecialArgs = {
+            #       inherit (inputs);
+            #       isWorkstation = false;
+            #       latestPkgs = mkPkgsFor "x86_64-darwin" nixpkgs-master;
+            #     };
+            #     users.jmartinez = import ./hosts/ron/default.nix;
+            #   };
+            # }
+          ];
+        };
+
         severus = darwin.lib.darwinSystem {
           inputs = { inherit nixpkgs; };
           system = "x86_64-darwin";
