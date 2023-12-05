@@ -11,7 +11,6 @@ in
     ../../applications/direnv.nix
     ../../applications/git.nix
     ../../applications/neovim.nix
-    ../../applications/sbt.nix
     ../../applications/zsh
   ];
 
@@ -33,16 +32,13 @@ in
     cachix
 
     # Global dev tools
-    awscli2
     colima
-    coursier
     docker-client
     docker-buildx
     docker-compose
-    kubectl
+    latestPkgs.joplin
     latestPkgs.keepassxc
     latestPkgs.raycast
-    latestPkgs.scala-cli
   ];
 
   home.stateVersion = "23.05";

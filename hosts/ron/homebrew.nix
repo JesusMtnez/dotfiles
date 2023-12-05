@@ -18,8 +18,6 @@
     brews = [
       { name = "pinentry"; }
       { name = "gnupg"; }
-      { name = "protobuf"; }
-      { name = "watch"; }
     ];
 
     casks = [
@@ -29,7 +27,6 @@
       { name = "font-sf-pro"; }
       # { name = "google-chrome"; greedy = true; }
       # { name = "hiddenbar"; }
-      { name = "joplin"; }
       # { name = "marta"; }
       { name = "mounty"; }
       { name = "openvpn-connect"; }

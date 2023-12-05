@@ -92,19 +92,19 @@
             ./hosts/ron/configuration.nix
             # ./hosts/ron/homebrew.nix
 
-            # home.darwinModule
-            # {
-            #   home-manager = {
-            #     useGlobalPkgs = true;
-            #     useUserPackages = true;
-            #     extraSpecialArgs = {
-            #       inherit (inputs);
-            #       isWorkstation = false;
-            #       latestPkgs = mkPkgsFor "x86_64-darwin" nixpkgs-master;
-            #     };
-            #     users.jmartinez = import ./hosts/ron/default.nix;
-            #   };
-            # }
+            home.darwinModule
+            {
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                extraSpecialArgs = {
+                  inherit (inputs);
+                  isWorkstation = false;
+                  latestPkgs = mkPkgsFor "aarch64-darwin" nixpkgs-master;
+                };
+                users.jesus = import ./hosts/ron/default.nix;
+              };
+            }
           ];
         };
 
