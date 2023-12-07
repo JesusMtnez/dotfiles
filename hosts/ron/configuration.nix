@@ -11,7 +11,7 @@
     options = "-d";
   };
 
-  users.users.jmartinez.home = "/Users/jesus";
+  users.users.jesus.home = "/Users/jesus";
 
   system.defaults.dock = {
     autohide = false;
