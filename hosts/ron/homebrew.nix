@@ -21,13 +21,10 @@
     ];
 
     casks = [
-      # { name = "amethyst"; }
+      { name = "autofirma"; }
       { name = "coconutbattery"; }
       { name = "firefox"; }
       { name = "font-sf-pro"; }
-      # { name = "google-chrome"; greedy = true; }
-      # { name = "hiddenbar"; }
-      # { name = "marta"; }
       { name = "mounty"; }
       { name = "openvpn-connect"; }
       { name = "sleek"; }
