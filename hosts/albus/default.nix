@@ -54,7 +54,7 @@ in
     gimp-with-plugins
     latestPkgs.joplin-desktop
     keepassxc
-    libreoffice-qt
+    libreoffice-fresh
     masterpdfeditor4
     latestPkgs.portfolio
     protonvpn-gui
@@ -65,6 +65,17 @@ in
     usbimager
     vlc
   ];
+
+  gtk = {
+    enable = true;
+
+    iconTheme = {
+      name = "Papirus-Dark";
+      package = pkgs.papirus-icon-theme;
+    };
+
+    theme.name = "Adwaita-dark";
+  };
 
   # See: https://github.com/nix-community/home-manager/issues/2064
   systemd.user.targets.tray = {

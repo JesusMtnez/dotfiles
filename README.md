@@ -20,7 +20,7 @@ _using nix to rule them all_
 
 | Name |      | OS  | DE  | WM  | Use |
 | :-:  | :-:  | :-: | :-: | :-: | :-: |
-| `albus` | <img width="18" src="https://cdn.simpleicons.org/nixos" /> | NixOS 23.11 | KDE Plasma 5 |  KWin | _Personal_ |
+| `albus` | <img width="18" src="https://cdn.simpleicons.org/nixos" /> | NixOS 23.11 | Gnome |  - | _Personal_ |
 | `ron` | <img width="18" src="https://cdn.simpleicons.org/apple" /> | macOS 14.1 | - | - | _Personal_ |
 | `severus` | <img width="18" src="https://cdn.simpleicons.org/apple" /> | macOS 12.6 | - | - | _Personal_ |
 

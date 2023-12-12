@@ -37,7 +37,6 @@
 
   networking = {
     hostName = "albus";
-    useDHCP = false;
     interfaces.enp0s31f6.useDHCP = true;
     networkmanager.enable = true;
   };
@@ -59,14 +58,9 @@
     enable = true;
     excludePackages = [ pkgs.xterm ];
 
-    displayManager = {
-      sddm.enable = true;
-    };
+    displayManager.gdm.enable = true;
 
-    desktopManager.plasma5 = {
-      enable = true;
-      useQtScaling = true;
-    };
+    desktopManager.gnome.enable = true;
 
     layout = "us";
     xkbVariant = "altgr-intl";
@@ -92,7 +86,7 @@
   hardware.nvidia.modesetting.enable = true;
 
   services.gnome.gnome-keyring.enable = true;
-  security.pam.services.sddm.enableGnomeKeyring = true;
+  security.pam.services.gdm.enableGnomeKeyring = true;
 
   sound.enable = true;
   sound.mediaKeys.enable = true;
@@ -125,9 +119,30 @@
     appimage-run
     cachix
 
-    # kde apps
-    libsForQt5.ark
+    # gnome apps / tools
+    gnome.adwaita-icon-theme
+    gnomeExtensions.appindicator
   ];
+
+  environment.gnome.excludePackages = (with pkgs; [
+    gnome-photos
+    gnome-tour
+  ]) ++ (with pkgs.gnome; [
+    atomix # puzzle game
+    cheese # webcam tool
+    gnome-music
+    geary # email reader
+    gedit # text editor
+    gnome-characters
+    gnome-contacts
+    gnome-initial-setup
+    gnome-terminal
+    epiphany # web browser
+    hitori # sudoku game
+    iagno # go game
+    tali # poker game
+    yelp # Help view
+  ]);
 
   programs = {
     dconf.enable = true;
@@ -145,6 +160,8 @@
     corefonts
     vistafonts
   ];
+
+  services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
 
   system.stateVersion = "23.11";
 }
