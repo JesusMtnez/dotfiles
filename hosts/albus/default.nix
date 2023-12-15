@@ -64,6 +64,12 @@ in
     thunderbird-bin
     usbimager
     vlc
+
+    gnomeExtensions.appindicator
+    gnomeExtensions.dash-to-panel
+    gnomeExtensions.space-bar
+    gnomeExtensions.user-themes
+    gnomeExtensions.vitals
   ];
 
   gtk = {
@@ -75,6 +81,22 @@ in
     };
 
     theme.name = "Adwaita-dark";
+  };
+
+  dconf.settings = {
+    # ...
+    "org/gnome/shell" = {
+      disable-user-extensions = false;
+
+      # `gnome-extensions list` for a list
+      enabled-extensions = [
+        "appindicatorsupport@rgcjonas.gmail.com"
+        "dash-to-panel@jderose9.github.com"
+        "space-bar@luchrioh"
+        "user-theme@gnome-shell-extensions.gcampax.github.com"
+        "Vitals@CoreCoding.com"
+      ];
+    };
   };
 
   # See: https://github.com/nix-community/home-manager/issues/2064

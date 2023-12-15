@@ -121,7 +121,6 @@
 
     # gnome apps / tools
     gnome.adwaita-icon-theme
-    gnomeExtensions.appindicator
   ];
 
   environment.gnome.excludePackages = (with pkgs; [
