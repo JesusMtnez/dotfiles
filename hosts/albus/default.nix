@@ -67,6 +67,7 @@ in
 
     gnomeExtensions.appindicator
     gnomeExtensions.dash-to-panel
+    gnomeExtensions.paperwm
     gnomeExtensions.space-bar
     gnomeExtensions.user-themes
     gnomeExtensions.vitals
@@ -92,6 +93,7 @@ in
       enabled-extensions = [
         "appindicatorsupport@rgcjonas.gmail.com"
         "dash-to-panel@jderose9.github.com"
+        # "paperwm@paperwm.github.com"
         "space-bar@luchrioh"
         "user-theme@gnome-shell-extensions.gcampax.github.com"
         "Vitals@CoreCoding.com"
