@@ -36,7 +36,6 @@ in
     systemd.user.services.protonmail-bridge = {
       Unit = {
         Description = "Protonmail Bridge";
-        Requires = [ "network.target" ];
         After = [ "network.target" ];
       };
 
