@@ -57,7 +57,6 @@
 
     extensions = with pkgs.vscode-marketplace; [
       cab404.vscode-direnv
-      # pkgs.vscode-marketplace-release.eamodio.gitlens
       flix.flix
       fwcd.kotlin
       github.vscode-github-actions
@@ -71,7 +70,6 @@
       pkgs.vscode-marketplace-release.rust-lang.rust-analyzer
       scala-lang.scala
       scalameta.metals
-      vscodevim.vim
       zhuangtongfa.material-theme
     ];
   };
