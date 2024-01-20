@@ -7,13 +7,16 @@
 _using nix to rule them all_
 
 [![Built with nix][NIX-badge]][NIX-link]
+[![woodpecker-status][STATUS-badge]][STATUS-link]
 [![MIT LICENSE][LICENSE-badge]][LICENSE-link]
 
 </div>
 
-  [NIX-badge]: https://img.shields.io/badge/nix-blue.svg?logo=nixos&labelColor=73C3D5&style=for-the-badge
+  [STATUS-badge]: https://ci.codeberg.org/api/badges/13009/status.svg
+  [STATUS-link]: https://ci.codeberg.org/repos/13009
+  [NIX-badge]: https://img.shields.io/badge/nix-blue.svg?logo=nixos&labelColor=73C3D5
   [NIX-link]: https://builtwithnix.org
-  [LICENSE-badge]: https://img.shields.io/badge/license-MIT-green.svg?style=for-the-badge
+  [LICENSE-badge]: https://img.shields.io/badge/license-MIT-green.svg
   [LICENSE-link]: /LICENSE
 
 ## Machines
