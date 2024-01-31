@@ -32,7 +32,7 @@ in
   };
 
   services.protonmail-bridge = {
-    enable = true;
+    enable = false;
     nonInteractive = true;
   };
 
