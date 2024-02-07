@@ -57,6 +57,7 @@ in
     keepassxc
     libreoffice-fresh
     masterpdfeditor4
+    mullvad-browser
     latestPkgs.portfolio
     protonvpn-gui
     sleek
