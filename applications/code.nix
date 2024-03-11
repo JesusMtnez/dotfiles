@@ -74,6 +74,7 @@
       pkgs.vscode-marketplace-release.rust-lang.rust-analyzer
       scala-lang.scala
       scalameta.metals
+      yzhang.markdown-all-in-one
       zhuangtongfa.material-theme
     ];
   };
