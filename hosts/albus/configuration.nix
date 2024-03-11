@@ -117,7 +117,7 @@
   environment.systemPackages = with pkgs; [
     # apps
     appimage-run
-    cachix
+    # cachix
 
     # gnome apps / tools
     gnome.adwaita-icon-theme
