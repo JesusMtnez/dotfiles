@@ -36,8 +36,12 @@
       "metals.showInferredType" = true;
       "metals.bloopSbtAlreadyInstalled" = true;
       "nix.enableLanguageServer" = true;
-      "nix.formatterPath" = "${pkgs.nixpkgs-fmt}/bin/nixpkgs-fmt";
-      "nix.serverPath" = "${pkgs.rnix-lsp}/bin/rnix-lsp";
+      "nix.serverPath" = "${pkgs.nil}/bin/nil";
+      "nix.serverSettings" = {
+        "nil" = {
+          "formatting" = { "command" = [ "${pkgs.nixpkgs-fmt}/bin/nixpkgs-fmt" ]; };
+        };
+      };
       "oneDarkPro.vivid" = true;
       "terminal.integrated.cursorStyle" = "line";
       "terminal.integrated.fontFamily" = "'IosevkaTerm Nerd Font'";
