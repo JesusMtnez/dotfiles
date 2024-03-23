@@ -24,7 +24,7 @@
     };
   };
 
-  outputs = inputs @ { self, nixpkgs, home, darwin, nixpkgs-master, nix-vscode-extensions, ... }:
+  outputs = { nixpkgs, home, darwin, nixpkgs-master, nix-vscode-extensions, ... }:
     let
       systems = [
         "x86_64-linux"
@@ -99,33 +99,6 @@
                   latestPkgs = mkPkgsFor "aarch64-darwin" nixpkgs-master;
                 };
                 users.jesus = import ./hosts/ron/default.nix;
-              };
-            }
-          ];
-        };
-
-        severus = darwin.lib.darwinSystem {
-          inputs = { inherit nixpkgs; };
-          system = "x86_64-darwin";
-          specialArgs = {
-            nix-vscode-extensions-overlay = nix-vscode-extensions.overlays.default;
-          };
-          modules = [
-            ./hosts/common.nix
-            ./hosts/severus/configuration.nix
-            ./hosts/severus/homebrew.nix
-
-            home.darwinModule
-            {
-              home-manager = {
-                useGlobalPkgs = true;
-                useUserPackages = true;
-                extraSpecialArgs = {
-                  inherit (inputs);
-                  isWorkstation = false;
-                  latestPkgs = mkPkgsFor "x86_64-darwin" nixpkgs-master;
-                };
-                users.jmartinez = import ./hosts/severus/default.nix;
               };
             }
           ];

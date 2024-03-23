@@ -1,4 +1,4 @@
-{ config, pkgs, latestPkgs, lib, ... }:
+{ pkgs, latestPkgs, lib, ... }:
 let
   sleek = pkgs.callPackage ../../packages/sleek.nix { };
 in
