@@ -60,8 +60,6 @@
                 useGlobalPkgs = true;
                 useUserPackages = true;
                 extraSpecialArgs = {
-                  inherit (inputs);
-                  isWorkstation = false;
                   latestPkgs = mkPkgsFor "x86_64-linux" nixpkgs-master;
                 };
                 users.jesus = import ./hosts/albus/default.nix;
@@ -98,8 +96,6 @@
                 useGlobalPkgs = true;
                 useUserPackages = true;
                 extraSpecialArgs = {
-                  inherit (inputs);
-                  isWorkstation = false;
                   latestPkgs = mkPkgsFor "aarch64-darwin" nixpkgs-master;
                 };
                 users.jesus = import ./hosts/ron/default.nix;

@@ -1,4 +1,4 @@
-{ pkgs, lib, isWorkstation, ... }:
+{ ... }:
 {
 
   programs.sbt = {
@@ -20,13 +20,5 @@
         version = "0.11.1";
       }
     ];
-  };
-
-  home.file.".sbt/1.0/credentials.sbt" = lib.mkIf isWorkstation {
-    text =
-      ''
-        credentials += Credentials(Path.userHome / ".secrets" / "credentials")
-        credentials += Credentials(Path.userHome / ".secrets" / "credentials_old")
-      '';
   };
 }
