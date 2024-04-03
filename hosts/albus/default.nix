@@ -11,8 +11,6 @@ in
     ../../applications/neovim.nix
     ../../applications/sbt.nix
     ../../applications/zsh
-
-    ../../home-manager/services/protonmail-bridge.nix
   ];
 
   fonts.fontconfig.enable = true;
@@ -29,11 +27,6 @@ in
     enable = true;
     defaultCacheTtl = 1800;
     enableSshSupport = true;
-  };
-
-  services.protonmail-bridge = {
-    enable = false;
-    nonInteractive = true;
   };
 
   services.syncthing = {
