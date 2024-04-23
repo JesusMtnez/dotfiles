@@ -41,7 +41,7 @@ nix run --extra-experimental-features nix-command --extra-experimental-features 
 2. Switch to `$HOSTNAME` flake.
 
 ```sh
-nixos-rebuild switch --use-remote-sudo --flakes $HOME/.dotfiles/.
+nixos-rebuild switch --use-remote-sudo --flake $HOME/.dotfiles/.
 ```
 
 ### MacOS setup
