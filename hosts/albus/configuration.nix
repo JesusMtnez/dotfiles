@@ -37,7 +37,7 @@
 
   networking = {
     hostName = "albus";
-    interfaces.enp0s31f6.useDHCP = true;
+    interfaces.eno1.useDHCP = true;
     networkmanager.enable = true;
   };
 
