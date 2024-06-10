@@ -2,11 +2,11 @@
 
 let
   pname = "sleek";
-  version = "2.0.13";
+  version = "2.0.14";
 
   src = fetchurl {
     url = "https://github.com/ransome1/sleek/releases/download/v${version}/sleek-${version}.AppImage";
-    hash = "sha256-USNubx5jsQHWDnZKcr1Pg9nlSLd36qAc5mMi5wIyacY=";
+    hash = "sha256-d2fLsCI7peuNBtjgHs1qumgPAF9eJeBYiIIffoSv9Jk=";
   };
 
   appimageContents = appimageTools.extract {
