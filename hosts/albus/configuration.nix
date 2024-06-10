@@ -4,7 +4,7 @@
   imports = [ ./hardware-configuration.nix ];
 
   nix = {
-    package = pkgs.nixUnstable;
+    package = pkgs.nixVersions.latest;
     extraOptions = ''
       experimental-features = nix-command flakes
     '';
@@ -62,18 +62,19 @@
 
     desktopManager.gnome.enable = true;
 
-    layout = "us";
-    xkbVariant = "altgr-intl";
-    xkbOptions = "ctrl:nocaps";
+    xkb.layout = "us";
+    xkb.variant = "altgr-intl";
+    xkb.options = "ctrl:nocaps";
 
     videoDrivers = [ "nvidia" ];
-
-    libinput.enable = true;
   };
+
+  services.libinput.enable = true;
 
   services.avahi = {
     enable = true;
-    nssmdns = true;
+    nssmdns4 = true;
+    nssmdns6 = true;
   };
 
   services.printing = {
@@ -126,12 +127,12 @@
   environment.gnome.excludePackages = (with pkgs; [
     gnome-photos
     gnome-tour
+    gedit # text editor
   ]) ++ (with pkgs.gnome; [
     atomix # puzzle game
     cheese # webcam tool
     gnome-music
     geary # email reader
-    gedit # text editor
     gnome-characters
     gnome-contacts
     gnome-initial-setup
@@ -153,7 +154,10 @@
   };
 
   virtualisation.docker.enable = true;
-  virtualisation.libvirtd.enable = true;
+  virtualisation.libvirtd = {
+    enable = true;
+    qemu.vhostUserPackages = [ pkgs.virtiofsd ];
+  };
 
   fonts.packages = with pkgs; [
     corefonts
@@ -162,5 +166,5 @@
 
   services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
 
-  system.stateVersion = "23.11";
+  system.stateVersion = "24.05";
 }

@@ -145,9 +145,10 @@
 
   programs.eza = {
     enable = true;
-    enableAliases = true;
     icons = true;
     git = true;
+    enableZshIntegration = true;
+    enableBashIntegration = false;
   };
 
   programs.fzf = {

@@ -53,7 +53,7 @@ in
     mullvad-browser
     latestPkgs.portfolio
     protonvpn-gui
-    sleek
+    # sleek
     spotify
     tdesktop
     thunderbird-bin
@@ -104,5 +104,5 @@ in
     };
   };
 
-  home.stateVersion = "23.11";
+  home.stateVersion = "24.05";
 }
