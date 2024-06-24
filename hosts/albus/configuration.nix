@@ -145,6 +145,10 @@
   ]);
 
   programs = {
+    appimage = {
+      enable = true;
+      binfmt = true;
+    };
     dconf.enable = true;
     gnupg.agent = {
       enable = true;
