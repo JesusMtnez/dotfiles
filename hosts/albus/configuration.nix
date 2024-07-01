@@ -117,7 +117,6 @@
 
   environment.systemPackages = with pkgs; [
     # apps
-    appimage-run
     # cachix
 
     # gnome apps / tools
