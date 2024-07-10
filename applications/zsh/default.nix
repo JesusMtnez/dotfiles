@@ -129,6 +129,10 @@
           tags = [ "from:oh-my-zsh" "as:plugin" "depth:1" "defer:2" ];
         }
         {
+          name = "go-task/task";
+          tags = [ "depth:1" "use:completion/zsh" ];
+        }
+        {
           name = "\$HOME/.config/zsh";
           tags = [ "from:local" ];
         }
