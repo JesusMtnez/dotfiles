@@ -64,6 +64,7 @@
       flix.flix
       fwcd.kotlin
       github.vscode-github-actions
+      golang.go
       jnoortheen.nix-ide
       mathiasfrohlich.kotlin
       pkgs.open-vsx.ms-python.python
