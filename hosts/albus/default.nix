@@ -13,6 +13,8 @@ in
     ../../applications/zsh
   ];
 
+  catppuccin.flavor = "frappe";
+
   fonts.fontconfig.enable = true;
 
   programs = {

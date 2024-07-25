@@ -42,15 +42,14 @@
           "formatting" = { "command" = [ "${pkgs.nixpkgs-fmt}/bin/nixpkgs-fmt" ]; };
         };
       };
-      "oneDarkPro.vivid" = true;
       "terminal.integrated.cursorStyle" = "line";
       "terminal.integrated.fontFamily" = "'IosevkaTerm Nerd Font'";
       "terminal.integrated.fontSize" = 12;
       "update.mode" = "none";
       "window.restoreFullscreen" = true;
       "window.zoomLevel" = 0;
-      "workbench.colorTheme" = "One Dark Pro";
-      "workbench.iconTheme" = "material-icon-theme";
+      "workbench.colorTheme" = "Catppuccin Frappé";
+      "workbench.iconTheme" = "catppuccin-frappe";
       "workbench.sideBar.location" = "right";
       "redhat.telemetry.enabled" = false;
 
@@ -61,6 +60,8 @@
 
     extensions = with pkgs.vscode-marketplace; [
       cab404.vscode-direnv
+      catppuccin.catppuccin-vsc
+      catppuccin.catppuccin-vsc-icons
       flix.flix
       fwcd.kotlin
       github.vscode-github-actions
@@ -69,7 +70,6 @@
       mathiasfrohlich.kotlin
       pkgs.open-vsx.ms-python.python
       ms-vsliveshare.vsliveshare
-      pkief.material-icon-theme
       redhat.ansible
       redhat.vscode-yaml
       pkgs.vscode-marketplace-release.rust-lang.rust-analyzer
@@ -77,7 +77,6 @@
       scalameta.metals
       task.vscode-task
       yzhang.markdown-all-in-one
-      zhuangtongfa.material-theme
     ];
   };
 }

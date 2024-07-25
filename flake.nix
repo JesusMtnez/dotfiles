@@ -22,9 +22,11 @@
       url = "github:nix-community/nix-vscode-extensions";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    catppuccin.url = "github:catppuccin/nix";
   };
 
-  outputs = { nixpkgs, home, darwin, nixpkgs-master, nix-vscode-extensions, ... }:
+  outputs = { nixpkgs, home, darwin, nixpkgs-master, nix-vscode-extensions, catppuccin, ... }:
     let
       systems = [
         "x86_64-linux"
@@ -62,7 +64,12 @@
                 extraSpecialArgs = {
                   latestPkgs = mkPkgsFor "x86_64-linux" nixpkgs-master;
                 };
-                users.jesus = import ./hosts/albus/default.nix;
+                users.jesus = {
+                  imports = [
+                    catppuccin.homeManagerModules.catppuccin
+                    ./hosts/albus/default.nix
+                  ];
+                };
               };
             }
           ];

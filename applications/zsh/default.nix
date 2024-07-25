@@ -142,9 +142,7 @@
 
   programs.bat = {
     enable = true;
-    config = {
-      theme = "TwoDark";
-    };
+    catppuccin.enable = true;
   };
 
   programs.eza = {
@@ -157,6 +155,7 @@
 
   programs.fzf = {
     enable = true;
+    catppuccin.enable = true;
     enableZshIntegration = true;
     enableBashIntegration = false;
   };
