@@ -35,7 +35,7 @@ This dotfiles are manage using [`nix`](https://nixos.wiki/wiki/Nix) and [`home-m
 1. Clone the repository and go inside the folder
 
 ```sh
-nix run --extra-experimental-features nix-command --extra-experimental-features flakes github:nixos/nixpkgs#git -- clone git@github.com:JesusMtnez/dotfiles $HOME/.dotfiles
+nix run --extra-experimental-features nix-command --extra-experimental-features flakes github:nixos/nixpkgs#git -- clone https://codeberg.com/JesusMtnez/dotfiles $HOME/.dotfiles
 ```
 
 2. Switch to `$HOSTNAME` flake.
