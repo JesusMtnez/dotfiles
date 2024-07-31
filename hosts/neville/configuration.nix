@@ -69,7 +69,7 @@
   services.libinput.enable = true;
 
   services.avahi = {
-    enable = true ;
+    enable = true;
     nssmdns4 = true;
     nssmdns6 = true;
   };
