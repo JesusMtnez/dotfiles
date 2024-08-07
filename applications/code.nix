@@ -66,11 +66,11 @@
       github.vscode-github-actions
       golang.go
       jnoortheen.nix-ide
-      pkgs.open-vsx.ms-python.python
+      ms-python.python
       ms-vsliveshare.vsliveshare
       redhat.ansible
       redhat.vscode-yaml
-      pkgs.vscode-marketplace-release.rust-lang.rust-analyzer
+      rust-lang.rust-analyzer
       scala-lang.scala
       scalameta.metals
       task.vscode-task
