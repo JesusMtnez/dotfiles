@@ -63,11 +63,9 @@
       catppuccin.catppuccin-vsc
       catppuccin.catppuccin-vsc-icons
       flix.flix
-      fwcd.kotlin
       github.vscode-github-actions
       golang.go
       jnoortheen.nix-ide
-      mathiasfrohlich.kotlin
       pkgs.open-vsx.ms-python.python
       ms-vsliveshare.vsliveshare
       redhat.ansible
