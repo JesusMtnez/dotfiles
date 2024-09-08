@@ -74,35 +74,6 @@
             }
           ];
         };
-
-        neville = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-          specialArgs = {
-            nix-vscode-extensions-overlay = nix-vscode-extensions.overlays.default;
-          };
-          modules = [
-            ./hosts/common.nix
-            ./hosts/neville/configuration.nix
-
-            home.nixosModules.home-manager
-            {
-              home-manager = {
-                useGlobalPkgs = true;
-                useUserPackages = true;
-                backupFileExtension = "backup";
-                extraSpecialArgs = {
-                  latestPkgs = mkPkgsFor "x86_64-linux" nixpkgs-master;
-                };
-                users.jesus = {
-                  imports = [
-                    catppuccin.homeManagerModules.catppuccin
-                    ./hosts/neville/default.nix
-                  ];
-                };
-              };
-            }
-          ];
-        };
       };
 
       darwinConfigurations = {
