@@ -58,15 +58,17 @@
     enable = true;
     excludePackages = [ pkgs.xterm ];
 
-    displayManager.gdm.enable = true;
-
-    desktopManager.gnome.enable = true;
-
     xkb.layout = "us";
     xkb.variant = "altgr-intl";
     xkb.options = "ctrl:nocaps";
 
     videoDrivers = [ "nvidia" ];
+  };
+
+  services.desktopManager.plasma6.enable = true;
+  services.displayManager.sddm = {
+    enable = true;
+    autoNumlock = true;
   };
 
   services.libinput.enable = true;
@@ -86,8 +88,8 @@
 
   hardware.nvidia.modesetting.enable = true;
 
-  services.gnome.gnome-keyring.enable = true;
-  security.pam.services.gdm.enableGnomeKeyring = true;
+  # services.gnome.gnome-keyring.enable = true;
+  # security.pam.services.gdm.enableGnomeKeyring = true;
 
   sound.enable = true;
   sound.mediaKeys.enable = true;
@@ -118,30 +120,13 @@
   environment.systemPackages = with pkgs; [
     # apps
     # cachix
-
-    # gnome apps / tools
-    gnome.adwaita-icon-theme
   ];
 
-  environment.gnome.excludePackages = (with pkgs; [
-    gnome-photos
-    gnome-tour
-    gedit # text editor
-  ]) ++ (with pkgs.gnome; [
-    atomix # puzzle game
-    cheese # webcam tool
-    gnome-music
-    geary # email reader
-    gnome-characters
-    gnome-contacts
-    gnome-initial-setup
-    gnome-terminal
-    epiphany # web browser
-    hitori # sudoku game
-    iagno # go game
-    tali # poker game
-    yelp # Help view
-  ]);
+  environment.plasma6.excludePackages = with pkgs.kdePackages; [
+    plasma-browser-integration
+    konsole
+    oxygen
+  ];
 
   programs = {
     appimage = {
@@ -166,8 +151,6 @@
     corefonts
     vistafonts
   ];
-
-  services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
 
   system.stateVersion = "24.05";
 }

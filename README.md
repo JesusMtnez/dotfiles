@@ -23,7 +23,7 @@ _using nix to rule them all_
 
 | Name |      | OS  | DE  | WM  | Use |
 | :-:  | :-:  | :-: | :-: | :-: | :-: |
-| `albus` | <img width="18" src="https://cdn.simpleicons.org/nixos" /> | NixOS 24.05 | Gnome |  - | _Personal_ |
+| `albus` | <img width="18" src="https://cdn.simpleicons.org/nixos" /> | NixOS 24.05 | KDE |  - | _Personal_ |
 | `neville` | <img width="18" src="https://cdn.simpleicons.org/nixos" /> | NixOS 24.05 | Gnome |  - | _Personal_ |
 
 ## Installation
