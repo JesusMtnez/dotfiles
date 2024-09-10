@@ -88,9 +88,6 @@
 
   hardware.nvidia.modesetting.enable = true;
 
-  # services.gnome.gnome-keyring.enable = true;
-  security.pam.services.sddm.kwallet.enable = true;
-
   sound.enable = true;
   sound.mediaKeys.enable = true;
 
