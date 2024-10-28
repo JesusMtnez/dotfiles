@@ -56,7 +56,7 @@ in
     # sleek
     spotify
     tdesktop
-    betterbird
+    latestPkgs.betterbird
     usbimager
     vlc
   ];
