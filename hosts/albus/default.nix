@@ -53,10 +53,8 @@ in
     masterpdfeditor4
     mullvad-browser
     latestPkgs.portfolio
-    # sleek
     spotify
     tdesktop
-    latestPkgs.betterbird
     usbimager
     vlc
   ];
