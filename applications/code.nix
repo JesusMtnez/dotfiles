@@ -59,21 +59,26 @@
     };
 
     extensions = with pkgs.vscode-marketplace; [
-      cab404.vscode-direnv
+      # UI
       catppuccin.catppuccin-vsc
       catppuccin.catppuccin-vsc-icons
-      flix.flix
-      github.vscode-github-actions
-      golang.go
-      jnoortheen.nix-ide
-      ms-python.python
+
+      # Tools
+      cab404.vscode-direnv
+      # github.vscode-github-actions
       ms-vsliveshare.vsliveshare
+      task.vscode-task
+
+      # Languagues
+      jnoortheen.nix-ide
+      # flix.flix
+      # golang.go
+      ms-python.python
       redhat.ansible
       redhat.vscode-yaml
-      rust-lang.rust-analyzer
+      # rust-lang.rust-analyzer
       scala-lang.scala
       scalameta.metals
-      task.vscode-task
       yzhang.markdown-all-in-one
     ];
   };
