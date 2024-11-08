@@ -1,8 +1,4 @@
-{ pkgs, latestPkgs, lib, ... }:
-let
-  sleek = pkgs.callPackage ../../packages/sleek.nix { };
-in
-{
+{ pkgs, latestPkgs, lib, ... }: {
   imports = [
     ../../applications/alacritty.nix
     ../../applications/code.nix
