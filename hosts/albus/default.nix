@@ -53,6 +53,7 @@
     mullvad-browser
     spotify
     tdesktop
+    transmission_4-qt6
     unrar
     usbimager
     vlc
