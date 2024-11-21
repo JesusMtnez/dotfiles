@@ -39,8 +39,11 @@
 
   home.packages = with pkgs; [
     audacity
+    brave
     calibre
     drawing
+    latestPkgs.dbeaver-bin
+    filezilla
     firefox
     gimp-with-plugins
     latestPkgs.joplin-desktop
@@ -51,6 +54,7 @@
     latestPkgs.portfolio
     spotify
     tdesktop
+    unrar
     usbimager
     vlc
   ];
