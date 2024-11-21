@@ -51,7 +51,6 @@
     libreoffice-qt6-fresh
     masterpdfeditor4
     mullvad-browser
-    latestPkgs.portfolio
     spotify
     tdesktop
     unrar
