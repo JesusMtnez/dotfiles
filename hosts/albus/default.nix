@@ -43,6 +43,7 @@
     calibre
     drawing
     latestPkgs.dbeaver-bin
+    discord
     filezilla
     firefox
     gimp
