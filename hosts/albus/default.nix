@@ -45,7 +45,7 @@
     latestPkgs.dbeaver-bin
     filezilla
     firefox
-    gimp-with-plugins
+    gimp
     latestPkgs.joplin-desktop
     keepassxc
     libreoffice-qt6-fresh
