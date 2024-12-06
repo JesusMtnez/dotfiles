@@ -84,12 +84,10 @@
     drivers = [ pkgs.brlaser ];
   };
 
-  hardware.opengl.enable = true;
+  hardware.graphics.enable = true;
 
   hardware.nvidia.modesetting.enable = true;
-
-  sound.enable = true;
-  sound.mediaKeys.enable = true;
+  hardware.nvidia.open = true;
 
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -149,5 +147,5 @@
     vistafonts
   ];
 
-  system.stateVersion = "24.05";
+  system.stateVersion = "24.11";
 }
