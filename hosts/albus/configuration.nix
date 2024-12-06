@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 
 {
   imports = [ ./hardware-configuration.nix ];
@@ -22,6 +22,7 @@
     kernelPackages = pkgs.linuxPackages_6_6;
     # https://www.kernel.org/category/releases.html
 
+    kernelParams = [ "module_blacklist=i915" ];
     blacklistedKernelModules = [ "nouveau" ];
 
     loader = {
@@ -84,10 +85,9 @@
     drivers = [ pkgs.brlaser ];
   };
 
-  hardware.graphics.enable = true;
-
   hardware.nvidia.modesetting.enable = true;
   hardware.nvidia.open = true;
+  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.production;
 
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
