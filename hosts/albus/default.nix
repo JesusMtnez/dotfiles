@@ -1,4 +1,9 @@
-{ pkgs, latestPkgs, lib, ... }: {
+{ pkgs, latestPkgs, lib, ... }:
+
+let
+  sleek = pkgs.callPackage ../../packages/sleek.nix { };
+in
+{
   imports = [
     ../../applications/alacritty.nix
     ../../applications/code.nix
@@ -52,6 +57,7 @@
     libreoffice-qt6-fresh
     masterpdfeditor4
     mullvad-browser
+    sleek
     spotify
     tdesktop
     transmission_4-qt6

@@ -13,7 +13,7 @@ let
     inherit pname version src;
   };
 in
-appimageTools.wrapType2 rec {
+appimageTools.wrapType2 {
   inherit pname version src;
 
   profile = ''
@@ -27,15 +27,15 @@ appimageTools.wrapType2 rec {
 
   extraInstallCommands = ''
     # Strip version from binary name.
-    mv $out/bin/${pname}-${version} $out/bin/${pname}
+    # mv $out/bin/${pname}-${version} $out/bin/${pname}
 
     install -m 444 \
         -D ${appimageContents}/sleek.desktop \
-        -t $out/share/applications
+        $out/share/applications/sleek.desktop
 
     substituteInPlace \
         $out/share/applications/sleek.desktop \
-        --replace 'Exec=AppRun' 'Exec=${pname}'
+        --replace-fail 'Exec=AppRun' 'Exec=${pname}'
 
     cp -r ${appimageContents}/usr/share/icons $out/share
   '';
