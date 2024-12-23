@@ -142,8 +142,9 @@
 
   programs.bat = {
     enable = true;
-    catppuccin.enable = true;
   };
+
+  catppuccin.bat.enable = true;
 
   programs.eza = {
     enable = true;
@@ -155,8 +156,9 @@
 
   programs.fzf = {
     enable = true;
-    catppuccin.enable = true;
     enableZshIntegration = true;
     enableBashIntegration = false;
   };
+
+  catppuccin.fzf.enable = true;
 }

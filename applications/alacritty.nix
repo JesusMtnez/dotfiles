@@ -4,8 +4,6 @@
     enable = true;
     package = pkgs.alacritty;
 
-    catppuccin.enable = true;
-
     settings = {
       font = {
         normal = {
@@ -17,4 +15,6 @@
       };
     };
   };
+
+  catppuccin.alacritty.enable = true;
 }
