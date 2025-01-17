@@ -85,9 +85,12 @@
     drivers = [ pkgs.brlaser ];
   };
 
-  hardware.nvidia.modesetting.enable = true;
-  hardware.nvidia.open = true;
-  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.production;
+  hardware.nvidia = {
+    package = config.boot.kernelPackages.nvidiaPackages.production;
+    modesetting.enable = true;
+    powerManagement.enable = true;
+    open = true;
+  };
 
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
