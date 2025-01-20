@@ -19,7 +19,7 @@
   };
 
   boot = {
-    kernelPackages = pkgs.linuxPackages_6_6;
+    kernelPackages = pkgs.linuxPackages_6_12;
     # https://www.kernel.org/category/releases.html
 
     kernelParams = [ "module_blacklist=i915" ];
