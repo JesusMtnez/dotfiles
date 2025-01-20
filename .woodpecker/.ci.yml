@@ -1,10 +1,10 @@
 ---
 when:
-  branch: main
-  event: [ push, pull_request]
+  - branch: main
+    event: [ push, pull_request]
 
 steps:
-  fmt:
+  - name: fmt
     image: nixos/nix:2.25.3
     commands:
       - echo 'experimental-features = flakes nix-command' >> /etc/nix/nix.conf
