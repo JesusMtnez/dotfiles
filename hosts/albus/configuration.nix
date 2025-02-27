@@ -70,8 +70,8 @@
   services.displayManager = {
     defaultSession = "plasmax11";
     sddm = {
-    enable = true;
-    autoNumlock = true;
+      enable = true;
+      autoNumlock = true;
     };
   };
 
