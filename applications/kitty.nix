@@ -6,7 +6,11 @@
 
     font = {
       name = "IosevkaTerm Nerd Font";
-      size = 9.0;
+      size = 10.0;
+    };
+
+    settings = {
+      cursor_shape = "beam";
     };
   };
 
