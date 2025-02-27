@@ -9,7 +9,7 @@
     userSettings = {
       "editor.fontFamily" = "'IosevkaTerm Nerd Font'";
       "editor.fontLigatures" = true;
-      "editor.fontSize" = 12;
+      "editor.fontSize" = 13;
       "editor.fontWeight" = "normal";
       "editor.minimap.maxColumn" = 60;
       "editor.minimap.renderCharacters" = false;
@@ -44,7 +44,7 @@
       };
       "terminal.integrated.cursorStyle" = "line";
       "terminal.integrated.fontFamily" = "'IosevkaTerm Nerd Font'";
-      "terminal.integrated.fontSize" = 12;
+      "terminal.integrated.fontSize" = 13;
       "update.mode" = "none";
       "window.restoreFullscreen" = true;
       "window.zoomLevel" = 0;
