@@ -67,9 +67,12 @@
   };
 
   services.desktopManager.plasma6.enable = true;
-  services.displayManager.sddm = {
+  services.displayManager = {
+    defaultSession = "plasmax11";
+    sddm = {
     enable = true;
     autoNumlock = true;
+    };
   };
 
   services.libinput.enable = true;
