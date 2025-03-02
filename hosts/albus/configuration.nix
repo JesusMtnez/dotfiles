@@ -134,6 +134,8 @@
       enable = true;
       binfmt = true;
     };
+    autofirma.enable = true;
+    autofirma.firefoxIntegration.enable = true;
     dconf.enable = true;
     gnupg.agent = {
       enable = true;

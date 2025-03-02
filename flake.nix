@@ -24,9 +24,14 @@
     };
 
     catppuccin.url = "github:catppuccin/nix";
+
+    autofirma = {
+      url = "github:nix-community/autofirma-nix/release-24.11";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, home, darwin, nixpkgs-master, nix-vscode-extensions, catppuccin, ... }:
+  outputs = { nixpkgs, home, darwin, nixpkgs-master, nix-vscode-extensions, catppuccin, autofirma, ... }:
     let
       systems = [
         "x86_64-linux"
@@ -72,6 +77,8 @@
                 };
               };
             }
+
+            autofirma.nixosModules.default
           ];
         };
       };
