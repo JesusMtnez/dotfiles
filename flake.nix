@@ -71,7 +71,7 @@
                 };
                 users.jesus = {
                   imports = [
-                    catppuccin.homeManagerModules.catppuccin
+                    catppuccin.homeModules.catppuccin
                     ./hosts/albus/default.nix
                   ];
                 };
