@@ -72,6 +72,7 @@
     sddm = {
       enable = true;
       autoNumlock = true;
+      wayland.enable = false;
     };
   };
 
@@ -92,7 +93,10 @@
     package = config.boot.kernelPackages.nvidiaPackages.production;
     modesetting.enable = true;
     powerManagement.enable = true;
+    powerManagement.finegrained = false;
     open = true;
+    nvidiaSettings = true;
+    nvidiaPersistenced = false;
   };
 
   hardware.pulseaudio.enable = false;
