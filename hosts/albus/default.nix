@@ -56,7 +56,6 @@ in
     keepassxc
     libreoffice-qt6-fresh
     masterpdfeditor4
-    mullvad-browser
     sleek
     spotify
     tdesktop
@@ -65,14 +64,6 @@ in
     usbimager
     vlc
   ];
-
-  # See: https://github.com/nix-community/home-manager/issues/2064
-  systemd.user.targets.tray = {
-    Unit = {
-      Description = "Home Manager System Tray";
-      Requires = [ "graphical-session-pre.target" ];
-    };
-  };
 
   home.stateVersion = "24.11";
 }

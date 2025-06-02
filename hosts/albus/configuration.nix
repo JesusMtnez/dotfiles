@@ -21,7 +21,7 @@
   boot = {
     # https://www.kernel.org/category/releases.html
     kernelPackages = pkgs.linuxPackages_6_12;
-    
+
     kernelModules = [ "kvm-intel" ];
 
     loader = {
