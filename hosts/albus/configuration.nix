@@ -78,6 +78,8 @@
 
   services.libinput.enable = true;
 
+  services.fwupd.enable = true;
+
   services.avahi = {
     enable = true;
     nssmdns4 = true;
@@ -114,7 +116,6 @@
     package = pkgs.bluez;
   };
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.jesus = {
     isNormalUser = true;
     description = "Jesús";
