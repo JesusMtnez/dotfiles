@@ -19,11 +19,10 @@
   };
 
   boot = {
-    kernelPackages = pkgs.linuxPackages_6_12;
     # https://www.kernel.org/category/releases.html
-
-    kernelParams = [ "module_blacklist=i915" ];
-    blacklistedKernelModules = [ "nouveau" ];
+    kernelPackages = pkgs.linuxPackages_6_12;
+    
+    kernelModules = [ "kvm-intel" ];
 
     loader = {
       systemd-boot.enable = true;
@@ -57,7 +56,6 @@
 
   services.xserver = {
     enable = true;
-    excludePackages = [ pkgs.xterm ];
 
     xkb.layout = "us";
     xkb.variant = "altgr-intl";
@@ -89,6 +87,11 @@
   services.printing = {
     enable = true;
     drivers = [ pkgs.brlaser ];
+  };
+
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
   };
 
   hardware.nvidia = {
