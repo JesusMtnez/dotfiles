@@ -101,7 +101,6 @@
     powerManagement.finegrained = false;
     open = true;
     nvidiaSettings = true;
-    nvidiaPersistenced = false;
   };
 
   hardware.pulseaudio.enable = false;
