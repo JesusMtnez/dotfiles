@@ -85,7 +85,7 @@
     drivers = [ pkgs.brlaser ];
   };
 
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -144,5 +144,5 @@
     vistafonts
   ];
 
-  system.stateVersion = "24.11";
+  system.stateVersion = "25.05";
 }

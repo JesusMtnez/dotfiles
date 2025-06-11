@@ -35,7 +35,7 @@
 
   fonts.fontDir.enable = true;
   fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "IosevkaTerm" ]; })
+    nerd-fonts.iosevka-term
     (iosevka-bin.override { variant = "SGr-IosevkaTerm"; })
     (iosevka-bin.override { variant = "Aile"; })
   ];

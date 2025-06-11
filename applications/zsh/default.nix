@@ -17,12 +17,33 @@
       size = 100000;
     };
 
-    initExtraFirst = ''
-      # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-      if [[ -r \"''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh\" ]]; then
-        source "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh"
-      fi
-    '';
+    initContent = lib.mkMerge [
+      (lib.mkBefore ''
+        # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+        if [[ -r \"''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh\" ]]; then
+          source "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh"
+        fi
+      '')
+      (lib.mkAfter ''
+        # Source other resource
+        [ -f $HOME/.localrc ] && source $HOME/.localrc # Local configuration
+
+        # Act as git status if no parameters.
+        g() {
+          if [[ $# > 0 ]]; then
+            git $@
+          else
+            git status -sb
+          fi
+        }
+        compdef g=git
+
+        # Change PWD hook
+        function chpwd() {
+            exa -lh # ls -lh
+        }
+      '')
+    ];
 
     sessionVariables = {
       EDITOR = "${pkgs.neovim}/bin/nvim +startinsert";
@@ -33,26 +54,6 @@
       TERM = "xterm-256color";
       ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE = "fg=60";
     };
-
-    initExtra = ''
-      # Source other resource
-      [ -f $HOME/.localrc ] && source $HOME/.localrc # Local configuration
-
-      # Act as git status if no parameters.
-      g() {
-        if [[ $# > 0 ]]; then
-          git $@
-        else
-          git status -sb
-        fi
-      }
-      compdef g=git
-
-      # Change PWD hook
-      function chpwd() {
-          exa -lh # ls -lh
-      }
-    '';
 
     shellAliases = lib.mkMerge [
       {
