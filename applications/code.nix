@@ -2,7 +2,7 @@
 {
 
   programs.vscode = {
-    package = latestPkgs.vscodium;
+    package = latestPkgs.vscode;
     enable = true;
     mutableExtensionsDir = false;
 
