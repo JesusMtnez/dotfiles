@@ -66,6 +66,7 @@
       # Tools
       cab404.vscode-direnv
       # github.vscode-github-actions
+      mechatroner.rainbow-csv
       ms-vsliveshare.vsliveshare
       task.vscode-task
 
