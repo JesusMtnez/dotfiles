@@ -53,7 +53,9 @@ in
     firefox
     gimp
     latestPkgs.joplin-desktop
+    kdePackages.kdenlive
     keepassxc
+    krita
     libreoffice-qt6-fresh
     masterpdfeditor4
     sleek
