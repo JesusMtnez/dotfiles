@@ -7,7 +7,7 @@
         "flake-parts": "flake-parts",
         "jmulticard-src": "jmulticard-src",
         "nixpkgs": [
-          "nixpkgs"
+          "nixpkgs_24_11"
         ]
       },
       "locked": {
@@ -136,7 +136,7 @@
     "home": {
       "inputs": {
         "nixpkgs": [
-          "nixpkgs"
+          "nixpkgs_24_11"
         ]
       },
       "locked": {
@@ -175,7 +175,7 @@
       "inputs": {
         "flake-utils": "flake-utils",
         "nixpkgs": [
-          "nixpkgs"
+          "nixpkgs_24_11"
         ]
       },
       "locked": {
@@ -241,6 +241,22 @@
     },
     "nixpkgs_2": {
       "locked": {
+        "lastModified": 1751741127,
+        "narHash": "sha256-t75Shs76NgxjZSgvvZZ9qOmz5zuBE8buUaYD28BMTxg=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "29e290002bfff26af1db6f64d070698019460302",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-25.05",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_24_11": {
+      "locked": {
         "lastModified": 1751274312,
         "narHash": "sha256-/bVBlRpECLVzjV19t5KMdMFWSwKLtb5RyXdjz3LJT+g=",
         "owner": "nixos",
@@ -263,7 +279,8 @@
         "home": "home",
         "nix-vscode-extensions": "nix-vscode-extensions",
         "nixpkgs": "nixpkgs_2",
-        "nixpkgs-master": "nixpkgs-master"
+        "nixpkgs-master": "nixpkgs-master",
+        "nixpkgs_24_11": "nixpkgs_24_11"
       }
     },
     "systems": {

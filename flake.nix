@@ -4,13 +4,15 @@
 
   inputs = {
 
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
+
+    nixpkgs_24_11.url = "github:nixos/nixpkgs/nixos-24.11";
 
     nixpkgs-master.url = "github:nixos/nixpkgs/master";
 
     home = {
       url = "github:nix-community/home-manager/release-24.11";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs_24_11";
     };
 
     darwin = {
@@ -20,27 +22,30 @@
 
     nix-vscode-extensions = {
       url = "github:nix-community/nix-vscode-extensions";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs_24_11";
     };
 
     catppuccin.url = "github:catppuccin/nix";
 
     autofirma = {
       url = "github:nix-community/autofirma-nix/release-24.11";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs_24_11";
     };
   };
 
-  outputs = { nixpkgs, home, darwin, nixpkgs-master, nix-vscode-extensions, catppuccin, autofirma, ... }:
+  outputs = { nixpkgs_24_11, nixpkgs, nixpkgs-master, home, darwin, nix-vscode-extensions, catppuccin, autofirma, ... }:
     let
-      systems = [
+      allSystems = [
         "x86_64-linux"
         "aarch64-linux"
         "x86_64-darwin"
         "aarch64-darwin"
       ];
 
-      forAllSystems = nixpkgs.lib.genAttrs systems;
+      forAllSystems = f: nixpkgs.lib.genAttrs allSystems (system: f {
+        pkgs = import nixpkgs { inherit system; };
+        latest = import nixpkgs-master { inherit system; };
+      });
 
       mkPkgsFor = system: pkgset:
         import pkgset {
@@ -52,7 +57,7 @@
     in
     {
       nixosConfigurations = {
-        albus = nixpkgs.lib.nixosSystem {
+        albus = nixpkgs_24_11.lib.nixosSystem {
           system = "x86_64-linux";
           specialArgs = {
             nix-vscode-extensions-overlay = nix-vscode-extensions.overlays.default;
@@ -81,6 +86,13 @@
             autofirma.nixosModules.default
           ];
         };
+
+        minerva = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            ./hosts/minerva/configuration.nix
+          ];
+        };
       };
 
       darwinConfigurations = {
@@ -93,16 +105,12 @@
         };
       };
 
-      devShell = forAllSystems
-        (system:
-          let
-            pkgs = nixpkgs.legacyPackages.${system};
-          in
-          pkgs.mkShell {
-            nativeBuildInputs = with pkgs; [
-              nixpkgs-fmt
-            ];
-          }
-        );
+      devShell = forAllSystems ({ pkgs, latest }:
+        pkgs.mkShell {
+          nativeBuildInputs = with pkgs; [
+            nixpkgs-fmt
+          ];
+        }
+      );
     };
 }
