@@ -73,7 +73,7 @@
       # Languagues
       jnoortheen.nix-ide
       # flix.flix
-      # golang.go
+      golang.go
       ms-python.python
       redhat.ansible
       redhat.vscode-yaml
