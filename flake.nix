@@ -6,23 +6,16 @@
 
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
 
-    nixpkgs_24_11.url = "github:nixos/nixpkgs/nixos-24.11";
-
     nixpkgs-master.url = "github:nixos/nixpkgs/master";
 
     home = {
-      url = "github:nix-community/home-manager/release-24.11";
-      inputs.nixpkgs.follows = "nixpkgs_24_11";
-    };
-
-    darwin = {
-      url = "github:lnl7/nix-darwin";
+      url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     nix-vscode-extensions = {
       url = "github:nix-community/nix-vscode-extensions";
-      inputs.nixpkgs.follows = "nixpkgs_24_11";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     catppuccin.url = "github:catppuccin/nix";
@@ -31,9 +24,16 @@
       url = "github:nix-community/autofirma-nix/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs_24_11";
     };
+
+    # TODO Remove when upgrading albus (errors with nvidia upgrade)
+    nixpkgs_24_11.url = "github:nixos/nixpkgs/nixos-24.11";
+    home_24_11 = {
+      url = "github:nix-community/home-manager/release-24.11";
+      inputs.nixpkgs.follows = "nixpkgs_24_11";
+    };
   };
 
-  outputs = { nixpkgs_24_11, nixpkgs, nixpkgs-master, home, darwin, nix-vscode-extensions, catppuccin, autofirma, ... }:
+  outputs = { nixpkgs, nixpkgs-master, home, nix-vscode-extensions, catppuccin, autofirma, nixpkgs_24_11, home_24_11, ... }:
     let
       allSystems = [
         "x86_64-linux"
@@ -66,7 +66,7 @@
             ./hosts/common.nix
             ./hosts/albus/configuration.nix
 
-            home.nixosModules.home-manager
+            home_24_11.nixosModules.home-manager
             {
               home-manager = {
                 useGlobalPkgs = true;
@@ -91,16 +91,6 @@
           system = "x86_64-linux";
           modules = [
             ./hosts/minerva/configuration.nix
-          ];
-        };
-      };
-
-      darwinConfigurations = {
-        bootstrap = darwin.lib.darwinSystem {
-          system = "aarch64-darwin"; # TODO Make it compatible with system "x86_64-darwin"
-          inputs = { inherit nixpkgs; };
-          modules = [
-            ./hosts/darwin-bootstrap.nix
           ];
         };
       };
