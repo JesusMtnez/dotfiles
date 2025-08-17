@@ -47,10 +47,10 @@
   };
 
   users.users.admin = {
-    isNormalUser = true;
-    description = "administrator";
-    extraGroups = [ "wheel" "docker" ];
-    packages = with pkgs; [ vim ];
+      isNormalUser = true;
+      description = "administrator";
+      extraGroups = [ "wheel" "docker" ];
+      packages = with pkgs; [ vim ];
   };
 
   environment.systemPackages = with pkgs; [ ];
@@ -70,6 +70,19 @@
       enable = true;
       nssmdns4 = true;
       nssmdns6 = true;
+    };
+
+    k3s = {
+      enable = true;
+      package = pkgs.k3s_1_33;
+      role = "server";
+      extraFlags = [
+        "--disable coredns"
+        "--disable traefik"
+        "--disable metrics-server"
+        "--disable servicelb"
+        "--disable local-storage"
+      ];
     };
 
     openssh.enable = true;
