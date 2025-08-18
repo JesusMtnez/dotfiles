@@ -1,7 +1,3 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
 { pkgs, ... }:
 
 {
@@ -24,16 +20,9 @@
 
   networking = {
     hostName = "minerva";
-
     useDHCP = false;
+    interfaces."enp2s0".useDHCP = true;
     wireless.enable = false;
-
-    interfaces.enp2s0 = {
-      useDHCP = true;
-      # FIXME static ip
-    };
-
-    firewall.enable = false;
   };
 
   time.timeZone = "Europe/Madrid";
@@ -46,22 +35,18 @@
     options = "ctrl:nocaps";
   };
 
-  users.users.admin = {
+  users.users = {
+    "admin" = {
       isNormalUser = true;
       description = "administrator";
       extraGroups = [ "wheel" "docker" ];
       packages = with pkgs; [ vim ];
+    };
   };
 
   environment.systemPackages = with pkgs; [ ];
 
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
+  networking.firewall.enable = false;
 
   services = {
     fwupd.enable = true;
