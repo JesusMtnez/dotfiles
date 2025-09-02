@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ pkgs, ... }:
 
 {
   imports = [ ./hardware-configuration.nix ];
@@ -61,7 +61,7 @@
     xkb.variant = "altgr-intl";
     xkb.options = "ctrl:nocaps";
 
-    videoDrivers = [ "nvidia" ];
+    videoDrivers = [ "nouveau" ];
   };
 
   services.desktopManager.plasma6.enable = true;
@@ -83,20 +83,6 @@
   services.printing = {
     enable = true;
     drivers = [ pkgs.brlaser ];
-  };
-
-  hardware.graphics = {
-    enable = true;
-    enable32Bit = true;
-  };
-
-  hardware.nvidia = {
-    package = config.boot.kernelPackages.nvidiaPackages.production;
-    modesetting.enable = true;
-    powerManagement.enable = true;
-    powerManagement.finegrained = false;
-    open = true;
-    nvidiaSettings = true;
   };
 
   hardware.pulseaudio.enable = false;
