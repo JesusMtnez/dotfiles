@@ -21,19 +21,12 @@
     catppuccin.url = "github:catppuccin/nix";
 
     autofirma = {
-      url = "github:nix-community/autofirma-nix/release-24.11";
-      inputs.nixpkgs.follows = "nixpkgs_24_11";
-    };
-
-    # TODO Remove when upgrading albus (errors with nvidia upgrade)
-    nixpkgs_24_11.url = "github:nixos/nixpkgs/nixos-24.11";
-    home_24_11 = {
-      url = "github:nix-community/home-manager/release-24.11";
-      inputs.nixpkgs.follows = "nixpkgs_24_11";
+      url = "github:nix-community/autofirma-nix/release-25.05";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { nixpkgs, nixpkgs-master, home, nix-vscode-extensions, catppuccin, autofirma, nixpkgs_24_11, home_24_11, ... }:
+  outputs = { nixpkgs, nixpkgs-master, home, nix-vscode-extensions, catppuccin, autofirma, ... }:
     let
       allSystems = [
         "x86_64-linux"
@@ -57,7 +50,7 @@
     in
     {
       nixosConfigurations = {
-        albus = nixpkgs_24_11.lib.nixosSystem {
+        albus = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           specialArgs = {
             nix-vscode-extensions-overlay = nix-vscode-extensions.overlays.default;
@@ -66,7 +59,7 @@
             ./hosts/common.nix
             ./hosts/albus/configuration.nix
 
-            home_24_11.nixosModules.home-manager
+            home.nixosModules.home-manager
             {
               home-manager = {
                 useGlobalPkgs = true;

@@ -20,13 +20,13 @@
 
   boot = {
     # https://www.kernel.org/category/releases.html
-    kernelPackages = pkgs.linuxPackages_6_12;
+    kernelPackages = pkgs.linuxPackages_latest;
 
     kernelModules = [ "kvm-intel" ];
 
     loader = {
       systemd-boot.enable = true;
-      systemd-boot.configurationLimit = 5;
+      systemd-boot.configurationLimit = 10;
       efi.canTouchEfiVariables = true;
     };
 
