@@ -54,7 +54,6 @@ in
     gimp
     latestPkgs.joplin-desktop
     kdePackages.kdenlive
-    kdePackages.isoimagewriter
     keepassxc
     krita
     libreoffice-qt6-fresh
@@ -63,7 +62,6 @@ in
     spotify
     tdesktop
     transmission_4-qt6
-    unrar
     vlc
   ];
 
