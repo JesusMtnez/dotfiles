@@ -76,6 +76,7 @@
         jnoortheen.nix-ide
         # flix.flix
         golang.go
+        casualjim.gotemplate
         ms-python.python
         redhat.ansible
         redhat.vscode-yaml
