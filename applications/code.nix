@@ -54,6 +54,7 @@
         "workbench.sideBar.location" = "right";
         "redhat.telemetry.enabled" = false;
 
+        "[go]"."editor.tabSize" = 2;
         "[nix]"."editor.tabSize" = 2;
         "[python]"."editor.tabSize" = 4;
         "[scala]"."editor.tabSize" = 2;
@@ -64,12 +65,12 @@
         catppuccin.catppuccin-vsc
         catppuccin.catppuccin-vsc-icons
 
-      # Tools
-      cab404.vscode-direnv
-      # github.vscode-github-actions
-      mechatroner.rainbow-csv
-      ms-vsliveshare.vsliveshare
-      task.vscode-task
+        # Tools
+        cab404.vscode-direnv
+        # github.vscode-github-actions
+        mechatroner.rainbow-csv
+        ms-vsliveshare.vsliveshare
+        task.vscode-task
 
         # Languagues
         jnoortheen.nix-ide
