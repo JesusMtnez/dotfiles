@@ -70,6 +70,8 @@
     autoNumlock = true;
   };
 
+  hardware.graphics.enable = true;
+
   services.libinput.enable = true;
 
   services.fwupd.enable = true;
@@ -85,7 +87,6 @@
     drivers = [ pkgs.brlaser ];
   };
 
-  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -95,10 +96,7 @@
     jack.enable = true;
   };
 
-  hardware.bluetooth = {
-    enable = true;
-    package = pkgs.bluez;
-  };
+  hardware.bluetooth.enable = true;
 
   users.users.jesus = {
     isNormalUser = true;
