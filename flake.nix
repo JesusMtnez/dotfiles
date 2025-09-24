@@ -91,6 +91,16 @@
         };
       };
 
+      homeConfigurations = {
+        sirius = home.lib.homeManagerConfiguration {
+          pkgs = mkPkgsFor "x86_64-linux" nixpkgs;
+          modules = [
+            ./hosts/sirius/home.nix
+            catppuccin.homeModules.catppuccin
+          ];
+        };
+      };
+
       devShell = forAllSystems ({ pkgs, latest }:
         pkgs.mkShell {
           nativeBuildInputs = with pkgs; [
