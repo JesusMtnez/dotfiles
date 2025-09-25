@@ -21,7 +21,7 @@
     (iosevka-bin.override { variant = "SGr-IosevkaTerm"; })
     (iosevka-bin.override { variant = "Aile"; })
   ];
-  
+
   programs.home-manager.enable = true;
   programs.jq.enable = true;
 
