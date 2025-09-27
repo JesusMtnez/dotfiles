@@ -3,8 +3,8 @@
   nixpkgs = {
     config.allowUnfree = true;
     config.packageOverrides = {
-      jre = pkgs.jdk17;
-      jdk = pkgs.jdk17;
+      jre = pkgs.jdk21;
+      jdk = pkgs.jdk21;
     };
   };
 
