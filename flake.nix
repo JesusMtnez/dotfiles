@@ -13,6 +13,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
+
     nix-vscode-extensions = {
       url = "github:nix-community/nix-vscode-extensions";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -29,7 +31,7 @@
     };
   };
 
-  outputs = { nixpkgs, nixpkgs-master, home, nix-vscode-extensions, catppuccin, autofirma, ... }:
+  outputs = { nixpkgs, nixpkgs-master, home, nix-flatpak, nix-vscode-extensions, catppuccin, autofirma, ... }:
     let
       allSystems = [
         "x86_64-linux"
@@ -61,6 +63,7 @@
           modules = [
             ./hosts/common.nix
             ./hosts/albus/configuration.nix
+            nix-flatpak.nixosModules.nix-flatpak
 
             home.nixosModules.home-manager
             {

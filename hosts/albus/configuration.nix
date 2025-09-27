@@ -143,5 +143,27 @@
     vistafonts
   ];
 
+  services.flatpak = {
+    enable = true;
+    uninstallUnmanaged = false;
+    update.onActivation = true;
+    update.auto.enable = true;
+    update.auto.onCalendar = "daily";
+
+    packages = [
+      "org.audacityteam.Audacity"
+      "com.brave.Browser"
+      "com.calibre_ebook.calibre"
+      "io.dbeaver.DBeaverCommunity"
+      "com.discordapp.Discord"
+      "org.gimp.GIMP"
+      "org.kde.kdenlive"
+      "org.kde.krita"
+      "org.libreoffice.LibreOffice"
+      "info.portfolio_performance.PortfolioPerformance"
+      "com.github.ransome1.sleek"
+    ];
+  };
+
   system.stateVersion = "25.05";
 }

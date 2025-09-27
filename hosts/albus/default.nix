@@ -43,22 +43,22 @@ in
   systemd.user.services.syncthingtray.Service.ExecStart = lib.mkForce "${pkgs.bash}/bin/bash -c '${pkgs.coreutils}/bin/sleep 5; ${pkgs.syncthingtray-minimal}/bin/syncthingtray --wait'";
 
   home.packages = with pkgs; [
-    audacity
-    brave
-    calibre
+    # audacity
+    # brave
+    # calibre
     drawing
-    latestPkgs.dbeaver-bin
-    discord
+    # latestPkgs.dbeaver-bin
+    # discord
     filezilla
     firefox
-    gimp
+    # gimp
     latestPkgs.joplin-desktop
-    kdePackages.kdenlive
+    # kdePackages.kdenlive
     keepassxc
-    krita
-    libreoffice-qt6-fresh
+    # krita
+    # libreoffice-qt6-fresh
     masterpdfeditor4
-    sleek
+    # sleek
     spotify
     tdesktop
     transmission_4-qt6
