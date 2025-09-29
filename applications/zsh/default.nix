@@ -42,6 +42,10 @@
         function chpwd() {
             exa -lh # ls -lh
         }
+
+        # Source zsh plugins managed by sheldon
+        # FIXME Release 25.11 will include sheldon
+        eval "$(sheldon source)"
       '')
     ];
 
@@ -70,76 +74,9 @@
       })
     ];
 
-    zplug = {
-      enable = true;
-      plugins = [
-        {
-          name = "zplug/zplug";
-          tags = [ "hook-build:'zplug --self-managed'" ];
-        }
-        {
-          name = "romkatv/powerlevel10k";
-          tags = [ "as:theme" "depth:1" ];
-        }
-        {
-          name = "lib/completion";
-          tags = [ "from:oh-my-zsh" "depth:1" ];
-        }
-        {
-          name = "lib/history";
-          tags = [ "from:oh-my-zsh" "depth:1" ];
-        }
-        {
-          name = "lib/key-bindings";
-          tags = [ "from:oh-my-zsh" "depth:1" ];
-        }
-        {
-          name = "junegunn/fzf";
-          tags = [ "use:\"shell/*.zsh\"" "depth:1" "defer:3" ];
-        }
-        {
-          name = "zsh-users/zsh-autosuggestions";
-          tags = [ "depth:1" ];
-        }
-        {
-          name = "zsh-users/zsh-completions";
-          tags = [ "depth:1" ];
-        }
-        {
-          name = "b4b4r07/enhancd";
-          tags = [ "use:init.sh" "depth:1" ];
-        }
-        {
-          name = "zdharma-continuum/fast-syntax-highlighting";
-          tags = [ "depth:1" "defer:2" ];
-        }
-        {
-          name = "hlissner/zsh-autopair";
-          tags = [ "depth:1" "defer:2" ];
-        }
-        {
-          name = "plugins/kubectl";
-          tags = [ "from:oh-my-zsh" "as:plugin" "depth:1" "defer:2" ];
-        }
-        {
-          name = "plugins/docker";
-          tags = [ "from:oh-my-zsh" "as:plugin" "depth:1" "defer:2" ];
-        }
-        {
-          name = "plugins/vscode";
-          tags = [ "from:oh-my-zsh" "as:plugin" "depth:1" "defer:2" ];
-        }
-        {
-          name = "go-task/task";
-          tags = [ "depth:1" "use:completion/zsh" ];
-        }
-        {
-          name = "\$HOME/.config/zsh";
-          tags = [ "from:local" ];
-        }
-      ];
-    };
-  };
+  # Release 25.11 will include sheldon: https://github.com/nix-community/home-manager/blob/master/modules/programs/sheldon.nix
+  home.packages = [ pkgs.sheldon ];
+  xdg.configFile."sheldon/plugins.toml".source = ./plugins.toml;
 
   programs.bat = {
     enable = true;

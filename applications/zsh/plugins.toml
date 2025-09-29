@@ -1,0 +1,45 @@
+shell = "zsh"
+
+[plugins.zsh-defer]
+github = "romkatv/zsh-defer"
+
+[templates]
+defer = "{{ hooks?.pre | nl }}{% for file in files %}zsh-defer source \"{{ file }}\"\n{% endfor %}{{ hooks?.post | nl }}"
+
+[plugins.powerlevel10k]
+github = "romkatv/powerlevel10k"
+
+[plugins.ohmyzsh]
+github = "ohmyzsh/ohmyzsh"
+use = ["lib/completion.zsh", "lib/history.zsh", "lib/key-bindings.zsh", "plugins/kubectl.plugin.zsh",  "plugins/docker.plugin.zsh", "plugins/vscode.plugin.zsh"]
+
+[plugins.fzf]
+github = "junegunn/fzf"
+use = ["shell/completion.zsh", "shell/key-bindings.zsh"]
+
+[plugins.zsh-autosuggestions]
+github = "zsh-users/zsh-autosuggestions"
+use = ["zsh-autosuggestions.zsh"]
+
+[plugins.zsh-completions]
+github = "zsh-users/zsh-completions"
+use = ["zsh-completions.plugin.zsh"]
+
+[plugins.enhancd]
+github = "b4b4r07/enhancd"
+use = ["init.sh"]
+
+[plugins.fast-syntax-highlighting]
+github = "zdharma-continuum/fast-syntax-highlighting"
+use = ["fast-syntax-highlighting.plugin.zsh"]
+
+[plugins.zsh-autopair]
+github = "hlissner/zsh-autopair"
+use = ["zsh-autopair.plugin.zsh"]
+
+[plugins.go-tasks]
+github = "go-task/task"
+use = ["completion/zsh/_task"]
+
+[plugins.local]
+local = "/home/jesus/.config/zsh"
