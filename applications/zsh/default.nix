@@ -73,6 +73,7 @@
         open = "xdg-open";
       })
     ];
+  };
 
   # Release 25.11 will include sheldon: https://github.com/nix-community/home-manager/blob/master/modules/programs/sheldon.nix
   home.packages = [ pkgs.sheldon ];
