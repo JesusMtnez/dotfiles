@@ -21,11 +21,11 @@ _using nix to rule them all_
 
 ## Machines
 
-| Name |      | OS  | DE  | WM  | Use |
-| :-:  | :-:  | :-: | :-: | :-: | :-: |
-| `albus` | <img width="18" src="https://cdn.simpleicons.org/nixos" /> | NixOS 25.05 | KDE |  - | _Personal_ |
-| `sirius` |<img width="18" src="https://cdn.simpleicons.org/kubuntu" /> <img width="18" src="https://cdn.simpleicons.org/nixos" /> | Kubuntu 25.04 with `nix`| KDE | _Work_ |
-| `minerva` | <img width="18" src="https://cdn.simpleicons.org/nixos" /> | NixOS 25.05 | - | _Server_ |
+|   Name    |                                                                                                                         |            OS            |  DE   |    Use     |
+| :-------: | :---------------------------------------------------------------------------------------------------------------------: | :----------------------: | :---: | :--------: |
+|  `albus`  |                               <img width="18" src="https://cdn.simpleicons.org/nixos" />                                |       NixOS 25.05        |  KDE  | _Personal_ |
+|  `work`   | <img width="18" src="https://cdn.simpleicons.org/kubuntu" /> <img width="18" src="https://cdn.simpleicons.org/nixos" /> | Kubuntu 25.04 with `nix` |  KDE  |   _Work_   |
+| `minerva` |                               <img width="18" src="https://cdn.simpleicons.org/nixos" />                                |       NixOS 25.05        |   -   |  _Server_  |
 
 ## Installation
 

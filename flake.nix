@@ -95,10 +95,10 @@
       };
 
       homeConfigurations = {
-        sirius = home.lib.homeManagerConfiguration {
+        work = home.lib.homeManagerConfiguration {
           pkgs = mkPkgsFor "x86_64-linux" nixpkgs;
           modules = [
-            ./hosts/sirius/home.nix
+            ./hosts/work/home.nix
             catppuccin.homeModules.catppuccin
           ];
         };
