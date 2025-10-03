@@ -3,10 +3,19 @@
   home.username = "jesus";
   home.homeDirectory = "/home/jesus";
 
+  nixpkgs = {
+    config.allowUnfree = true;
+    config.packageOverrides = {
+      jre = pkgs.temurin-bin;
+      jdk = pkgs.temurin-bin;
+    };
+  };
+
   imports = [
     ../../applications/direnv.nix
     ../../applications/git.nix
     ../../applications/neovim.nix
+    ../../applications/sbt.nix
     ../../applications/zsh
   ];
 
@@ -24,6 +33,7 @@
 
   programs.home-manager.enable = true;
   programs.jq.enable = true;
+  programs.java.enable = true;
 
   home.stateVersion = "25.05";
 }
