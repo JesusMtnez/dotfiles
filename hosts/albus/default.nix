@@ -1,8 +1,4 @@
 { pkgs, latestPkgs, lib, ... }:
-
-let
-  sleek = pkgs.callPackage ../../packages/sleek.nix { };
-in
 {
   imports = [
     ../../applications/code.nix
@@ -43,24 +39,11 @@ in
   systemd.user.services.syncthingtray.Service.ExecStart = lib.mkForce "${pkgs.bash}/bin/bash -c '${pkgs.coreutils}/bin/sleep 5; ${pkgs.syncthingtray-minimal}/bin/syncthingtray --wait'";
 
   home.packages = with pkgs; [
-    # audacity
-    # brave
-    # calibre
-    drawing
-    # latestPkgs.dbeaver-bin
-    # discord
-    filezilla
     firefox
-    # gimp
     latestPkgs.joplin-desktop
-    # kdePackages.kdenlive
     keepassxc
-    # krita
-    # libreoffice-qt6-fresh
     masterpdfeditor4
-    # sleek
     spotify
-    tdesktop
     transmission_4-qt6
     vlc
   ];

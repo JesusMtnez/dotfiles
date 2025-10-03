@@ -156,12 +156,15 @@
       "com.calibre_ebook.calibre"
       "io.dbeaver.DBeaverCommunity"
       "com.discordapp.Discord"
+      "org.filezillaproject.Filezilla"
       "org.gimp.GIMP"
+      "org.kde.kcalc"
       "org.kde.kdenlive"
       "org.kde.krita"
       "org.libreoffice.LibreOffice"
       "info.portfolio_performance.PortfolioPerformance"
       "com.github.ransome1.sleek"
+      "org.telegram.desktop"
     ];
   };
 
