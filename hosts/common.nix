@@ -3,8 +3,8 @@
   nixpkgs = {
     config.allowUnfree = true;
     config.packageOverrides = {
-      jre = pkgs.jdk21;
-      jdk = pkgs.jdk21;
+      jre = pkgs.temurin-bin;
+      jdk = pkgs.temurin-bin;
     };
   };
 
