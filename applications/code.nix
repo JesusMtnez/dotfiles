@@ -33,9 +33,9 @@
           "**/.metals" = true;
           "**/target" = true;
         };
-        "metals.suggestLatestUpgrade" = false;
-        "metals.showInferredType" = true;
         "metals.bloopSbtAlreadyInstalled" = true;
+        "metals.enableIndentOnPaste" = true;
+        "metals.suggestLatestUpgrade" = "off";
         "nix.enableLanguageServer" = true;
         "nix.serverPath" = "${pkgs.nil}/bin/nil";
         "nix.serverSettings" = {
