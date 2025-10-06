@@ -164,6 +164,7 @@
       "org.libreoffice.LibreOffice"
       "info.portfolio_performance.PortfolioPerformance"
       "com.github.ransome1.sleek"
+      "com.spotify.Client"
       "org.telegram.desktop"
     ];
   };

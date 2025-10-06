@@ -43,7 +43,6 @@
     latestPkgs.joplin-desktop
     keepassxc
     masterpdfeditor4
-    spotify
     transmission_4-qt6
     vlc
   ];
