@@ -10,7 +10,10 @@
     ../../applications/zsh
   ];
 
-  catppuccin.flavor = "frappe";
+  catppuccin = {
+    enable = true;
+    flavor = "frappe";
+  };
 
   fonts.fontconfig.enable = true;
 

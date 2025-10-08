@@ -1,5 +1,11 @@
 { pkgs, latestPkgs, ... }:
 {
+  catppuccin = {
+    vscode.profiles.default = {
+      enable = true;
+      icons.enable = true;
+    };
+  };
 
   programs.vscode = {
     package = latestPkgs.vscode;
@@ -49,8 +55,6 @@
         "update.mode" = "none";
         "window.restoreFullscreen" = true;
         "window.zoomLevel" = 0;
-        "workbench.colorTheme" = "Catppuccin Frappé";
-        "workbench.iconTheme" = "catppuccin-frappe";
         "workbench.sideBar.location" = "right";
         "redhat.telemetry.enabled" = false;
 
@@ -61,10 +65,6 @@
       };
 
       extensions = with pkgs.vscode-marketplace; [
-        # UI
-        catppuccin.catppuccin-vsc
-        catppuccin.catppuccin-vsc-icons
-
         # Tools
         cab404.vscode-direnv
         github.vscode-github-actions
