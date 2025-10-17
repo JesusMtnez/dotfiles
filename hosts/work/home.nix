@@ -25,7 +25,11 @@
   };
 
   fonts.fontconfig.enable = true;
+
   home.packages = with pkgs; [
+    kdotool
+
+    # Fonts
     nerd-fonts.iosevka-term
     (iosevka-bin.override { variant = "SGr-IosevkaTerm"; })
     (iosevka-bin.override { variant = "Aile"; })
