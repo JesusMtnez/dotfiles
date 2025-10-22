@@ -101,6 +101,9 @@
             ./hosts/work/home.nix
             catppuccin.homeModules.catppuccin
           ];
+          extraSpecialArgs = {
+            latestPkgs = mkPkgsFor "x86_64-linux" nixpkgs-master;
+          };
         };
       };
 

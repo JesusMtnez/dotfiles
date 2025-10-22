@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, lib, latestPkgs, ... }:
 {
 
   xdg.configFile."zsh/theme.zsh".source = ./theme.zsh;
@@ -95,6 +95,7 @@
 
   programs.fzf = {
     enable = true;
+    package = latestPkgs.fzf;
     enableZshIntegration = true;
     enableBashIntegration = false;
   };
