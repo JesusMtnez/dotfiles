@@ -28,6 +28,7 @@
 
   home.packages = with pkgs; [
     kdotool
+    ydotool
 
     # Fonts
     nerd-fonts.iosevka-term
