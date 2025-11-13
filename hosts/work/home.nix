@@ -14,7 +14,6 @@
   imports = [
     ../../applications/direnv.nix
     ../../applications/git.nix
-    ../../applications/neovim.nix
     ../../applications/sbt.nix
     ../../applications/zsh
   ];
@@ -29,6 +28,7 @@
   home.packages = with pkgs; [
     kdotool
     ydotool
+    neovim
 
     # Fonts
     nerd-fonts.iosevka-term
