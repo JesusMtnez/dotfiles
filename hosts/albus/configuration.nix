@@ -140,7 +140,7 @@
 
   fonts.packages = with pkgs; [
     corefonts
-    vistafonts
+    vista-fonts
   ];
 
   services.flatpak = {
