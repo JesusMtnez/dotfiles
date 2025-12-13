@@ -21,11 +21,13 @@ _using nix to rule them all_
 
 ## Machines
 
-|   Name    |                                                                                                                         |            OS            |  DE   |    Use     |
-| :-------: | :---------------------------------------------------------------------------------------------------------------------: | :----------------------: | :---: | :--------: |
-|  `albus`  |                               <img width="18" src="https://cdn.simpleicons.org/nixos" />                                |       NixOS 25.11        |  KDE  | _Personal_ |
-|  `work`   | <img width="18" src="https://cdn.simpleicons.org/kubuntu" /> <img width="18" src="https://cdn.simpleicons.org/nixos" /> | Kubuntu 25.10 with `nix` |  KDE  |   _Work_   |
-| `minerva` |                               <img width="18" src="https://cdn.simpleicons.org/nixos" />                                |       NixOS 25.11        |   -   |  _Server_  |
+|   Name    |                                                                                                                         |                OS                 |  DE   |    Use     |
+| :-------: | :---------------------------------------------------------------------------------------------------------------------: | :-------------------------------: | :---: | :--------: |
+|  `albus`  |                               <img width="18" src="https://cdn.simpleicons.org/nixos" />                                |            NixOS 25.11            |  KDE  | _Personal_ |
+|  `work`   | <img width="18" src="https://cdn.simpleicons.org/kubuntu" /> <img width="18" src="https://cdn.simpleicons.org/nixos" /> |     Kubuntu 25.10 with `nix`      |  KDE  |   _Work_   |
+| `minerva` |                               <img width="18" src="https://cdn.simpleicons.org/nixos" />                                | NixOS 25.11 ([See HomeLab][homelab]) |   -   |  _Server_  |
+
+  [homelab]: https://codeberg.org/JesusMtnez/homelab
 
 ## Installation
 

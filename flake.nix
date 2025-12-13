@@ -85,13 +85,6 @@
             autofirma.nixosModules.default
           ];
         };
-
-        minerva = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-          modules = [
-            ./hosts/minerva/configuration.nix
-          ];
-        };
       };
 
       homeConfigurations = {
