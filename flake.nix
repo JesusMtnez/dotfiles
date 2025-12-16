@@ -21,12 +21,12 @@
     };
 
     catppuccin = {
-      url = "github:catppuccin/nix/release-25.05";
+      url = "github:catppuccin/nix/main";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     autofirma = {
-      url = "github:nix-community/autofirma-nix/release-25.05";
+      url = "github:nix-community/autofirma-nix/main";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

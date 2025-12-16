@@ -13,16 +13,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1762846273,
-        "narHash": "sha256-TvPVL/CLMstwlnsDrBHw7vMbrxwO1RlxJcQD2Csc/3Q=",
+        "lastModified": 1762939683,
+        "narHash": "sha256-U2F9tK5LioLDfQizU4FWKv8Y3hE1WuPEeoe7ElkRa78=",
         "owner": "nix-community",
         "repo": "autofirma-nix",
-        "rev": "014a7decf4a60dcab532f78469ce83387c9aa40e",
+        "rev": "75770f68709e764659712ff152193d7986db2530",
         "type": "github"
       },
       "original": {
         "owner": "nix-community",
-        "ref": "release-25.05",
+        "ref": "main",
         "repo": "autofirma-nix",
         "type": "github"
       }
@@ -51,16 +51,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1763111355,
-        "narHash": "sha256-iUTS8wV7tCo7A456Ro6ZOJ6Bbk0V5Is3zPd+BmJHJ/Q=",
+        "lastModified": 1765485905,
+        "narHash": "sha256-fk6zFzzcwz6su99K7UTxS2497+z/Cdk3FzNsacsmZKA=",
         "owner": "catppuccin",
         "repo": "nix",
-        "rev": "5375a9d80c4b2a835c7203920f997f3ea4224423",
+        "rev": "b49c675acd80931fc8b54290920a90189b461dcf",
         "type": "github"
       },
       "original": {
         "owner": "catppuccin",
-        "ref": "release-25.05",
+        "ref": "main",
         "repo": "nix",
         "type": "github"
       }
