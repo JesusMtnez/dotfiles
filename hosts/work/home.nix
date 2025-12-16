@@ -26,8 +26,7 @@
   fonts.fontconfig.enable = true;
 
   home.packages = with pkgs; [
-    kdotool
-    ydotool
+    scala-cli
     neovim
 
     # Fonts
