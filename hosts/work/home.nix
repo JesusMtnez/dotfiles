@@ -6,8 +6,8 @@
   nixpkgs = {
     config.allowUnfree = true;
     config.packageOverrides = {
-      jre = pkgs.javaPackages.compiler.temurin-bin.jdk-25;
-      jdk = pkgs.javaPackages.compiler.temurin-bin.jdk-25;
+      jre = pkgs.jre25_minimal;
+      jdk = pkgs.jdk25_headless;
     };
   };
 
