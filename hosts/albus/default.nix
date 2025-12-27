@@ -61,35 +61,21 @@
     latestPkgs.dbeaver-bin
     latestPkgs.discord
     firefox
+    filezilla
     latestPkgs.gimp-with-plugins
-    latestPkgs.libreoffice-qt
     latestPkgs.joplin-desktop
     latestPkgs.kdePackages.kdenlive
     latestPkgs.krita
     keepassxc
+    latestPkgs.libreoffice-qt
     masterpdfeditor4
+    latestPkgs.portfolio
+    latestPkgs.spotify
+    latestPkgs.sleek-todo
     transmission_4-qt6
     vlc
+    telegram-desktop
   ];
-
-  services.flatpak = {
-    enable = true;
-    uninstallUnmanaged = true;
-    update.onActivation = true;
-    update.auto.enable = true;
-    update.auto.onCalendar = "daily";
-
-    packages = [
-      "org.audacityteam.Audacity"
-      "com.calibre_ebook.calibre"
-      "com.discordapp.Discord"
-      "org.filezillaproject.Filezilla"
-      "info.portfolio_performance.PortfolioPerformance"
-      "com.github.ransome1.sleek"
-      "com.spotify.Client"
-      "org.telegram.desktop"
-    ];
-  };
 
   home.stateVersion = "25.05";
 }
