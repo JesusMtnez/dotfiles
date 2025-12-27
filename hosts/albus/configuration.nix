@@ -106,15 +106,16 @@
   };
 
   environment.systemPackages = with pkgs; [
-    # apps
+    kdePackages.kcalc
     kdePackages.isoimagewriter
     unrar
   ];
 
   environment.plasma6.excludePackages = with pkgs.kdePackages; [
-    plasma-browser-integration
+    elisa
     konsole
     oxygen
+    plasma-browser-integration
   ];
 
   programs = {
@@ -122,8 +123,6 @@
       enable = true;
       binfmt = true;
     };
-    autofirma.enable = true;
-    autofirma.firefoxIntegration.enable = true;
     dconf.enable = true;
     gnupg.agent = {
       enable = true;
@@ -136,37 +135,6 @@
   virtualisation.libvirtd = {
     enable = true;
     qemu.vhostUserPackages = [ pkgs.virtiofsd ];
-  };
-
-  fonts.packages = with pkgs; [
-    corefonts
-    vista-fonts
-  ];
-
-  services.flatpak = {
-    enable = true;
-    uninstallUnmanaged = false;
-    update.onActivation = true;
-    update.auto.enable = true;
-    update.auto.onCalendar = "daily";
-
-    packages = [
-      "org.audacityteam.Audacity"
-      "com.brave.Browser"
-      "com.calibre_ebook.calibre"
-      "com.collaboraoffice.Office"
-      "io.dbeaver.DBeaverCommunity"
-      "com.discordapp.Discord"
-      "org.filezillaproject.Filezilla"
-      "org.gimp.GIMP"
-      "org.kde.kcalc"
-      "org.kde.kdenlive"
-      "org.kde.krita"
-      "info.portfolio_performance.PortfolioPerformance"
-      "com.github.ransome1.sleek"
-      "com.spotify.Client"
-      "org.telegram.desktop"
-    ];
   };
 
   system.stateVersion = "25.05";

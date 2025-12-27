@@ -1,4 +1,4 @@
-{ pkgs, nix-vscode-extensions-overlay, ... }:
+{ pkgs, ... }:
 {
   nixpkgs = {
     config.allowUnfree = true;
@@ -7,10 +7,6 @@
       jdk = pkgs.jdk25_headless;
     };
   };
-
-  nixpkgs.overlays = [
-    nix-vscode-extensions-overlay
-  ];
 
   nix.extraOptions = ''
     keep-derivations = true
@@ -38,5 +34,9 @@
     nerd-fonts.iosevka-term
     (iosevka-bin.override { variant = "SGr-IosevkaTerm"; })
     (iosevka-bin.override { variant = "Aile"; })
+
+    # Windows fonts
+    corefonts
+    vista-fonts
   ];
 }

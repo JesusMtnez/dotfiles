@@ -57,32 +57,29 @@
       nixosConfigurations = {
         albus = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
-          specialArgs = {
-            nix-vscode-extensions-overlay = nix-vscode-extensions.overlays.default;
-          };
+          specialArgs = { };
           modules = [
             ./hosts/common.nix
             ./hosts/albus/configuration.nix
-            nix-flatpak.nixosModules.nix-flatpak
 
             home.nixosModules.home-manager
             {
               home-manager = {
-                useGlobalPkgs = true;
                 useUserPackages = true;
                 extraSpecialArgs = {
                   latestPkgs = mkPkgsFor "x86_64-linux" nixpkgs-master;
+                  nix-vscode-extensions-overlay = nix-vscode-extensions.overlays.default;
                 };
                 users.jesus = {
                   imports = [
                     catppuccin.homeModules.catppuccin
+                    autofirma.homeManagerModules.default
+                    nix-flatpak.homeManagerModules.nix-flatpak
                     ./hosts/albus/default.nix
                   ];
                 };
               };
             }
-
-            autofirma.nixosModules.default
           ];
         };
       };
