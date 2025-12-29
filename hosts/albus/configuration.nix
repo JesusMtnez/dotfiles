@@ -61,7 +61,7 @@
     xkb.variant = "altgr-intl";
     xkb.options = "ctrl:nocaps";
 
-    videoDrivers = [ "nouveau" ];
+    videoDrivers = [ "nvidia" ];
   };
 
   services.desktopManager.plasma6.enable = true;
@@ -71,6 +71,13 @@
   };
 
   hardware.graphics.enable = true;
+
+  hardware.nvidia = {
+    modesetting.enable = true;
+    powerManagement.enable = true;
+    open = true;
+    nvidiaSettings = true;
+  };
 
   services.libinput.enable = true;
 
