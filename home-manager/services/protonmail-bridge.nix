@@ -1,4 +1,9 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 with lib;
 let
@@ -20,7 +25,16 @@ in
       };
 
       logLevel = mkOption {
-        type = types.enum [ "panic" "fatal" "error" "warn" "info" "debug" "debug-client" "debug-server" ];
+        type = types.enum [
+          "panic"
+          "fatal"
+          "error"
+          "warn"
+          "info"
+          "debug"
+          "debug-client"
+          "debug-server"
+        ];
         default = "info";
         description = "The log level";
       };
@@ -42,7 +56,9 @@ in
       Service = {
         Restart = "always";
         ExecStartPre = "${pkgs.coreutils}/bin/sleep 20";
-        ExecStart = "${pkgs.protonmail-bridge}/bin/protonmail-bridge --no-window --log-level ${cfg.logLevel}" + optionalString (cfg.nonInteractive) " --noninteractive";
+        ExecStart =
+          "${pkgs.protonmail-bridge}/bin/protonmail-bridge --no-window --log-level ${cfg.logLevel}"
+          + optionalString (cfg.nonInteractive) " --noninteractive";
       };
 
       Install = {

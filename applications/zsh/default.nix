@@ -1,4 +1,9 @@
-{ pkgs, lib, latestPkgs, ... }:
+{
+  pkgs,
+  lib,
+  latestPkgs,
+  ...
+}:
 {
 
   xdg.configFile."zsh/theme.zsh".source = ./theme.zsh;

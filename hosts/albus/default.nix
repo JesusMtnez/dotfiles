@@ -1,4 +1,10 @@
-{ pkgs, latestPkgs, lib, nix-vscode-extensions-overlay, ... }:
+{
+  pkgs,
+  latestPkgs,
+  lib,
+  nix-vscode-extensions-overlay,
+  ...
+}:
 {
   nixpkgs = {
     config.allowUnfree = true;
@@ -52,7 +58,8 @@
     };
   };
 
-  systemd.user.services.syncthingtray.Service.ExecStart = lib.mkForce "${pkgs.bash}/bin/bash -c '${pkgs.coreutils}/bin/sleep 5; ${pkgs.syncthingtray-minimal}/bin/syncthingtray --wait'";
+  systemd.user.services.syncthingtray.Service.ExecStart =
+    lib.mkForce "${pkgs.bash}/bin/bash -c '${pkgs.coreutils}/bin/sleep 5; ${pkgs.syncthingtray-minimal}/bin/syncthingtray --wait'";
 
   home.packages = with pkgs; [
     audacity

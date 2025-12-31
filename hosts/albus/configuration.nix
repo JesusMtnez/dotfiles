@@ -108,7 +108,12 @@
   users.users.jesus = {
     isNormalUser = true;
     description = "Jesús";
-    extraGroups = [ "wheel" "docker" "network" "libvirtd" ];
+    extraGroups = [
+      "wheel"
+      "docker"
+      "network"
+      "libvirtd"
+    ];
     shell = pkgs.zsh;
   };
 

@@ -44,11 +44,6 @@
         "metals.suggestLatestUpgrade" = "off";
         "nix.enableLanguageServer" = true;
         "nix.serverPath" = "${pkgs.nil}/bin/nil";
-        "nix.serverSettings" = {
-          "nil" = {
-            "formatting" = { "command" = [ "${pkgs.nixpkgs-fmt}/bin/nixpkgs-fmt" ]; };
-          };
-        };
         "terminal.integrated.cursorStyle" = "line";
         "terminal.integrated.fontFamily" = "'IosevkaTerm Nerd Font'";
         "terminal.integrated.fontSize" = 13;

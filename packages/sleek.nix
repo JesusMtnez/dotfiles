@@ -1,4 +1,9 @@
-{ lib, fetchurl, appimageTools, makeWrapper, }:
+{
+  lib,
+  fetchurl,
+  appimageTools,
+  makeWrapper,
+}:
 
 let
   pname = "sleek";
@@ -21,7 +26,12 @@ let
   };
 in
 appimageTools.wrapType2 {
-  inherit pname version src meta;
+  inherit
+    pname
+    version
+    src
+    meta
+    ;
 
   nativeBuildInputs = [ makeWrapper ];
 

@@ -31,7 +31,17 @@
     };
   };
 
-  outputs = { nixpkgs, nixpkgs-master, home, nix-flatpak, nix-vscode-extensions, catppuccin, autofirma, ... }:
+  outputs =
+    {
+      nixpkgs,
+      nixpkgs-master,
+      home,
+      nix-flatpak,
+      nix-vscode-extensions,
+      catppuccin,
+      autofirma,
+      ...
+    }:
     let
       allSystems = [
         "x86_64-linux"
@@ -40,12 +50,18 @@
         "aarch64-darwin"
       ];
 
-      forAllSystems = f: nixpkgs.lib.genAttrs allSystems (system: f {
-        pkgs = import nixpkgs { inherit system; };
-        latest = import nixpkgs-master { inherit system; };
-      });
+      forAllSystems =
+        f:
+        nixpkgs.lib.genAttrs allSystems (
+          system:
+          f {
+            pkgs = import nixpkgs { inherit system; };
+            latest = import nixpkgs-master { inherit system; };
+          }
+        );
 
-      mkPkgsFor = system: pkgset:
+      mkPkgsFor =
+        system: pkgset:
         import pkgset {
           inherit system;
           config = {
@@ -97,10 +113,13 @@
         };
       };
 
-      devShell = forAllSystems ({ pkgs, latest }:
+      formatter = forAllSystems ({ pkgs, latest }: pkgs.nixfmt-tree);
+
+      devShell = forAllSystems (
+        { pkgs, latest }:
         pkgs.mkShell {
           nativeBuildInputs = with pkgs; [
-            nixpkgs-fmt
+            nixfmt-tree
           ];
         }
       );
