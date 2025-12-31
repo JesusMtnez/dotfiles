@@ -8,4 +8,4 @@ steps:
     image: nixos/nix:2.33.0
     commands:
       - echo 'experimental-features = flakes nix-command' >> /etc/nix/nix.conf
-      - nix develop -c nixpkgs-fmt --check .
+      - nix develop -c treefmt --ci --fail-on-change
