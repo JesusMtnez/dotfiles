@@ -6,7 +6,7 @@
   nixpkgs = {
     config.allowUnfree = true;
     config.packageOverrides = {
-      jre = pkgs.jre25_minimal;
+      jre = pkgs.jdk25_headless;
       jdk = pkgs.jdk25_headless;
     };
   };
