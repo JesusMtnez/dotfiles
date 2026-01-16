@@ -7,7 +7,7 @@
       {
         org = "ch.epfl.scala";
         artifact = "sbt-bloop";
-        version = "2.0.17";
+        version = "2.0.18";
       }
       {
         org = "io.spray";
