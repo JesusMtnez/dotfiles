@@ -26,6 +26,7 @@
   fonts.fontconfig.enable = true;
 
   home.packages = with pkgs; [
+    awscli2
     scala-cli
     neovim
 
