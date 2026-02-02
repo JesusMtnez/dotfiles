@@ -69,10 +69,10 @@
     latestPkgs.discord
     firefox
     filezilla
-    latestPkgs.gimp-with-plugins
+    gimp-with-plugins
     latestPkgs.joplin-desktop
-    latestPkgs.kdePackages.kdenlive
-    latestPkgs.krita
+    kdePackages.kdenlive
+    krita
     keepassxc
     latestPkgs.libreoffice-qt
     masterpdfeditor4
