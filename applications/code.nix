@@ -39,7 +39,7 @@
           "**/.metals" = true;
           "**/target" = true;
         };
-        "metals.bloopVersion": ""
+        "metals.bloopVersion" = "";
         "metals.bloopSbtAlreadyInstalled" = true;
         "metals.enableIndentOnPaste" = true;
         "metals.suggestLatestUpgrade" = "off";
