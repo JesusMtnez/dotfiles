@@ -5,16 +5,11 @@
 
   nixpkgs = {
     config.allowUnfree = true;
-    config.packageOverrides = {
-      jre = pkgs.jdk25_headless;
-      jdk = pkgs.jdk25_headless;
-    };
   };
 
   imports = [
     ../../applications/direnv.nix
     ../../applications/git.nix
-    ../../applications/sbt.nix
     ../../applications/zsh
   ];
 
@@ -27,7 +22,6 @@
 
   home.packages = with pkgs; [
     awscli2
-    scala-cli
     neovim
 
     # Fonts
@@ -38,7 +32,6 @@
 
   programs.home-manager.enable = true;
   programs.jq.enable = true;
-  programs.java.enable = true;
 
   home.stateVersion = "25.05";
 }
