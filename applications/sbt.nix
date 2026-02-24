@@ -1,8 +1,9 @@
-{ ... }:
+{ pkgs, ...}:
 {
 
   programs.sbt = {
     enable = true;
+    package = pkgs.emptyDirectory;
     plugins = [
       {
         org = "ch.epfl.scala";

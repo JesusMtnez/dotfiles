@@ -10,6 +10,7 @@
   imports = [
     ../../applications/direnv.nix
     ../../applications/git.nix
+    ../../applications/sbt.nix
     ../../applications/zsh
   ];
 
