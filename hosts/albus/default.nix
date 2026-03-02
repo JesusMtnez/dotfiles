@@ -64,7 +64,7 @@
   home.packages = with pkgs; [
     audacity
     latestPkgs.brave
-    latestPkgs.calibre
+    calibre
     latestPkgs.dbeaver-bin
     latestPkgs.discord
     firefox
