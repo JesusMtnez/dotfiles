@@ -41,6 +41,7 @@
         };
         "metals.bloopVersion" = "";
         "metals.bloopSbtAlreadyInstalled" = true;
+        "metals.shutdownBloopOnEditorClose" = true;
         "metals.enableIndentOnPaste" = true;
         "metals.suggestLatestUpgrade" = "off";
         "nix.enableLanguageServer" = true;
