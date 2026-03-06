@@ -61,21 +61,21 @@
         "[scala]"."editor.tabSize" = 2;
       };
 
-      extensions = with pkgs.vscode-marketplace; [
+      extensions = with pkgs.open-vsx; [
         # Tools
         cab404.vscode-direnv
         github.vscode-github-actions
         mechatroner.rainbow-csv
-        ms-vsliveshare.vsliveshare
+        pkgs.vscode-marketplace.ms-vsliveshare.vsliveshare
         task.vscode-task
 
         # Languagues
         jnoortheen.nix-ide
         # flix.flix
-        golang.go
-        casualjim.gotemplate
-        ms-python.python
-        redhat.ansible
+        # pkgs.vscode-marketplace.golang.go
+        # pkgs.vscode-marketplace.casualjim.gotemplate
+        # pkgs.vscode-marketplace.ms-python.python
+        # redhat.ansible
         redhat.vscode-yaml
         # rust-lang.rust-analyzer
         scala-lang.scala
