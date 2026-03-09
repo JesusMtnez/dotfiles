@@ -66,7 +66,6 @@
     latestPkgs.brave
     calibre
     latestPkgs.dbeaver-bin
-    latestPkgs.discord
     firefox
     filezilla
     gimp-with-plugins
@@ -74,15 +73,25 @@
     kdePackages.kdenlive
     krita
     keepassxc
-    latestPkgs.libreoffice-qt
     masterpdfeditor4
     latestPkgs.portfolio
-    latestPkgs.spotify
     latestPkgs.sleek-todo
     transmission_4-qt6
     vlc
-    telegram-desktop
   ];
+
+  services.flatpak = {
+    uninstallUnmanaged = false;
+    update.onActivation = true;
+    update.auto.enable = true;
+    update.auto.onCalendar = "daily";
+    packages = [
+      "com.discordapp.Discord"
+      "com.spotify.Client"
+      "org.libreoffice.LibreOffice"
+      "org.telegram.desktop"
+    ];
+  };
 
   home.stateVersion = "25.05";
 }
