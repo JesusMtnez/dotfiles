@@ -51,6 +51,11 @@
         # Source zsh plugins managed by sheldon
         # FIXME Release 25.11 will include sheldon
         eval "$(sheldon source)"
+
+        # Source mise
+        if command -v mise &> /dev/null; then
+          eval "$(mise activate zsh)"
+        fi
       '')
     ];
 
