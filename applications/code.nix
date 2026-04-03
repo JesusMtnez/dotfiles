@@ -67,6 +67,7 @@
         github.vscode-github-actions
         mechatroner.rainbow-csv
         pkgs.vscode-marketplace.ms-vsliveshare.vsliveshare
+        pkgs.vscode-marketplace.sst-dev.opencode
         task.vscode-task
 
         # Languagues

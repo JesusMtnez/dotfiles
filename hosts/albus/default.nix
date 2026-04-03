@@ -22,6 +22,7 @@
     ../../applications/direnv.nix
     ../../applications/git.nix
     ../../applications/kitty.nix
+    ../../applications/opencode.nix
     ../../applications/neovim.nix
     ../../applications/sbt.nix
     ../../applications/zsh
