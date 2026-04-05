@@ -1,0 +1,20 @@
+---
+name: Update Flakes
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  fmt:
+    runs-on: codeberg-small-lazy
+    steps:
+      - name: "Git checkout"
+        uses: https://code.forgejo.org/actions/checkout@v6
+
+      - name: "Install Nix ❄️"
+        uses: https://github.com/cachix/install-nix-action@v31
+
+      - name: "Run format checker 🛠️"
+        run: nix develop -c treefmt --ci --fail-on-change
