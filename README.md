@@ -6,18 +6,18 @@
 
 _using nix to rule them all_
 
-[![Built with nix][NIX-badge]][NIX-link]
-[![woodpecker-status][STATUS-badge]][STATUS-link]
-[![MIT LICENSE][LICENSE-badge]][LICENSE-link]
+[![Built with nix][nix-badge]][nix-link]
+[![forgejo][forgejo-actions-badge]][forgejo-actions-link]
+[![MIT LICENSE][license-badge]][license-link]
 
 </div>
 
-  [STATUS-badge]: https://ci.codeberg.org/api/badges/13009/status.svg
-  [STATUS-link]: https://ci.codeberg.org/repos/13009
-  [NIX-badge]: https://img.shields.io/badge/nix-blue.svg?logo=nixos&labelColor=73C3D5
-  [NIX-link]: https://builtwithnix.org
-  [LICENSE-badge]: https://img.shields.io/badge/license-MIT-green.svg
-  [LICENSE-link]: /LICENSE
+  [forgejo-actions-badge]: https://codeberg.org/JesusMtnez/dotfiles/badges/workflows/ci.yml/badge.svg?&logo=forgejo&style=for-the-badge&logoColor=white&color=blue&label
+  [forgejo-actions-link]: https://codeberg.org/JesusMtnez/dotfiles/src/branch/main/.forgejo/workflows/ci.yml
+  [nix-badge]: https://img.shields.io/badge/25.11-blue.svg?logo=nixos&style=for-the-badge&logoColor=white&color=blue
+  [nix-link]: https://builtwithnix.org
+  [license-badge]: https://img.shields.io/badge/license-MIT-green.svg?style=for-the-badge&logoColor=white&color=blue
+  [license-link]: /LICENSE
 
 ## Machines
 
