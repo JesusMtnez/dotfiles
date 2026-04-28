@@ -20,7 +20,7 @@
 
   boot = {
     # https://www.kernel.org/category/releases.html
-    kernelPackages = pkgs.linuxPackages_6_18;
+    kernelPackages = pkgs.linuxPackages_7_0;
 
     kernelModules = [ "kvm-intel" ];
 
