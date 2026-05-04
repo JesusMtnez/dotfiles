@@ -261,18 +261,18 @@
         "type": "github"
       }
     },
-    "nixpkgs-master": {
+    "nixpkgs-unstable": {
       "locked": {
-        "lastModified": 1777867411,
-        "narHash": "sha256-l1sm3calYbQzfZWyUHVPQNSgUjDTEOTehCqoN1QGn+I=",
+        "lastModified": 1777826146,
+        "narHash": "sha256-wQ/iN5Zp5VIa3ebBibijPnLyKhor+xEbDy4d0goa9Zs=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "c3590535fb85011b75ca0fab81ada53191a09787",
+        "rev": "73c703c22422b8951895a960959dbbaca7296492",
         "type": "github"
       },
       "original": {
         "owner": "nixos",
-        "ref": "master",
+        "ref": "nixpkgs-unstable",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -301,7 +301,7 @@
         "nix-flatpak": "nix-flatpak",
         "nix-vscode-extensions": "nix-vscode-extensions",
         "nixpkgs": "nixpkgs_2",
-        "nixpkgs-master": "nixpkgs-master"
+        "nixpkgs-unstable": "nixpkgs-unstable"
       }
     },
     "treefmt-nix": {

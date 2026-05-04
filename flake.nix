@@ -6,7 +6,7 @@
 
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
 
-    nixpkgs-master.url = "github:nixos/nixpkgs/master";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
 
     home = {
       url = "github:nix-community/home-manager/release-25.11";
@@ -34,7 +34,7 @@
   outputs =
     {
       nixpkgs,
-      nixpkgs-master,
+      nixpkgs-unstable,
       home,
       nix-flatpak,
       nix-vscode-extensions,
@@ -56,7 +56,7 @@
           system:
           f {
             pkgs = import nixpkgs { inherit system; };
-            latest = import nixpkgs-master { inherit system; };
+            latest = import nixpkgs-unstable { inherit system; };
           }
         );
 
@@ -83,7 +83,7 @@
               home-manager = {
                 useUserPackages = true;
                 extraSpecialArgs = {
-                  latestPkgs = mkPkgsFor "x86_64-linux" nixpkgs-master;
+                  latestPkgs = mkPkgsFor "x86_64-linux" nixpkgs-unstable;
                   nix-vscode-extensions-overlay = nix-vscode-extensions.overlays.default;
                 };
                 users.jesus = {
@@ -108,7 +108,7 @@
             catppuccin.homeModules.catppuccin
           ];
           extraSpecialArgs = {
-            latestPkgs = mkPkgsFor "x86_64-linux" nixpkgs-master;
+            latestPkgs = mkPkgsFor "x86_64-linux" nixpkgs-unstable;
           };
         };
       };
