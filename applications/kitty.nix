@@ -6,7 +6,7 @@
 
     font = {
       name = "IosevkaTerm Nerd Font";
-      size = 10.0;
+      size = 11.0;
     };
 
     settings = {
