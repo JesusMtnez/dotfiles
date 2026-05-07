@@ -66,15 +66,14 @@
         cab404.vscode-direnv
         github.vscode-github-actions
         mechatroner.rainbow-csv
-        pkgs.vscode-marketplace.ms-vsliveshare.vsliveshare
-        pkgs.vscode-marketplace.sst-dev.opencode
+        # pkgs.vscode-marketplace.ms-vsliveshare.vsliveshare
         task.vscode-task
 
         # Languagues
         jnoortheen.nix-ide
         # flix.flix
-        # pkgs.vscode-marketplace.golang.go
-        # pkgs.vscode-marketplace.casualjim.gotemplate
+        pkgs.vscode-marketplace.golang.go
+        pkgs.vscode-marketplace.casualjim.gotemplate
         # pkgs.vscode-marketplace.ms-python.python
         # redhat.ansible
         redhat.vscode-yaml
