@@ -48,10 +48,6 @@
             exa -lh # ls -lh
         }
 
-        # Source zsh plugins managed by sheldon
-        # FIXME Release 25.11 will include sheldon
-        eval "$(sheldon source)"
-
         # Source mise
         if command -v mise &> /dev/null; then
           eval "$(mise activate zsh)"
@@ -85,9 +81,78 @@
     ];
   };
 
-  # Release 25.11 will include sheldon: https://github.com/nix-community/home-manager/blob/master/modules/programs/sheldon.nix
-  home.packages = [ pkgs.sheldon ];
-  xdg.configFile."sheldon/plugins.toml".source = ./plugins.toml;
+  programs.sheldon = {
+    enable = true;
+    enableZshIntegration = true;
+    settings = {
+      shell = "zsh";
+
+      plugins = {
+        zsh-defer = {
+          github = "romkatv/zsh-defer";
+        };
+
+        powerlevel10k = {
+          github = "romkatv/powerlevel10k";
+        };
+
+        ohmyzsh = {
+          github = "ohmyzsh/ohmyzsh";
+          use = [
+            "lib/completion.zsh"
+            "lib/history.zsh"
+            "lib/key-bindings.zsh"
+            "plugins/kubectl.plugin.zsh"
+            "plugins/docker.plugin.zsh"
+            "plugins/vscode.plugin.zsh"
+          ];
+        };
+
+        fzf = {
+          github = "junegunn/fzf";
+          use = ["shell/completion.zsh" "shell/key-bindings.zsh"];
+        };
+
+        zsh-autosuggestions = {
+          github = "zsh-users/zsh-autosuggestions";
+          use = ["zsh-autosuggestions.zsh"];
+        };
+
+        zsh-completions = {
+          github = "zsh-users/zsh-completions";
+          use = ["zsh-completions.plugin.zsh"];
+        };
+
+        enhancd = {
+          github = "b4b4r07/enhancd";
+          use = ["init.sh"];
+        };
+
+        fast-syntax-highlighting = {
+          github = "zdharma-continuum/fast-syntax-highlighting";
+          use = ["fast-syntax-highlighting.plugin.zsh"];
+        };
+
+        zsh-autopair = {
+          github = "hlissner/zsh-autopair";
+          use = ["zsh-autopair.plugin.zsh"];
+        };
+
+        go-tasks = {
+          github = "go-task/task";
+          use = ["completion/zsh/_task"];
+        };
+
+        local = {
+          local = "/home/jesus/.config/zsh";
+        };
+      };
+
+      templates = {
+        defer = "{{ hooks?.pre | nl }}{% for file in files %}zsh-defer source \"{{ file }}\"\n{% endfor %}{{ hooks?.post | nl }}";
+      };
+    };
+  };
 
   programs.bat = {
     enable = true;
