@@ -110,37 +110,40 @@
 
         fzf = {
           github = "junegunn/fzf";
-          use = ["shell/completion.zsh" "shell/key-bindings.zsh"];
+          use = [
+            "shell/completion.zsh"
+            "shell/key-bindings.zsh"
+          ];
         };
 
         zsh-autosuggestions = {
           github = "zsh-users/zsh-autosuggestions";
-          use = ["zsh-autosuggestions.zsh"];
+          use = [ "zsh-autosuggestions.zsh" ];
         };
 
         zsh-completions = {
           github = "zsh-users/zsh-completions";
-          use = ["zsh-completions.plugin.zsh"];
+          use = [ "zsh-completions.plugin.zsh" ];
         };
 
         enhancd = {
           github = "b4b4r07/enhancd";
-          use = ["init.sh"];
+          use = [ "init.sh" ];
         };
 
         fast-syntax-highlighting = {
           github = "zdharma-continuum/fast-syntax-highlighting";
-          use = ["fast-syntax-highlighting.plugin.zsh"];
+          use = [ "fast-syntax-highlighting.plugin.zsh" ];
         };
 
         zsh-autopair = {
           github = "hlissner/zsh-autopair";
-          use = ["zsh-autopair.plugin.zsh"];
+          use = [ "zsh-autopair.plugin.zsh" ];
         };
 
         go-tasks = {
           github = "go-task/task";
-          use = ["completion/zsh/_task"];
+          use = [ "completion/zsh/_task" ];
         };
 
         local = {
