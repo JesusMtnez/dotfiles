@@ -42,7 +42,10 @@
     gpg.enable = true;
     java.enable = true;
     jq.enable = true;
-    ssh.enable = true;
+    ssh = {
+      enable = true;
+      enableDefaultConfig = false;
+    };
   };
 
   services.gpg-agent = {
@@ -94,5 +97,5 @@
     ];
   };
 
-  home.stateVersion = "25.05";
+  home.stateVersion = "26.05";
 }

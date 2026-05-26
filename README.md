@@ -14,7 +14,7 @@ _using nix to rule them all_
 
   [forgejo-actions-badge]: https://codeberg.org/JesusMtnez/dotfiles/badges/workflows/ci.yml/badge.svg?&logo=forgejo&style=for-the-badge&logoColor=white&color=blue&label
   [forgejo-actions-link]: https://codeberg.org/JesusMtnez/dotfiles/src/branch/main/.forgejo/workflows/ci.yml
-  [nix-badge]: https://img.shields.io/badge/25.11-blue.svg?logo=nixos&style=for-the-badge&logoColor=white&color=blue
+  [nix-badge]: https://img.shields.io/badge/26.05-blue.svg?logo=nixos&style=for-the-badge&logoColor=white&color=blue
   [nix-link]: https://builtwithnix.org
   [license-badge]: https://img.shields.io/badge/license-MIT-green.svg?style=for-the-badge&logoColor=white&color=blue
   [license-link]: /LICENSE
@@ -23,9 +23,9 @@ _using nix to rule them all_
 
 |   Name    |                                                                                                                         |                OS                 |  DE   |    Use     |
 | :-------: | :---------------------------------------------------------------------------------------------------------------------: | :-------------------------------: | :---: | :--------: |
-|  `albus`  |                               <img width="18" src="https://cdn.simpleicons.org/nixos" />                                |            NixOS 25.11            |  KDE  | _Personal_ |
+|  `albus`  |                               <img width="18" src="https://cdn.simpleicons.org/nixos" />                                |            NixOS 26.05            |  KDE  | _Personal_ |
 |  `work`   | <img width="18" src="https://cdn.simpleicons.org/kubuntu" /> <img width="18" src="https://cdn.simpleicons.org/nixos" /> |     Kubuntu 26.04 with `nix`      |  KDE  |   _Work_   |
-| `minerva` |                               <img width="18" src="https://cdn.simpleicons.org/nixos" />                                | NixOS 25.11 ([See HomeLab][homelab]) |   -   |  _Server_  |
+| `minerva` |                               <img width="18" src="https://cdn.simpleicons.org/nixos" />                                | NixOS 26.05 ([See HomeLab][homelab]) |   -   |  _Server_  |
 
   [homelab]: https://codeberg.org/JesusMtnez/homelab
 
