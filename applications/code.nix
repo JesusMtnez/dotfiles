@@ -54,6 +54,14 @@
         "window.zoomLevel" = 0;
         "workbench.sideBar.location" = "right";
         "redhat.telemetry.enabled" = false;
+        "yaml.disableSchemaDetection" = [
+          "**/.github/workflows/*.yml"
+          "**/.github/workflows/*.yaml"
+          "**/.gitea/workflows/*.yml"
+          "**/.gitea/workflows/*.yaml"
+          "**/.forgejo/workflows/*.yml"
+          "**/.forgejo/workflows/*.yaml"
+        ];
 
         "[go]"."editor.tabSize" = 2;
         "[nix]"."editor.tabSize" = 2;
