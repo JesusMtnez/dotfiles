@@ -15,11 +15,6 @@
         artifact = "sbt-revolver";
         version = "0.10.0";
       }
-      {
-        org = "ch.epfl.scala";
-        artifact = "sbt-scalafix";
-        version = "0.14.7";
-      }
     ];
   };
 }
