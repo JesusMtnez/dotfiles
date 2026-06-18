@@ -1,5 +1,5 @@
 ---
-name: Update Flakes
+name: CI
 
 on:
   pull_request:
