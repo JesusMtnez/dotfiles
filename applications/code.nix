@@ -36,8 +36,7 @@
         "files.watcherExclude" = {
           "**/.ammonite" = true;
           "**/.bloop" = true;
-          "**/.metals" = true;
-          "**/target" = true;
+          "**/.metals/**/*.{java,scala}" = true;
         };
         "metals.bloopVersion" = "";
         "metals.bloopSbtAlreadyInstalled" = true;
