@@ -27,7 +27,7 @@
         "editor.bracketPairColorization.enabled" = true;
         "explorer.confirmDelete" = false;
         "extensions.autoCheckUpdates" = false;
-        "extensions.autoUpdate" = false;
+        "extensions.autoUpdate" = "off";
         "files.autoSave" = "afterDelay";
         "files.autoSaveDelay" = 500;
         "files.insertFinalNewline" = true;
