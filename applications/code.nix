@@ -35,7 +35,7 @@
         "files.trimTrailingWhitespace" = true;
         "files.watcherExclude" = {
           "**/.ammonite" = true;
-          "**/.bloop" = true;
+          "**/.bloop/**" = true;
           "**/.metals/**/*.{java,scala}" = true;
         };
         "metals.bloopVersion" = "";
