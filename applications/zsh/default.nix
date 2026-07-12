@@ -96,7 +96,6 @@
           use = [
             "lib/completion.zsh"
             "lib/history.zsh"
-            "lib/key-bindings.zsh"
             "plugins/kubectl.plugin.zsh"
             "plugins/docker.plugin.zsh"
             "plugins/vscode.plugin.zsh"
