@@ -82,6 +82,7 @@
     latestPkgs.sleek-todo
     transmission_4-qt6
     vlc
+    wl-clipboard
   ];
 
   services.flatpak = {

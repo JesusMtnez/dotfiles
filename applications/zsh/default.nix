@@ -73,11 +73,6 @@
         # Others
         grep = "grep --color=auto";
       }
-      (lib.mkIf pkgs.stdenv.hostPlatform.isLinux {
-        pbcopy = "${pkgs.xsel}/bin/xsel --clipboard --input";
-        pbpaste = "${pkgs.xsel}/bin/xsel --clipboard --output";
-        open = "xdg-open";
-      })
     ];
   };
 
