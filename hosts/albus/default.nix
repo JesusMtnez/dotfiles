@@ -25,6 +25,7 @@
     ../../applications/opencode.nix
     ../../applications/neovim.nix
     ../../applications/sbt.nix
+    ../../applications/zellij.nix
     ../../applications/zsh
   ];
 

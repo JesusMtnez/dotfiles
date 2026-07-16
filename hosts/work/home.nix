@@ -11,6 +11,7 @@
     ../../applications/git.nix
     ../../applications/opencode.nix
     ../../applications/sbt.nix
+    ../../applications/zellij.nix
     ../../applications/zsh
   ];
 
