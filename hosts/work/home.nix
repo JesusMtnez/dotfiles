@@ -9,6 +9,7 @@
 
   imports = [
     ../../applications/git.nix
+    ../../applications/kitty.nix
     ../../applications/opencode.nix
     ../../applications/sbt.nix
     ../../applications/zellij.nix

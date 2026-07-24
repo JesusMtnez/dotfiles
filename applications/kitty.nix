@@ -1,8 +1,11 @@
-{ pkgs, ... }:
+{ pkgs, osConfig ? null, ... }:
+let
+  isNixOS = osConfig ? system && osConfig.system == "nixos";
+in
 {
   programs.kitty = {
     enable = true;
-    package = pkgs.kitty;
+    package = if isNixOS then pkgs.kitty else pkgs.emptyDirectory;
 
     font = {
       name = "IosevkaTerm Nerd Font";
