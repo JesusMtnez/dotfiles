@@ -1,4 +1,8 @@
-{ pkgs, osConfig ? null, ... }:
+{
+  pkgs,
+  osConfig ? null,
+  ...
+}:
 let
   isNixOS = osConfig ? system && osConfig.system == "nixos";
 in
