@@ -4,7 +4,7 @@
   ...
 }:
 let
-  isNixOS = osConfig ? system && osConfig.system == "nixos";
+  isNixOS = osConfig != null && osConfig ? nix;
 in
 {
   programs.kitty = {
