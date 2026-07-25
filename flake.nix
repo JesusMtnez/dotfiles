@@ -82,6 +82,7 @@
             {
               home-manager = {
                 useUserPackages = true;
+                backupFileExtension = ".bak";
                 extraSpecialArgs = {
                   latestPkgs = mkPkgsFor "x86_64-linux" nixpkgs-unstable;
                   nix-vscode-extensions-overlay = nix-vscode-extensions.overlays.default;
