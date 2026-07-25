@@ -16,7 +16,7 @@
       userSettings = {
         "editor.fontFamily" = "'IosevkaTerm Nerd Font'";
         "editor.fontLigatures" = true;
-        "editor.fontSize" = 13;
+        "editor.fontSize" = 14;
         "editor.fontWeight" = "normal";
         "editor.minimap.maxColumn" = 60;
         "editor.minimap.renderCharacters" = false;
@@ -47,7 +47,9 @@
         "nix.serverPath" = "${pkgs.nil}/bin/nil";
         "terminal.integrated.cursorStyle" = "line";
         "terminal.integrated.fontFamily" = "'IosevkaTerm Nerd Font'";
-        "terminal.integrated.fontSize" = 13;
+        "terminal.integrated.fontSize" = 14;
+        "terminal.integrated.fontWeight" = "normal";
+        "terminal.integrated.fontLigatures.enabled" = true;
         "update.mode" = "none";
         "window.restoreFullscreen" = true;
         "window.zoomLevel" = 0;
